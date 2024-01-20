@@ -11,8 +11,12 @@
             "id": "ca0be8a816818868",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular.md"
+              }
             }
           }
         ]
@@ -140,9 +148,9 @@
   },
   "active": "ca0be8a816818868",
   "lastOpenFiles": [
+    "Computação/Algebra.md",
     "a.md",
     "Computação/README.md",
-    "Computação/Algebra.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o inverso modular para um array de números módulo  m.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando Exponenciação Binária.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Algoritmo de Garner.md",
