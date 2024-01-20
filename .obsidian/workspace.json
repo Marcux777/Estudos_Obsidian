@@ -11,8 +11,12 @@
             "id": "865a089a77a3bbe5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "a.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "a.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "a.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "a.md"
+              }
             }
           }
         ]
@@ -138,8 +146,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "865a089a77a3bbe5",
   "lastOpenFiles": [
+    "a.md",
     "Computação/README.md",
     "Computação/Algebra.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o inverso modular para um array de números módulo  m.md",
@@ -166,7 +175,6 @@
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Peneirando apenas pelos números ímpares.md",
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Modificação em Tempo Linear - Crivo de Eratóstenes.md",
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Pasted image 20240118170010.png",
-    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Implementação - Segmented Sieve.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm",
