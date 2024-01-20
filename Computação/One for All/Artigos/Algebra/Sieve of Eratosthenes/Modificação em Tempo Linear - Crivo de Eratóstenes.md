@@ -1,0 +1,1 @@
+Podemos modificar o algoritmo de tal maneira que ele tenha apenas complexidade de tempo linear. Esta abordagem é descrita no artigo [[Crivo Linear]]. No entanto, este algoritmo também tem suas próprias fraquezas.

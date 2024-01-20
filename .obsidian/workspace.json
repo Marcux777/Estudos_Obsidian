@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "9acc8e02d079a285",
+    "type": "split",
+    "children": [
+      {
+        "id": "38f191e277376d73",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "865a089a77a3bbe5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a1a22303c5aa2eb6",
+    "type": "split",
+    "children": [
+      {
+        "id": "40e2a6768d830fb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af5fa2d9e0cae015",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0baec266b2e151b4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "583bd4a26b20bec6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "924c32237d82494b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fcd4627e2fd4f0ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a866aeb4a35babdd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bf6a98cc1480e07f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "07f46dc9a4bfa26b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8cda43a1e8e21ec5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "af5fa2d9e0cae015",
+  "lastOpenFiles": [
+    "Computação/README.md",
+    "Computação/Algebra.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o inverso modular para um array de números módulo  m.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando Exponenciação Binária.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Algoritmo de Garner.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Inverso Multiplicativo Modular.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o inverso modular para módulos primos usando a Divisão Euclidiana.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation/Solução encontrando o elemento inverso.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation/Solução com o Algoritmo Euclidiano Estendido.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation/Equação Congruente Linear.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Implementação do Algoritmo de Garner.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Teorema Chines dos Restos.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Solução para o Caso Geral.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Solução para Módulos não Coprimos.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Solução para Dois Módulos.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Formulação.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Corolário.md",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Peneirando até a raiz.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Teoria dos Grupos.md",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Segmented Sieve.md",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Peneirando apenas pelos números ímpares.md",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Modificação em Tempo Linear - Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Pasted image 20240118170010.png",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes/Implementação - Segmented Sieve.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Pasted image 20240119130130.png",
+    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes",
+    "Computação/One for All/Artigos/Algebra/Primality tests",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic",
+    "Computação/One for All/Artigos/Algebra/Linear Sieve",
+    "Computação/One for All/Artigos/Algebra/Integer factorization",
+    "One for All/Artigos/Algebra/Sieve of Eratosthenes/Pasted image 20240118170010.png",
+    "One for All/Artigos/Algebra/Integer factorization/Pasted image 20240119130130.png"
+  ]
+}
