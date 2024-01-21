@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f0777e2ac2a8962b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Operations on polynomials and series.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73c6e98bdb4dc420",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Formal power series.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
+                "file": "Formal power series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
+                "file": "Formal power series.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md"
+                "file": "Formal power series.md"
               }
             }
           }
@@ -146,12 +171,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "98071bc528e009fe",
+  "active": "73c6e98bdb4dc420",
   "lastOpenFiles": [
+    "Operations on polynomials and series.md",
+    "Formal power series.md",
+    "Polynomial multiplication.md",
+    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/Algebra.md",
     "Computação/One for All/Artigos/Aplicações.md",
     "Computação/One for All/Artigos/Fast Fourier transform.md",
-    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/One for All/Artigos/Algebra/Sistemas numéricos.md",
     "Computação/One for All/Artigos/Código Gray.md",
     "Computação/One for All/Artigos/Ternário Equilibrado.md",
@@ -171,9 +199,6 @@
     "Computação/One for All/Artigos/Algebra/Linear Sieve/Implementação - Crivo Linear.md",
     "Computação/One for All/Enumerating submasks of a bitmask.md",
     "Computação/One for All/Artigos/Bit manipulation.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Solução para Dois Módulos.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Inverso Multiplicativo Modular.md",
-    "inversos modulares.md",
     "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Pasted image 20240118170010.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
