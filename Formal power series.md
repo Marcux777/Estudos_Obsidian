@@ -275,12 +275,80 @@ enumere conjuntos de pedras, cada pedra colorida em uma de 2 cores (ou seja, há
   <mi>i</mi>
 </math>)), e que 
 
-\[ B(x) = \sum_{j=0}^{\infty} 3^j x^j \]
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msup>
+    <mn>3</mn>
+    <mi>j</mi>
+  </msup>
+  <msup>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msup>
+</math>
 
-enumere conjuntos de pedras, cada pedra colorida em uma de \(3\) cores. Então 
+enumere conjuntos de pedras, cada pedra colorida em uma de 3 cores. Então 
 
-\[ C(x) = A(x) B(x) = \sum_{k=0}^\infty c_k x^k \]
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>C</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+</math>
 
-enumeraria objetos que podem ser descritos como "dois conjuntos de pedras, primeiro conjunto apenas de pedras do tipo \(A\), segundo conjunto apenas de pedras do tipo \(B\), com número total de pedras sendo \(k\)" para \(c_k\).</p>
+enumeraria objetos que podem ser descritos como "dois conjuntos de pedras, primeiro conjunto apenas de pedras do tipo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+</math>, segundo conjunto apenas de pedras do tipo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+</math>, com número total de pedras sendo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>k</mi>
+</math>" para <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+</math>.</p>
 
 De maneira semelhante, há um significado intuitivo para algumas outras funções sobre séries de potências formais.
