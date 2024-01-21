@@ -7,6 +7,6 @@ $7!_{\%p} \equiv 1 \cdot 2 \cdot \underbrace{1}_{3} \cdot 4 \cdot 5 \underbrace{
 Aprender a calcular efetivamente este fatorial modificado nos permite calcular rapidamente o valor das várias fórmulas combinatórias (por exemplo, coeficientes binomiais).
 
 [[Algoritmo]]
-[[Implementação]]
+[[Computação/One for All/Artigos/Algebra/Factorial modulo p/Implementação]]
 [[Multiplicity of  p]]
 

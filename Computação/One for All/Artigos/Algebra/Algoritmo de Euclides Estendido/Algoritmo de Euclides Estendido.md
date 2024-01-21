@@ -1,4 +1,4 @@
-Enquanto o [Algoritmo de Euclides](obsidian://open?vault=Algoritmos&file=algoritmos%2FOne%20for%20All%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum) calcula apenas o maior divisor comum (MDC) de dois inteiros $a$ e $b$, a versão estendida também encontra uma maneira de representar o MDC em termos de $a$ e $b$, ou seja, coeficientes $x$ e $y$ para os quais:
+Enquanto o [Algoritmo de Euclides](obsidian://open?vault=Estudos_Obsidian&file=Computa%C3%A7%C3%A3o%2FOne%20for%20All%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum) calcula apenas o maior divisor comum (MDC) de dois inteiros $a$ e $b$, a versão estendida também encontra uma maneira de representar o MDC em termos de $a$ e $b$, ou seja, coeficientes $x$ e $y$ para os quais:
 
 $$a \cdot x + b \cdot y = \gcd(a, b)$$
 

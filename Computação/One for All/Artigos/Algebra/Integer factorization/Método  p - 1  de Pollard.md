@@ -10,7 +10,7 @@ Isso também significa que
 $$a^{(p - 1)^k} \equiv a^{k \cdot (p - 1)} \equiv 1 \pmod{p}.$$ 
 Portanto, para qualquer $M$  com  $p - 1 ~|~ M$  sabemos que  $a^M \equiv 1$ . Isso significa que  $a^M - 1 = p \cdot r$ , e por causa disso também  $p ~|~ \gcd(a^M - 1, n)$ .
 
-Portanto, se  $p - 1$  para um fator $p$  de  $n$  divide  $M$ , podemos extrair um fator usando o [algoritmo de Euclides](obsidian://open?vault=Algoritmos&file=algoritmos%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum).
+Portanto, se  $p - 1$  para um fator $p$  de  $n$  divide  $M$ , podemos extrair um fator usando o [algoritmo de Euclides](obsidian://open?vault=Estudos_Obsidian&file=Computa%C3%A7%C3%A3o%2FOne%20for%20All%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20-%20Algoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum).
 
 É claro que o menor  $M$  que é um múltiplo de todo número  $B$ -powersmooth é  $\text{lcm}(1,~2~,3~,4~,~\dots,~B)$ . Ou alternativamente:
  

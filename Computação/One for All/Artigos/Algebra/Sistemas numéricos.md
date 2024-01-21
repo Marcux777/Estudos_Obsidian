@@ -1,4 +1,4 @@
 
 
-- [[Balanced Ternary]]
-- [[Gray code]]
+- [[Ternário Equilibrado]]
+- [[Código Gray]]

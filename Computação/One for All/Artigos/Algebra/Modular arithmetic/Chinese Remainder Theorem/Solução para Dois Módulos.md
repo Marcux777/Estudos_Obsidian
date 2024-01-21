@@ -7,7 +7,7 @@ Queremos encontrar uma solução para $a \pmod{m_1 m_2}$. Usando o [Algoritmo Eu
 
 $$n_1 m_1 + n_2 m_2 = 1.$$
 
-Na verdade, $n_1$ e $n_2$ são apenas os [[inversos modulares]] de $m_1$ e $m_2$ módulo $m_2$ e $m_1$, respectivamente. Temos $n_1 m_1 \equiv 1 \pmod{m_2}$, então $n_1 \equiv m_1^{-1} \pmod{m_2}$, e vice-versa, $n_2 \equiv m_2^{-1} \pmod{m_1}$.
+Na verdade, $n_1$ e $n_2$ são apenas os [inversos modulares](obsidian://open?vault=Estudos_Obsidian&file=Computa%C3%A7%C3%A3o%2FOne%20for%20All%2FArtigos%2FAlgebra%2FModular%20arithmetic%2FModular%20Inverse%2FInverso%20Multiplicativo%20Modular) de $m_1$ e $m_2$ módulo $m_2$ e $m_1$, respectivamente. Temos $n_1 m_1 \equiv 1 \pmod{m_2}$, então $n_1 \equiv m_1^{-1} \pmod{m_2}$, e vice-versa, $n_2 \equiv m_2^{-1} \pmod{m_1}$.
 
 Com esses dois coeficientes, podemos definir uma solução:
 

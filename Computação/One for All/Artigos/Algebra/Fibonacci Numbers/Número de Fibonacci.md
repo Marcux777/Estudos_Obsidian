@@ -20,7 +20,7 @@ $$F_{2n} = F_n (F_{n+1} + F_{n-1})$$
 - Identidade do MDC:
 
 $$GCD(F_m, F_n) = F_{GCD(m, n)}$$
-- Os números de Fibonacci são as piores entradas possíveis para o algoritmo euclidiano (veja o teorema de Lame no [algoritmo euclidiano](obsidian://open?vault=Algoritmos&file=algoritmos%2FOne%20for%20All%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum)).
+- Os números de Fibonacci são as piores entradas possíveis para o algoritmo euclidiano (veja o teorema de Lame no [algoritmo euclidiano](obsidian://open?vault=Estudos_Obsidian&file=Computa%C3%A7%C3%A3o%2FOne%20for%20All%2FArtigos%2FAlgebra%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum%2FAlgoritmo%20de%20Euclides%20para%20calcular%20o%20maior%20divisor%20comum)).
 
 [[Fibonacci Coding]]
 [[Fórmulas para o enésimo número de Fibonacci]]

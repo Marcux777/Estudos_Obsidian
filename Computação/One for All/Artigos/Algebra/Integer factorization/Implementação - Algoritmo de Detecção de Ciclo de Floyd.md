@@ -41,6 +41,6 @@ long long mult(long long a, long long b, long long mod) {
     return result;
 }
 ```
-Alternativamente, você também pode implementar a [[multiplicação de Montgomery]].
+Alternativamente, você também pode implementar a [multiplicação de Montgomery](obsidian://open?vault=Estudos_Obsidian&file=Computa%C3%A7%C3%A3o%2FOne%20for%20All%2FArtigos%2FMontgomery%20Multiplication).
 
 Como já observado acima: se  $n$  é composto e o algoritmo retorna  $n$  como fator, você deve repetir o procedimento com parâmetro diferente  $x_0$  e  $c$ . Por exemplo, a escolha  $x_0 = c = 1$  não fatorará  $25 = 5 \cdot 5$ . O algoritmo apenas retornará  $25$ . No entanto, a escolha  $x_0 = 1$ ,  $c = 2$  irá fatorá-lo.
