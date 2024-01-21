@@ -11,47 +11,241 @@ $2$  à medida que o número de termos se aproxima do infinito. No entanto, s�
 
 **Definição**
 
-O produto de duas séries de potências formais  $A(x)$  e  $B(x)$  também é definido por meio da expansão como uma expressão aritmética:
-$$ A(x) B(x) = \left(\sum\limits_{i=0}^\infty a_i x^i \right)\left(\sum\limits_{j=0}^\infty b_j x^j\right) = \sum\limits_{i,j} a_i b_j x^{i+j} = \sum\limits_{k=0}^{\infty} c_k x^k = C(x), $$ 
-onde os coeficientes  $c_0, c_1, \dots$  são definidos como somas finitas
-
-$$ c_k = \sum\limits_{i=0}^k a_i b_{k-i}. $$ 
+<p> O produto de duas séries de potências formais  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>  e  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>  também é definido por meio da expansão como uma expressão aritmética:
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </munderover>
+    <msub>
+      <mi>a</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mi>x</mi>
+      <mi>i</mi>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </munderover>
+    <msub>
+      <mi>b</mi>
+      <mi>j</mi>
+    </msub>
+    <msup>
+      <mi>x</mi>
+      <mi>j</mi>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>b</mi>
+    <mi>j</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>+</mo>
+      <mi>j</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+  <mo>=</mo>
+  <mi>C</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+</math>
 A sequência  $c_0, c_1, \dots$  também é chamada de convolução de  $a_0, a_1, \dots$  e  $b_0, b_1, \dots$ , generalizando o conceito para sequências infinitas.
 
 Assim, polinômios podem ser considerados séries de potências formais, mas com um número finito de coeficientes.
 
 Séries de potências formais desempenham um papel crucial na combinatorial enumerativa, onde são estudadas como funções geradoras para várias sequências. Uma explicação detalhada de funções geradoras e a intuição por trás delas estarão, infelizmente, fora do escopo deste artigo. Portanto, o leitor curioso é referenciado, por exemplo, [aqui](https://en.wikipedia.org/wiki/Generating_function#Formal_power_series) para detalhes sobre o significado combinatório.
 
-No entanto, mencionaremos muito brevemente que se  $A(x)$  e  $B(x)$  são funções geradoras para sequências que enumeram objetos pelo número de "átomos" neles (por exemplo, árvores pelo número de vértices), então o produto  $A(x) B(x)$  enumera objetos que podem ser descritos como pares de objetos dos tipos  $A$  e  $B$ , enumerados pelo número total de "átomos" no par.
+No entanto, mencionaremos muito brevemente que se  $A(x)$  e  $B(x)$  são funções geradoras para sequências que enumeram objetos pelo número de "átomos" neles (por exemplo, árvores pelo número de vértices), então o produto  $A(x) B(x)$  enumera objetos que podem ser descritos como pares de objetos dos tipos  $A$  e  $B$ , enumerados pelo número total de "átomos" no par.</p>
 
 **Exemplo**
+<p>
+Suponha que
 
-Suponha que 
-$$
-\
-A(x) = \sum\limits_{i=0}^\infty 2^i x^i
-\
-$$
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msup>
+    <mn>2</mn>
+    <mi>i</mi>
+  </msup>
+  <msup>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msup>
+</math>
 
-enumere conjuntos de pedras, cada pedra colorida em uma de  $2$  cores (ou seja, há  
-$2^i$  desses conjuntos de tamanho  $i$ ), e que 
+enumere conjuntos de pedras, cada pedra colorida em uma de  2  cores (ou seja, há  
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msup>
+    <mn>2</mn>
+    <mi>i</mi>
+  </msup>
+</math>  desses conjuntos de tamanho  i), e que 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msup>
+    <mn>3</mn>
+    <mi>j</mi>
+  </msup>
+  <msup>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msup>
+</math>
 
-$$
-\
-B(x) = \sum\limits_{j=0}^{\infty} 3^j x^j
-\
-$$
+enumere conjuntos de pedras, cada pedra colorida em uma de  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>3</mn>
+</math>  cores. Então 
 
-enumere conjuntos de pedras, cada pedra colorida em uma de  $3$  cores. Então 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>C</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+</math>
 
-\
-C(x) = A(x) B(x) = \sum\limits_{k=0}^\infty c_k x^k
-\
-
-enumeraria objetos que podem ser descritos como "dois conjuntos de pedras, primeiro conjunto apenas de pedras do tipo  
-$A$ , segundo conjunto apenas de pedras do tipo  
-$B$ , com número total de pedras sendo  
-$k$ " para  
-$c_k$ .
+enumeraria objetos que podem ser descritos como "dois conjuntos de pedras, primeiro conjunto apenas de pedras do tipo  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+</math> , segundo conjunto apenas de pedras do tipo  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+</math> , com número total de pedras sendo  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>k</mi>
+</math> " para <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+</math> .</p>
 
 De maneira semelhante, há um significado intuitivo para algumas outras funções sobre séries de potências formais.
