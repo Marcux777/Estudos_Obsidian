@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d647cc6d29754907",
+        "id": "67d9110592d92adb",
         "type": "tabs",
         "children": [
           {
-            "id": "707693a6000d93e9",
+            "id": "98071bc528e009fe",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c9082d902d7ad0cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,23 +138,24 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "c9082d902d7ad0cd",
+  "active": "98071bc528e009fe",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Aplicações.md",
+    "Computação/One for All/Artigos/Fast Fourier transform.md",
+    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/Algebra.md",
     "Computação/One for All/Artigos/Algebra/Sistemas numéricos.md",
+    "Computação/One for All/Artigos/Código Gray.md",
     "Computação/One for All/Artigos/Ternário Equilibrado.md",
-    "Computação/One for All/Artigos/Algoritmo de Conversão.md",
     "Computação/One for All/Artigos/Algebra/Aritmética modular.md",
+    "Computação/README.md",
+    "Computação/One for All/Artigos/Algoritmo de Conversão.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
-    "Computação/One for All/Artigos/Algebra/Diversos.md",
-    "Computação/One for All/Artigos/Fast Fourier transform.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
     "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
     "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
     "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
     "Computação/One for All/Artigos/Aplicação da DFT - multiplicação rápida de polinômios.md",
-    "Computação/README.md",
-    "Computação/One for All/Artigos/Applications.md",
     "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
     "Computação/One for All/Artigos/Number theoretic transform.md",
     "Computação/One for All/Artigos/Improved implementation - in-place computation.md",
@@ -183,7 +163,6 @@
     "Computação/One for All/Artigos/Algebra/Linear Sieve/Implementação - Crivo Linear.md",
     "Computação/One for All/Enumerating submasks of a bitmask.md",
     "Computação/One for All/Artigos/Bit manipulation.md",
-    "Computação/One for All/Artigos/Código Gray.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Solução para Dois Módulos.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Inverso Multiplicativo Modular.md",
     "inversos modulares.md",

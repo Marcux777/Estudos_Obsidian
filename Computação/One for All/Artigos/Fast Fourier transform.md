@@ -10,4 +10,4 @@ Observe que o algoritmo FFT apresentado aqui é executado em  $O(n \log n)$ 
 
 [[Multiplicação com módulo arbitrário]]
 
-[[Applications]]
+[[Aplicações]]
