@@ -1,10 +1,10 @@
-### Operações em Polinômios e Séries
+## Operações em Polinômios e Séries
 
 Problemas em programação competitiva, especialmente aqueles envolvendo enumeração de algum tipo, são frequentemente resolvidos ao reduzir o problema para o cálculo de algo em polinômios e séries formais de potências.
 
 Isso inclui conceitos como multiplicação de polinômios, interpolação e operações mais complicadas, como logaritmos e exponenciais de polinômios. Neste artigo, é apresentada uma visão geral breve dessas operações e das abordagens comuns para resolvê-las.
 
-### Noções Básicas e Fatos
+## Noções Básicas e Fatos
 
 Nesta seção, focamos mais nas definições e propriedades "intuitivas" de várias operações polinomiais. Os detalhes técnicos de implementação e complexidades serão abordados em seções posteriores.
 
@@ -14,7 +14,7 @@ Nesta seção, focamos mais nas definições e propriedades "intuitivas" de vár
 
 [[Long polynomial division]]
 
-### Basic implementation
+## Basic implementation
 
 Aqui está a implementação básica da álgebra de polinômios.
 
@@ -42,4 +42,21 @@ Outras funções úteis:
 - `poly<T> inter(vector<T> x, vector<T> y)`: interpola um polinômio por um conjunto de pares  $P(x_i) = y_i$  em  $O(n \log^2 n)$ .
 
 E mais algumas, sinta-se à vontade para explorar o código!
+
+
+
+## Arithmetic
+### Multiplication
+A operação fundamental é a multiplicação de dois polinômios. Ou seja, dados os polinômios  $A$  e  $B$ :
+ 
+$$A = a_0 + a_1 x + \dots + a_n x^n$$ 
+$$B = b_0 + b_1 x + \dots + b_m x^m$$ 
+Você precisa calcular o polinômio  $C = A \cdot B$ , que é definido como
+$$\boxed{C = \sum\limits_{i=0}^n \sum\limits_{j=0}^m a_i b_j x^{i+j}} = c_0 + c_1 x + \dots + c_{n+m} x^{n+m}.$$ 
+Isso pode ser calculado em  $O(n \log n)$  através da Transformada Rápida de Fourier, e quase todos os métodos aqui a utilizarão como sub-rotina.
+
+### Série inversa
+Se  $A(0) \neq 0$ , sempre existe uma série de potências formais infinita  $A^{-1}(x) = q_0+q_1 x + q_2 x^2 + \dots$  tal que  $A^{-1} A = 1$ . Frequentemente, é útil calcular primeiro  $k$  coeficientes de  $A^{-1}$  (ou seja, calculá-lo módulo  $x^k$ ). Existem duas principais maneiras de calculá-lo.
+
+#### Dividir e conquistar
 
