@@ -181,34 +181,18 @@ $$F'(Q) = Q^{-1}$$ 
 $$\boxed{Q_{k+1} \equiv Q_k(1 + P - \ln Q_k) \pmod{x^{2^{k+1}}}}$$ 
 
 
-### Potência  
-$k$ -ésima¶
-Agora precisamos calcular  
-$P^k(x)=Q$ . Isso pode ser feito através da seguinte fórmula:
+### $k$ -ésima Potência  
 
+Agora precisamos calcular  $P^k(x)=Q$ . Isso pode ser feito através da seguinte fórmula:
  
 $$Q = \exp\left[k \ln P(x)\right]$$ 
-Observe, no entanto, que você só pode calcular os logaritmos e exponenciais corretamente se puder encontrar algum  
-$Q_0$  inicial.
+Observe, no entanto, que você só pode calcular os logaritmos e exponenciais corretamente se puder encontrar algum  $Q_0$  inicial.
 
 Para encontrá-lo, você deve calcular o logaritmo ou a exponencial do coeficiente constante do polinômio.
 
-Mas a única maneira razoável de fazer isso é se  
-$P(0)=1$  para  
-$Q = \ln P$ , então  
-$Q(0)=0$  e se  
-$P(0)=0$  para  
-$Q = e^P$ , então  
-$Q(0)=1$ .
+Mas a única maneira razoável de fazer isso é se  $P(0)=1$  para  $Q = \ln P$ , então  $Q(0)=0$  e se  $P(0)=0$  para  $Q = e^P$ , então  $Q(0)=1$ .
 
-Assim, você pode usar a fórmula acima apenas se  
-$P(0) = 1$ . Caso contrário, se  
-$P(x) = \alpha x^t T(x)$  onde  
-$T(0)=1$ , você pode escrever que:
-
+Assim, você pode usar a fórmula acima apenas se  $P(0) = 1$ . Caso contrário, se  $P(x) = \alpha x^t T(x)$  onde  $T(0)=1$ , você pode escrever que:
  
 $$\boxed{P^k(x) = \alpha^kx^{kt} \exp[k \ln T(x)]}$$ 
-Observe que você também pode calcular alguma raiz  
-$k$ -ésima de um polinômio se puder calcular  
-$\sqrt[k]{\alpha}$ , por exemplo, para  
-$\alpha=1$ .
+Observe que você também pode calcular alguma raiz  $k$ -ésima de um polinômio se puder calcular  $\sqrt[k]{\alpha}$ , por exemplo, para  $\alpha=1$ .
