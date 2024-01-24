@@ -196,3 +196,118 @@ Assim, você pode usar a fórmula acima apenas se  $P(0) = 1$ . Caso contrá
  
 $$\boxed{P^k(x) = \alpha^kx^{kt} \exp[k \ln T(x)]}$$ 
 Observe que você também pode calcular alguma raiz  $k$ -ésima de um polinômio se puder calcular  $\sqrt[k]{\alpha}$ , por exemplo, para  $\alpha=1$ .
+
+## Avaliação e Interpolação
+### Transformada Chirp-z
+Para o caso específico em que você precisa avaliar um polinômio nos pontos  $x_r = z^{2r}$ , você pode fazer o seguinte:
+
+$$A(z^{2r}) = \sum\limits_{k=0}^n a_k z^{2kr}$$ 
+Vamos substituir  $2kr = r^2+k^2-(r-k)^2$ . Então, esta soma se reescreve como:
+
+$$\boxed{A(z^{2r}) = z^{r^2}\sum\limits_{k=0}^n (a_k z^{k^2}) z^{-(r-k)^2}}$$ 
+O que é, até o fator  $z^{r^2}$ , igual à convolução das sequências  $u_k = a_k z^{k^2}$  e  $v_k = z^{-k^2}$ .
+
+Observe que  $u_k$  tem índices de  $0$  a  $n$  aqui e  $v_k$  tem índices de  $-n$  a  $m$ , onde  $m$  é a potência máxima de  $z$  que você precisa.
+
+Agora, se você precisar avaliar um polinômio nos pontos  $x_r = z^{2r+1}$ , você pode reduzi-lo à tarefa anterior pela transformação  $a_k \to a_k z^k$ .
+
+Isso nos dá um algoritmo  $O(n \log n)$  quando você precisa calcular valores em potências de  
+$z$ , assim você pode calcular a Transformada Discreta de Fourier (DFT) para números que não são potências de dois.
+
+Outra observação é que  $kr = \binom{k+r}{2} - \binom{k}{2} - \binom{r}{2}$ . Então, temos
+
+$$\boxed{A(z^r) = z^{-\binom{r}{2}}\sum\limits_{k=0}^n \left(a_k z^{-\binom{k}{2}}\right)z^{\binom{k+r}{2}}}$$ 
+O coeficiente de $x^{n+r}$  do produto dos polinômios  $A_0(x) = \sum\limits_{k=0}^n a_{n-k}z^{-\binom{n-k}{2}}x^k$  e    $A_1(x) = \sum\limits_{k\geq 0}z^{\binom{k}{2}}x^k$  é igual a  $z^{\binom{r}{2}}A(z^r)$ . Você pode usar a fórmula  $z^{\binom{k+1}{2}}=z^{\binom{k}{2}+k}$  para calcular os coeficientes de  $A_0(x)$  e  $A_1(x)$ .
+
+### Avaliação em Múltiplos Pontos
+Suponha que você precise calcular  $A(x_1), \dots, A(x_n)$ . Como mencionado anteriormente,  $A(x) \equiv A(x_i) \pmod{x-x_i}$ . Assim, você pode fazer o seguinte:
+
+1. Calcule uma árvore de segmentos de modo que no segmento  $[l,r)$  esteja o produto  $P_{l, r}(x) = (x-x_l)(x-x_{l+1})\dots(x-x_{r-1})$ .
+2. Começando com  $l=1$  e  $r=n+1$  na raiz da árvore, deixe  $m=\lfloor(l+r)/2\rfloor$ . Mova-se para baixo até  $[l,m)$  com o polinômio  $A(x) \pmod{P_{l,m}(x)}$ .
+3. Isso calculará recursivamente  $A(x_l), \dots, A(x_{m-1})$ . Agora faça o mesmo para  $[m,r)$  com  $A(x) \pmod{P_{m,r}(x)}$ .
+4. Concatene os resultados da primeira e segunda chamadas recursivas e retorne-os.
+
+O procedimento inteiro será executado em  $O(n \log^2 n)$ .
+
+### Interpolação
+Existe uma fórmula direta de Lagrange para interpolar um polinômio, dado um conjunto de pares  
+$(x_i, y_i)$ :
+$$\boxed{A(x) = \sum\limits_{i=1}^n y_i \prod\limits_{j \neq i}\dfrac{x-x_j}{x_i - x_j}}$$ 
+Calcular isso diretamente é uma tarefa difícil, mas acontece que podemos calculá-lo em  $O(n \log^2 n)$  com uma abordagem de dividir e conquistar:
+
+Considere  $P(x) = (x-x_1)\dots(x-x_n)$ . Para conhecer os coeficientes dos denominadores em  
+$A(x)$ , devemos calcular produtos como:
+
+$$ P_i = \prod\limits_{j \neq i} (x_i-x_j) $$ 
+Mas se você considerar a derivada  $P'(x)$ , descobrirá que  $P'(x_i) = P_i$ . Assim, você pode calcular os  $P_i$  via avaliação em  $O(n \log^2 n)$ .
+
+Agora, considere o algoritmo recursivo feito na mesma árvore de segmentos que na avaliação em vários pontos. Ele começa nas folhas com o valor  $\dfrac{y_i}{P_i}$  em cada folha.
+
+Quando retornamos da recursão, devemos mesclar os resultados dos vértices esquerdo e direito como  $A_{l,r} = A_{l,m}P_{m,r} + P_{l,m} A_{m,r}$ .
+
+Dessa forma, quando você retornar à raiz, terá exatamente  $A(x)$  nela. O procedimento total também funciona em  $O(n \log^2 n)$ .
+
+## Máximo Divisor Comum (MDC) e Resultantes
+Suponha que você tenha os polinômios  $A(x) = a_0 + a_1 x + \dots + a_n x^n$  e  $B(x) = b_0 + b_1 x + \dots + b_m x^m$ .
+
+Deixe  $\lambda_0, \dots, \lambda_n$  serem as raízes de  $A(x)$  e deixe  $\mu_0, \dots, \mu_m$  serem as raízes de  $B(x)$  contadas com suas multiplicidades.
+
+Você deseja saber se  $A(x)$  e  $B(x)$  têm alguma raiz em comum. Existem duas maneiras interconectadas de fazer isso.
+
+### Algoritmo de Euclides
+Bem, já temos um artigo sobre isso. Para um domínio arbitrário, você pode escrever o algoritmo de Euclides tão facilmente quanto:
+
+```cpp
+template<typename T>
+T gcd(const T &a, const T &b) {
+    return b == T(0) ? a : gcd(b, a % b);
+}
+```
+Pode ser comprovado que, para polinômios  $A(x)$  e  $B(x)$ , isso funcionará em  $O(nm)$ .
+
+### Resultante
+Vamos calcular o produto  $A(\mu_0)\cdots A(\mu_m)$ . Isso será igual a zero se e somente se algum  $\mu_i$  for raiz de  $A(x)$ .
+
+Para simetria, também podemos multiplicá-lo por  $b_m^n$  e reescrever o produto inteiro na seguinte forma:
+ 
+$$\boxed{\mathcal{R}(A, B) = b_m^n\prod\limits_{j=0}^m A(\mu_j) = b_m^n a_m^n \prod\limits_{i=0}^n \prod\limits_{j=0}^m (\mu_j - \lambda_i)= (-1)^{mn}a_n^m \prod\limits_{i=0}^n B(\lambda_i)}$$ 
+O valor definido acima é chamado de resultante dos polinômios  $A(x)$  e  $B(x)$ . Da definição, você pode encontrar as seguintes propriedades:
+ 
+1. $\mathcal R(A, B) = (-1)^{nm} \mathcal R(B, A)$ .
+ 
+2. $\mathcal R(A, B)= a_n^m b_m^n$  quando  $n=0$  ou  $m=0$ .
+3. Se  $b_m=1$ , então  $\mathcal R(A - CB, B) = \mathcal R(A, B)$  para um polinômio arbitrário  $C(x)$  e  $n,m \geq 1$ .
+4. Daqui segue que  $\mathcal R(A, B) = b_m^{\deg(A) - \deg(A-CB)}\mathcal R(A - CB, B)$  para  $A(x)$ ,  $B(x)$  e  $C(x)$  arbitrários.
+
+Milagrosamente, isso significa que a resultante de dois polinômios é sempre do mesmo anel que seus coeficientes!
+
+Essas propriedades também nos permitem calcular a resultante junto com o algoritmo de Euclides, que funciona em  $O(nm)$ .
+
+```cpp
+template<typename T>
+T resultant(poly<T> a, poly<T> b) {
+    if(b.is_zero()) {
+        return 0;
+    } else if(b.deg() == 0) {
+        return bpow(b.lead(), a.deg());
+    } else {
+        int pw = a.deg();
+        a %= b;
+        pw -= a.deg();
+        base mul = bpow(b.lead(), pw) * base((b.deg() & a.deg() & 1) ? -1 : 1);
+        base ans = resultant(b, a);
+        return ans * mul;
+    }
+}
+```
+
+
+
+### Algoritmo Half-GCD
+Existe uma maneira de calcular o MDC e as resultantes em  $O(n \log^2 n)$ .
+
+O procedimento para fazer isso implementa uma transformação linear de  $2 \times 2$  que mapeia um par de polinômios  $a(x)$ ,  $b(x)$  em outro par  $c(x), d(x)$  de modo que  $\deg d(x) \leq \frac{\deg a(x)}{2}$ . Se você for cuidadoso o suficiente, pode calcular o meio-MDC de qualquer par de polinômios com no máximo  $2$  chamadas recursivas aos polinômios que são pelo menos  $2$  vezes menores.
+
+Os detalhes específicos do algoritmo são um tanto tediosos de explicar, no entanto, você pode encontrar sua implementação na biblioteca, como a função `half_gcd`.
+
+Após a implementação do half-GCD, você pode aplicá-lo repetidamente a polinômios até ser reduzido ao par  $\gcd(a, b)$  e  $0$ .
