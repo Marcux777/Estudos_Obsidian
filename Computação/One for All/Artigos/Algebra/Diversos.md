@@ -5,5 +5,5 @@
 - [[Arbitrary-Precision Arithmetic]]
 - [[Fast Fourier transform]]
 - [[Operations on polynomials and series]]
-- [[Continued fractions]]
+- [[Frações contínuas]]
 - [[Factoring Exponentiation]]

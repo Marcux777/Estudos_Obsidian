@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Continued fractions.md",
+                "file": "Frações contínuas.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Continued fractions.md",
+                "file": "Frações contínuas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Continued fractions.md",
+                "file": "Frações contínuas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Continued fractions.md"
+                "file": "Frações contínuas.md"
               }
             }
           }
@@ -162,7 +162,7 @@
   "active": "3dbdc0d0b77df630",
   "lastOpenFiles": [
     "Computação/One for All/Artigos/Algebra/Diversos.md",
-    "Continued fractions.md",
+    "Frações contínuas.md",
     "Computação/One for All/Artigos/Operations on polynomials and series.md",
     "Computação/One for All/Artigos/Polynomial multiplication.md",
     "Computação/Algebra.md",
