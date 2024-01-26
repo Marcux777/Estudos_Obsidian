@@ -473,17 +473,11 @@ Dado  $A, B, C \in \mathbb Z$ . Encontre  $x, y \in \mathbb Z$  tal que 
 Embora este problema seja tipicamente resolvido com o algoritmo estendido de Euclides, existe uma solução simples e direta usando frações contínuas.
 
 Seja  $\frac{A}{B}=[a_0; a_1, \dots, a_k]$ . Já foi demonstrado anteriormente que $p_k q_{k-1} - p_{k-1} q_k = (-1)^{k-1}$ . Substituindo  $p_k$  e  $q_k$  por  $A$  e  $B$ , obtemos
-
 $$Aq_{k-1} - Bp_{k-1} = (-1)^{k-1} g,$$ 
-onde  
-$g = \gcd(A, B)$ . Se  
-$C$  é divisível por  
-$g$ , então a solução é  
-$x = (-1)^{k-1}\frac{C}{g} q_{k-1}$  e  
-$y = (-1)^{k}\frac{C}{g} p_{k-1}$ .
+onde  $g = \gcd(A, B)$ . Se  $C$  é divisível por  $g$ , então a solução é  $x = (-1)^{k-1}\frac{C}{g} q_{k-1}$  e  $y = (-1)^{k}\frac{C}{g} p_{k-1}$ .
 
 
-Python
+```Python
 # retorna (x, y) tal que Ax+By=C
 # assume que tal (x, y) existe
 def dio(A, B, C):
@@ -491,3 +485,77 @@ def dio(A, B, C):
     C //= A // p[-1] # dividir por gcd(A, B)
     t = (-1) if len(p) % 2 else 1
     return t*C*q[-2], -t*C*p[-2]
+```
+
+## Transformações Lineares Fracionárias
+Outro conceito importante para frações contínuas são as chamadas transformações lineares fracionárias.
+
+> # Definição
+>Uma transformação linear fracionária é uma função  $f : \mathbb R \to \mathbb R$  tal que  $f(x) = \frac{ax+b}{cx+d}$  para alguns  $a, b, c, d \in \mathbb R$
+
+Uma composição  $(L_0 \circ L_1)(x) = L_0(L_1(x))$  de transformações lineares fracionárias  $L_0(x)=\frac{a_0 x + b_0}{c_0 x + d_0}$  e  $L_1(x)=\frac{a_1 x + b_1}{c_1 x + d_1}$  é ela própria uma transformação linear fracionária:
+$$\frac{a_0\frac{a_1 x + b_1}{c_1 x + d_1} + b_0}{c_0 \frac{a_1 x + b_1}{c_1 x + d_1} + d_0} = \frac{a_0(a_1 x + b_1) + b_0 (c_1 x + d_1)}{c_0 (a_1 x + b_1) + d_0 (c_1 x + d_1)} = \frac{(a_0 a_1 + b_0 c_1) x + (a_0 b_1 + b_0 d_1)}{(c_0 a_1 + d_0 c_1) x + (c_0 b_1 + d_0 d_1)}.$$ 
+O inverso de uma transformação linear fracionária também é uma transformação linear fracionária:
+ 
+$$y = \frac{ax+b}{cx+d} \iff y(cx+d) = ax + b \iff x = -\frac{dy-b}{cy-a}.$$ 
+> # DMOPC '19 Contest 7 P4 - Bob e Frações Contínuas
+>Dado um array de inteiros positivos  $a_1, \dots, a_n$ , você precisa responder a  $m$  consultas. Cada consulta consiste em calcular  $[a_l; a_{l+1}, \dots, a_r]$ .
+>
+> # Solução
+> Podemos resolver este problema com uma árvore de segmento se formos capazes de concatenar frações contínuas.
+> É geralmente verdade que $[a_0; a_1, \dots, a_k, b_0, b_1, \dots, b_k] = [a_0; a_1, \dots, a_k, [b_1; b_2, \dots, b_k]]$ .
+>Vamos denotar  $L_{k}(x) = [a_k; x] = a_k + \frac{1}{x} = \frac{a_k\cdot x+1}{1\cdot x + 0}$ . Note que  $L_k(\infty) = a_k$ . Nessa notação, vale a pena observar que
+>$$[a_0; a_1, \dots, a_k, x] = [a_0; [a_1; [\dots; [a_k; x]]]] = (L_0 \circ L_1 \circ \dots \circ L_k)(x) = \frac{p_k x + p_{k-1}}{q_k x + q_{k-1}}.$$
+>Assim, o problema se resume ao cálculo de
+>$$(L_l \circ L_{l+1} \circ \dots \circ L_r)(\infty).$$ 
+>A composição de transformações é associativa, portanto, é possível calcular em cada nó de uma árvore de segmento a composição de transformações em sua subárvore.
+
+> # Transformação Linear Fracionária de uma Fração Contínua
+Seja  $L(x) = \frac{ax+b}{cx+d}$ . Calcule a representação de fração contínua  $[b_0; b_1, \dots, b_m]$  de  
+$L(A)$  para  
+$A=[a_0; a_1, \dots, a_n]$ .
+
+Isso permite calcular  
+$A + \frac{p}{q} = \frac{qA + p}{q}$  e  
+$A \cdot \frac{p}{q} = \frac{p A}{q}$  para qualquer  
+$\frac{p}{q}$ .
+
+Solução
+Como observado anteriormente,  
+$[a_0; a_1, \dots, a_k] = (L_{a_0} \circ L_{a_1} \circ \dots \circ L_{a_k})(\infty)$ , portanto  
+$L([a_0; a_1, \dots, a_k]) = (L \circ L_{a_0} \circ L_{a_1} \circ \dots L_{a_k})(\infty)$ .
+
+Assim, adicionando consequentemente  
+$L_{a_0}$ ,  
+$L_{a_1}$  e assim por diante, poderíamos calcular
+
+ 
+ 
+ 
+ 
+ 
+$$(L \circ L_{a_0} \circ \dots \circ L_{a_k})(x) = L\left(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}}\right)=\frac{a_k x + b_k}{c_k x + d_k}.$$ 
+Uma vez que  
+$L(x)$  é invertível, ela também é monótona em  
+$x$ . Portanto, para qualquer  
+$x \geq 0$ , vale que  
+$L(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}})$  está entre  
+$L(\frac{p_k}{q_k}) = \frac{a_k}{c_k}$  e  
+$L(\frac{p_{k-1}}{q_{k-1}}) = \frac{b_k}{d_k}$ .
+
+Além disso, para  
+$x=[a_{k+1}; \dots, a_n]$ , isso é igual a  
+$L(A)$ . Portanto,  
+$b_0 = \lfloor L(A) \rfloor$  está entre  
+$\lfloor L(\frac{p_k}{q_k}) \rfloor$  e  
+$\lfloor L(\frac{p_{k-1}}{q_{k-1}}) \rfloor$ . Quando eles são iguais, eles também são iguais a  
+$b_0$ .
+
+Observe que  
+$L(A) = (L_{b_0} \circ L_{b_1} \circ \dots \circ L_{b_m})(\infty)$ . Sabendo  
+$b_0$ , podemos compor  
+$L_{b_0}^{-1}$  com a transformação atual e continuar adicionando  
+$L_{a_{k+1}}$ ,  
+$L_{a_{k+2}}$  e assim por diante, procurando novos pisos para concordar, a partir dos quais seríamos capazes de deduzir  
+$b_1$  e assim por diante até recuperar todos os valores de  
+$[b_0; b_1, \dots, b_m]$ .
