@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3dbdc0d0b77df630",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Continued fractions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
+                "file": "Continued fractions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
+                "file": "Continued fractions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md"
+                "file": "Continued fractions.md"
               }
             }
           }
@@ -146,11 +159,12 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "98071bc528e009fe",
+  "active": "3dbdc0d0b77df630",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Algebra/Diversos.md",
+    "Continued fractions.md",
     "Computação/One for All/Artigos/Operations on polynomials and series.md",
     "Computação/One for All/Artigos/Polynomial multiplication.md",
-    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/Algebra.md",
     "Computação/One for All/Artigos/Formal power series.md",
     "Computação/One for All/Artigos/Long polynomial division.md",
@@ -173,7 +187,6 @@
     "Computação/One for All/Artigos/Improved implementation - in-place computation.md",
     "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
     "Computação/One for All/Artigos/Algebra/Linear Sieve/Implementação - Crivo Linear.md",
-    "Computação/One for All/Enumerating submasks of a bitmask.md",
     "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Pasted image 20240118170010.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
