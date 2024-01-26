@@ -225,7 +225,7 @@ pair<vector<int>, vector<int>> convergents(vector<int> a) {
 }
 ```
 
-## Árvores de frações contínuas¶
+## Árvores de frações contínuas
 Existem duas maneiras principais de unir todas as frações contínuas possíveis em estruturas de árvores úteis.
 
 ### Árvore de Stern-Brocot
@@ -384,110 +384,110 @@ O problema agora é, dado $\frac{p_0}{q_0} < \frac{p_1}{q_1}$ , encontrar uma 
 
 
 
-Árvore de Calkin-Wilf¶
+### Árvore de Calkin-Wilf
 Uma maneira um pouco mais simples de organizar frações contínuas em uma árvore binária é a árvore de Calkin-Wilf.
 
 A árvore geralmente se parece com isto:
 
+![[Pasted image 20240126194921.png]]
 
-A imagem de Olli Niemitalo, Proz está licenciada sob CC0 1.0
-Na raiz da árvore, o número  
- 
- 
-$\frac{1}{1}$  está localizado. Então, para o vértice com o número  
- 
- 
-$\frac{p}{q}$ , seus filhos são  
- 
- 
-$\frac{p}{p+q}$  e  
- 
- 
-$\frac{p+q}{q}$ .
+*A imagem de Olli Niemitalo, Proz está licenciada sob CC0 1.0*
+
+Na raiz da árvore, o número  $\frac{1}{1}$  está localizado. Então, para o vértice com o número $\frac{p}{q}$ , seus filhos são
+$\frac{p}{p+q}$  e  $\frac{p+q}{q}$ .
 
 Ao contrário da árvore de Stern-Brocot, a árvore de Calkin-Wilf não é uma árvore de busca binária, portanto, não pode ser usada para realizar uma busca binária racional.
 
-Na árvore de Calkin-Wilf, o pai direto de uma fração  
- 
- 
-$\frac{p}{q}$  é  
- 
- 
-$\frac{p-q}{q}$  quando  
-$p>q$  e  
- 
- 
-$\frac{p}{q-p}$  caso contrário.
+Na árvore de Calkin-Wilf, o pai direto de uma fração $\frac{p}{q}$  é $\frac{p-q}{q}$  quando  $p>q$  e $\frac{p}{q-p}$  caso contrário.
 
-Para a árvore de Stern-Brocot, usamos a recorrência para convergentes. Para estabelecer a conexão entre a fração contínua e a árvore de Calkin-Wilf, devemos lembrar a recorrência para quocientes completos. Se  
- 
- 
-$s_k = \frac{p}{q}$ , então  
- 
- 
- 
- 
-$s_{k+1} = \frac{q}{p \mod q} = \frac{q}{p-\lfloor p/q \rfloor \cdot q}$ .
+Para a árvore de Stern-Brocot, usamos a recorrência para convergentes. Para estabelecer a conexão entre a fração contínua e a árvore de Calkin-Wilf, devemos lembrar a recorrência para quocientes completos. Se $s_k = \frac{p}{q}$ , então $s_{k+1} = \frac{q}{p \mod q} = \frac{q}{p-\lfloor p/q \rfloor \cdot q}$ .
 
-Por outro lado, se continuarmos indo de  
- 
- 
-$s_k = \frac{p}{q}$  para o seu pai na árvore de Calkin-Wilf quando  
-$p > q$ , acabaremos em  
- 
- 
- 
- 
-$\frac{p \mod q}{q} = \frac{1}{s_{k+1}}$ . Se continuarmos fazendo isso, acabaremos em  
-$s_{k+2}$ , então  
- 
- 
-$\frac{1}{s_{k+3}}$  e assim por diante. A partir disso, podemos deduzir que:
+Por outro lado, se continuarmos indo de $s_k = \frac{p}{q}$  para o seu pai na árvore de Calkin-Wilf quando $p > q$ , acabaremos em  $\frac{p \mod q}{q} = \frac{1}{s_{k+1}}$ . Se continuarmos fazendo isso, acabaremos em  $s_{k+2}$ , então $\frac{1}{s_{k+3}}$  e assim por diante. A partir disso, podemos deduzir que:
 
-Quando  
-$a_0> 0$ , o pai direto de  
-$[a_0; a_1, \dots, a_k]$  na árvore de Calkin-Wilf é  
- 
- 
-$\frac{p-q}{q}=[a_0 - 1; a_1, \dots, a_k]$ .
-Quando  
-$a_0 = 0$  e  
-$a_1 > 1$ , seu pai direto é  
- 
- 
-$\frac{p}{q-p} = [0; a_1 - 1, a_2, \dots, a_k]$ .
-E quando  
-$a_0 = 0$  e  
-$a_1 = 1$ , seu pai direto é  
- 
- 
-$\frac{p}{q-p} = [a_2; a_3, \dots, a_k]$ .
-Correspondentemente, os filhos de  
-$\frac{p}{q} = [a_0; a_1, \dots, a_k]$  são
-
- 
- 
- 
- 
- 
-$\frac{p+q}{q}=1+\frac{p}{q}$ , que é  
-$[a_0+1; a_1, \dots, a_k]$ ,
- 
- 
- 
- 
- 
- 
- 
-$\frac{p}{p+q} = \frac{1}{1+\frac{q}{p}}$ , que é  
-$[0, 1, a_0, a_1, \dots, a_k]$  para  
-$a_0 > 0$  e  
-$[0, a_1+1, a_2, \dots, a_k]$  para  
-$a_0=0$ .
-Vale ressaltar que, se enumerarmos os vértices da árvore de Calkin-Wilf na ordem de busca em largura (ou seja, a raiz tem um número  
-$1$ , e os filhos do vértice  
-$v$  têm índices  
-$2v$  e  
-$2v+1$  correspondentes), o índice do número racional na árvore de Calkin-Wilf seria o mesmo que na árvore de Stern-Brocot.
+1. Quando  $a_0> 0$ , o pai direto de  $[a_0; a_1, \dots, a_k]$  na árvore de Calkin-Wilf é    $\frac{p-q}{q}=[a_0 - 1; a_1, \dots, a_k]$ .
+2. Quando  $a_0 = 0$  e  $a_1 > 1$ , seu pai direto é $\frac{p}{q-p} = [0; a_1 - 1, a_2, \dots, a_k]$ .
+3. E quando  $a_0 = 0$  e  $a_1 = 1$ , seu pai direto é $\frac{p}{q-p} = [a_2; a_3, \dots, a_k]$ .
+Correspondentemente, os filhos de  $\frac{p}{q} = [a_0; a_1, \dots, a_k]$  são 
+1. $\frac{p+q}{q}=1+\frac{p}{q}$ , que é  $[a_0+1; a_1, \dots, a_k]$ ,
+2. $\frac{p}{p+q} = \frac{1}{1+\frac{q}{p}}$ , que é  $[0, 1, a_0, a_1, \dots, a_k]$  para  $a_0 > 0$  e  $[0, a_1+1, a_2, \dots, a_k]$  para  $a_0=0$ .
+Vale ressaltar que, se enumerarmos os vértices da árvore de Calkin-Wilf na ordem de busca em largura (ou seja, a raiz tem um número  $1$ , e os filhos do vértice  $v$  têm índices  $2v$  e  $2v+1$  correspondentes), o índice do número racional na árvore de Calkin-Wilf seria o mesmo que na árvore de Stern-Brocot.
 
 Assim, os números nos mesmos níveis das árvores de Stern-Brocot e Calkin-Wilf são os mesmos, mas a ordem deles difere por meio da permutação de inversão de bits.
+
+
+
+## Convergência
+Para o número  $r$  e sua  $k$-ésima convergente  $r_k=\frac{p_k}{q_k}$ , a seguinte fórmula é válida:
+
+$$r_k = a_0 + \sum\limits_{i=1}^k \frac{(-1)^{i-1}}{q_i q_{i-1}}.$$ 
+Em particular, isso significa que
+ 
+$$r_k - r_{k-1} = \frac{(-1)^{k-1}}{q_k q_{k-1}}$$ 
+e
+ 
+$$p_k q_{k-1} - p_{k-1} q_k = (-1)^{k-1}.$$ 
+A partir disso, podemos concluir que
+ 
+$$\left| r-\frac{p_k}{q_k} \right| \leq \frac{1}{q_{k+1}q_k} \leq \frac{1}{q_k^2}.$$ 
+A última desigualdade se deve ao fato de que  $r_k$  e  $r_{k+1}$  geralmente estão localizados em lados diferentes de  $r$ , assim
+
+$$|r-r_k| = |r_k-r_{k+1}|-|r-r_{k+1}| \leq |r_k - r_{k+1}|.$$ 
+#### Explicação Detalhada
+Para estimar  $|r-r_k|$ , começamos estimando a diferença entre convergentes adjacentes. Pela definição,
+ 
+$$\frac{p_k}{q_k} - \frac{p_{k-1}}{q_{k-1}} = \frac{p_k q_{k-1} - p_{k-1} q_k}{q_k q_{k-1}}.$$ 
+Substituindo  $p_k$  e  $q_k$  no numerador por suas recorrências, obtemos
+ 
+$$\begin{align} p_k q_{k-1} - p_{k-1} q_k &= (a_k p_{k-1} + p_{k-2}) q_{k-1} - p_{k-1} (a_k q_{k-1} + q_{k-2}) \\&= p_{k-2} q_{k-1} - p_{k-1} q_{k-2},\end{align}$$ 
+assim o numerador de  $r_k - r_{k-1}$  é sempre o numerador negado de  $r_{k-1} - r_{k-2}$ . Isso, por sua vez, é igual a  $1$  para
+
+$$r_1 - r_0=\left(a_0+\frac{1}{a_1}\right)-a_0=\frac{1}{a_1},$$ 
+portanto
+$$r_k - r_{k-1} = \frac{(-1)^{k-1}}{q_k q_{k-1}}.$$ 
+Isso proporciona uma representação alternativa de  $r_k$  como uma soma parcial de uma série infinita:
+
+$$r_k = (r_k - r_{k-1}) + \dots + (r_1 - r_0) + r_0 = a_0 + \sum\limits_{i=1}^k \frac{(-1)^{i-1}}{q_i q_{i-1}}.$$ 
+Da relação recorrente, segue que  $q_k$  aumenta monotonamente pelo menos tão rapidamente quanto os números de Fibonacci, portanto
+
+$$r = \lim\limits_{k \to \infty} r_k = a_0 + \sum\limits_{i=1}^\infty \frac{(-1)^{i-1}}{q_i q_{i-1}}$$ 
+é sempre bem definido, já que a série subjacente sempre converge. Vale ressaltar que a série residual
+
+$$r-r_k = \sum\limits_{i=k+1}^\infty \frac{(-1)^{i-1}}{q_i q_{i-1}}$$ 
+tem o mesmo sinal que  $(-1)^k$  devido à rapidez com que  $q_i q_{i-1}$  diminui. Portanto, convergentes de índice par  $r_k$  se aproximam de  $r$  por baixo, enquanto convergentes de índice ímpar se aproximam de cima:
+
+![[Pasted image 20240126195657.png]]
+
+**Convergentes de  $r=\phi = \frac{1+\sqrt{5}}{2}=[1;1,1,\dots]$  e sua distância de  $r$ .**
+
+A partir desta imagem, podemos ver que
+
+$$|r-r_k| = |r_k - r_{k+1}| - |r-r_{k+1}| \leq |r_k - r_{k+1}|,$$ 
+portanto, a distância entre  $r$  e  $r_k$  nunca é maior do que a distância entre  $r_k$  e  $r_{k+1}$ :
+ 
+$$\left|r-\frac{p_k}{q_k}\right| \leq \frac{1}{q_k q_{k+1}} \leq \frac{1}{q_k^2}.$$ 
+#### Solução Estendida de Euclides?
+
+Dado  $A, B, C \in \mathbb Z$ . Encontre  $x, y \in \mathbb Z$  tal que  $Ax + By = C$ .
+
+##### Solução
+Embora este problema seja tipicamente resolvido com o algoritmo estendido de Euclides, existe uma solução simples e direta usando frações contínuas.
+
+Seja  $\frac{A}{B}=[a_0; a_1, \dots, a_k]$ . Já foi demonstrado anteriormente que $p_k q_{k-1} - p_{k-1} q_k = (-1)^{k-1}$ . Substituindo  $p_k$  e  $q_k$  por  $A$  e  $B$ , obtemos
+
+$$Aq_{k-1} - Bp_{k-1} = (-1)^{k-1} g,$$ 
+onde  
+$g = \gcd(A, B)$ . Se  
+$C$  é divisível por  
+$g$ , então a solução é  
+$x = (-1)^{k-1}\frac{C}{g} q_{k-1}$  e  
+$y = (-1)^{k}\frac{C}{g} p_{k-1}$ .
+
+
+Python
+# retorna (x, y) tal que Ax+By=C
+# assume que tal (x, y) existe
+def dio(A, B, C):
+    p, q = convergents(fraction(A, B))
+    C //= A // p[-1] # dividir por gcd(A, B)
+    t = (-1) if len(p) % 2 else 1
+    return t*C*q[-2], -t*C*p[-2]
