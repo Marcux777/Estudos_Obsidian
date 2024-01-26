@@ -261,11 +261,11 @@ Outro exemplo é  $\frac{2}{5} = [0;2,2]=[0;2,1,1]$ , que tem índice  $11
 
 Vale ressaltar que a árvore de Stern-Brocot é, na verdade, uma treap. Ou seja, é uma árvore de busca binária por  $\frac{p}{q}$ , mas é uma heap tanto por  $p$  quanto por  $q$ .
 
-### Comparando frações contínuas
+#### Comparando frações contínuas
 
 Você recebe  $A=[a_0; a_1, \dots, a_n]$  e  $B=[b_0; b_1, \dots, b_m]$ . Qual fração é menor?
 
-#### Solução
+##### Solução
 Assuma por enquanto que  $A$  e  $B$  são irracionais e suas representações de frações contínuas denotam uma descida infinita na árvore de Stern-Brocot.
 
 Como já mencionamos, nessa representação  $a_0$  denota o número de giros à direita na descida,  $a_1$  denota o número de giros à esquerda consecutivos e assim por diante. Portanto, ao comparar  
@@ -300,4 +300,87 @@ def pm_eps(a):
     b.append(float('inf'))
     return (a, b) if less(a, b) else (b, a)
 ```
+
+#### Melhor ponto interno
+
+Dado  $\frac{0}{1} \leq \frac{p_0}{q_0} < \frac{p_1}{q_1} \leq \frac{1}{0}$ . Encontre o número racional  $\frac{p}{q}$  de modo que  $(q; p)$  seja lexicograficamente o menor e  $\frac{p_0}{q_0} < \frac{p}{q} < \frac{p_1}{q_1}$ .
+
+##### Solução
+Em termos da árvore de Stern-Brocot, isso significa que precisamos encontrar o AncesRealSternBrocottor Comum (LCA) de  $\frac{p_0}{q_0}$  e  $\frac{p_1}{q_1}$ . Devido à conexão entre a árvore de Stern-Brocot e a fração contínua, esse LCA corresponderia aproximadamente ao maior prefixo comum das representações de frações contínuas para  $\frac{p_0}{q_0}$  e  $\frac{p_1}{q_1}$ .
+
+Portanto, se  $\frac{p_0}{q_0} = [a_0; a_1, \dots, a_{k-1}, a_k, \dots]$  e  $\frac{p_1}{q_1} = [a_0; a_1, \dots, a_{k-1}, b_k, \dots]$  são números irracionais, o LCA é  $[a_0; a_1, \dots, \min(a_k, b_k)+1]$ .
+
+Para  $r_0$  e  $r_1$  racionais, um deles pode ser o LCA em si, o que exigiria um tratamento especial. Para simplificar a solução para  $r_0$  e  $r_1$  racionais, é possível usar a representação de fração contínua de  
+$r_0 + \varepsilon$  e  $r_1 - \varepsilon$  que foi derivada no problema anterior.
+
+```Python
+# encontra lexicograficamente o menor (q, p)
+# tal que p0/q0 < p/q < p1/q1
+def meio(p0, q0, p1, q1):
+    a0 = pm_eps(fraction(p0, q0))[1]
+    a1 = pm_eps(fraction(p1, q1))[0]
+    a = []
+    for i in range(min(len(a0), len(a1))):
+        a.append(min(a0[i], a1[i]))
+        if a0[i] != a1[i]:
+            break
+    a[-1] += 1
+    p, q = convergents(a)
+    return p[-1], q[-1]
+```
+
+#### GCJ 2019, Round 2 - Novos Elementos: Parte 2
+
+Você recebe  $N$  pares de números inteiros positivos  $(C_i, J_i)$ . Você precisa encontrar um par de inteiros positivos  $(x, y)$  tal que  $C_i x + J_i y$  seja uma sequência estritamente crescente.
+
+Dentre esses pares, encontre o menor lexicograficamente.
+
+##### Solução
+Reformulando o enunciado,  $A_i x + B_i y$  deve ser positivo para todos os  $i$ , onde  $A_i = C_i - C_{i-1}$  e  $B_i = J_i - J_{i-1}$ .
+
+Dentre tais equações, temos quatro grupos significativos para  $A_i x + B_i y > 0$ :
+
+1. $A_i, B_i > 0$  podem ser ignorados, já que estamos procurando  $x, y > 0$ .
+ 
+2. $A_i, B_i \leq 0$  forneceriam "IMPOSSIBLE" como resposta.
+
+3. $A_i > 0$ ,  $B_i \leq 0$ . Tais restrições são equivalentes a $\frac{y}{x} < \frac{A_i}{-B_i}$ .
+ 
+4. $A_i \leq 0$ , $B_i > 0$ . Tais restrições são equivalentes a  $\frac{y}{x} > \frac{-A_i}{B_i}$ .
+
+Seja  $\frac{p_0}{q_0}$  o maior $\frac{-A_i}{B_i}$  do quarto grupo e  $\frac{p_1}{q_1}$  o menor $\frac{A_i}{-B_i}$  do terceiro grupo.
+
+O problema agora é, dado $\frac{p_0}{q_0} < \frac{p_1}{q_1}$ , encontrar uma fração   $\frac{p}{q}$  tal que  $(q;p)$  seja lexicograficamente o menor e $\frac{p_0}{q_0} < \frac{p}{q} < \frac{p_1}{q_1}$ .
+
+
+```Python
+    def resolver():
+    n = int(input())
+    C = [0] * n
+    J = [0] * n
+    # p0/q0 < y/x < p1/q1
+    p0, q0 = 0, 1
+    p1, q1 = 1, 0
+    falha = False
+    for i in range(n):
+        C[i], J[i] = map(int, input().split())
+        if i > 0:
+            A = C[i] - C[i-1]
+            B = J[i] - J[i-1]
+            if A <= 0 and B <= 0:
+                falha = True
+            elif B > 0 and A < 0: # y/x > (-A)/B if B > 0
+                if (-A)*q0 > p0*B:
+                    p0, q0 = -A, B
+            elif B < 0 and A > 0: # y/x < A/(-B) if B < 0
+                if A*q1 < p1*(-B):
+                    p1, q1 = A, -B
+    if p0*q1 >= p1*q0 or falha:
+        return 'IMPOSSIBLE'
+
+    p, q = meio(p0, q0, p1, q1)
+    return str(q) + ' ' + str(p)
+    ```
+
+
 
