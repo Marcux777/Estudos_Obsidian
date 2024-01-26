@@ -384,3 +384,110 @@ O problema agora é, dado $\frac{p_0}{q_0} < \frac{p_1}{q_1}$ , encontrar uma 
 
 
 
+Árvore de Calkin-Wilf¶
+Uma maneira um pouco mais simples de organizar frações contínuas em uma árvore binária é a árvore de Calkin-Wilf.
+
+A árvore geralmente se parece com isto:
+
+
+A imagem de Olli Niemitalo, Proz está licenciada sob CC0 1.0
+Na raiz da árvore, o número  
+ 
+ 
+$\frac{1}{1}$  está localizado. Então, para o vértice com o número  
+ 
+ 
+$\frac{p}{q}$ , seus filhos são  
+ 
+ 
+$\frac{p}{p+q}$  e  
+ 
+ 
+$\frac{p+q}{q}$ .
+
+Ao contrário da árvore de Stern-Brocot, a árvore de Calkin-Wilf não é uma árvore de busca binária, portanto, não pode ser usada para realizar uma busca binária racional.
+
+Na árvore de Calkin-Wilf, o pai direto de uma fração  
+ 
+ 
+$\frac{p}{q}$  é  
+ 
+ 
+$\frac{p-q}{q}$  quando  
+$p>q$  e  
+ 
+ 
+$\frac{p}{q-p}$  caso contrário.
+
+Para a árvore de Stern-Brocot, usamos a recorrência para convergentes. Para estabelecer a conexão entre a fração contínua e a árvore de Calkin-Wilf, devemos lembrar a recorrência para quocientes completos. Se  
+ 
+ 
+$s_k = \frac{p}{q}$ , então  
+ 
+ 
+ 
+ 
+$s_{k+1} = \frac{q}{p \mod q} = \frac{q}{p-\lfloor p/q \rfloor \cdot q}$ .
+
+Por outro lado, se continuarmos indo de  
+ 
+ 
+$s_k = \frac{p}{q}$  para o seu pai na árvore de Calkin-Wilf quando  
+$p > q$ , acabaremos em  
+ 
+ 
+ 
+ 
+$\frac{p \mod q}{q} = \frac{1}{s_{k+1}}$ . Se continuarmos fazendo isso, acabaremos em  
+$s_{k+2}$ , então  
+ 
+ 
+$\frac{1}{s_{k+3}}$  e assim por diante. A partir disso, podemos deduzir que:
+
+Quando  
+$a_0> 0$ , o pai direto de  
+$[a_0; a_1, \dots, a_k]$  na árvore de Calkin-Wilf é  
+ 
+ 
+$\frac{p-q}{q}=[a_0 - 1; a_1, \dots, a_k]$ .
+Quando  
+$a_0 = 0$  e  
+$a_1 > 1$ , seu pai direto é  
+ 
+ 
+$\frac{p}{q-p} = [0; a_1 - 1, a_2, \dots, a_k]$ .
+E quando  
+$a_0 = 0$  e  
+$a_1 = 1$ , seu pai direto é  
+ 
+ 
+$\frac{p}{q-p} = [a_2; a_3, \dots, a_k]$ .
+Correspondentemente, os filhos de  
+$\frac{p}{q} = [a_0; a_1, \dots, a_k]$  são
+
+ 
+ 
+ 
+ 
+ 
+$\frac{p+q}{q}=1+\frac{p}{q}$ , que é  
+$[a_0+1; a_1, \dots, a_k]$ ,
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+$\frac{p}{p+q} = \frac{1}{1+\frac{q}{p}}$ , que é  
+$[0, 1, a_0, a_1, \dots, a_k]$  para  
+$a_0 > 0$  e  
+$[0, a_1+1, a_2, \dots, a_k]$  para  
+$a_0=0$ .
+Vale ressaltar que, se enumerarmos os vértices da árvore de Calkin-Wilf na ordem de busca em largura (ou seja, a raiz tem um número  
+$1$ , e os filhos do vértice  
+$v$  têm índices  
+$2v$  e  
+$2v+1$  correspondentes), o índice do número racional na árvore de Calkin-Wilf seria o mesmo que na árvore de Stern-Brocot.
+
+Assim, os números nos mesmos níveis das árvores de Stern-Brocot e Calkin-Wilf são os mesmos, mas a ordem deles difere por meio da permutação de inversão de bits.
