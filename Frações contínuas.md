@@ -511,51 +511,139 @@ $$y = \frac{ax+b}{cx+d} \iff y(cx+d) = ax + b \iff x = -\frac{dy-b}{cy-a}.$$ 
 >A composição de transformações é associativa, portanto, é possível calcular em cada nó de uma árvore de segmento a composição de transformações em sua subárvore.
 
 > # Transformação Linear Fracionária de uma Fração Contínua
-Seja  $L(x) = \frac{ax+b}{cx+d}$ . Calcule a representação de fração contínua  $[b_0; b_1, \dots, b_m]$  de  
-$L(A)$  para  
-$A=[a_0; a_1, \dots, a_n]$ .
+> Seja  $L(x) = \frac{ax+b}{cx+d}$ . Calcule a representação de fração contínua  $[b_0; b_1, \dots, b_m]$  de  $L(A)$  para  $A=[a_0; a_1, \dots, a_n]$ .
+> 
+> Isso permite calcular  $A + \frac{p}{q} = \frac{qA + p}{q}$  e  $A \cdot \frac{p}{q} = \frac{p A}{q}$  para qualquer  $\frac{p}{q}$ .
+> 
+> # Solução
+> Como observado anteriormente,  $[a_0; a_1, \dots, a_k] = (L_{a_0} \circ L_{a_1} \circ \dots \circ L_{a_k})(\infty)$ , portanto  $L([a_0; a_1, \dots, a_k]) = (L \circ L_{a_0} \circ L_{a_1} \circ \dots L_{a_k})(\infty)$ .
+> 
+> Assim, adicionando consequentemente  $L_{a_0}$ ,  $L_{a_1}$  e assim por diante, poderíamos calcular
+>$$(L \circ L_{a_0} \circ \dots \circ L_{a_k})(x) = L\left(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}}\right)=\frac{a_k x + b_k}{c_k x + d_k}.$$ 
+> Uma vez que  $L(x)$  é invertível, ela também é monótona em  $x$ . Portanto, para qualquer  $x \geq 0$ , vale que  $L(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}})$  está entre  $L(\frac{p_k}{q_k}) = \frac{a_k}{c_k}$  e  $L(\frac{p_{k-1}}{q_{k-1}}) = \frac{b_k}{d_k}$ .
+> 
+>Além disso, para  $x=[a_{k+1}; \dots, a_n]$ , isso é igual a  $L(A)$ . Portanto,  $b_0 = \lfloor L(A) \rfloor$  está entre  $\lfloor L(\frac{p_k}{q_k}) \rfloor$  e  $\lfloor L(\frac{p_{k-1}}{q_{k-1}}) \rfloor$ . Quando eles são iguais, eles também são iguais a  $b_0$ .
+>
+>Observe que  $L(A) = (L_{b_0} \circ L_{b_1} \circ \dots \circ L_{b_m})(\infty)$ . Sabendo  $b_0$ , podemos compor  $L_{b_0}^{-1}$  com a transformação atual e continuar adicionando  $L_{a_{k+1}}$ ,  $L_{a_{k+2}}$  e assim por diante, procurando novos pisos para concordar, a partir dos quais seríamos capazes de deduzir  $b_1$  e assim por diante até recuperar todos os valores de  $[b_0; b_1, \dots, b_m]$ .
 
-Isso permite calcular  
-$A + \frac{p}{q} = \frac{qA + p}{q}$  e  
-$A \cdot \frac{p}{q} = \frac{p A}{q}$  para qualquer  
-$\frac{p}{q}$ .
+> # Aritmética de Frações Contínuas
+> Seja  $A=[a_0; a_1, \dots, a_n]$  e  $B=[b_0; b_1, \dots, b_m]$ . Calcule as representações de fração contínua de  $A+B$  e  $A \cdot B$ .
+> 
+>Solução A ideia aqui é semelhante ao problema anterior, mas em vez de   $L(x) = \frac{ax+b}{cx+d}$ , você deve considerar a transformação fracionária bilinear   $L(x, y) = \frac{axy+bx+cy+d}{exy+fx+gy+h}$ .
+>
+>Em vez de   $L(x) \mapsto L(L_{a_k}(x))$ , você mudaria sua transformação atual para   $L(x, y) \mapsto L(L_{a_k}(x), y)$  ou   $L(x, y) \mapsto L(x, L_{b_k}(y))$ .
+>
+> Então, você verifica se  $\lfloor \frac{a}{e} \rfloor = \lfloor \frac{b}{f} \rfloor = \lfloor \frac{c}{g} \rfloor = \lfloor \frac{d}{h} \rfloor$  e, se todos concordarem, você usa esse valor como  $c_k$  na fração resultante e altera a transformação para$$L(x, y) \mapsto \frac{1}{L(x, y) - c_k}.$$
 
-Solução
-Como observado anteriormente,  
-$[a_0; a_1, \dots, a_k] = (L_{a_0} \circ L_{a_1} \circ \dots \circ L_{a_k})(\infty)$ , portanto  
-$L([a_0; a_1, \dots, a_k]) = (L \circ L_{a_0} \circ L_{a_1} \circ \dots L_{a_k})(\infty)$ .
+> # Definição
+>Uma fração contínua  $x = [a_0; a_1, \dots]$  é dita ser periódica se  $x = [a_0; a_1, \dots, a_k, x]$  para algum  $k$ .
+>
+>Uma fração contínua  $x = [a_0; a_1, \dots]$  é dita ser eventualmente periódica se  $x = [a_0; a_1, \dots, a_k, y]$ , onde  $y$  é periódica.
 
-Assim, adicionando consequentemente  
-$L_{a_0}$ ,  
-$L_{a_1}$  e assim por diante, poderíamos calcular
+Para  $x = [1; 1, 1, \dots]$ , temos que  $x = 1 + \frac{1}{x}$ , assim  $x^2 = x + 1$ . Existe uma conexão genérica entre frações contínuas periódicas e equações quadráticas. Considere a seguinte equação:
+$$ x = [a_0; a_1, \dots, a_k, x].$$ 
+Por um lado, essa equação significa que a representação da fração contínua de  $x$  é periódica com o período  $k+1$ .
 
- 
- 
- 
- 
- 
-$$(L \circ L_{a_0} \circ \dots \circ L_{a_k})(x) = L\left(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}}\right)=\frac{a_k x + b_k}{c_k x + d_k}.$$ 
-Uma vez que  
-$L(x)$  é invertível, ela também é monótona em  
-$x$ . Portanto, para qualquer  
-$x \geq 0$ , vale que  
-$L(\frac{p_k x + p_{k-1}}{q_k x + q_{k-1}})$  está entre  
-$L(\frac{p_k}{q_k}) = \frac{a_k}{c_k}$  e  
-$L(\frac{p_{k-1}}{q_{k-1}}) = \frac{b_k}{d_k}$ .
+Por outro lado, usando a fórmula para convergentes, essa equação significa que
+$$x = \frac{p_k x + p_{k-1}}{q_k x + q_{k-1}}.$$ 
+Ou seja,  $x$  é uma transformação linear fracionária de si mesma. Da equação, segue que  
+$x$  é uma raiz da equação de segundo grau:
 
-Além disso, para  
-$x=[a_{k+1}; \dots, a_n]$ , isso é igual a  
-$L(A)$ . Portanto,  
-$b_0 = \lfloor L(A) \rfloor$  está entre  
-$\lfloor L(\frac{p_k}{q_k}) \rfloor$  e  
-$\lfloor L(\frac{p_{k-1}}{q_{k-1}}) \rfloor$ . Quando eles são iguais, eles também são iguais a  
-$b_0$ .
+$$q_k x^2 + (q_{k-1}-p_k)x - p_{k-1} = 0.$$ 
+Raciocínio semelhante se aplica a frações contínuas que são eventualmente periódicas, ou seja,  
+$x = [a_0; a_1, \dots, a_k, y]$  para  $y=[b_0; b_1, \dots, b_k, y]$ . De fato, da primeira equação derivamos que  
+$x = L_0(y)$  e da segunda equação que  $y = L_1(y)$ , onde  $L_0$  e  $L_1$  são transformações lineares fracionárias. Portanto,
+$$x = (L_0 \circ L_1)(y) = (L_0 \circ L_1 \circ L_0^{-1})(x).$$ 
+Pode-se ainda provar (e foi feito primeiramente por Lagrange) que, para qualquer equação quadrática  $ax^2+bx+c=0$  com coeficientes inteiros, sua solução  $x$  é uma fração contínua eventualmente periódica.
 
-Observe que  
-$L(A) = (L_{b_0} \circ L_{b_1} \circ \dots \circ L_{b_m})(\infty)$ . Sabendo  
-$b_0$ , podemos compor  
-$L_{b_0}^{-1}$  com a transformação atual e continuar adicionando  
-$L_{a_{k+1}}$ ,  
-$L_{a_{k+2}}$  e assim por diante, procurando novos pisos para concordar, a partir dos quais seríamos capazes de deduzir  
-$b_1$  e assim por diante até recuperar todos os valores de  
-$[b_0; b_1, \dots, b_m]$ .
+> # Quadratic Irracionalidade
+> 
+> Encontre a fração contínua de  $\alpha = \frac{x+y\sqrt{n}}{z}$ , onde  $x, y, z, n \in \mathbb Z$  e  $n > 0$  não é um quadrado perfeito.
+
+> # Solução
+>Para o  $k$ -ésimo quociente completo  $s_k$  do número, geralmente vale que
+$$\alpha = [a_0; a_1, \dots, a_{k-1}, s_k] = \frac{s_k p_{k-1} + p_{k-2}}{s_k q_{k-1} + q_{k-2}}.$$ 
+>Portanto,
+$$s_k = -\frac{\alpha q_{k-1} - p_{k-1}}{\alpha q_k - p_k} = -\frac{q_{k-1} y \sqrt n + (x q_{k-1} - z p_{k-1})}{q_k y \sqrt n + (xq_k-zp_k)}.$$ 
+>Multiplicando o numerador e o denominador por  $(xq_k - zp_k) - q_k y \sqrt n$ , nos livramos de  $\sqrt n$  no denominador, assim, os quocientes completos são da forma
+$$s_k = \frac{x_k + y_k \sqrt n}{z_k}.$$. 
+>Vamos encontrar  $s_{k+1}$ , assumindo que  $s_k$  é conhecido.
+>
+>Primeiramente,  $a_k = \lfloor s_k \rfloor = \left\lfloor \frac{x_k + y_k \lfloor \sqrt n \rfloor}{z_k} \right\rfloor$ . Então, 
+$$s_{k+1} = \frac{1}{s_k-a_k} = \frac{z_k}{(x_k - z_k a_k) + y_k \sqrt n} = \frac{z_k (x_k - y_k a_k) - y_k z_k \sqrt n}{(x_k - y_k a_k)^2 - y_k^2 n}.$$ 
+>Assim, se denotarmos  $t_k = x_k - y_k a_k$ , valerá que
+$$\begin{align}x_{k+1} &=& z_k t_k, \\ y_{k+1} &=& -y_k z_k, \\ z_{k+1} &=& t_k^2 - y_k^2 n.\end{align}$$ 
+>A coisa boa sobre essa representação é que, se reduzirmos  $x_{k+1}, y_{k+1}, z_{k+1}$  pelo seu maior divisor comum, o resultado será único. Portanto, podemos usá-lo para verificar se o estado atual já se repetiu e também para verificar onde foi o índice anterior que teve esse estado.
+>
+Abaixo está o código para calcular a representação da fração contínua para  
+$\alpha = \sqrt n$ :
+
+```Python
+# compute the continued fraction of sqrt(n)
+def sqrt(n):
+    n0 = math.floor(math.sqrt(n))
+    x, y, z = 1, 0, 1
+    a = []
+    def step(x, y, z):
+        a.append((x * n0 + y) // z)
+        t = y - a[-1]*z
+        x, y, z = -z*x, z*t, t**2 - n*x**2
+        g = math.gcd(x, math.gcd(y, z))
+        return x // g, y // g, z // g
+
+    used = dict()
+    for i in range(n):
+        used[x, y, z] = i
+        x, y, z = step(x, y, z)
+        if (x, y, z) in used:
+            return a
+
+Usando a mesma função de passo, mas diferentes  
+$x$ ,  
+$y$  e  
+$z$  iniciais, é possível calcular para  
+$\frac{x+y \sqrt{n}}{z}$  arbitrário.
+
+```
+
+># Tavrida NU Akai Contest - Fração Contínua
+>
+>Você recebe  $x$  e  $k$ , onde  $x$  não é um quadrado perfeito. Seja  $\sqrt x = [a_0; a_1, \dots]$ , encontre  $\frac{p_k}{q_k}=[a_0; a_1, \dots, a_k]$  para  $0 \leq k \leq 10^9$ .
+
+> # Solução
+>Após calcular o período de  $\sqrt x$ , é possível calcular  $a_k$  usando a exponenciação binária na transformação linear fracionária induzida pela representação da fração contínua. Para encontrar a transformação resultante, você comprime o período de tamanho  $T$  em uma única transformação e repete  $\lfloor \frac{k-1}{T}\rfloor$  vezes, após o qual você a combina manualmente com as transformações restantes.
+
+```python
+x, k = map(int, input().split())
+
+mod = 10**9+7
+
+# combine (A[0]*x + A[1]) / (A[2]*x + A[3]) and (B[0]*x + B[1]) / (B[2]*x + B[3])
+def combine(A, B):
+    return [t % mod for t in [A[0]*B[0]+A[1]*B[2], A[0]*B[1]+A[1]*B[3], A[2]*B[0]+A[3]*B[2], A[2]*B[1]+A[3]*B[3]]]
+
+A = [1, 0, 0, 1] # (x + 0) / (0*x + 1) = x
+
+a = sqrt(x)
+
+T = len(a) - 1 # período de a
+
+# aplicar ak + 1/x = (ak*x+1)/(1x+0) a (Ax + B) / (Cx + D)
+for i in reversed(range(1, len(a))):
+    A = combine([a[i], 1, 1, 0], A)
+
+def bpow(A, n):
+    return [1, 0, 0, 1] if not n else combine(A, bpow(A, n-1)) if n % 2 else bpow(combine(A, A), n // 2)
+
+
+C = (0, 1, 0, 0) # = 1 / 0
+while k % T:
+    i = k % T
+    C = combine([a[i], 1, 1, 0], C)
+    k -= 1
+
+C = combine(bpow(A, k // T), C)
+C = combine([a[0], 1, 1, 0], C)
+print(str(C[1]) + '/' + str(C[3]))
+```
+
