@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "67d9110592d92adb",
+        "id": "2b78924df9a702d3",
         "type": "tabs",
         "children": [
           {
-            "id": "98071bc528e009fe",
+            "id": "b3fbcec5e446ad22",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3dbdc0d0b77df630",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Frações contínuas.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Frações contínuas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Frações contínuas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Frações contínuas.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,10 +139,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "3dbdc0d0b77df630",
+  "active": "b3fbcec5e446ad22",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Frações contínuas.md",
+    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Pasted image 20240126195657.png",
     "Pasted image 20240126194921.png",
     "Pasted image 20240126191343.png",
