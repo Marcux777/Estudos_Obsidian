@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2e82b9a0d7c18c55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Números Complexos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "924c32237d82494b",
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Espaços Vetoriais.md",
+                "file": "Números Complexos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Espaços Vetoriais.md",
+                "file": "Números Complexos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Espaços Vetoriais.md"
+                "file": "Números Complexos.md"
               }
             }
           }
@@ -159,10 +172,11 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "465fb5e28af51eb9",
+  "active": "2e82b9a0d7c18c55",
   "lastOpenFiles": [
-    "Algebra Linear/Sumario.md",
     "Espaços Vetoriais.md",
+    "Números Complexos.md",
+    "Algebra Linear/Sumario.md",
     "Sem título.md",
     "Algebra Linear",
     "Matematica Pura",
@@ -194,7 +208,6 @@
     "Computação/One for All/Artigos/Algoritmo de Conversão.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
-    "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
     "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Pasted image 20240118170010.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
