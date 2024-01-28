@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2b78924df9a702d3",
+        "id": "e7374407b35b978b",
         "type": "tabs",
         "children": [
           {
-            "id": "b3fbcec5e446ad22",
+            "id": "e0c2c46c05f835ad",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Algebra Linear/Sumario.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "465fb5e28af51eb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Espaços Vetoriais.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -82,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Espaços Vetoriais.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Espaços Vetoriais.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Espaços Vetoriais.md"
+              }
             }
           }
         ]
@@ -139,24 +159,29 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b3fbcec5e446ad22",
+  "active": "465fb5e28af51eb9",
   "lastOpenFiles": [
-    "Frações contínuas.md",
+    "Algebra Linear/Sumario.md",
+    "Espaços Vetoriais.md",
+    "Sem título.md",
+    "Algebra Linear",
+    "Matematica Pura",
+    "Computação/One for All/Artigos/Frações contínuas.md",
     "Computação/One for All/Artigos/Algebra/Diversos.md",
-    "Pasted image 20240126195657.png",
-    "Pasted image 20240126194921.png",
-    "Pasted image 20240126191343.png",
-    "Pasted image 20240126191203.png",
-    "Melhores aproximações.md",
-    "Envoltórios de retículas.md",
-    "Desvios.md",
-    "Recorrência.md",
-    "Explicação Detalhada.md",
-    "Pasted image 20240126185928.png",
-    "Pasted image 20240126185817.png",
+    "Computação/Algebra.md",
+    "Computação/One for All/Artigos/Desvios.md",
+    "Computação/One for All/Artigos/Recorrência.md",
+    "Computação/One for All/Artigos/Pasted image 20240126191203.png",
+    "Computação/One for All/Artigos/Pasted image 20240126185817.png",
+    "Computação/One for All/Artigos/Melhores aproximações.md",
+    "Computação/One for All/Artigos/Explicação Detalhada.md",
+    "Computação/One for All/Artigos/Envoltórios de retículas.md",
+    "Computação/One for All/Artigos/Pasted image 20240126194921.png",
+    "Computação/One for All/Artigos/Pasted image 20240126195657.png",
+    "Computação/One for All/Artigos/Pasted image 20240126191343.png",
+    "Computação/One for All/Artigos/Pasted image 20240126185928.png",
     "Computação/One for All/Artigos/Operations on polynomials and series.md",
     "Computação/One for All/Artigos/Polynomial multiplication.md",
-    "Computação/Algebra.md",
     "Computação/One for All/Artigos/Formal power series.md",
     "Computação/One for All/Artigos/Long polynomial division.md",
     "Computação/One for All/Artigos/Aplicações.md",
@@ -170,8 +195,6 @@
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
     "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
-    "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
-    "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
     "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Pasted image 20240118170010.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
@@ -183,8 +206,6 @@
     "Computação/One for All/Artigos/Algebra/Integer factorization/Pasted image 20240119130130.png",
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes",
     "Computação/One for All/Artigos/Algebra/Primality tests",
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic",
-    "Computação/One for All/Artigos/Algebra/Linear Sieve"
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions"
   ]
 }

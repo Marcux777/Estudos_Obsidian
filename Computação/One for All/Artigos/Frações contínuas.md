@@ -474,8 +474,7 @@ Embora este problema seja tipicamente resolvido com o algoritmo estendido de Euc
 
 Seja  $\frac{A}{B}=[a_0; a_1, \dots, a_k]$ . Já foi demonstrado anteriormente que $p_k q_{k-1} - p_{k-1} q_k = (-1)^{k-1}$ . Substituindo  $p_k$  e  $q_k$  por  $A$  e  $B$ , obtemos
 $$Aq_{k-1} - Bp_{k-1} = (-1)^{k-1} g,$$ 
-onde  $g = \gcd(A, B)$ . Se  $C$  é divisível por  $g$ , então a solução é  $x = (-1)^{k-1}\frac{C}{g} q_{k-1}$  e  $y = (-1)^{k}\frac{C}{g} p_{k-1}$ .
-
+onde  $g = \gcd(A, B)$ . Se  $C$  é divisível por  $g$ , então a solução é  $x = (-1)^{k-1}\frac{C}{g} q_{k-1}$  e  $y = (-1)^{k}\frac{C}{g} p_{k-1}$.
 
 ```Python
 # retorna (x, y) tal que Ax+By=C
