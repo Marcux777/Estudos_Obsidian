@@ -659,20 +659,27 @@ Note que  $\vec r_k \times r = (q;p) \times (1;r) = qr - p$ , assim 
 $$a_k = \left\lfloor \left| \frac{q_{k-1}r-p_{k-1}}{q_{k-2}r-p_{k-2}} \right| \right\rfloor.$$
 
 > # Explicação
-	Como já observamos,  $a_k = \lfloor s_k \rfloor$ , onde  $s_k = [a_k; a_{k+1}, a_{k+2}, \dots]$ . Por outro lado, da recorrência convergente, derivamos que 
-	$$r = [a_0; a_1, \dots, a_{k-1}, s_k] = \frac{s_k p_{k-1} + p_{k-2}}{s_k q_{k-1} + q_{k-2}}.$$
+	Como já observamos,  $a_k = \lfloor s_k \rfloor$ , onde  $s_k = [a_k; a_{k+1}, a_{k+2}, \dots]$ . Por outro lado, da recorrência convergente, derivamos que  $$r = [a_0; a_1, \dots, a_{k-1}, s_k] = \frac{s_k p_{k-1} + p_{k-2}}{s_k q_{k-1} + q_{k-2}}.$$
 	Na forma vetorial, reescreve-se como $$\vec r \parallel s_k \vec r_{k-1} + \vec r_{k-2},$$
 	significando que  $\vec r$  e  $s_k \vec r_{k-1} + \vec r_{k-2}$  são colineares (ou seja, têm o mesmo coeficiente angular). Tomando o produto pseudoscalar de ambas as partes com  $\vec r$ , obtemos  $$0 = s_k (\vec r_{k-1} \times \vec r) + (\vec r_{k-2} \times \vec r),$$ 
 	o que nos dá a fórmula final $$s_k = -\frac{\vec r_{k-2} \times \vec r}{\vec r_{k-1} \times \vec r}.$$
 
+
 > # Algoritmo de esticamento do nariz
 >	Cada vez que você adiciona  $\vec r_{k-1}$  ao vetor  $\vec p$ , o valor de  $\vec p \times \vec r$  é aumentado por  	$\vec r_{k-1} \times \vec r$ .
+>	
 >	Assim,  $a_k=\lfloor s_k \rfloor$  é o número máximo inteiro de vetores  $\vec r_{k-1}$  que podem ser adicionados a  $\vec r_{k-2}$  sem alterar o sinal do produto vetorial com $\vec r$ .
 >	Em outras palavras,  $a_k$  é o número máximo inteiro de vezes que você pode adicionar  $\vec r_{k-1}$  a  $\vec r_{k-2}$  sem cruzar a linha definida por  $\vec r$ :
+>	
 >	![[Pasted image 20240129153352.png]]
->	Convergentes de  $r=\frac{7}{9}=[0;1,3,2]$ . Semiconvergentes correspondem a pontos intermediários entre as setas cinzas.
+>	*Convergentes de  $r=\frac{7}{9}=[0;1,3,2]$ . Semiconvergentes correspondem a pontos intermediários entre as setas cinzas.*
+>	
 >	Na imagem acima,  $\vec r_2 = (4;3)$  é obtido adicionando repetidamente  $\vec r_1 = (1;1)$  a  $\vec r_0 = (1;0)$ .
+>	
 >	Quando não é possível adicionar mais  $\vec r_1$  a  $\vec r_0$  sem cruzar a linha  $y=rx$ , vamos para o outro lado e adicionamos repetidamente  $\vec r_2$  a  $\vec r_1$  para obter  $\vec r_3 = (9;7)$ .
+>	
 >	Este procedimento gera vetores exponencialmente mais longos, que se aproximam da linha.
+>	
 >	Por esta propriedade, o procedimento de geração de vetores convergentes consecutivos foi apelidado de algoritmo de esticamento do nariz por Boris Delaunay.
+
 
