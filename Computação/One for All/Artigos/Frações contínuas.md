@@ -646,4 +646,49 @@ C = combine([a[0], 1, 1, 0], C)
 print(str(C[1]) + '/' + str(C[3]))
 ```
 
-## 
+## Interpretação geométrica¶
+Seja  
+$\vec r_k = (q_k;p_k)$  para o convergente  
+ 
+ 
+$r_k = \frac{p_k}{q_k}$ . Então, a seguinte recorrência é válida:
+
+ 
+$$\vec r_k = a_k \vec r_{k-1} + \vec r_{k-2}.$$ 
+Seja  
+$\vec r = (1;r)$ . Então, cada vetor  
+$(x;y)$  corresponde ao número que é igual ao seu coeficiente angular  
+ 
+ 
+$\frac{y}{x}$ .
+
+Com a noção de produto pseudoscalar  
+$(x_1;y_1) \times (x_2;y_2) = x_1 y_2 - x_2 y_1$ , pode ser mostrado (veja a explicação abaixo) que
+
+ 
+ 
+ 
+ 
+ 
+$$s_k = -\frac{\vec r_{k-2} \times \vec r}{\vec r_{k-1} \times \vec r} = \left|\frac{\vec r_{k-2} \times \vec r}{\vec r_{k-1} \times \vec r}\right|.$$ 
+A última equação é devido ao fato de que  
+$r_{k-1}$  e  
+$r_{k-2}$  estão em lados diferentes de  
+$r$ , assim os produtos pseudoscalares de  
+$\vec r_{k-1}$  e  
+$\vec r_{k-2}$  com  
+$\vec r$  têm sinais distintos. Com  
+$a_k = \lfloor s_k \rfloor$  em mente, a fórmula para  
+$\vec r_k$  agora parece
+
+ 
+ 
+ 
+$$\vec r_k = \vec r_{k-2} + \left\lfloor \left| \frac{\vec r \times \vec r_{k-2}}{\vec r \times \vec r_{k-1}}\right|\right\rfloor \vec r_{k-1}.$$ 
+Note que  
+$\vec r_k \times r = (q;p) \times (1;r) = qr - p$ , assim
+
+ 
+ 
+ 
+$$a_k = \left\lfloor \left| \frac{q_{k-1}r-p_{k-1}}{q_{k-2}r-p_{k-2}} \right| \right\rfloor.$$
