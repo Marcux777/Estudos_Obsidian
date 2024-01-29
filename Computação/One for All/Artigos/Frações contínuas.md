@@ -683,3 +683,23 @@ $$a_k = \left\lfloor \left| \frac{q_{k-1}r-p_{k-1}}{q_{k-2}r-p_{k-2}} \right| \r
 >	Por esta propriedade, o procedimento de geração de vetores convergentes consecutivos foi apelidado de algoritmo de esticamento do nariz por Boris Delaunay.
 
 
+Se olharmos para o triângulo desenhado nos pontos  $\vec r_{k-2}$ ,  
+$\vec r_{k}$  e  
+$\vec 0$ , notaremos que sua área dobrada é
+
+ 
+$$|\vec r_{k-2} \times \vec r_k| = |\vec r_{k-2} \times (\vec r_{k-2} + a_k \vec r_{k-1})| = a_k |\vec r_{k-2} \times \vec r_{k-1}| = a_k.$$ 
+Combinado com o teorema de Pick, isso significa que não há pontos de grade estritamente dentro do triângulo e os únicos pontos de grade em sua borda são  
+$\vec 0$  e  
+$\vec r_{k-2} + t \cdot \vec r_{k-1}$  para todos os inteiros  
+$t$  tal que  
+$0 \leq t \leq a_k$ . Quando unidos para todos os possíveis  
+$k$ , isso significa que não há pontos inteiros no espaço entre os polígonos formados pelos vetores convergentes de índices pares e ímpares.
+
+Isso, por sua vez, significa que  
+$\vec r_k$  com coeficientes ímpares formam um casco convexo de pontos de grade com  
+$x \geq 0$  acima da linha  
+$y=rx$ , enquanto  
+$\vec r_k$  com coeficientes pares formam um casco convexo de pontos de grade com  
+$x > 0$  abaixo da linha  
+$y=rx$ .
