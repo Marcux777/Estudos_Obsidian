@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4f07f4d9b9d6aea7",
+        "id": "1a774336a9a25ab8",
         "type": "tabs",
         "children": [
           {
-            "id": "b4ab9e4eac3d34e9",
+            "id": "9fbd96ea8e0df046",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Envoltórios de retículas.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Envoltórios de retículas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Envoltórios de retículas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computação/One for All/Artigos/Envoltórios de retículas.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,16 +138,20 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b4ab9e4eac3d34e9",
+  "active": "9fbd96ea8e0df046",
   "lastOpenFiles": [
-    "Computação/Algebra.md",
+    "Algebra Linear/Sumario.md",
     "Computação/One for All/Artigos/Desvios.md",
+    "Computação/One for All/Artigos/Explicação Detalhada.md",
+    "Computação/One for All/Artigos/Frações contínuas.md",
+    "Computação/One for All/Artigos/Algebra/Diversos.md",
+    "Computação/Algebra.md",
+    "Computação/One for All/Artigos/Melhores aproximações.md",
     "Computação/One for All/Artigos/Envoltórios de retículas.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
     "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
     "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
     "Computação/One for All/Artigos/Fast Fourier transform.md",
-    "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
     "Computação/One for All/Enumerating submasks of a bitmask.md",
     "Computação/One for All/Artigos/Bit manipulation.md",
@@ -168,13 +164,9 @@
     "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Solução Algorítmica - Equações Diofantinas Lineares.md",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/README.md",
-    "Computação/One for All/Artigos/Explicação Detalhada.md",
     "Computação/One for All/Artigos/Factoring Exponentiation.md",
-    "Computação/One for All/Artigos/Frações contínuas.md",
     "Computação/One for All/Artigos/Pasted image 20240129153352.png",
-    "Algebra Linear/Sumario.md",
     "Números Complexos.md",
-    "Espaços Vetoriais.md",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Pasted image 20240126191203.png",
