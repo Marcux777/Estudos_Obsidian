@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e7374407b35b978b",
+        "id": "3351802585f16505",
         "type": "tabs",
         "children": [
           {
-            "id": "e0c2c46c05f835ad",
+            "id": "37bd6f6e3bbdd81e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra Linear/Sumario.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "465fb5e28af51eb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Espaços Vetoriais.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e82b9a0d7c18c55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Frações contínuas.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Frações contínuas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Frações contínuas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computação/One for All/Artigos/Frações contínuas.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -171,18 +138,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "2e82b9a0d7c18c55",
+  "active": "37bd6f6e3bbdd81e",
   "lastOpenFiles": [
-    "Pasted image 20240129153352.png",
+    "Computação/One for All/Artigos/Frações contínuas.md",
     "Computação/One for All/Artigos/Algebra/Diversos.md",
     "Computação/Algebra.md",
-    "Números Complexos.md",
-    "Espaços Vetoriais.md",
     "Algebra Linear/Sumario.md",
+    "Espaços Vetoriais.md",
+    "Pasted image 20240129153352.png",
+    "Números Complexos.md",
     "Sem título.md",
     "Algebra Linear",
     "Matematica Pura",
-    "Computação/One for All/Artigos/Frações contínuas.md",
     "Computação/One for All/Artigos/Desvios.md",
     "Computação/One for All/Artigos/Recorrência.md",
     "Computação/One for All/Artigos/Pasted image 20240126191203.png",
@@ -215,7 +182,6 @@
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Pasted image 20240119130130.png",
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes",
     "Computação/One for All/Artigos/Algebra/Primality tests",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions"
