@@ -1,2 +1,3 @@
-[[Fundamental - Data Structures]]
+[[Fundamentals - Data Structures]]
 
+[[Trees - Data Structures]]

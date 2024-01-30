@@ -59,4 +59,53 @@ for (int i = K; i >= 0; i--) {
 ```
 A complexidade de tempo para uma Consulta de Soma de Intervalo é  $O(K) = O(\log \text{MAXN})$ .
 
+### Consultas de Mínimo de Intervalo (RMQ)
+Estas são as consultas onde a Tabela Esparsa brilha. Ao calcular o mínimo de um intervalo, não importa se processamos um valor no intervalo uma ou duas vezes. Portanto, em vez de dividir um intervalo em vários intervalos, também podemos dividir o intervalo em apenas dois intervalos sobrepostos com comprimento de potência de dois. Por exemplo, podemos dividir o intervalo  $[1, 6]$  nos intervalos  $[1, 4]$  e  $[3, 6]$ . O mínimo do intervalo  $[1, 6]$  é claramente o mesmo que o mínimo do mínimo do intervalo  $[1, 4]$  e o mínimo do intervalo  $[3, 6]$ . Então, podemos calcular o mínimo do intervalo  $[L, R]$  com:
+ 
+$$\min(\text{st}[i][L], \text{st}[i][R - 2^i + 1]) \quad \text{ onde } i = \log_2(R - L + 1)$$ 
+Isso requer que possamos calcular  $\log_2(R - L + 1)$  rapidamente. Você pode conseguir isso pré-computando todos os logaritmos:
 
+```c++
+int lg[MAXN+1];
+lg[1] = 0;
+for (int i = 2; i <= MAXN; i++)
+    lg[i] = lg[i/2] + 1;
+```
+Alternativamente, o log pode ser calculado em tempo e espaço constantes:
+```c++
+// C++20
+#include <bit>
+int log2_floor(unsigned long i) {
+    return std::bit_width(i) - 1;
+}
+
+// pré C++20
+int log2_floor(unsigned long long i) {
+    return i ? __builtin_clzll(1) - __builtin_clzll(i) : -1;
+}
+```
+Este benchmark mostra que usar o array lg é mais lento devido a falhas de cache.
+Depois, precisamos pré-computar a estrutura da Tabela Esparsa. Desta vez, definimos  $f$  com  $f(x, y) = \min(x, y)$ .
+
+```c++
+int st[K + 1][MAXN];
+
+std::copy(array.begin(), array.end(), st[0]);
+
+for (int i = 1; i <= K; i++)
+    for (int j = 0; j + (1 << i) <= N; j++)
+        st[i][j] = min(st[i - 1][j], st[i - 1][j + (1 << (i - 1))]);
+```
+E o mínimo de um intervalo  $[L, R]$  pode ser calculado com:
+
+```c++
+int i = lg[R - L + 1];
+int minimum = min(st[i][L], st[i][R - (1 << i) + 1]);
+```
+A complexidade de tempo para uma Consulta de Mínimo de Intervalo é  
+$O(1)$ .
+
+### Estruturas de dados semelhantes que suportam mais tipos de consultas
+Uma das principais fraquezas da abordagem  $O(1)$  discutida na seção anterior é que essa abordagem só suporta consultas de funções idempotentes. Ou seja, funciona muito bem para consultas de mínimo de intervalo, mas não é possível responder a consultas de soma de intervalo usando essa abordagem.
+
+Existem estruturas de dados semelhantes que podem lidar com qualquer tipo de funções associativas e responder a consultas de intervalo em  $O(1)$ . Uma delas é chamada de Tabela Esparsa Disjunta. Outra seria a Árvore Sqrt.
