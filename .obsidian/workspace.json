@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ed02b18c1eb25377",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Disjoint Set Union.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Trees - Data Structures.md",
+                "file": "Disjoint Set Union.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Trees - Data Structures.md",
+                "file": "Disjoint Set Union.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Trees - Data Structures.md"
+                "file": "Disjoint Set Union.md"
               }
             }
           }
@@ -159,10 +171,12 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "e4e4383754e30061",
+  "active": "ed02b18c1eb25377",
   "lastOpenFiles": [
-    "Data Structures.md",
+    "Pasted image 20240130193618.png",
     "Trees - Data Structures.md",
+    "Disjoint Set Union.md",
+    "Data Structures.md",
     "Trees.md",
     "Fundamentals - Data Structures.md",
     "c.md",
@@ -185,8 +199,6 @@
     "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
     "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
     "Computação/One for All/Artigos/Fast Fourier transform.md",
-    "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
-    "Computação/One for All/Enumerating submasks of a bitmask.md",
     "Computação/One for All/Artigos/Pasted image 20240129153352.png",
     "Algebra Linear",
     "Matematica Pura",
