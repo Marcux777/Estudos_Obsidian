@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3351802585f16505",
+        "id": "16389bb597185d47",
         "type": "tabs",
         "children": [
           {
-            "id": "37bd6f6e3bbdd81e",
+            "id": "cd01eb0b8e02bdd0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Desvios.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "converg",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computação/One for All/Artigos/Desvios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Computação/One for All/Artigos/Desvios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Computação/One for All/Artigos/Desvios.md"
+              }
             }
           }
         ]
@@ -138,42 +147,43 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "37bd6f6e3bbdd81e",
+  "active": "cd01eb0b8e02bdd0",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Frações contínuas.md",
+    "Computação/One for All/Artigos/Envoltórios de retículas.md",
+    "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
+    "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
+    "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
+    "Computação/One for All/Artigos/Fast Fourier transform.md",
     "Computação/One for All/Artigos/Algebra/Diversos.md",
+    "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
+    "Computação/One for All/Enumerating submasks of a bitmask.md",
+    "Computação/One for All/Artigos/Bit manipulation.md",
     "Computação/Algebra.md",
+    "Computação/One for All/Artigos/Competitive Programming/Fundamental.md",
+    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo de Euclides Estendido.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Encontrando a solução com valor mínimo de x + y - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Encontrar o número de soluções e as soluções em um determinado intervalo - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Obtendo todas as Soluções - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Solução Algorítmica - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
+    "Computação/README.md",
+    "Computação/One for All/Artigos/Explicação Detalhada.md",
+    "Computação/One for All/Artigos/Factoring Exponentiation.md",
+    "Computação/One for All/Artigos/Frações contínuas.md",
+    "Computação/One for All/Artigos/Pasted image 20240129153352.png",
     "Algebra Linear/Sumario.md",
-    "Espaços Vetoriais.md",
-    "Pasted image 20240129153352.png",
     "Números Complexos.md",
+    "Espaços Vetoriais.md",
     "Sem título.md",
     "Algebra Linear",
     "Matematica Pura",
-    "Computação/One for All/Artigos/Desvios.md",
-    "Computação/One for All/Artigos/Recorrência.md",
     "Computação/One for All/Artigos/Pasted image 20240126191203.png",
     "Computação/One for All/Artigos/Pasted image 20240126185817.png",
-    "Computação/One for All/Artigos/Melhores aproximações.md",
-    "Computação/One for All/Artigos/Explicação Detalhada.md",
-    "Computação/One for All/Artigos/Envoltórios de retículas.md",
     "Computação/One for All/Artigos/Pasted image 20240126194921.png",
     "Computação/One for All/Artigos/Pasted image 20240126195657.png",
     "Computação/One for All/Artigos/Pasted image 20240126191343.png",
     "Computação/One for All/Artigos/Pasted image 20240126185928.png",
-    "Computação/One for All/Artigos/Operations on polynomials and series.md",
-    "Computação/One for All/Artigos/Polynomial multiplication.md",
-    "Computação/One for All/Artigos/Formal power series.md",
-    "Computação/One for All/Artigos/Long polynomial division.md",
-    "Computação/One for All/Artigos/Aplicações.md",
-    "Computação/One for All/Artigos/Fast Fourier transform.md",
-    "Computação/One for All/Artigos/Algebra/Sistemas numéricos.md",
-    "Computação/One for All/Artigos/Código Gray.md",
-    "Computação/One for All/Artigos/Ternário Equilibrado.md",
-    "Computação/One for All/Artigos/Algebra/Aritmética modular.md",
-    "Computação/README.md",
-    "Computação/One for All/Artigos/Algoritmo de Conversão.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
     "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Pasted image 20240118170010.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
