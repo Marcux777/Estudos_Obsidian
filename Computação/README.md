@@ -1,3 +1,6 @@
 Teoria e algoritmos prontos
 
-# [[Algebra]]
+# [[Álgebra]]
+
+# [[Data Structures]]
+
