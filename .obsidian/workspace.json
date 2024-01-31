@@ -11,8 +11,12 @@
             "id": "30d867b2f0b9299c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Data Structures.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "c.md"
+                "file": "Data Structures.md"
               }
             }
           }
@@ -140,8 +146,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "30d867b2f0b9299c",
   "lastOpenFiles": [
+    "c.md",
     "Data Structures.md",
     "Trees - Data Structures.md",
     "Disjoint Set Union.md",
@@ -149,7 +156,6 @@
     "Pasted image 20240130193618.png",
     "Trees.md",
     "Fundamentals - Data Structures.md",
-    "c.md",
     "Sparse Table.md",
     "Minimum stack - Minimum queue.md",
     "Computação/README.md",
