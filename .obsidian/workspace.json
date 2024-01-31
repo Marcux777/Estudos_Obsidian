@@ -11,12 +11,8 @@
             "id": "30d867b2f0b9299c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "c.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "c.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "c.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +140,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "30d867b2f0b9299c",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Data Structures.md",
     "Trees - Data Structures.md",
