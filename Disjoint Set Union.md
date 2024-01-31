@@ -365,6 +365,81 @@ for (int i = 0; i < n; i++) {
 ```
 Hoje em dia, este algoritmo é conhecido como truque de Arpa. Ele recebeu o nome de AmirReza Poorakhavan, que descobriu e popularizou esta técnica de forma independente. Embora este algoritmo já existisse antes de sua descoberta.
 
-Ancestral Comum Mais Baixo Offline (LCA) em uma árvore em  
-$O(\alpha(n))$  em média¶
+### Ancestral Comum Mais Baixo Offline (LCA) em uma árvore em  $O(\alpha(n))$  em média
 O algoritmo para encontrar o LCA é discutido no artigo Ancestral Comum Mais Baixo - Algoritmo offline de Tarjan. Este algoritmo se compara favoravelmente com outros algoritmos para encontrar o LCA devido à sua simplicidade (especialmente em comparação com um algoritmo ótimo como o de Farach-Colton e Bender).
+
+### Armazenando o DSU explicitamente em uma lista de conjuntos / Aplicações desta ideia ao mesclar várias estruturas de dados
+Uma das maneiras alternativas de armazenar o DSU é a preservação de cada conjunto na forma de uma lista explicitamente armazenada de seus elementos. Ao mesmo tempo, cada elemento também armazena a referência ao representante de seu conjunto.
+
+À primeira vista, isso parece uma estrutura de dados ineficiente: ao combinar dois conjuntos, teremos que adicionar uma lista ao final de outra e teremos que atualizar a liderança em todos os elementos de uma das listas.
+
+No entanto, verifica-se que o uso de uma heurística de ponderação (semelhante à União por tamanho) pode reduzir significativamente a complexidade assintótica:  
+$O(m + n \log n)$  para realizar  $m$  consultas nos  $n$  elementos.
+
+Sob heurística de ponderação, entendemos que sempre adicionaremos o menor dos dois conjuntos ao maior conjunto. Adicionar um conjunto a outro é fácil de implementar em union_sets e levará tempo proporcional ao tamanho do conjunto adicionado. E a busca pelo líder em find_set levará  $O(1)$  com este método de armazenamento.
+
+Vamos provar a complexidade do tempo  $O(m + n \log n)$  para a execução de  $m$  consultas. Vamos fixar um elemento arbitrário  $x$  e contar quantas vezes ele foi tocado na operação de mesclagem union_sets. Quando o elemento  $x$  é tocado pela primeira vez, o tamanho do novo conjunto será pelo menos  $2$ . Quando é tocado pela segunda vez, o conjunto resultante terá tamanho de pelo menos  $4$ , porque o conjunto menor é adicionado ao maior. E assim por diante. Isso significa que  $x$  só pode ser movido no máximo  $\log n$  operações de mesclagem. Assim, a soma sobre todos os vértices dá  $O(n \log n)$  mais  $O(1)$  para cada solicitação.
+
+Aqui está uma implementação:
+
+```cpp
+vector<int> lst[MAXN];
+int parent[MAXN];
+
+void make_set(int v) {
+    lst[v] = vector<int>(1, v);
+    parent[v] = v;
+}
+
+int find_set(int v) {
+    return parent[v];
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (lst[a].size() < lst[b].size())
+            swap(a, b);
+        while (!lst[b].empty()) {
+            int v = lst[b].back();
+            lst[b].pop_back();
+            parent[v] = a;
+            lst[a].push_back (v);
+        }
+    }
+}
+```
+Esta ideia de adicionar a parte menor a uma parte maior também pode ser usada em muitas soluções que não têm nada a ver com DSU.
+
+Por exemplo, considere o seguinte problema: nos é dado uma árvore, cada folha tem um número atribuído (o mesmo número pode aparecer várias vezes em folhas diferentes). Queremos calcular o número de números diferentes na subárvore para cada nó da árvore.
+
+Aplicando a esta tarefa a mesma ideia, é possível obter esta solução: podemos implementar um DFS, que retornará um ponteiro para um conjunto de inteiros - a lista de números naquela subárvore. Então, para obter a resposta para o nó atual (a menos, é claro, que seja uma folha), chamamos DFS para todos os filhos desse nó e mesclamos todos os conjuntos recebidos juntos. O tamanho do conjunto resultante será a resposta para o nó atual. Para combinar eficientemente vários conjuntos, basta aplicar a receita acima descrita: mesclamos os conjuntos simplesmente adicionando os menores aos maiores. No final, obtemos uma solução  $O(n \log^2 n)$ , porque um número só será adicionado a um conjunto no máximo  $O(\log n)$  vezes.
+
+### Armazenando o DSU mantendo uma estrutura de árvore clara / Encontrando pontes online em  $O(\alpha(n))$  em média
+Uma das aplicações mais poderosas do DSU é que ele permite armazenar tanto como árvores comprimidas quanto não comprimidas. A forma comprimida pode ser usada para mesclar árvores e para a verificação se dois vértices estão na mesma árvore, e a forma não comprimida pode ser usada - por exemplo - para buscar caminhos entre dois vértices dados, ou outras travessias da estrutura da árvore.
+
+Na implementação, isso significa que, além do array de ancestrais comprimidos parent[], precisaremos manter o array de ancestrais não comprimidos real_parent[]. É trivial que manter esse array adicional não piorará a complexidade: as mudanças nele só ocorrem quando mesclamos duas árvores, e apenas em um elemento.
+
+Por outro lado, quando aplicado na prática, muitas vezes precisamos conectar árvores usando uma aresta especificada que não seja usando os dois nós raiz. Isso significa que não temos outra escolha a não ser reenraizar uma das árvores (fazer as extremidades da aresta a nova raiz da árvore).
+
+À primeira vista, parece que esse reenraizamento é muito caro e piorará muito a complexidade do tempo. De fato, para enraizar uma árvore no vértice  $v$ , devemos ir do vértice à raiz antiga e mudar as direções em parent[] e real_parent[] para todos os nós nesse caminho.
+
+No entanto, na realidade, não é tão ruim, podemos simplesmente reenraizar a menor das duas árvores, semelhante às ideias nas seções anteriores, e obter  
+$O(\log n)$  em média.
+
+Mais detalhes (incluindo prova da complexidade do tempo) podem ser encontrados no artigo Encontrando Pontes Online.
+
+### Retrospectiva histórica
+A estrutura de dados DSU é conhecida há muito tempo.
+
+Essa maneira de armazenar essa estrutura na forma de uma floresta de árvores foi aparentemente descrita pela primeira vez por Galler e Fisher em 1964 (Galler, Fisher, "Um algoritmo de equivalência aprimorado"), no entanto, a análise completa da complexidade do tempo foi conduzida muito mais tarde.
+
+As otimizações de compressão de caminho e União por classificação foram desenvolvidas por McIlroy e Morris, e independentemente deles também por Tritter.
+
+Hopcroft e Ullman mostraram em 1973 a complexidade do tempo  $O(\log^\star n)$  (Hopcroft, Ullman "Algoritmos de fusão de conjuntos") - aqui  $\log^\star$  é o logaritmo iterado (esta é uma função de crescimento lento, mas ainda não tão lenta quanto a função inversa de Ackermann).
+
+Pela primeira vez, a avaliação de  $O(\alpha(n))$  foi mostrada em 1975 (Tarjan "Eficiência de um bom, mas não linear, algoritmo de união de conjuntos"). Mais tarde, em 1985, ele, juntamente com Leeuwen, publicou várias análises de complexidade para várias heurísticas de classificação diferentes e maneiras de comprimir o caminho (Tarjan, Leeuwen "Análise de pior caso de algoritmos de união de conjuntos").
+
+Finalmente, em 1989, Fredman e Sachs provaram que, no modelo de computação adotado, qualquer algoritmo para o problema de união de conjuntos disjuntos tem que trabalhar pelo menos em  
+$O(\alpha(n))$  tempo em média (Fredman, Saks, "A complexidade de sonda de célula de estruturas de dados dinâmicas").
