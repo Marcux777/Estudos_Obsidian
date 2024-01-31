@@ -1,4 +1,4 @@
-## União de Conjuntos Disjuntos
+# União de Conjuntos Disjuntos
 Este artigo discute a estrutura de dados União de Conjuntos Disjuntos ou DSU. Muitas vezes também é chamada de Union Find por causa de suas duas principais operações.
 
 Esta estrutura de dados fornece as seguintes capacidades. Recebemos vários elementos, cada um dos quais é um conjunto separado. Uma DSU terá uma operação para combinar quaisquer dois conjuntos, e será capaz de dizer em qual conjunto um elemento específico está. A versão clássica também introduz uma terceira operação, ela pode criar um conjunto a partir de um novo elemento.
@@ -12,7 +12,7 @@ Como descrito em mais detalhes mais tarde, a estrutura de dados permite que voc�
 
 Também em uma das subseções, uma estrutura alternativa de uma DSU é explicada, que alcança uma complexidade média mais lenta de  $O(\log n)$ , mas pode ser mais poderosa do que a estrutura regular DSU.
 
-### Construir uma estrutura de dados eficiente
+## Construir uma estrutura de dados eficiente
 Armazenaremos os conjuntos na forma de árvores: cada árvore corresponderá a um conjunto. E a raiz da árvore será o representante/líder do conjunto.
 
 Na imagem a seguir, você pode ver a representação de tais árvores.
@@ -126,3 +126,57 @@ void union_sets(int a, int b) {
 ```
 Ambas as otimizações são equivalentes em termos de complexidade de tempo e espaço. Portanto, na prática, você pode usar qualquer uma delas.
 
+### Complexidade de Tempo
+Como mencionado antes, se combinarmos ambas as otimizações - compressão de caminho com união por tamanho / classificação - alcançaremos consultas de tempo quase constante. Acontece que a complexidade de tempo amortizada final é  
+$O(\alpha(n))$ , onde  
+$\alpha(n)$  é a função inversa de Ackermann, que cresce muito lentamente. Na verdade, ela cresce tão lentamente, que não excede  
+$4$  para todos os  
+$n$  razoáveis (aproximadamente  
+$n < 10^{600}$ ).
+
+A complexidade amortizada é o tempo total por operação, avaliada ao longo de uma sequência de várias operações. A ideia é garantir o tempo total de toda a sequência, enquanto permite que operações individuais sejam muito mais lentas do que o tempo amortizado. Por exemplo, em nosso caso, uma única chamada pode levar  
+$O(\log n)$  no pior caso, mas se fizermos  
+$m$  tais chamadas consecutivas, acabaremos com um tempo médio de  
+$O(\alpha(n))$ .
+
+Também não apresentaremos uma prova para essa complexidade de tempo, pois ela é bastante longa e complicada.
+
+Além disso, vale a pena mencionar que DSU com união por tamanho / classificação, mas sem compressão de caminho, funciona em  
+$O(\log n)$  tempo por consulta.
+
+### Ligação por Índice / Ligação por Sorteio
+Tanto a união por classificação quanto a união por tamanho exigem que você armazene dados adicionais para cada conjunto e mantenha esses valores durante cada operação de união. Existe também um algoritmo randomizado, que simplifica um pouco a operação de união: ligação por índice.
+
+Atribuímos a cada conjunto um valor aleatório chamado índice, e anexamos o conjunto com o índice menor ao que tem o índice maior. É provável que um conjunto maior tenha um índice maior do que o conjunto menor, portanto, essa operação está intimamente relacionada à união por tamanho. Na verdade, pode ser provado que essa operação tem a mesma complexidade de tempo que a união por tamanho. No entanto, na prática, é um pouco mais lento do que a união por tamanho.
+
+Você pode encontrar uma prova da complexidade e até mais técnicas de união aqui.
+
+```c++
+void make_set(int v) {
+    parent[v] = v;
+    index[v] = rand();
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (index[a] < index[b])
+            swap(a, b);
+        parent[b] = a;
+    }
+}
+```
+É um equívoco comum que apenas jogar uma moeda, para decidir qual conjunto anexamos ao outro, tem a mesma complexidade. No entanto, isso não é verdade. O artigo vinculado acima conjectura que a ligação por sorteio combinada com a compressão de caminho tem complexidade  $\Omega\left(n \frac{\log n}{\log \log n}\right)$ . E nos benchmarks, ele se sai muito pior do que a união por tamanho/classificação ou ligação por índice.
+
+```c++
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (rand() % 2)
+            swap(a, b);
+        parent[b] = a;
+    }
+}
+```
