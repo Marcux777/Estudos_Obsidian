@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures.md",
+                "file": "Fundamentals - Data Structures.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structures.md",
+                "file": "Fundamentals - Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Structures.md",
+                "file": "Fundamentals - Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Structures.md"
+                "file": "Fundamentals - Data Structures.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "30d867b2f0b9299c",
   "lastOpenFiles": [
-    "c.md",
-    "Data Structures.md",
-    "Trees - Data Structures.md",
     "Disjoint Set Union.md",
+    "Data Structures.md",
+    "c.md",
+    "Trees - Data Structures.md",
     "Pasted image 20240130200911.png",
     "Pasted image 20240130193618.png",
     "Trees.md",
