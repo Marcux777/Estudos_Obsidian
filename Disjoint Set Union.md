@@ -430,7 +430,7 @@ $O(\log n)$  em média.
 
 Mais detalhes (incluindo prova da complexidade do tempo) podem ser encontrados no artigo Encontrando Pontes Online.
 
-### Retrospectiva histórica
+## Retrospectiva histórica
 A estrutura de dados DSU é conhecida há muito tempo.
 
 Essa maneira de armazenar essa estrutura na forma de uma floresta de árvores foi aparentemente descrita pela primeira vez por Galler e Fisher em 1964 (Galler, Fisher, "Um algoritmo de equivalência aprimorado"), no entanto, a análise completa da complexidade do tempo foi conduzida muito mais tarde.
