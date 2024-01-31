@@ -23,3 +23,106 @@ No início, cada elemento começa como um único conjunto, portanto cada vértic
 
 Para a implementação, isso significa que teremos que manter um array `parent` que armazena uma referência ao seu ancestral imediato na árvore.
 
+### Implementação Ingênua
+Já podemos escrever a primeira implementação da estrutura de dados União de Conjuntos Disjuntos. Será bastante ineficiente no início, mas depois podemos melhorá-la usando duas otimizações, de modo que levará quase um tempo constante para cada chamada de função.
+
+Como dissemos, todas as informações sobre os conjuntos de elementos serão mantidas em um array `parent`.
+
+Para criar um novo conjunto (operação `make_set(v)`), simplesmente criamos uma árvore com raiz no vértice v, o que significa que ele é seu próprio ancestral.
+
+Para combinar dois conjuntos (operação `union_sets(a, b)`), primeiro encontramos o representante do conjunto no qual a está localizado, e o representante do conjunto no qual b está localizado. Se os representantes forem idênticos, não temos nada a fazer, os conjuntos já estão mesclados. Caso contrário, podemos simplesmente especificar que um dos representantes é o pai do outro representante - combinando assim as duas árvores.
+
+Finalmente, a implementação da função encontrar representante (operação `find_set(v)`): simplesmente subimos os ancestrais do vértice v até chegarmos à raiz, ou seja, um vértice tal que a referência ao ancestral leva a si mesmo. Esta operação é facilmente implementada de forma recursiva.
+
+```c++
+void make_set(int v) {
+    parent[v] = v;
+}
+
+int find_set(int v) {
+    if (v == parent[v])
+        return v;
+    return find_set(parent[v]);
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b)
+        parent[b] = a;
+}
+```
+No entanto, esta implementação é ineficiente. É fácil construir um exemplo, de modo que as árvores degenerem em longas cadeias. Nesse caso, cada chamada `find_set(v)` pode levar  $O(n)$  tempo.
+
+Isso está longe da complexidade que queremos ter (tempo quase constante). Portanto, consideraremos duas otimizações que permitirão acelerar significativamente o trabalho.
+
+### Otimização de Compressão de Caminho
+Esta otimização é projetada para acelerar `find_set`.
+
+Se chamarmos `find_set(v)` para algum vértice v, na verdade encontramos o representante p para todos os vértices que visitamos no caminho entre v e o representante real p. O truque é tornar os caminhos para todos esses nós mais curtos, definindo o pai de cada vértice visitado diretamente para p.
+
+Você pode ver a operação na seguinte imagem. À esquerda, há uma árvore, e à direita, há a árvore comprimida após chamar `find_set(7)`, que encurta os caminhos para os nós visitados 7, 5, 3 e 2.
+
+![[Pasted image 20240130200911.png]]
+
+A nova implementação de `find_set` é a seguinte:
+
+```c++
+int find_set(int v) {
+    if (v == parent[v])
+        return v;
+    return parent[v] = find_set(parent[v]);
+}
+```
+A implementação simples faz o que se pretendia: primeiro encontra o representante do conjunto (vértice raiz), e então, no processo de desenrolar da pilha, os nós visitados são anexados diretamente ao representante.
+
+Esta simples modificação da operação já atinge a complexidade de tempo  $O(\log n)$  por chamada em média (aqui sem prova). Há uma segunda modificação, que a tornará ainda mais rápida.
+
+### Otimização por Tamanho / Classificação
+Nesta otimização, vamos alterar a operação `union_set`. Para ser preciso, vamos mudar qual árvore é anexada à outra. Na implementação ingênua, a segunda árvore sempre era anexada à primeira. Na prática, isso pode levar a árvores contendo cadeias de comprimento  $O(n)$ . Com essa otimização, evitaremos isso escolhendo com muito cuidado qual árvore será anexada.
+
+Existem muitas heurísticas possíveis que podem ser usadas. As duas abordagens mais populares são: na primeira abordagem, usamos o tamanho das árvores como classificação, e na segunda, usamos a profundidade da árvore (mais precisamente, o limite superior na profundidade da árvore, porque a profundidade diminuirá quando aplicarmos a compressão de caminho).
+
+Em ambas as abordagens, a essência da otimização é a mesma: anexamos a árvore com a classificação mais baixa àquela com a classificação maior.
+
+Aqui está a implementação da união por tamanho:
+
+```c++
+void make_set(int v) {
+    parent[v] = v;
+    size[v] = 1;
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (size[a] < size[b])
+            swap(a, b);
+        parent[b] = a;
+        size[a] += size[b];
+    }
+}
+```
+E aqui está a implementação da união por classificação baseada na profundidade das árvores:
+
+```c++
+void make_set(int v) {
+    parent[v] = v;
+    rank[v] = 0;
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (rank[a] < rank[b])
+            swap(a, b);
+        parent[b] = a;
+        if (rank[a] == rank[b])
+            rank[a]++;
+    }
+}
+```
+Ambas as otimizações são equivalentes em termos de complexidade de tempo e espaço. Portanto, na prática, você pode usar qualquer uma delas.
+
