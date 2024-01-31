@@ -1,4 +1,4 @@
-## Pilha Mínima / Fila Mínima¶
+## Pilha Mínima / Fila Mínima
 Neste artigo, vamos considerar três problemas: primeiro, vamos modificar uma pilha de maneira que nos permita encontrar o menor elemento da pilha em  
 $O(1)$ , depois faremos o mesmo com uma fila, e finalmente usaremos essas estruturas de dados para encontrar o mínimo em todos os subconjuntos de um comprimento fixo em um array em  
 $O(n)$ .

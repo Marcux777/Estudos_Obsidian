@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fundamentals - Data Structures.md",
+                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fundamentals - Data Structures.md",
+                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fundamentals - Data Structures.md",
+                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fundamentals - Data Structures.md"
+                "file": "Computação/One for All/Artigos/Disjoint Set Union.md"
               }
             }
           }
@@ -146,18 +146,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "30d867b2f0b9299c",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "Disjoint Set Union.md",
     "Data Structures.md",
+    "Computação/One for All/Artigos/Disjoint Set Union.md",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Computação/One for All/Artigos/Sparse Table.md",
+    "Computação/One for All/Artigos/Pasted image 20240130200911.png",
+    "Computação/One for All/Artigos/Pasted image 20240130193618.png",
+    "Computação/One for All/Artigos/Minimum stack - Minimum queue.md",
+    "Computação/One for All/Artigos/Fundamentals - Data Structures.md",
     "c.md",
-    "Trees - Data Structures.md",
-    "Pasted image 20240130200911.png",
-    "Pasted image 20240130193618.png",
     "Trees.md",
-    "Fundamentals - Data Structures.md",
-    "Sparse Table.md",
-    "Minimum stack - Minimum queue.md",
     "Computação/README.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Computação/Álgebra.md",
