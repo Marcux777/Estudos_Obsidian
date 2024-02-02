@@ -835,3 +835,40 @@ Vertex* update(Vertex* v, int tl, int tr, int pos, int new_val) {
 Para cada modificação da Árvore de Segmentos, receberemos um novo vértice raiz. Para saltar rapidamente entre duas versões diferentes da Árvore de Segmentos, precisamos armazenar essas raízes em um array. Para usar uma versão específica da Árvore de Segmentos, simplesmente chamamos a consulta usando o vértice raiz apropriado.
 
 Com a abordagem descrita acima, quase qualquer Árvore de Segmentos pode ser transformada em uma estrutura de dados persistente.
+
+
+#### Encontrando o  $k$ -ésimo menor número em um intervalo¶
+Desta vez, temos que responder consultas do tipo "Qual é o  $k$ -ésimo menor elemento no intervalo  $a[l \dots r]$ . Essa consulta pode ser respondida usando uma busca binária e uma Árvore de Ordenação por Fusão, mas a complexidade de tempo para uma única consulta seria  $O(\log^3 n)$ . Vamos realizar a mesma tarefa usando uma Árvore de Segmento persistente em  $O(\log n)$ .
+
+Primeiro, vamos discutir uma solução para um problema mais simples: vamos considerar apenas arrays nos quais os elementos são limitados por  $0 \le a[i] \lt n$ . E queremos apenas encontrar o  $k$ -ésimo menor elemento em algum prefixo do array  
+$a$ . Será muito fácil estender as ideias desenvolvidas posteriormente para arrays não restritos e consultas de intervalo não restritas. Note que estaremos usando indexação baseada em 1 para  $a$ .
+
+
+
+```cpp
+Vertex* build(int tl, int tr) {
+    if (tl == tr)
+        return new Vertex(0);
+    int tm = (tl + tr) / 2;
+    return new Vertex(build(tl, tm), build(tm+1, tr));
+}
+
+Vertex* update(Vertex* v, int tl, int tr, int pos) {
+    if (tl == tr)
+        return new Vertex(v->sum+1);
+    int tm = (tl + tr) / 2;
+    if (pos <= tm)
+        return new Vertex(update(v->l, tl, tm, pos), v->r);
+    else
+        return new Vertex(v->l, update(v->r, tm+1, tr, pos));
+}
+
+int find_kth(Vertex* vl, Vertex *vr, int tl, int tr, int k) {
+    if (tl == tr)
+        return tl;
+    int tm = (tl + tr) / 2, left_count = vr->l->sum - vl->l->sum;
+    if (left_count >= k)
+        return find_kth(vl->l, vr->l, tl, tm, k);
+    return find_kth(vl->r, vr->r, tm+1, tr, k-left_count);
+}
+```
