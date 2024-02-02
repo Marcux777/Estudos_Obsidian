@@ -53,8 +53,7 @@ Como  $x < n \cdot n < r \cdot n$  (mesmo se  $x$  for o produto de uma 
 Como vemos, podemos realizar a redução de Montgomery sem nenhuma operação de módulo pesada. Se escolhermos  $r$  como uma potência de  $2$ , as operações de módulo e divisões no algoritmo podem ser calculadas usando mascaramento e deslocamento de bits.
 
 Uma segunda aplicação da redução de Montgomery é transferir um número de volta do espaço de Montgomery para o espaço normal.
-[[Fast inverse trick]]
-
+## Fast inverse trick
 Para calcular a inversa  $n^{\prime} := n^{-1} \bmod r$  de maneira eficiente, podemos usar o seguinte truque (inspirado no método de Newton):
 $$a \cdot x \equiv 1 \bmod 2^k \Longrightarrow a \cdot x \cdot (2 - a \cdot x) \equiv 1 \bmod 2^{2k}$$ 
 Isso pode ser facilmente comprovado. Se tivermos  $a \cdot x = 1 + m \cdot 2^k$ , então teremos:

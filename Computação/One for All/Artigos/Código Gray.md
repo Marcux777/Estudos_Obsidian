@@ -6,7 +6,7 @@ Por exemplo, a sequência de códigos Gray para números de 3 bits é: 000, 001,
 
 Esse código foi inventado por Frank Gray em 1953.
 
-## Encontrando o Código Gray¶
+## Encontrando o Código Gray
 
 Vamos observar os bits do número  $n$  e os bits do número  $G(n)$ . Observe que o  $i$ -ésimo bit de  
 $G(n)$  é igual a 1 apenas quando o  $i$ -ésimo bit de  $n$  é igual a 1 e o  $i + 1$ -ésimo bit é igual a 0, ou vice-versa ( $i$ -ésimo bit igual a 0 e  $i + 1$ -ésimo bit igual a 1). Assim,  $G(n) = n \oplus (n >> 1)$ :

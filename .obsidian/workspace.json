@@ -20,91 +20,43 @@
             }
           },
           {
-            "id": "1c6a162e8943631c",
+            "id": "6a6eba0a0d730ae0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
+                "file": "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6ca1699110cbb816",
+            "id": "8cdae93d8b1a9111",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Montgomery Multiplication.md",
+                "file": "Computação/One for All/Artigos/Fast Fourier transform.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f7bc8eca6e14e3b0",
+            "id": "21c952ed77dd6ded",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Transformação Rápida.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7d1c9ea897fd6ea8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Implementação - Montgomery Multiplication.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "01b04934627e701b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Fast inverse trick.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1006868e19c1fea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Redução de Montgomery.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dee8f1cdddc7adc4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Representação de Montgomery.md",
+                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -170,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Montgomery Multiplication.md",
+                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Montgomery Multiplication.md",
+                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Montgomery Multiplication.md"
+                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md"
               }
             }
           }
@@ -231,34 +183,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "6ca1699110cbb816",
+  "active": "21c952ed77dd6ded",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Transformação Rápida.md",
+    "Computação/One for All/Artigos/Fast Fourier transform.md",
+    "Computação/One for All/Artigos/Number theoretic transform.md",
+    "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
+    "Computação/One for All/Artigos/Improved implementation - in-place computation.md",
+    "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
+    "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
+    "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
+    "Computação/One for All/Artigos/Aplicação da DFT - multiplicação rápida de polinômios.md",
+    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
+    "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
+    "Computação/One for All/Artigos/Enumerating submasks of a bitmask.md",
+    "Computação/One for All/Artigos/Bit manipulation.md",
+    "Computação/Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Sistemas numéricos - Álgebra.md",
+    "Computação/One for All/Artigos/Código Gray.md",
+    "Computação/One for All/Artigos/Ternário Equilibrado.md",
+    "Computação/One for All/Artigos/Algoritmo de Conversão.md",
+    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Computação/One for All/Artigos/Montgomery Multiplication.md",
+    "Computação/One for All/Artigos/Transformação Rápida.md",
     "Computação/One for All/Artigos/Implementação - Montgomery Multiplication.md",
     "Computação/One for All/Artigos/Fast inverse trick.md",
     "Computação/One for All/Artigos/Redução de Montgomery.md",
     "Computação/One for All/Artigos/Representação de Montgomery.md",
-    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Computação/One for All/Artigos/Discrete Root.md",
     "Computação/One for All/Artigos/Algoritmo - Discrete Root.md",
-    "Computação/One for All/Artigos/Encontrando todas as soluções a partir de uma solução conhecida - Discrete Root.md",
-    "Computação/One for All/Artigos/Implementação - Discrete Root.md",
-    "Computação/One for All/Artigos/Primitive Root.md",
-    "Computação/One for All/Artigos/Implementação - Primitive Root.md",
-    "Computação/One for All/Artigos/Algoritmo para encontrar uma raiz primitiva - Primitive Root.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Discrete Log.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Quando a e  m não são coprimos.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Implementação - Discrete Log.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Complexidade - Discrete Log.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Algoritmo - Discrete Log.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Factorial modulo p.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Multiplicity of  p.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Implementação.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Algoritmo.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Garner's Algorithm.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Implementação do Algoritmo de Garner.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
