@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "981bf36227fc6dd4",
+        "id": "55fa90501f5d5c0d",
         "type": "tabs",
         "children": [
           {
-            "id": "f2790c3c1f37e574",
+            "id": "0c8c112ee6e4d685",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computação/Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Computação/Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Computação/Data Structures.md"
+              }
             }
           }
         ]
@@ -140,7 +144,7 @@
   },
   "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "Sem título",
+    "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo Rho de Pollard.md",
