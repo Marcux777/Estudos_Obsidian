@@ -88,36 +88,23 @@ Novamente, aqui está uma visualização usando o mesmo array. Aqui realizamos a
 
 ![[Pasted image 20240202045138.png]]
 
-Implementação¶
-A principal consideração é como armazenar a Árvore de Segmentos. Claro que podemos definir uma estrutura  
-$\text{Vertex}$  e criar objetos, que armazenam os limites do segmento, sua soma e adicionalmente também ponteiros para seus vértices filhos. No entanto, isso requer armazenar muitas informações redundantes na forma de ponteiros. Vamos usar um truque simples para tornar isso muito mais eficiente usando uma estrutura de dados implícita: apenas armazenando as somas em um array. (Um método semelhante é usado para heaps binários). A soma do vértice raiz no índice 1, as somas de seus dois vértices filhos nos índices 2 e 3, as somas dos filhos desses dois vértices nos índices 4 a 7, e assim por diante. Com a indexação 1, convenientemente o filho à esquerda de um vértice no índice  
-$i$  é armazenado no índice  
-$2i$ , e o direito no índice  
-$2i + 1$ . Equivalentemente, o pai de um vértice no índice  
-$i$  é armazenado em  
-$i/2$  (divisão inteira).
+### Implementação
+A principal consideração é como armazenar a Árvore de Segmentos. Claro que podemos definir uma estrutura  $\text{Vertex}$  e criar objetos, que armazenam os limites do segmento, sua soma e adicionalmente também ponteiros para seus vértices filhos. No entanto, isso requer armazenar muitas informações redundantes na forma de ponteiros. Vamos usar um truque simples para tornar isso muito mais eficiente usando uma estrutura de dados implícita: apenas armazenando as somas em um array. (Um método semelhante é usado para heaps binários). A soma do vértice raiz no índice 1, as somas de seus dois vértices filhos nos índices 2 e 3, as somas dos filhos desses dois vértices nos índices 4 a 7, e assim por diante. Com a indexação 1, convenientemente o filho à esquerda de um vértice no índice  $i$  é armazenado no índice  $2i$ , e o direito no índice  $2i + 1$ . Equivalentemente, o pai de um vértice no índice  $i$  é armazenado em  $i/2$  (divisão inteira).
 
 Isso simplifica muito a implementação. Não precisamos armazenar a estrutura da árvore na memória. Ela é definida implicitamente. Precisamos apenas de um array que contém as somas de todos os segmentos.
 
-Como observado antes, precisamos armazenar no máximo  
-$4n$  vértices. Pode ser menos, mas por conveniência sempre alocamos um array de tamanho  
-$4n$ . Haverá alguns elementos no array de soma, que não corresponderão a nenhum vértice na árvore real, mas isso não complica a implementação.
+Como observado antes, precisamos armazenar no máximo  $4n$  vértices. Pode ser menos, mas por conveniência sempre alocamos um array de tamanho  $4n$ . Haverá alguns elementos no array de soma, que não corresponderão a nenhum vértice na árvore real, mas isso não complica a implementação.
 
 Portanto, armazenamos a Árvore de Segmentos simplesmente como um array  
-$t[]$  com um tamanho quatro vezes o tamanho da entrada  
-$n$ :
-
+$t[]$  com um tamanho quatro vezes o tamanho da entrada  $n$ :
+```cpp
 int n, t[4*MAXN];
-O procedimento para construir a Árvore de Segmentos a partir de um array dado  
-$a[]$  é assim: é uma função recursiva com os parâmetros  
-$a[]$  (o array de entrada),  
-$v$  (o índice do vértice atual), e os limites  
-$tl$  e  
-$tr$  do segmento atual. No programa principal, esta função será chamada com os parâmetros do vértice raiz:  
-$v = 1$ ,  
-$tl = 0$ , e  
-$tr = n - 1$ .
+```
 
+O procedimento para construir a Árvore de Segmentos a partir de um array dado  
+$a[]$  é assim: é uma função recursiva com os parâmetros  $a[]$  (o array de entrada),  $v$  (o índice do vértice atual), e os limites  $tl$  e  $tr$  do segmento atual. No programa principal, esta função será chamada com os parâmetros do vértice raiz:  $v = 1$ ,  $tl = 0$ , e  $tr = n - 1$ .
+
+```cpp
 void build(int a[], int v, int tl, int tr) {
     if (tl == tr) {
         t[v] = a[tl];
@@ -128,9 +115,11 @@ void build(int a[], int v, int tl, int tr) {
         t[v] = t[v*2] + t[v*2+1];
     }
 }
-Além disso, a função para responder a consultas de soma também é uma função recursiva, que recebe como parâmetros informações sobre o vértice/segmento atual (ou seja, o índice  
-$v$  e os limites  $tl$  e  $tr$ ) e também as informações sobre os limites da consulta,  $l$  e  $r$ . Para simplificar o código, esta função sempre faz duas chamadas recursivas, mesmo que apenas uma seja necessária - nesse caso, a chamada recursiva supérflua terá  $l > r$ , e isso pode ser facilmente capturado usando uma verificação adicional no início da função.
+```
 
+Além disso, a função para responder a consultas de soma também é uma função recursiva, que recebe como parâmetros informações sobre o vértice/segmento atual (ou seja, o índice  $v$  e os limites  $tl$  e  $tr$ ) e também as informações sobre os limites da consulta,  $l$  e  $r$ . Para simplificar o código, esta função sempre faz duas chamadas recursivas, mesmo que apenas uma seja necessária - nesse caso, a chamada recursiva supérflua terá  $l > r$ , e isso pode ser facilmente capturado usando uma verificação adicional no início da função.
+
+```cpp
 int sum(int v, int tl, int tr, int l, int r) {
     if (l > r) 
         return 0;
@@ -141,8 +130,9 @@ int sum(int v, int tl, int tr, int l, int r) {
     return sum(v*2, tl, tm, l, min(r, tm))
            + sum(v*2+1, tm+1, tr, max(l, tm+1), r);
 }
+```
 Finalmente a consulta de atualização. A função também receberá informações sobre o vértice/segmento atual, e adicionalmente também o parâmetro da consulta de atualização (ou seja, a posição do elemento e seu novo valor).
-
+```cpp
 void update(int v, int tl, int tr, int pos, int new_val) {
     if (tl == tr) {
         t[v] = new_val;
@@ -155,3 +145,89 @@ void update(int v, int tl, int tr, int pos, int new_val) {
         t[v] = t[v*2] + t[v*2+1];
     }
 }
+```
+
+
+
+### Implementação Eficiente em Memória
+A maioria das pessoas usa a implementação da seção anterior. Se você olhar para o array t, verá que ele segue a numeração dos nós da árvore na ordem de uma travessia BFS (travessia em nível). Usando esta travessia, os filhos do vértice  $v$  são 
+$2v$  e $2v + 1$  respectivamente. No entanto, se  $n$  não for uma potência de dois, este método pulará alguns índices e deixará algumas partes do array t não utilizadas. O consumo de memória é limitado por  $4n$ , mesmo que uma Árvore de Segmentos de um array de  $n$  elementos requer apenas  $2n - 1$  vértices.
+
+No entanto, isso pode ser reduzido. Nós renumeramos os vértices da árvore na ordem de uma travessia de Euler (travessia em pré-ordem), e escrevemos todos esses vértices um ao lado do outro.
+
+Vamos olhar para um vértice no índice  $v$ , e deixá-lo ser responsável pelo segmento  $[l, r]$ , e deixar  $mid = \dfrac{l + r}{2}$ . É óbvio que o filho à esquerda terá o índice  $v + 1$ . O filho à esquerda é responsável pelo segmento  $[l, mid]$ , ou seja, no total haverá 
+$2 * (mid - l + 1) - 1$  vértices na subárvore do filho à esquerda. Assim, podemos calcular o índice do filho à direita de  $v$ . O índice será  $v + 2 * (mid - l + 1)$ . Com essa numeração, alcançamos uma redução da memória necessária para  $2n$ .
+
+
+
+
+
+## Versões Avançadas de Árvores de Segmentos
+Uma Árvore de Segmentos é uma estrutura de dados muito flexível e permite variações e extensões em muitas direções diferentes. Vamos tentar categorizá-las abaixo.
+### Consultas mais complexas
+Pode ser bastante fácil mudar a Árvore de Segmentos em uma direção, de forma que ela compute consultas diferentes (por exemplo, calcular o mínimo / máximo em vez da soma), mas também pode ser muito não trivial.
+
+#### Encontrando o máximo
+Vamos alterar ligeiramente a condição do problema descrito acima: em vez de consultar a soma, agora faremos consultas máximas.
+
+A árvore terá exatamente a mesma estrutura que a árvore descrita acima. Só precisamos mudar a maneira como  $t[v]$  é calculado nas funções  $\text{build}$  e  $\text{update}$ .  $t[v]$  agora armazenará o máximo do segmento correspondente. E também precisamos mudar o cálculo do valor retornado da função  $\text{sum}$  (substituindo a soma pelo máximo).
+
+Claro que este problema pode ser facilmente transformado em calcular o mínimo em vez do máximo.
+
+Em vez de mostrar uma implementação para este problema, a implementação será dada para uma versão mais complexa deste problema na próxima seção.
+
+#### Encontrando o máximo e o número de vezes que ele aparece
+Esta tarefa é muito semelhante à anterior. Além de encontrar o máximo, também temos que encontrar o número de ocorrências do máximo.
+
+Para resolver este problema, armazenamos um par de números em cada vértice na árvore: Além do máximo, também armazenamos o número de ocorrências dele no segmento correspondente. Determinar o par correto para armazenar em  $t[v]$  ainda pode ser feito em tempo constante usando as informações dos pares armazenados nos vértices filhos. Combinar dois desses pares deve ser feito em uma função separada, pois esta será uma operação que faremos ao construir a árvore, ao responder consultas máximas e ao realizar modificações.
+
+```cpp
+pair<int, int> t[4*MAXN];
+
+pair<int, int> combine(pair<int, int> a, pair<int, int> b) {
+    if (a.first > b.first) 
+        return a;
+    if (b.first > a.first)
+        return b;
+    return make_pair(a.first, a.second + b.second);
+}
+
+void build(int a[], int v, int tl, int tr) {
+    if (tl == tr) {
+        t[v] = make_pair(a[tl], 1);
+    } else {
+        int tm = (tl + tr) / 2;
+        build(a, v*2, tl, tm);
+        build(a, v*2+1, tm+1, tr);
+        t[v] = combine(t[v*2], t[v*2+1]);
+    }
+}
+
+pair<int, int> get_max(int v, int tl, int tr, int l, int r) {
+    if (l > r)
+        return make_pair(-INF, 0);
+    if (l == tl && r == tr)
+        return t[v];
+    int tm = (tl + tr) / 2;
+    return combine(get_max(v*2, tl, tm, l, min(r, tm)), 
+                   get_max(v*2+1, tm+1, tr, max(l, tm+1), r));
+}
+
+void update(int v, int tl, int tr, int pos, int new_val) {
+    if (tl == tr) {
+        t[v] = make_pair(new_val, 1);
+    } else {
+        int tm = (tl + tr) / 2;
+        if (pos <= tm)
+            update(v*2, tl, tm, pos, new_val);
+        else
+            update(v*2+1, tm+1, tr, pos, new_val);
+        t[v] = combine(t[v*2], t[v*2+1]);
+    }
+}
+```
+#### Calcular o maior divisor comum / mínimo múltiplo comum
+Neste problema, queremos calcular o MDC / MMC de todos os números de intervalos dados do array.
+
+Esta interessante variação da Árvore de Segmentos pode ser resolvida exatamente da mesma maneira que as Árvores de Segmentos que derivamos para consultas de soma / mínimo / máximo: basta armazenar o MDC / MMC do vértice correspondente em cada vértice da árvore. Combinar dois vértices pode ser feito calculando o MDC / MMC de ambos os vértices.
+
