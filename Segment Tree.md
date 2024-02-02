@@ -843,7 +843,22 @@ Desta vez, temos que responder consultas do tipo "Qual é o  $k$ -ésimo men
 Primeiro, vamos discutir uma solução para um problema mais simples: vamos considerar apenas arrays nos quais os elementos são limitados por  $0 \le a[i] \lt n$ . E queremos apenas encontrar o  $k$ -ésimo menor elemento em algum prefixo do array  
 $a$ . Será muito fácil estender as ideias desenvolvidas posteriormente para arrays não restritos e consultas de intervalo não restritas. Note que estaremos usando indexação baseada em 1 para  $a$ .
 
+Vamos usar uma Árvore de Segmento que conta todos os números que aparecem, ou seja, na Árvore de Segmento armazenaremos o histograma do array. Portanto, os vértices folha armazenarão com que frequência os valores  $0$ ,  $1$ ,  $\dots$ ,  $n-1$  aparecerão no array, e os outros vértices armazenam quantos números em algum intervalo estão no array. Em outras palavras, criamos uma Árvore de Segmento regular com consultas de soma sobre o histograma do array. Mas, em vez de criar todas as  $n$  Árvores de Segmento para cada prefixo possível, criaremos uma persistente, que conterá a mesma informação. Começaremos com uma Árvore de Segmento vazia (todas as contagens serão  $0$ ) apontada por  $root_0$ , e adicionaremos os elementos  $a[1]$ ,  $a[2]$ ,  $\dots$ ,  $a[n]$  um após o outro. Para cada modificação, receberemos um novo vértice raiz, vamos chamar  $root_i$  a raiz da Árvore de Segmento após inserir os primeiros  $i$  elementos do array  $a$ . A Árvore de Segmento enraizada em  $root_i$  conterá o histograma do prefixo  $a[1 \dots i]$ . Usando esta Árvore de Segmento, podemos encontrar em  $O(\log n)$  tempo a posição do  $k$ -ésimo elemento usando a mesma técnica discutida em Contando o número de zeros, procurando pelo  $k$ -ésimo zero.
 
+Agora, para a versão não restrita do problema.
+
+Primeiro, para a restrição nas consultas: em vez de realizar apenas essas consultas sobre um prefixo de  a , queremos usar quaisquer segmentos arbitrários  $a[l…r]$ . Aqui, precisamos de uma Árvore de Segmento que represente o histograma dos elementos no intervalo  $a[l…r]$ . É fácil ver que tal Árvore de Segmento é apenas a diferença entre a Árvore de Segmento enraizada em  $root_{r}$​  e a Árvore de Segmento enraizada em  $root_{l-1}$​ , ou seja, cada vértice na Árvore de Segmento  $[l…r]$  pode ser computado com o vértice da árvore  $root_{r}$​  menos o vértice da árvore $root_{l-1}$​ .
+
+
+Na implementação da função <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtext>find_kth</mtext>
+</math>, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
+
+Aqui estão as funções modificadas <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtext>build</mtext>
+</math>, $\text{update}$ e <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtext>find_kth</mtext>
+</math>:
 
 ```cpp
 Vertex* build(int tl, int tr) {
@@ -872,3 +887,19 @@ int find_kth(Vertex* vl, Vertex *vr, int tl, int tr, int k) {
     return find_kth(vl->r, vr->r, tm+1, tr, k-left_count);
 }
 ```
+
+Agora, para as restrições nos elementos do array: podemos realmente transformar qualquer array em tal array por meio de compressão de índice. O menor elemento no array receberá o valor 0, o segundo menor o valor 1, e assim por diante. É fácil gerar tabelas de pesquisa (por exemplo, usando  $\text{map}$ ), que convertem um valor em seu índice e vice-versa em  $O(\log n)$  tempo.
+Aqui está o código para construir uma Árvore de Segmento persistente sobre um vetor `a` com elementos no intervalo `[0, MAX_VALUE]`:
+
+```cpp
+int tl = 0, tr = MAX_VALUE + 1;
+std::vector<Vertex*> roots;
+roots.push_back(build(tl, tr));
+for (int i = 0; i < a.size(); i++) {
+    roots.push_back(update(roots.back(), tl, tr, a[i]));
+}
+
+// encontrar o 5º menor número do subarray [a[2], a[3], ..., a[19]]
+int result = find_kth(roots[2], roots[20], tl, tr, 5);
+```
+
