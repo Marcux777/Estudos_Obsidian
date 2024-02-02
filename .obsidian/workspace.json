@@ -20,19 +20,43 @@
             }
           },
           {
-            "id": "1aeaaffa8653bed1",
+            "id": "8530647203e3b4b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+                "file": "Computação/One for All/Artigos/Competitive Programming/Números Primos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f3ba1fda906fb562",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Crivo de Eratóstenes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6caa463c3fda2dd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+                "file": "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+                "file": "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md"
+                "file": "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md"
               }
             }
           }
@@ -159,10 +183,18 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1aeaaffa8653bed1",
+  "active": "6caa463c3fda2dd2",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Número de Fibonacci.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Peneirando apenas pelos números ímpares.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Peneirando até a raiz.md",
+    "Computação/One for All/Artigos/Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Implementação - Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Competitive Programming/Números Primos.md",
+    "Computação/Álgebra.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Número de Fibonacci.md",
     "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Equações Diofantinas Lineares.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo de Euclides para calcular o maior divisor comum.md",
     "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Periodicidade módulo p - Número de Fibonacci.md",
@@ -179,14 +211,6 @@
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo - Algoritmo de Euclides Estendido.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Implementação - Algoritmo de Euclides para calcular o maior divisor comum.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/MDC Binário.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Mínimo múltiplo comum.md",
-    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo - Algoritmo de Euclides para calcular o maior divisor comum.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Aplicações - Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/- Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Algoritmo - Binary Exponentiation.md",
-    "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
