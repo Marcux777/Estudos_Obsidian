@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "63cb168b2ec546f0",
+        "id": "7ff0f993be400005",
         "type": "tabs",
         "children": [
           {
-            "id": "30d867b2f0b9299c",
+            "id": "686bc2dd7c0753dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fc3b41085451b2d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fenwick Tree.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
+                "file": "Fenwick Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
+                "file": "Fenwick Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Disjoint Set Union.md"
+                "file": "Fenwick Tree.md"
               }
             }
           }
@@ -146,11 +159,12 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "fc3b41085451b2d4",
   "lastOpenFiles": [
-    "Data Structures.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Fenwick Tree.md",
+    "Data Structures.md",
     "Computação/One for All/Artigos/Sparse Table.md",
     "Computação/One for All/Artigos/Pasted image 20240130200911.png",
     "Computação/One for All/Artigos/Pasted image 20240130193618.png",
