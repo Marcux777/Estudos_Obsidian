@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Data Structures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "395846fab4b7bf18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
                 "mode": "source",
                 "source": false
@@ -20,19 +32,19 @@
             }
           },
           {
-            "id": "886bd9c589235441",
+            "id": "93d313b9487462b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sqrt Decomposition.md",
+                "file": "Segment Tree.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sqrt Decomposition.md",
+                "file": "Segment Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sqrt Decomposition.md",
+                "file": "Segment Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sqrt Decomposition.md"
+                "file": "Segment Tree.md"
               }
             }
           }
@@ -159,14 +171,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "886bd9c589235441",
+  "active": "93d313b9487462b6",
   "lastOpenFiles": [
     "Computação/One for All/Artigos/Trees - Data Structures.md",
-    "Sqrt Decomposition.md",
-    "Fenwick Tree.md",
-    "Pasted image 20240202032745.png",
-    "Computação/One for All/Artigos/Disjoint Set Union.md",
+    "Segment Tree.md",
     "Data Structures.md",
+    "Computação/One for All/Sqrt Decomposition.md",
+    "Computação/One for All/Fenwick Tree.md",
+    "Computação/One for All/Pasted image 20240202032745.png",
+    "Computação/One for All/Artigos/Disjoint Set Union.md",
     "Computação/One for All/Artigos/Sparse Table.md",
     "Computação/One for All/Artigos/Pasted image 20240130200911.png",
     "Computação/One for All/Artigos/Pasted image 20240130193618.png",
@@ -189,7 +202,6 @@
     "Computação/One for All/Artigos/Envoltórios de retículas.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
     "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
-    "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
     "Computação/One for All/Artigos/Pasted image 20240129153352.png",
     "Algebra Linear",
     "Matematica Pura",
