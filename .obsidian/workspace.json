@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "18c9e768013d8fec",
+        "id": "dafde98b8a44db52",
         "type": "tabs",
         "children": [
           {
-            "id": "a6b32e9c87e65609",
+            "id": "00792101b9322b26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "205d2ef7da829564",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
+                "file": "Computação/Álgebra.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
+                "file": "Computação/Álgebra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
+                "file": "Computação/Álgebra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Trees - Data Structures.md"
+                "file": "Computação/Álgebra.md"
               }
             }
           }
@@ -159,15 +146,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "205d2ef7da829564",
+  "active": "00792101b9322b26",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Data Structures.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Sqrt Decomposition.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Fenwick Tree.md",
     "Computação/One for All/Artigos/Pasted image 20240202032745.png",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
