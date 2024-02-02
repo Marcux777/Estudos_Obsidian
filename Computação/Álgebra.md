@@ -1,7 +1,7 @@
 
 - [[Fundamental - Álgebra]]
-- [[Números Primos]]
-- [[Funções Teoria dos Números]]
+- [[Números Primos  - Álgebra]]
+- [[Funções Teoria dos Números - Álgebra]]
 - [[Aritmética modular]]
 - [[Sistemas numéricos]]
 - [[Diversos]]
