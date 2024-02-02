@@ -164,3 +164,180 @@ struct FenwickTreeMin {
 ```
 Nota: é possível implementar uma árvore de Fenwick que pode lidar com consultas mínimas de intervalo arbitrário e atualizações arbitrárias. O artigo [[Efficient Range Minimum Queries using Binary Indexed Trees]] descreve tal abordagem. No entanto, com essa abordagem, você precisa manter uma segunda árvore indexada binária sobre os dados, com uma estrutura ligeiramente diferente, já que uma árvore não é suficiente para armazenar os valores de todos os elementos no array. A implementação também é muito mais difícil em comparação com a implementação normal para somas.
 
+### Encontrando a soma em um array bidimensional
+Como afirmado antes, é muito fácil implementar a Árvore de Fenwick para um array multidimensional.
+
+```cpp
+struct FenwickTree2D {
+    vector<vector<int>> bit;
+    int n, m;
+
+    // init(...) { ... }
+
+    int sum(int x, int y) {
+        int ret = 0;
+        for (int i = x; i >= 0; i = (i & (i + 1)) - 1)
+            for (int j = y; j >= 0; j = (j & (j + 1)) - 1)
+                ret += bit[i][j];
+        return ret;
+    }
+
+    void add(int x, int y, int delta) {
+        for (int i = x; i < n; i = i | (i + 1))
+            for (int j = y; j < m; j = j | (j + 1))
+                bit[i][j] += delta;
+    }
+};
+```
+### Abordagem de indexação baseada em um
+Para esta abordagem, mudamos um pouco os requisitos e a definição para  $T[]$ e  $g()$. Queremos que  $T[i]$  armazene a soma de  $[g(i)+1; i]$ . Isso muda um pouco a implementação e permite uma definição semelhante e agradável para  $g(i)$ :
+
+```cpp
+def sum(int r):
+    res = 0
+    while (r > 0):
+        res += t[r]
+        r = g(r)
+    return res
+
+def increase(int i, int delta):
+    for all j with g(j) < i <= j:
+        t[j] += delta
+```
+O cálculo de  $g(i)$  é definido como: alternância do último bit definido  $1$  na representação binária de  $i$ .
+ 
+$$\begin{align} g(7) = g(111_2) = 110_2 &= 6 \\\\ g(6) = g(110_2) = 100_2 &= 4 \\\\ g(4) = g(100_2) = 000_2 &= 0 \\\\ \end{align}$$ 
+O último bit definido pode ser extraído usando  $i ~\&~ (-i)$ , então a operação pode ser expressa como:
+
+ 
+$$g(i) = i - (i ~\&~ (-i)).$$ 
+E não é difícil ver que você precisa mudar todos os valores  $T[j]$  na sequência  $i,~ h(i),~ h(h(i)),~ \dots$  quando você quer atualizar  $A[j]$ , onde  $h(i)$  é definido como:
+ 
+$$h(i) = i + (i ~\&~ (-i)).$$ 
+Como você pode ver, o principal benefício desta abordagem é que as operações binárias se complementam muito bem.
+
+A seguinte implementação pode ser usada como as outras implementações, no entanto, ela usa indexação baseada em um internamente.
+
+```cpp
+struct FenwickTreeOneBasedIndexing {
+    vector<int> bit;  // árvore indexada binária
+    int n;
+
+    FenwickTreeOneBasedIndexing(int n) {
+        this->n = n + 1;
+        bit.assign(n + 1, 0);
+    }
+
+    FenwickTreeOneBasedIndexing(vector<int> a)
+        : FenwickTreeOneBasedIndexing(a.size()) {
+        for (size_t i = 0; i < a.size(); i++)
+            add(i, a[i]);
+    }
+
+    int sum(int idx) {
+        int ret = 0;
+        for (++idx; idx > 0; idx -= idx & -idx)
+            ret += bit[idx];
+        return ret;
+    }
+
+    int sum(int l, int r) {
+        return sum(r) - sum(l - 1);
+    }
+
+    void add(int idx, int delta) {
+        for (++idx; idx < n; idx += idx & -idx)
+            bit[idx] += delta;
+    }
+};
+```
+
+
+
+## Operações de intervalo
+Uma árvore de Fenwick pode suportar as seguintes operações de intervalo:
+
+1. Atualização de Ponto e Consulta de Intervalo
+2. Atualização de Intervalo e Consulta de Ponto
+3. Atualização de Intervalo e Consulta de Intervalo
+#### 1. Atualização de Ponto e Consulta de Intervalo
+Esta é apenas a árvore de Fenwick comum, conforme explicado acima.
+
+#### 2. Atualização de Intervalo e Consulta de Ponto
+Usando truques simples, também podemos fazer as operações inversas: aumentar intervalos e consultar valores únicos.
+
+Deixe a árvore de Fenwick ser inicializada com zeros. Suponha que queremos incrementar o intervalo  $[l, r]$  por  $x$ . Fazemos duas operações de atualização de ponto na árvore de Fenwick que são add(l, x) e add(r+1, -x).
+
+Se quisermos obter o valor de  $A[i]$ , só precisamos pegar a soma do prefixo usando o método de soma de intervalo comum. Para ver por que isso é verdade, podemos apenas nos concentrar na operação de incremento anterior novamente. Se  $i < l$ , então as duas operações de atualização não têm efeito na consulta e obtemos a soma  $0$ . Se  $i \in [l, r]$ , então obtemos a resposta  $x$  por causa da primeira operação de atualização. E se  $i > r$ , então a segunda operação de atualização cancelará o efeito da primeira.
+
+A seguinte implementação usa indexação baseada em um.
+
+```cpp
+void add(int idx, int val) {
+    for (++idx; idx < n; idx += idx & -idx)
+        bit[idx] += val;
+}
+
+void range_add(int l, int r, int val) {
+    add(l, val);
+    add(r + 1, -val);
+}
+
+int point_query(int idx) {
+    int ret = 0;
+    for (++idx; idx > 0; idx -= idx & -idx)
+        ret += bit[idx];
+    return ret;
+}
+```
+Nota: claro, também é possível aumentar um único ponto  $A[i]$  com range_add(i, i, val).
+
+#### 3. Atualizações de Intervalo e Consultas de Intervalo
+Para suportar ambas as atualizações de intervalo e consultas de intervalo, usaremos dois BITs, a saber  $B_1[]$  e  $B_2[]$ , inicializados com zeros.
+
+Suponha que queremos incrementar o intervalo  $[l, r]$  pelo valor  $x$ . De forma semelhante ao método anterior, realizamos duas operações de atualização de ponto em  $B_1$ : add(B1, l, x) e add(B1, r+1, -x). E também atualizamos  $B_2$ . Os detalhes serão explicados mais tarde.
+
+```cpp
+def range_add(l, r, x):
+    add(B1, l, x)
+    add(B1, r+1, -x)
+    add(B2, l, x*(l-1))
+    add(B2, r+1, -x*r))
+```
+Após a atualização de intervalo  $(l, r, x)$  a consulta de soma de intervalo deve retornar os seguintes valores:
+ 
+$$ sum[0, i]= \begin{cases} 0 & i < l \\\\ x \cdot (i-(l-1)) & l \le i \le r \\\\ x \cdot (r-l+1) & i > r \\\\ \end{cases} $$ 
+Podemos escrever a soma do intervalo como diferença de dois termos, onde usamos  $B_1$  para o primeiro termo e  $B_2$  para o segundo termo. A diferença das consultas nos dará a soma do prefixo sobre  $[0, i]$ .
+ 
+$$\begin{align} sum[0, i] &= sum(B_1, i) \cdot i - sum(B_2, i) \\\\ &= \begin{cases} 0 \cdot i - 0 & i < l\\\\ x \cdot i - x \cdot (l-1) & l \le i \le r \\\\ 0 \cdot i - (x \cdot (l-1) - x \cdot r) & i > r \\\\ \end{cases} \end{align} $$ 
+A última expressão é exatamente igual aos termos requeridos. Assim, podemos usar  
+$B_2$  para eliminar termos extras quando multiplicamos  $B_1[i]\times i$ .
+
+Podemos encontrar somas de intervalo arbitrárias calculando as somas de prefixo para  $l-1$  e  $r$  e pegando a diferença delas novamente.
+
+```cpp
+def add(b, idx, x):
+    while idx <= N:
+        b[idx] += x
+        idx += idx & -idx
+
+def range_add(l,r,x):
+    add(B1, l, x)
+    add(B1, r+1, -x)
+    add(B2, l, x*(l-1))
+    add(B2, r+1, -x*r)
+
+def sum(b, idx):
+    total = 0
+    while idx > 0:
+        total += b[idx]
+        idx -= idx & -idx
+    return total
+
+def prefix_sum(idx):
+    return sum(B1, idx)*idx -  sum(B2, idx)
+
+def range_sum(l, r):
+    return prefix_sum(r) - prefix_sum(l-1)
+```
+

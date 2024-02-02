@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "fc3b41085451b2d4",
+            "id": "886bd9c589235441",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fenwick Tree.md",
+                "file": "Sqrt Decomposition.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fenwick Tree.md",
+                "file": "Sqrt Decomposition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fenwick Tree.md",
+                "file": "Sqrt Decomposition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fenwick Tree.md"
+                "file": "Sqrt Decomposition.md"
               }
             }
           }
@@ -159,12 +159,13 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "fc3b41085451b2d4",
+  "active": "886bd9c589235441",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Sqrt Decomposition.md",
+    "Fenwick Tree.md",
     "Pasted image 20240202032745.png",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
-    "Fenwick Tree.md",
     "Data Structures.md",
     "Computação/One for All/Artigos/Sparse Table.md",
     "Computação/One for All/Artigos/Pasted image 20240130200911.png",
@@ -198,7 +199,6 @@
     "Computação/One for All/Artigos/Pasted image 20240126195657.png",
     "Computação/One for All/Artigos/Pasted image 20240126191343.png",
     "Computação/One for All/Artigos/Pasted image 20240126185928.png",
-    "Computação/One for All/Artigos/Pasted image 20240121002050 1.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
