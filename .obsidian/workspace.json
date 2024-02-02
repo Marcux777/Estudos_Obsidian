@@ -4,67 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "7885ccb4eadaf1db",
+        "id": "981bf36227fc6dd4",
         "type": "tabs",
         "children": [
           {
-            "id": "f52e66132934a911",
+            "id": "f2790c3c1f37e574",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "bce74caeae963aee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1e2d7833a5a728f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Aplicações - Binary Exponentiation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "90bb09ae924614c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "263b668248d1e14d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -191,34 +138,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "263b668248d1e14d",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Aplicação no teorema de Euler.md",
-    "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Aplicações - Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Método de Fatoração de Fermat.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Consumo de Memória e Velocidade das Operações.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Implementação.md",
-    "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
-    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Periodicidade módulo p - Número de Fibonacci.md",
-    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Solução Algorítmica - Equações Diofantinas Lineares.md",
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Função totiente de Euler de 1 a  n em  O(n loglogn).md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Implementação - Algoritmo de Detecção de Ciclo de Floyd.md",
-    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Encontrar o número de soluções e as soluções em um determinado intervalo - Equações Diofantinas Lineares.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Quando a e  m não são coprimos.md",
-    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo - Algoritmo de Euclides Estendido.md",
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Implementation - Função totiente de Euler.md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Fatoração por Roda.md",
-    "Computação/One for All/Artigos/Algebra/Primality tests/Divisão de Teste - Testes de primalidade.md",
-    "Computação/One for All/Artigos/Algebra/Discrete Log/Algoritmo - Discrete Log.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/- Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
-    "Data Structures.md",
-    "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
+    "Sem título",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
+    "Computação/One for All/Artigos/Formal power series.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo Rho de Pollard.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Segmented Sieve.md",
+    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Implementação - Algoritmo de Euclides para calcular o maior divisor comum.md",
+    "Computação/One for All/Artigos/Transformação Rápida.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Implementação - Algoritmo de Brent.md",
+    "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Modificação em Tempo Linear - Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem/Algoritmo de Garner.md",
+    "Computação/One for All/Artigos/Algebra/Primality tests/Versão Determinística.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Divisão de Teste - Fatoração de inteiros.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Implementação do Algoritmo de Garner.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Peneirando até a raiz.md",
+    "Computação/One for All/Artigos/Algoritmo para encontrar uma raiz primitiva - Primitive Root.md",
+    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Fórmulas para o enésimo número de Fibonacci.md",
+    "Computação/One for All/Artigos/Fast inverse trick.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Primos Pré-computados.md",
+    "Computação/One for All/Artigos/Representação de Montgomery.md",
+    "Computação/One for All/Artigos/Algebra/Primality tests/Teste de primalidade de Fermat.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo de Detecção de Ciclo de Floyd.md",
+    "Computação/One for All/Artigos/Aplicações.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
+    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Algoritmo.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
