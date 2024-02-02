@@ -2,6 +2,6 @@
 - [[Fundamental - Álgebra]]
 - [[Números Primos  - Álgebra]]
 - [[Funções Teoria dos Números - Álgebra]]
-- [[Aritmética modular]]
+- [[Aritmética modular - Álgebra]]
 - [[Sistemas numéricos]]
 - [[Diversos]]

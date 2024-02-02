@@ -27,8 +27,7 @@ Assim, usando as três primeiras propriedades, podemos calcular  $\phi(n)$  
  
 $$\begin{align} \phi (n) &= \phi ({p_1}^{a_1}) \cdot \phi ({p_2}^{a_2}) \cdots \phi ({p_k}^{a_k}) \\\\ &= \left({p_1}^{a_1} - {p_1}^{a_1 - 1}\right) \cdot \left({p_2}^{a_2} - {p_2}^{a_2 - 1}\right) \cdots \left({p_k}^{a_k} - {p_k}^{a_k - 1}\right) \\\\ &= p_1^{a_1} \cdot \left(1 - \frac{1}{p_1}\right) \cdot p_2^{a_2} \cdot \left(1 - \frac{1}{p_2}\right) \cdots p_k^{a_k} \cdot \left(1 - \frac{1}{p_k}\right) \\\\ &= n \cdot \left(1 - \frac{1}{p_1}\right) \cdot \left(1 - \frac{1}{p_2}\right) \cdots \left(1 - \frac{1}{p_k}\right) \end{align}$$
 
-## Implementation
-
+## Implementação
 Aqui está uma implementação usando fatoração em  $O(\sqrt{n})$ :
 ```c++
 int phi(int n) {
@@ -48,7 +47,6 @@ int phi(int n) {
 
 
 ## Função totiente de Euler de $1 a  n$ em  $O(n loglogn)$
-
 Se precisarmos de todos os totientes de todos os números entre  $1$  e  $n$ , então fatorar todos os números  
 $n$  não é eficiente. Podemos usar a mesma ideia do [[Crivo de Eratóstenes]]. Ainda se baseia na propriedade mostrada acima, mas em vez de atualizar o resultado temporário para cada fator primo para cada número, encontramos todos os números primos e para cada um atualizamos os resultados temporários de todos os números que são divisíveis por esse número primo.
 
@@ -71,16 +69,13 @@ void phi_1_to_n(int n) {
 
 
 ## Propriedade da soma dos divisores
-
 Esta interessante propriedade foi estabelecida por Gauss:
  
 $$ \sum_{d|n} \phi{(d)} = n$$ 
 Aqui a soma é sobre todos os divisores positivos  
 $d$  de  $n$ .
 Por exemplo, os divisores de 10 são 1, 2, 5 e 10. Portanto  $\phi{(1)} + \phi{(2)} + \phi{(5)} + \phi{(10)} = 1 + 1 + 4 + 4 = 10$ .
-
-## Encontrando o totiente de 1 a n usando a propriedade da soma dos divisores
-
+### Encontrando o totiente de 1 a n usando a propriedade da soma dos divisores
 A propriedade da soma dos divisores também nos permite calcular o totiente de todos os números entre 1 e  $n$ . Esta implementação é um pouco mais simples do que a implementação anterior baseada no Crivo de Eratóstenes, no entanto, tem uma complexidade um pouco pior:  $O(n \log n)$ 
 
 ```c++
@@ -97,7 +92,7 @@ void phi_1_to_n(int n) {
 }
 ```
 
-# [[Aplicação no teorema de Euler]]
+## Aplicação no teorema de Euler
 A propriedade mais famosa e importante da função totiente de Euler é expressa no teorema de Euler:
 $$a^{\phi(m)} \equiv 1 \pmod m \quad \text{se } a \text{ e } m \text{ são primos entre si.}$$ 
 No caso particular em que  $m$  é primo, o teorema de Euler se transforma no pequeno teorema de Fermat:
@@ -110,14 +105,12 @@ Como consequência imediata, também obtemos a equivalência:
 $$a^n \equiv a^{n \bmod \phi(m)} \pmod m$$ 
 Isso permite calcular  $x^n \bmod m$  para $n$  muito grande, especialmente se  $n$  é o resultado de outro cálculo, pois permite calcular  $n$  sob um módulo.
 
-# Teoria dos Grupos
-
+### Teoria dos Grupos
 $\phi(n)$  é a ordem do grupo multiplicativo mod n  $(\mathbb Z / n\mathbb Z)^\times$ , ou seja, o grupo das unidades (elementos com inversos multiplicativos). Os elementos com inversos multiplicativos são precisamente aqueles coprimos a  $n$ .
 
 A ordem multiplicativa de um elemento  $a$  mod  $n$ , denotada por $\operatorname{ord}_n(a)$ , é o menor $k>0$  tal que  $a^k \equiv 1 \pmod m$ .  $\operatorname{ord}_n(a)$  é o tamanho do subgrupo gerado por  $a$ , então pelo Teorema de Lagrange, a ordem multiplicativa de qualquer  $a$  deve dividir $\phi(n)$ . Se a ordem multiplicativa de  $a$  é  $\phi(n)$ , a maior possível, então  $a$  é uma raiz primitiva e o grupo é cíclico por definição.
 
-# Generalização
-
+## Generalização
 Existe uma versão menos conhecida da última equivalência, que permite calcular  
 $x^n \bmod m$  de forma eficiente para  $x$  e  $m$  não coprimos. Para  $x, m$  arbitrários e  $n \geq \log_2 m$ :
 
