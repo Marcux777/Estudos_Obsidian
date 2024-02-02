@@ -231,3 +231,138 @@ Neste problema, queremos calcular o MDC / MMC de todos os números de intervalos
 
 Esta interessante variação da Árvore de Segmentos pode ser resolvida exatamente da mesma maneira que as Árvores de Segmentos que derivamos para consultas de soma / mínimo / máximo: basta armazenar o MDC / MMC do vértice correspondente em cada vértice da árvore. Combinar dois vértices pode ser feito calculando o MDC / MMC de ambos os vértices.
 
+#### Contando o número de zeros, procurando pelo  $k$ -ésimo zero
+Neste problema, desejamos encontrar o número de zeros em um intervalo dado e, adicionalmente, encontrar o índice do  $k$ -ésimo zero usando uma segunda função.
+
+Novamente, precisamos ajustar um pouco os valores armazenados na árvore: desta vez, armazenaremos o número de zeros em cada segmento em  $t[]$ . É bastante claro como implementar as funções  $\text{build}$ ,  $\text{update}$  e <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtext>count_zero</mtext>
+</math>; podemos simplesmente usar as ideias do problema de consulta de soma. Assim, resolvemos a primeira parte do problema.
+
+Agora aprendemos como resolver o problema de encontrar o  $k$ -ésimo zero no array  $a[]$ . Para realizar essa tarefa, descemos na Árvore de Segmentos, começando no vértice raiz, e movendo-nos a cada vez para o filho esquerdo ou direito, dependendo de qual segmento contém o  $k$ -ésimo zero. Para decidir para qual filho precisamos ir, é suficiente olhar para o número de zeros que aparecem no segmento correspondente ao vértice esquerdo. Se esta contagem precomputada for maior ou igual a  $k$ , é necessário descer para o filho esquerdo; caso contrário, desça para o filho direito. Observe que, se escolhermos o filho direito, precisamos subtrair o número de zeros do filho esquerdo de  $k$ .
+
+Na implementação, podemos lidar com o caso especial de  $a[]$  conter menos de  
+$k$  zeros, retornando -1.
+
+```cpp
+int find_kth(int v, int tl, int tr, int k) {
+    if (k > t[v])
+        return -1;
+    if (tl == tr)
+        return tl;
+    int tm = (tl + tr) / 2;
+    if (t[v*2] >= k)
+        return find_kth(v*2, tl, tm, k);
+    else 
+        return find_kth(v*2+1, tm+1, tr, k - t[v*2]);
+}
+```
+
+#### Procurando por um prefixo de array com uma quantidade dada
+A tarefa é a seguinte: para um valor dado  $x$ , precisamos encontrar rapidamente o menor índice  $i$  tal que a soma dos primeiros  $i$  elementos do array  $a[]$  seja maior ou igual a  $x$  (assumindo que o array  $a[]$  contém apenas valores não negativos).
+
+Essa tarefa pode ser resolvida usando a busca binária, computando a soma dos prefixos com a Árvore de Segmentos. No entanto, isso levará a uma solução  
+$O(\log^2 n)$ .
+
+Em vez disso, podemos usar a mesma ideia da seção anterior e encontrar a posição descendo na árvore: movendo-nos a cada vez para a esquerda ou para a direita, dependendo da soma do filho esquerdo. Assim, encontramos a resposta em  
+$O(\log n)$  tempo.
+
+#### Procurando pelo primeiro elemento maior que uma quantidade dada
+A tarefa é a seguinte: para um valor dado  $x$  e um intervalo  $a[l \dots r]$ , encontrar o menor  $i$  no intervalo  $a[l \dots r]$ , tal que  $a[i]$  seja maior que  $x$ .
+
+Essa tarefa pode ser resolvida usando a busca binária sobre consultas de prefixo máximo com a Árvore de Segmentos. No entanto, isso levará a uma solução  $O(\log^2 n)$ .
+
+Em vez disso, podemos usar a mesma ideia das seções anteriores e encontrar a posição descendo na árvore: movendo-nos a cada vez para a esquerda ou para a direita, dependendo do valor máximo do filho esquerdo. Assim, encontramos a resposta em  $O(\log n)$  tempo.
+
+```cpp
+int get_first(int v, int tl, int tr, int l, int r, int x) {
+    if(tl > r || tr < l) return -1;
+    if(t[v] <= x) return -1;
+
+    if (tl== tr) return tl;
+
+    int tm = tl + (tr-tl)/2;
+    int left = get_first(2*v, tl, tm, l, r, x);
+    if(left != -1) return left;
+    return get_first(2*v+1, tm+1, tr, l ,r, x);
+}
+```
+
+#### Encontrando subsegmentos com a soma máxima
+Aqui novamente recebemos um intervalo  $a[l \dots r]$  para cada consulta, e desta vez precisamos encontrar um subsegmento  $a[l^\prime \dots r^\prime]$  tal que  $l \le l^\prime$  e  $r^\prime \le r$  e a soma dos elementos deste segmento seja máxima. Como antes, também queremos ser capazes de modificar elementos individuais do array. Os elementos do array podem ser negativos, e o subsegmento ótimo pode ser vazio (por exemplo, se todos os elementos forem negativos).
+
+Este problema é um uso não trivial de uma Árvore de Segmentos. Desta vez, armazenaremos quatro valores para cada vértice: a soma do segmento, a soma máxima do prefixo, a soma máxima do sufixo e a soma do subsegmento máximo nele. Em outras palavras, para cada segmento da Árvore de Segmentos, a resposta já está precomputada, assim como as respostas para segmentos que tocam as fronteiras esquerda e direita do segmento.
+
+Como construir uma árvore com esses dados? Novamente, a construímos de maneira recursiva: primeiro calculamos os quatro valores para o filho esquerdo e direito, e então os combinamos para obter os quatro valores para o vértice atual. Note que a resposta para o vértice atual é:
+
+- a resposta do filho esquerdo, o que significa que o subsegmento ótimo está totalmente colocado no segmento do filho esquerdo,
+- a resposta do filho direito, o que significa que o subsegmento ótimo está totalmente colocado no segmento do filho direito,
+- a soma da soma máxima do sufixo do filho esquerdo e a soma máxima do prefixo do filho direito, o que significa que o subsegmento ótimo se intersecta com ambos os filhos.
+
+Portanto, a resposta para o vértice atual é o máximo desses três valores. Calcular a soma máxima do prefixo/sufixo é ainda mais fácil. Aqui está a implementação da função  $\text{combine}$ , que recebe apenas dados do filho esquerdo e direito e retorna os dados do vértice atual.
+
+```cpp
+struct data {
+    int sum, pref, suff, ans;
+};
+
+data combine(data l, data r) {
+    data res;
+    res.sum = l.sum + r.sum;
+    res.pref = max(l.pref, l.sum + r.pref);
+    res.suff = max(r.suff, r.sum + l.suff);
+    res.ans = max(max(l.ans, r.ans), l.suff + r.pref);
+    return res;
+}
+```
+
+Usando a função  $\text{combine}$ , é fácil construir a Árvore de Segmentos. Podemos implementá-la exatamente da mesma maneira que nas implementações anteriores. Para inicializar os vértices folha, criamos a função auxiliar  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtext>make_data</mtext>
+</math> , que retornará um objeto  $\text{data}$  contendo as informações de um único valor.
+
+```cpp
+data make_data(int val) {
+    data res;
+    res.sum = val;
+    res.pref = res.suff = res.ans = max(0, val);
+    return res;
+}
+
+void build(int a[], int v, int tl, int tr) {
+    if (tl == tr) {
+        t[v] = make_data(a[tl]);
+    } else {
+        int tm = (tl + tr) / 2;
+        build(a, v*2, tl, tm);
+        build(a, v*2+1, tm+1, tr);
+        t[v] = combine(t[v*2], t[v*2+1]);
+    }
+}
+
+void update(int v, int tl, int tr, int pos, int new_val) {
+    if (tl == tr) {
+        t[v] = make_data(new_val);
+    } else {
+        int tm = (tl + tr) / 2;
+        if (pos <= tm)
+            update(v*2, tl, tm, pos, new_val);
+        else
+            update(v*2+1, tm+1, tr, pos, new_val);
+        t[v] = combine(t[v*2], t[v*2+1]);
+    }
+}
+```
+
+Resta apenas saber como calcular a resposta para uma consulta. Para respondê-la, descemos na árvore como antes, dividindo a consulta em vários subsegmentos que coincidem com os segmentos da Árvore de Segmentos, e combinamos as respostas neles em uma única resposta para a consulta. Em seguida, deve ficar claro que o trabalho é exatamente o mesmo que na Árvore de Segmentos simples, mas em vez de somar/minimizar/maximizar os valores, usamos a função  
+$\text{combine}$ .
+
+```cpp
+data query(int v, int tl, int tr, int l, int r) {
+    if (l > r) 
+        return make_data(0);
+    if (l == tl && r == tr) 
+        return t[v];
+    int tm = (tl + tr) / 2;
+    return combine(query(v*2, tl, tm, l, min(r, tm)), 
+                   query(v*2+1, tm+1, tr, max(l, tm+1), r));
+}
+```
