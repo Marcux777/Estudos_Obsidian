@@ -11,8 +11,12 @@
             "id": "0c8c112ee6e4d685",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Probabilidade.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/Data Structures.md",
+                "file": "Probabilidade.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/Data Structures.md",
+                "file": "Probabilidade.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/Data Structures.md"
+                "file": "Probabilidade.md"
               }
             }
           }
@@ -142,8 +146,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
+    "Computação/Data Structures.md",
+    "Probabilidade.md",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
@@ -169,7 +175,6 @@
     "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo de Detecção de Ciclo de Floyd.md",
     "Computação/One for All/Artigos/Aplicações.md",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
-    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Algoritmo.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
@@ -188,7 +193,6 @@
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem",
     "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes",
-    "Computação/One for All/Artigos/Algebra/Primality tests",
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions"
+    "Computação/One for All/Artigos/Algebra/Primality tests"
   ]
 }
