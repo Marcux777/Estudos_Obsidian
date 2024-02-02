@@ -849,7 +849,6 @@ Agora, para a versão não restrita do problema.
 
 Primeiro, para a restrição nas consultas: em vez de realizar apenas essas consultas sobre um prefixo de  a , queremos usar quaisquer segmentos arbitrários  $a[l…r]$ . Aqui, precisamos de uma Árvore de Segmento que represente o histograma dos elementos no intervalo  $a[l…r]$ . É fácil ver que tal Árvore de Segmento é apenas a diferença entre a Árvore de Segmento enraizada em  $root_{r}$​  e a Árvore de Segmento enraizada em  $root_{l-1}$​ , ou seja, cada vértice na Árvore de Segmento  $[l…r]$  pode ser computado com o vértice da árvore  $root_{r}$​  menos o vértice da árvore $root_{l-1}$​ .
 
-
 Na implementação da função <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mtext>find_kth</mtext>
 </math>, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
@@ -888,8 +887,7 @@ int find_kth(Vertex* vl, Vertex *vr, int tl, int tr, int k) {
 }
 ```
 
-Agora, para as restrições nos elementos do array: podemos realmente transformar qualquer array em tal array por meio de compressão de índice. O menor elemento no array receberá o valor 0, o segundo menor o valor 1, e assim por diante. É fácil gerar tabelas de pesquisa (por exemplo, usando  $\text{map}$ ), que convertem um valor em seu índice e vice-versa em  $O(\log n)$  tempo.
-Aqui está o código para construir uma Árvore de Segmento persistente sobre um vetor `a` com elementos no intervalo `[0, MAX_VALUE]`:
+Como já mencionado acima, precisamos armazenar a raiz da Árvore de Segmento inicial e também todas as raízes após cada atualização. Aqui está o código para construir uma Árvore de Segmento persistente sobre um vetor `a` com elementos no intervalo `[0, MAX_VALUE]`:
 
 ```cpp
 int tl = 0, tr = MAX_VALUE + 1;
@@ -902,4 +900,56 @@ for (int i = 0; i < a.size(); i++) {
 // encontrar o 5º menor número do subarray [a[2], a[3], ..., a[19]]
 int result = find_kth(roots[2], roots[20], tl, tr, 5);
 ```
+Agora, para as restrições nos elementos do array: podemos realmente transformar qualquer array em tal array por meio de compressão de índice. O menor elemento no array receberá o valor 0, o segundo menor o valor 1, e assim por diante. É fácil gerar tabelas de pesquisa (por exemplo, usando `map`), que convertem um valor em seu índice e vice-versa em  $O(logn)$  tempo.
+
+### Árvore de Segmento Dinâmica
+(Chamada assim porque sua forma é dinâmica e os nós são geralmente alocados dinamicamente. Também conhecida como árvore de segmento implícita ou árvore de segmento esparsa.)
+
+Anteriormente, consideramos casos em que temos a capacidade de construir a árvore de segmento original. Mas o que fazer se o tamanho original estiver preenchido com algum elemento padrão, mas seu tamanho não permitir que você o construa completamente com antecedência?
+
+Podemos resolver este problema criando uma árvore de segmento preguiçosamente (incrementalmente). Inicialmente, criaremos apenas a raiz, e criaremos os outros vértices apenas quando precisarmos deles. Neste caso, usaremos a implementação em ponteiros (antes de ir para os filhos do vértice, verifique se eles foram criados, e se não, crie-os). Cada consulta ainda tem apenas a complexidade  $O(\log n)$ , que é pequena o suficiente para a maioria dos casos de uso (por exemplo,  $\log_2 10^9 \approx 30$ ).
+
+Nesta implementação, temos duas consultas, adicionando um valor a uma posição (inicialmente todos os valores são  $0$ ), e calculando a soma de todos os valores em um intervalo. `Vertex(0, n)` será o vértice raiz da árvore implícita.
+
+```cpp
+struct Vertex {
+    int left, right;
+    int sum = 0;
+    Vertex *left_child = nullptr, *right_child = nullptr;
+
+    Vertex(int lb, int rb) {
+        left = lb;
+        right = rb;
+    }
+
+    void extend() {
+        if (!left_child && left + 1 < right) {
+            int t = (left + right) / 2;
+            left_child = new Vertex(left, t);
+            right_child = new Vertex(t, right);
+        }
+    }
+
+    void add(int k, int x) {
+        extend();
+        sum += x;
+        if (left_child) {
+            if (k < left_child->right)
+                left_child->add(k, x);
+            else
+                right_child->add(k, x);
+        }
+    }
+
+    int get_sum(int lq, int rq) {
+        if (lq <= left && right <= rq)
+            return sum;
+        if (max(left, lq) >= min(right, rq))
+            return 0;
+        extend();
+        return left_child->get_sum(lq, rq) + right_child->get_sum(lq, rq);
+    }
+};
+```
+Obviamente, essa ideia pode ser estendida de várias maneiras diferentes. Por exemplo, adicionando suporte para atualizações de intervalo via propagação preguiçosa.
 

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7ff0f993be400005",
+        "id": "18c9e768013d8fec",
         "type": "tabs",
         "children": [
           {
-            "id": "686bc2dd7c0753dd",
+            "id": "a6b32e9c87e65609",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "395846fab4b7bf18",
+            "id": "205d2ef7da829564",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,21 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "93d313b9487462b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Segment Tree.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Segment Tree.md",
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Segment Tree.md",
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Segment Tree.md"
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md"
               }
             }
           }
@@ -171,17 +159,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "93d313b9487462b6",
+  "active": "205d2ef7da829564",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
-    "Computação/One for All/Fenwick Tree.md",
-    "Segment Tree.md",
-    "Pasted image 20240202045138.png",
-    "Pasted image 20240202044844.png",
-    "Pasted image 20240202044455.png",
     "Data Structures.md",
-    "Computação/One for All/Sqrt Decomposition.md",
-    "Computação/One for All/Pasted image 20240202032745.png",
+    "Computação/One for All/Artigos/Segment Tree.md",
+    "Computação/One for All/Artigos/Sqrt Decomposition.md",
+    "Computação/One for All/Artigos/Pasted image 20240202044455.png",
+    "Computação/One for All/Artigos/Pasted image 20240202044844.png",
+    "Computação/One for All/Artigos/Pasted image 20240202045138.png",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Computação/One for All/Artigos/Fenwick Tree.md",
+    "Computação/One for All/Artigos/Pasted image 20240202032745.png",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
     "Computação/One for All/Artigos/Sparse Table.md",
     "Computação/One for All/Artigos/Pasted image 20240130200911.png",
