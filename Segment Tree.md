@@ -666,19 +666,23 @@ int query(int v, int tl, int tr, int l, int r) {
 Uma Árvore de Segmentos pode ser generalizada de maneira bastante natural para dimensões superiores. Se no caso unidimensional dividimos os índices do array em segmentos, então no caso bidimensional construímos uma Árvore de Segmentos comum com relação aos primeiros índices, e para cada segmento, construímos uma Árvore de Segmentos comum com relação aos segundos índices.
 
 #### Árvore de Segmentos 2D Simples
-
 É fornecida uma matriz $a[0 \dots n-1, 0 \dots m-1]$, e precisamos encontrar a soma (ou mínimo/máximo) em alguma submatriz $a[x_1 \dots x_2, y_1 \dots y_2]$, além de realizar modificações nos elementos individuais da matriz (ou seja, consultas da forma $a[x][y] = p$).
 
 Assim, construímos uma Árvore de Segmentos 2D: primeiro a Árvore de Segmentos usando a primeira coordenada $(x)$, depois a segunda $(y)$.
 
 Para tornar o processo de construção mais compreensível, podemos esquecer por um momento que a matriz é bidimensional e considerar apenas a primeira coordenada. Construiremos uma Árvore de Segmentos unidimensional usando apenas a primeira coordenada. Mas, em vez de armazenar um número em um segmento, armazenamos uma Árvore de Segmentos inteira: ou seja, neste momento, lembramos que também temos uma segunda coordenada; mas, como neste momento a primeira coordenada já está fixa em algum intervalo $[l \dots r]$, efetivamente trabalhamos com uma faixa $a[l \dots r, 0 \dots m-1]$ e construímos uma Árvore de Segmentos para ela.
 
-Aqui está a implementação da construção de uma Árvore de Segmentos 2D. Representa na verdade dois blocos separados: a construção de uma Árvore de Segmentos ao longo da coordenada $x$ <math xmlns="http://www.w3.org/1998/Math/MathML">
+Aqui está a implementação da construção de uma Árvore de Segmentos 2D. Representa na verdade dois blocos separados: a construção de uma Árvore de Segmentos ao longo da coordenada $x$ (<math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mtext>build</mtext>
     <mi>x</mi>
   </msub>
-</math>, e a coordenada $y$ (\(\text{build}_y\)). Para os nós folha em \(\text{build}_y\), temos que separar dois casos: quando o segmento atual da primeira coordenada \([tlx \dots trx]\) tem comprimento 1, e quando tem um comprimento maior que um. No primeiro caso, simplesmente pegamos o valor correspondente da matriz, e no segundo caso podemos combinar os valores de duas Árvores de Segmentos dos filhos esquerdo e direito na coordenada \(x\).
+</math>), e a coordenada $y$ (<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mtext>build</mtext>
+    <mi>y</mi>
+  </msub>
+</math>). Para os nós folha em $\text{build}_y$, temos que separar dois casos: quando o segmento atual da primeira coordenada $[tlx \dots trx]$ tem comprimento 1, e quando tem um comprimento maior que um. No primeiro caso, simplesmente pegamos o valor correspondente da matriz, e no segundo caso podemos combinar os valores de duas Árvores de Segmentos dos filhos esquerdo e direito na coordenada $x$.
 
 ```cpp
 void build_y(int vx, int lx, int rx, int vy, int ly, int ry) {
@@ -705,7 +709,7 @@ void build_x(int vx, int lx, int rx) {
 }
 ```
 
-Essa Árvore de Segmentos ainda utiliza uma quantidade linear de memória, mas com uma constante maior: \(16nm\). É claro que o procedimento descrito em \(\text{build}_x\) também funciona em tempo linear.
+Essa Árvore de Segmentos ainda utiliza uma quantidade linear de memória, mas com uma constante maior: $16nm$. É claro que o procedimento descrito em $\text{build}_x$ também funciona em tempo linear.
 
 Agora, passamos para o processamento de consultas. Responderemos à consulta bidimensional usando o mesmo princípio: primeiro dividir a consulta na primeira coordenada e, para cada vértice alcançado, chamar a Árvore de Segmentos correspondente da segunda coordenada.
 
@@ -733,9 +737,9 @@ int sum_x(int vx, int tlx, int trx, int lx, int rx, int ly, int ry) {
 }
 ```
 
-Esta função funciona em \(O(\log n \log m)\) tempo, pois primeiro desce a árvore na primeira coordenada e, para cada vértice percorrido na árvore, faz uma consulta na Árvore de Segmentos correspondente na segunda coordenada.
+Esta função funciona em $O(\log n \log m)$ tempo, pois primeiro desce a árvore na primeira coordenada e, para cada vértice percorrido na árvore, faz uma consulta na Árvore de Segmentos correspondente na segunda coordenada.
 
-Finalmente, consideramos a consulta de modificação. Queremos aprender como modificar a Árvore de Segmentos de acordo com a alteração no valor de algum elemento \(a[x][y] = p\). É claro que as alterações ocorrerão apenas nos vértices da primeira Árvore de Segmentos que cobrem a coordenada \(x\) (e tais serão \(O(\log n)\)), e para as Árvores de Segmentos correspondentes a elas, as alterações ocorrerão apenas nos vértices que cobrem a coordenada \(y\) (e tais serão \(O(\log m)\)). Portanto, a implementação não será muito diferente do caso unidimensional, apenas agora descemos primeiro na primeira coordenada e, em seguida, na segunda.
+Finalmente, consideramos a consulta de modificação. Queremos aprender como modificar a Árvore de Segmentos de acordo com a alteração no valor de algum elemento $a[x][y] = p$. É claro que as alterações ocorrerão apenas nos vértices da primeira Árvore de Segmentos que cobrem a coordenada $x$ (e tais serão $O(\log n)$), e para as Árvores de Segmentos correspondentes a elas, as alterações ocorrerão apenas nos vértices que cobrem a coordenada $y$ (e tais serão $O(\log m)$). Portanto, a implementação não será muito diferente do caso unidimensional, apenas agora descemos primeiro na primeira coordenada e, em seguida, na segunda.
 
 ```cpp
 void update_y(int vx, int lx, int rx, int vy, int ly, int ry, int x, int y, int new_val) {
@@ -765,3 +769,69 @@ void update_x(int vx, int lx, int rx, int x, int y, int new_val) {
     update_y(vx, lx, rx, 1, 0, m-1, x, y, new_val);
 }
 ```
+
+#### Compressão da Árvore de Segmentos 2D
+Vamos considerar o seguinte problema: existem  $n$  pontos no plano, dados por suas coordenadas  $(x_i, y_i)$  e consultas do tipo "conte o número de pontos dentro do retângulo  $((x_1, y_1), (x_2, y_2))$ ". É claro que, neste caso, torna-se irracionalmente dispendioso construir uma Árvore de Segmentos bidimensional com  $O(n^2)$  elementos. A maior parte dessa memória será desperdiçada, pois cada ponto individual só pode entrar em  $O(\log n)$  segmentos da árvore ao longo da primeira coordenada, e, portanto, o tamanho "útil" total de todos os segmentos da árvore na segunda coordenada é  $O(n \log n)$ .
+
+Portanto, procedemos da seguinte maneira: em cada vértice da Árvore de Segmentos em relação à primeira coordenada, armazenamos uma Árvore de Segmentos construída apenas por aquelas segundas coordenadas que ocorrem no segmento atual das primeiras coordenadas. Em outras palavras, ao construir uma Árvore de Segmentos dentro de algum vértice com índice  $vx$  e os limites  $tlx$  e  $trx$ , consideramos apenas aqueles pontos que caem neste intervalo  $x \in [tlx, trx]$ , e construímos uma Árvore de Segmentos apenas com eles.
+
+Assim, conseguiremos que cada Árvore de Segmentos na segunda coordenada ocupe exatamente a quantidade de memória que deveria. Como resultado, a quantidade total de memória diminuirá para  
+$O(n \log n)$ . Ainda podemos responder às consultas em  $O(\log^2 n)$  tempo, só temos que fazer uma busca binária na segunda coordenada, mas isso não piorará a complexidade.
+
+No entanto, consultas de modificação serão impossíveis com essa estrutura: na verdade, se um novo ponto aparecer, teremos que adicionar um novo elemento no meio de alguma Árvore de Segmentos ao longo da segunda coordenada, o que não pode ser feito de forma eficaz.
+
+Em conclusão, notamos que a Árvore de Segmentos bidimensional contraída da maneira descrita se torna praticamente equivalente à modificação da Árvore de Segmentos unidimensional (veja Salvando os subarrays inteiros em cada vértice). Em particular, a Árvore de Segmentos bidimensional é apenas um caso especial de armazenamento de um subarray em cada vértice da árvore. Segue-se que, se você tiver que abandonar uma Árvore de Segmentos bidimensional devido à impossibilidade de executar uma consulta, faz sentido tentar substituir a Árvore de Segmentos aninhada por uma estrutura de dados mais poderosa, por exemplo, uma árvore cartesiana.
+
+
+
+### Preservando o histórico de seus valores (Árvore de Segmentos Persistente)
+Uma estrutura de dados persistente é uma estrutura de dados que lembra seu estado anterior para cada modificação. Isso permite acessar qualquer versão desta estrutura de dados que nos interesse e executar uma consulta nela.
+
+A Árvore de Segmentos é uma estrutura de dados que pode ser transformada em uma estrutura de dados persistente de forma eficiente (tanto em tempo quanto em consumo de memória). Queremos evitar copiar a árvore completa antes de cada modificação, e não queremos perder o comportamento de  $O(\log n)$  tempo para responder consultas de intervalo.
+
+Na verdade, qualquer solicitação de mudança na Árvore de Segmentos leva a uma mudança nos dados de apenas  $O(\log n)$  vértices ao longo do caminho a partir da raiz. Então, se armazenarmos a Árvore de Segmentos usando ponteiros (ou seja, um vértice armazena ponteiros para os vértices filho à esquerda e à direita), então, ao realizar a consulta de modificação, simplesmente precisamos criar novos vértices em vez de mudar os vértices disponíveis. Vértices que não são afetados pela consulta de modificação ainda podem ser usados apontando os ponteiros para os vértices antigos. Assim, para uma consulta de modificação  $O(\log n)$  novos vértices serão criados, incluindo um novo vértice raiz da Árvore de Segmentos, e a versão anterior inteira da árvore enraizada no vértice raiz antigo permanecerá inalterada.
+
+Vamos dar uma implementação de exemplo para a Árvore de Segmentos mais simples: quando há apenas uma consulta pedindo somas e consultas de modificação de elementos únicos.
+
+```cpp
+struct Vertex {
+    Vertex *l, *r;
+    int sum;
+
+    Vertex(int val) : l(nullptr), r(nullptr), sum(val) {}
+    Vertex(Vertex *l, Vertex *r) : l(l), r(r), sum(0) {
+        if (l) sum += l->sum;
+        if (r) sum += r->sum;
+    }
+};
+
+Vertex* build(int a[], int tl, int tr) {
+    if (tl == tr)
+        return new Vertex(a[tl]);
+    int tm = (tl + tr) / 2;
+    return new Vertex(build(a, tl, tm), build(a, tm+1, tr));
+}
+
+int get_sum(Vertex* v, int tl, int tr, int l, int r) {
+    if (l > r)
+        return 0;
+    if (l == tl && tr == r)
+        return v->sum;
+    int tm = (tl + tr) / 2;
+    return get_sum(v->l, tl, tm, l, min(r, tm))
+         + get_sum(v->r, tm+1, tr, max(l, tm+1), r);
+}
+
+Vertex* update(Vertex* v, int tl, int tr, int pos, int new_val) {
+    if (tl == tr)
+        return new Vertex(new_val);
+    int tm = (tl + tr) / 2;
+    if (pos <= tm)
+        return new Vertex(update(v->l, tl, tm, pos, new_val), v->r);
+    else
+        return new Vertex(v->l, update(v->r, tm+1, tr, pos, new_val));
+}
+```
+Para cada modificação da Árvore de Segmentos, receberemos um novo vértice raiz. Para saltar rapidamente entre duas versões diferentes da Árvore de Segmentos, precisamos armazenar essas raízes em um array. Para usar uma versão específica da Árvore de Segmentos, simplesmente chamamos a consulta usando o vértice raiz apropriado.
+
+Com a abordagem descrita acima, quase qualquer Árvore de Segmentos pode ser transformada em uma estrutura de dados persistente.
