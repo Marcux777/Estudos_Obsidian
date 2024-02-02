@@ -1,5 +1,4 @@
 ## Exponenciação Binária por Fatoração
-
 Considere o problema de calcular  $ax^y \pmod{2^d}$ , dados os inteiros  $a$ ,  $x$ ,  $y$  e  $d \geq 3$ , onde  $x$  é ímpar.
 
 O algoritmo abaixo permite resolver este problema com  $O(d)$  adições e operações binárias e uma única multiplicação por  $y$ .
@@ -106,11 +105,7 @@ uint32_t mbin_exp_32(uint32_t r, uint32_t x) {
     return r;
 }
 ```
-
-
-
 ## Otimizações Adicionais
-
 É possível reduzir pela metade o número de iterações se você observar que  $4L(2^{d-1}+1)=2^{d-1}$  e que para  $2k \geq d$  vale que 
 $$ (2^n+1)^2 \equiv 2^{2n} + 2^{n+1}+1 \equiv 2^{n+1}+1 \pmod{2^d}, $$ 
 o que permite deduzir que  $4L(2^n+1)=2^n$  para  $2n \geq d$ . Assim, você poderia simplificar o algoritmo indo apenas até  $\frac{d}{2}$  e então usar o fato acima para calcular a parte restante com operações bitwise:
@@ -146,11 +141,7 @@ uint32_t mbin_exp_32(uint32_t r, uint32_t x) {
     return r;
 }
 ```
-
-
-
 ## Cálculo da tabela de logaritmos
-
 Para calcular a tabela de logaritmos, pode-se modificar o algoritmo de Pohlig-Hellman para o caso em que o módulo é uma potência de  
 $2$ .
 

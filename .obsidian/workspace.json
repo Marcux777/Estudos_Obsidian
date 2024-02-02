@@ -4,59 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "dafde98b8a44db52",
+        "id": "7885ccb4eadaf1db",
         "type": "tabs",
         "children": [
           {
-            "id": "00792101b9322b26",
+            "id": "f52e66132934a911",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "bce74caeae963aee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/Álgebra.md",
+                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6a6eba0a0d730ae0",
+            "id": "1e2d7833a5a728f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
+                "file": "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Aplicações - Binary Exponentiation.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8cdae93d8b1a9111",
+            "id": "90bb09ae924614c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Fast Fourier transform.md",
+                "file": "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "21c952ed77dd6ded",
+            "id": "263b668248d1e14d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
+                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -122,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
+                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
+                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md"
+                "file": "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md"
               }
             }
           }
@@ -183,34 +191,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "21c952ed77dd6ded",
+  "active": "263b668248d1e14d",
   "lastOpenFiles": [
-    "Computação/One for All/Artigos/Fast Fourier transform.md",
-    "Computação/One for All/Artigos/Number theoretic transform.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Aplicação no teorema de Euler.md",
     "Computação/One for All/Artigos/Transformada Discreta de Fourier.md",
-    "Computação/One for All/Artigos/Improved implementation - in-place computation.md",
-    "Computação/One for All/Artigos/Implementação - Discrete Fourier transform.md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Representação de Base Mista.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Aplicações - Binary Exponentiation.md",
     "Computação/One for All/Artigos/Inverse FFT (Transformada Rápida de Fourier Inversa).md",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse/Encontrando o Inverso Modular usando o Algoritmo Euclidiano Estendido.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Método de Fatoração de Fermat.md",
+    "Computação/One for All/Artigos/Sieve of Eratosthenes/Consumo de Memória e Velocidade das Operações.md",
+    "Computação/One for All/Artigos/Algebra/Factorial modulo p/Implementação.md",
     "Computação/One for All/Artigos/Fast Fourier Transform¶.md",
-    "Computação/One for All/Artigos/Aplicação da DFT - multiplicação rápida de polinômios.md",
-    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
-    "Computação/One for All/Artigos/Arbitrary-Precision Arithmetic.md",
-    "Computação/One for All/Artigos/Enumerating submasks of a bitmask.md",
-    "Computação/One for All/Artigos/Bit manipulation.md",
+    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Periodicidade módulo p - Número de Fibonacci.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Solução Algorítmica - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Função totiente de Euler de 1 a  n em  O(n loglogn).md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Implementação - Algoritmo de Detecção de Ciclo de Floyd.md",
+    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Encontrar o número de soluções e as soluções em um determinado intervalo - Equações Diofantinas Lineares.md",
+    "Computação/One for All/Artigos/Algebra/Discrete Log/Quando a e  m não são coprimos.md",
+    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo - Algoritmo de Euclides Estendido.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Implementation - Função totiente de Euler.md",
+    "Computação/One for All/Artigos/Algebra/Integer factorization/Fatoração por Roda.md",
+    "Computação/One for All/Artigos/Algebra/Primality tests/Divisão de Teste - Testes de primalidade.md",
+    "Computação/One for All/Artigos/Algebra/Discrete Log/Algoritmo - Discrete Log.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/- Binary Exponentiation.md",
+    "Computação/One for All/Artigos/Multiplicação com módulo arbitrário.md",
+    "Data Structures.md",
     "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Algebra/Sistemas numéricos - Álgebra.md",
-    "Computação/One for All/Artigos/Código Gray.md",
-    "Computação/One for All/Artigos/Ternário Equilibrado.md",
-    "Computação/One for All/Artigos/Algoritmo de Conversão.md",
-    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
-    "Computação/One for All/Artigos/Montgomery Multiplication.md",
-    "Computação/One for All/Artigos/Transformação Rápida.md",
-    "Computação/One for All/Artigos/Implementação - Montgomery Multiplication.md",
-    "Computação/One for All/Artigos/Fast inverse trick.md",
-    "Computação/One for All/Artigos/Redução de Montgomery.md",
-    "Computação/One for All/Artigos/Representação de Montgomery.md",
-    "Computação/One for All/Artigos/Discrete Root.md",
-    "Computação/One for All/Artigos/Algoritmo - Discrete Root.md",
+    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",

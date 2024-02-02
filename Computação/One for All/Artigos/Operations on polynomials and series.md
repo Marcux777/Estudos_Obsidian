@@ -8,11 +8,459 @@ Isso inclui conceitos como multiplicação de polinômios, interpolação e oper
 
 Nesta seção, focamos mais nas definições e propriedades "intuitivas" de várias operações polinomiais. Os detalhes técnicos de implementação e complexidades serão abordados em seções posteriores.
 
-[[Polynomial multiplication]]
+### Multiplicação de Polinômios
 
-[[Formal power series]]
+**Definição**
 
-[[Long polynomial division]]
+Um polinômio univariado é uma expressão da forma  $A(x) = a_0 + a_1 x + \dots + a_n x^n$ .
+
+Os valores  $a_0, \dots, a_n$  são coeficientes do polinômio, geralmente retirados de algum conjunto de números ou estruturas semelhantes a números. Neste artigo, assumimos que os coeficientes são retirados de algum campo, o que significa que as operações de adição, subtração, multiplicação e divisão são bem definidas para eles (exceto para a divisão por  $0$ ) e geralmente se comportam de maneira semelhante aos números reais.
+
+Exemplo típico desse campo é o campo dos restos da divisão por um número primo  
+$p$ .
+
+Por simplicidade, vamos omitir o termo univariado, pois este é o único tipo de polinômios que consideramos neste artigo. Também escreveremos  $A$  em vez de  $A(x)$  sempre que possível, o que será compreensível a partir do contexto. Assume-se que ou  $a_n \neq 0$  ou  $A(x)=0$ .
+
+**Definição**
+
+	O produto de dois polinômios é definido expandindo-o como uma expressão aritmética:
+	
+	 
+	$$ A(x) B(x) = \left(\sum\limits_{i=0}^n a_i x^i \right)\left(\sum\limits_{j=0}^m b_j x^j\right) = \sum\limits_{i,j} a_i b_j x^{i+j} = \sum\limits_{k=0}^{n+m} c_k x^k = C(x). $$ 
+	
+	A sequência  $c_0, c_1, \dots, c_{n+m}$  dos coeficientes de  $C(x)$  é chamada de convolução de  $a_0, \dots, a_n$  e  $b_0, \dots, b_m$ .
+
+**Definição**
+
+	O grau de um polinômio  $A$  com  $a_n \neq 0$  é definido como  $\deg A = n$ .
+	
+	Para consistência, o grau de  $A(x) = 0$  é definido como  $\deg A = -\infty$ .
+
+Nesta noção,  $\deg AB = \deg A + \deg B$  para quaisquer polinômios  $A$  e  $B$ .
+
+As convoluções são a base para resolver muitos problemas enumerativos.
+
+#### Exemplo
+
+	Você tem  $n$  objetos do primeiro tipo e  $m$  objetos do segundo tipo.
+	
+	Objetos do primeiro tipo têm valores  $a_1, \dots, a_n$ , e objetos do segundo tipo têm valores
+	$b_1, \dots, b_m$ .
+	
+	Você escolhe um único objeto do primeiro tipo e um único objeto do segundo tipo. Quantas maneiras existem de obter o valor total  $k$ ?
+
+**Solução**
+
+	Considere o produto  
+	$(x^{a_1} + \dots + x^{a_n})(x^{b_1} + \dots + x^{b_m})$ . Se você expandi-lo, cada monômio corresponderá ao par  
+	$(a_i, b_j)$  e contribuirá para o coeficiente próximo a  
+	$x^{a_i+b_j}$ . Em outras palavras, a resposta é o coeficiente próximo a  
+	$x^k$  no produto.
+
+#### Exemplo
+
+	Você joga um dado de  $6$  lados  $n$  vezes e soma os resultados de todos os lançamentos. Qual é a probabilidade de obter uma soma de  $k$ ?
+
+**Solução**
+
+	A resposta é o número de resultados que têm a soma  $k$ , dividido pelo número total de resultados, que é  $6^n$ .
+	
+	Qual é o número de resultados que têm a soma  $k$ ? Para  $n=1$ , pode ser representado por um polinômio  $A(x) = x^1+x^2+\dots+x^6$ .
+	
+	Para  $n=2$ , usando a mesma abordagem do exemplo acima, concluímos que é representado pelo polinômio  $(x^1+x^2+\dots+x^6)^2$ .
+	
+	Dito isso, a resposta para o problema é o coeficiente  $k$ -ésimo de  $(x^1+x^2+\dots+x^6)^n$ , dividido por  $6^n$ .
+
+
+O coeficiente próximo a  $x^k$  no polinômio  $A(x)$  é denotado brevemente como  $[x^k]A$ .
+
+### Série de Potências Formais
+
+**Definição**
+<p>Uma série de potências formais é uma soma infinita  
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mo>&#x2026;</mo>
+</math> , considerada independentemente de suas propriedades de convergência. </p>
+
+Em outras palavras, quando consideramos, por exemplo, uma soma  
+$1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots=2$ , estamos implicando que ela converge para  
+$2$  à medida que o número de termos se aproxima do infinito. No entanto, séries formais são consideradas apenas em termos de sequências que as definem.
+
+**Definição**
+<p> O produto de duas séries de potências formais  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>  e  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+</math>  também é definido por meio da expansão como uma expressão aritmética:
+	<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </munderover>
+    <msub>
+      <mi>a</mi>
+      <mi>i</mi>
+    </msub>
+    <msup>
+      <mi>x</mi>
+      <mi>i</mi>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <munderover>
+      <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mrow>
+      <mi mathvariant="normal">&#x221E;</mi>
+    </munderover>
+    <msub>
+      <mi>b</mi>
+      <mi>j</mi>
+    </msub>
+    <msup>
+      <mi>x</mi>
+      <mi>j</mi>
+    </msup>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>,</mo>
+      <mi>j</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi>a</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>b</mi>
+    <mi>j</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>+</mo>
+      <mi>j</mi>
+    </mrow>
+  </msup>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+  <mo>=</mo>
+  <mi>C</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+</math>
+onde os coeficientes<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>c</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>c</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math> são definidos como somas finitas
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi>k</mi>
+  </munderover>
+  <msub>
+    <mi>a</mi>
+    <mi>i</mi>
+  </msub>
+  <msub>
+    <mi>b</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>&#x2212;</mo>
+      <mi>i</mi>
+    </mrow>
+  </msub>
+  <mo>.</mo>
+</math>
+A sequência <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>c</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>c</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math>  também é chamada de convolução de <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>a</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>a</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math> e <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>b</mi>
+    <mn>0</mn>
+  </msub>
+  <mo>,</mo>
+  <msub>
+    <mi>b</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>,</mo>
+  <mo>&#x2026;</mo>
+</math> , generalizando o conceito para sequências infinitas. </p>
+
+Assim, polinômios podem ser considerados séries de potências formais, mas com um número finito de coeficientes.
+
+Séries de potências formais desempenham um papel crucial na combinatorial enumerativa, onde são estudadas como funções geradoras para várias sequências. Uma explicação detalhada de funções geradoras e a intuição por trás delas estarão, infelizmente, fora do escopo deste artigo. Portanto, o leitor curioso é referenciado, por exemplo, [aqui](https://en.wikipedia.org/wiki/Generating_function#Formal_power_series) para detalhes sobre o significado combinatório.
+
+No entanto, mencionaremos muito brevemente que se  $A(x)$  e  $B(x)$  são funções geradoras para sequências que enumeram objetos pelo número de "átomos" neles (por exemplo, árvores pelo número de vértices), então o produto  $A(x) B(x)$  enumera objetos que podem ser descritos como pares de objetos dos tipos  $A$  e  $B$ , enumerados pelo número total de "átomos" no par.
+
+**Exemplo**
+<p>Suponha que
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>i</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msup>
+    <mn>2</mn>
+    <mi>i</mi>
+  </msup>
+  <msup>
+    <mi>x</mi>
+    <mi>i</mi>
+  </msup>
+</math>
+
+enumere conjuntos de pedras, cada pedra colorida em uma de 2 cores (ou seja, há<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msup>
+    <mn>2</mn>
+    <mi>i</mi>
+  </msup>
+</math> desses conjuntos de tamanho <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>i</mi>
+</math>)), e que 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>j</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mrow data-mjx-texclass="ORD">
+      <mi mathvariant="normal">&#x221E;</mi>
+    </mrow>
+  </munderover>
+  <msup>
+    <mn>3</mn>
+    <mi>j</mi>
+  </msup>
+  <msup>
+    <mi>x</mi>
+    <mi>j</mi>
+  </msup>
+</math>
+
+enumere conjuntos de pedras, cada pedra colorida em uma de 3 cores. Então 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>C</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>A</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mi>B</mi>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <munderover>
+    <mo data-mjx-texclass="OP" movablelimits="false">&#x2211;</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mi>k</mi>
+      <mo>=</mo>
+      <mn>0</mn>
+    </mrow>
+    <mi mathvariant="normal">&#x221E;</mi>
+  </munderover>
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+  <msup>
+    <mi>x</mi>
+    <mi>k</mi>
+  </msup>
+</math>
+
+enumeraria objetos que podem ser descritos como "dois conjuntos de pedras, primeiro conjunto apenas de pedras do tipo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>A</mi>
+</math>, segundo conjunto apenas de pedras do tipo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>B</mi>
+</math>, com número total de pedras sendo <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>k</mi>
+</math>" para <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>c</mi>
+    <mi>k</mi>
+  </msub>
+</math>.</p>
+
+De maneira semelhante, há um significado intuitivo para algumas outras funções sobre séries de potências formais.
+
+### Long polynomial division
+Semelhante aos inteiros, é possível definir a divisão longa para polinômios.
+
+Definição
+
+Para quaisquer polinômios  $A$  e  $B \neq 0$ , pode-se representar  $A$  como
+ 
+$$ A = D \cdot B + R,~ \deg R < \deg B, $$ 
+onde  $R$  é chamado de resto de  $A$  módulo  $B$  e  $D$  é chamado de quociente.
+
+Denotando  $\deg A = n$  e  $\deg B = m$ , uma maneira ingênua de fazer isso é usar a divisão longa, durante a qual você multiplica  $B$  pelo monômio  $\frac{a_n}{b_m} x^{n - m}$  e subtrai isso de  $A$ , até que o grau de  $A$  seja menor que o de  $B$ . O que resta de  $A$  no final será o resto (daí o nome), e os polinômios pelos quais você multiplicou  $B$  no processo, somados juntos, formam o quociente.
+
+Definição
+
+Se  $A$  e  $B$  têm o mesmo resto módulo  $C$ , diz-se que são equivalentes módulo  $C$ , o que é denotado como 
+$$ A \equiv B \pmod{C}. $$ 
+A divisão longa de polinômios é útil devido às suas muitas propriedades importantes:
+
+ 
+$A$  é um múltiplo de  $B$  se e somente se  $A \equiv 0 \pmod B$ .
+
+Isso implica que  $A \equiv B \pmod C$  se e somente se  $A-B$  é um múltiplo de  $C$ .
+
+Em particular,  $A \equiv B \pmod{C \cdot D}$  implica  $A \equiv B \pmod{C}$ .
+
+Para qualquer polinômio linear  $x-r$ , vale que  $A(x) \equiv A(r) \pmod{x-r}$ .
+
+Isso implica que  $A$  é um múltiplo de  $x-r$  se e somente se  $A(r)=0$ .
+
+Para módulo sendo  $x^k$ , vale que  $A \equiv a_0 + a_1 x + \dots + a_{k-1} x^{k-1} \pmod{x^k}$ .
+
+Observe que a divisão longa não pode ser adequadamente definida para séries formais de potências. Em vez disso, para qualquer  $A(x)$  tal que  $a_0 \neq 0$ , é possível definir uma série de potências formais inversa  $A^{-1}(x)$ , tal que  $A(x) A^{-1}(x) = 1$ . Esse fato, por sua vez, pode ser usado para calcular o resultado da divisão longa para polinômios.
 
 ## Basic implementation
 
