@@ -1,3 +1,5 @@
+Livro: Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein)
+
 ## Espaço amostral e Evento
 
 A ferramenta de trabalho matemática para probabilidade é construída em volta de conjuntos.
@@ -34,4 +36,5 @@ onde:
 - \(|S|\) é o número total de resultados em \(S\).
 
 Uma boa estratégia ao tentar encontrar a probabilidade de um evento é começar pensando se será mais fácil encontrar a probabilidade do evento ou a probabilidade do seu complemento. As leis de De Morgan são especialmente úteis nesse contexto, pois pode ser mais fácil trabalhar com uma interseção do que com uma união, ou vice-versa.
+
 
