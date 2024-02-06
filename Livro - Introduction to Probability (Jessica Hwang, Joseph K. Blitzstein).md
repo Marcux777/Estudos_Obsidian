@@ -52,5 +52,12 @@ Solução: Existem 10 possibilidades para quem fica em primeiro lugar, então, u
 
 ### Amostragem com reposição
 
-Considerando n objetos e fazendo k escolhas dentre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não impede que ele seja escolhido novamente). Disso temos 
+Considerando n objetos e fazendo k escolhas dentre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não impede que ele seja escolhido novamente). Disso são $n^{k}$ possiveis resultados. 
+
+### Amostragem sem reposição
+
+Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez sem reposição (ou seja, escolher um determinado objeto impede que ele seja escolhido novamente). Então, há$n(n−1)⋅⋅⋅(n−k+1)$ possíveis resultados para $1 ≤ k ≤ n$, e $0$ possibilidades para $k > n$ (onde a ordem importa). Por convenção, $n(n − 1) · · · (n − k + 1) = n$ para $k = 1$.
+
+
+
 
