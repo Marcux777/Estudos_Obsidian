@@ -1,5 +1,4 @@
-Livro: Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein)
-
+Teoria apenas
 ## Espaço amostral e Evento
 
 A ferramenta de trabalho matemática para probabilidade é construída em volta de conjuntos.
@@ -37,4 +36,15 @@ onde:
 
 Uma boa estratégia ao tentar encontrar a probabilidade de um evento é começar pensando se será mais fácil encontrar a probabilidade do evento ou a probabilidade do seu complemento. As leis de De Morgan são especialmente úteis nesse contexto, pois pode ser mais fácil trabalhar com uma interseção do que com uma união, ou vice-versa.
 
+# Como contar
+
+## Regra da Multiplicação
+
+Considerando dois sub-experimentos, um experimento $A$ e um experimento $B$. Supondo que $A$ tenha $a$ possíveis resultados e $B$ tenha $b$ possíveis resultados, então esse experimento terá $ab$ possíveis resultados. 
+
+### Exemplo 1.4.3 (Corredores). 
+Suponha que 10 pessoas estão correndo uma corrida. Assuma que empates não são possíveis e que todos os 10 completarão a corrida, então haverá bem definidos primeiro, segundo e terceiro lugares. Quantas possibilidades existem para os vencedores do primeiro, segundo e terceiro lugar?
+Solução: Existem 10 possibilidades para quem fica em primeiro lugar, então, uma vez que isso é fixado, existem 9 possibilidades para quem fica em segundo lugar, e uma vez que ambos são fixados.
+
+![[Pasted image 20240206172609.png]]
 

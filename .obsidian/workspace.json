@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probabilidade.md",
+                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probabilidade.md",
+                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probabilidade.md",
+                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Probabilidade.md"
+                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
+    "Pasted image 20240206172609.png",
     "Computação/Data Structures.md",
-    "Probabilidade.md",
+    "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
@@ -174,7 +175,6 @@
     "Computação/One for All/Artigos/Algebra/Primality tests/Teste de primalidade de Fermat.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo de Detecção de Ciclo de Floyd.md",
     "Computação/One for All/Artigos/Aplicações.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Diferentes otimizações do Crivo de Eratóstenes.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
