@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Computação/Data Structures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ab9c5fe2b4ee459d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03280c1dc3319342",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Treap (Cartesian tree).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Treap (Cartesian tree).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Treap (Cartesian tree).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md"
+                "file": "Treap (Cartesian tree).md"
               }
             }
           }
@@ -146,11 +171,16 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "0c8c112ee6e4d685",
+  "active": "03280c1dc3319342",
   "lastOpenFiles": [
-    "Pasted image 20240206172609.png",
+    "Pasted image 20240207184018.png",
+    "Pasted image 20240207183644.png",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Treap (Cartesian tree).md",
     "Computação/Data Structures.md",
-    "Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+    "Computação/Álgebra.md",
+    "Probabilidade e Estatistica/Pasted image 20240206172609.png",
+    "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
@@ -172,9 +202,6 @@
     "Computação/One for All/Artigos/Fast inverse trick.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Primos Pré-computados.md",
     "Computação/One for All/Artigos/Representação de Montgomery.md",
-    "Computação/One for All/Artigos/Algebra/Primality tests/Teste de primalidade de Fermat.md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo de Detecção de Ciclo de Floyd.md",
-    "Computação/One for All/Artigos/Aplicações.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
@@ -185,8 +212,6 @@
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Pasted image 20240126191203.png",
-    "Computação/One for All/Artigos/Pasted image 20240126185817.png",
-    "Computação/One for All/Artigos/Pasted image 20240126194921.png",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
