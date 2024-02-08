@@ -255,3 +255,46 @@ pitem build(int *x, int *y, int n) {
     return nodes[min_element(y, y + n) - y];
 }
 ```
+Treaps Implícitos¶
+Treap implícito é uma simples modificação do treap regular que é uma estrutura de dados muito poderosa. Na verdade, o treap implícito pode ser considerado como um array com os seguintes procedimentos implementados (todos em  
+$O (\log N)$  no modo online):
+
+Inserção de um elemento no array em qualquer local
+Remoção de um elemento arbitrário
+Encontrar soma, elemento mínimo/máximo etc. em um intervalo arbitrário
+Adição, pintura em um intervalo arbitrário
+Reversão de elementos em um intervalo arbitrário
+A ideia é que as chaves devem ser índices baseados em nulo dos elementos no array. Mas não armazenaremos esses valores explicitamente (caso contrário, por exemplo, a inserção de um elemento causaria mudanças da chave em  
+$O (N)$  nós da árvore).
+
+Note que a chave de um nó é o número de nós menores que ele (tais nós podem estar presentes não apenas em sua subárvore esquerda, mas também nas subárvores esquerdas de seus ancestrais). Mais especificamente, a chave implícita para algum nó T é o número de vértices  
+$cnt (T \rightarrow L)$  na subárvore esquerda deste nó mais valores similares  
+$cnt (P \rightarrow L) + 1$  para cada ancestral P do nó T, se T está na subárvore direita de P.
+
+Agora está claro como calcular rapidamente a chave implícita do nó atual. Como em todas as operações chegamos a qualquer nó descendo na árvore, podemos apenas acumular essa soma e passá-la para a função. Se formos para a subárvore esquerda, a soma acumulada não muda, se formos para a subárvore direita ela aumenta por  
+$cnt (T \rightarrow L) +1$ .
+
+Aqui estão as novas implementações de Dividir e Mesclar:
+
+```cpp
+void merge (pitem & t, pitem l, pitem r) {
+    if (!l || !r)
+        t = l ? l : r;
+    else if (l->prior > r->prior)
+        merge (l->r, l->r, r),  t = l;
+    else
+        merge (r->l, l, r->l),  t = r;
+    upd_cnt (t);
+}
+
+void split (pitem t, pitem & l, pitem & r, int key, int add = 0) {
+    if (!t)
+        return void( l = r = 0 );
+    int cur_key = add + cnt(t->l); //implicit key
+    if (key <= cur_key)
+        split (t->l, l, t->l, key, add),  r = t;
+    else
+        split (t->r, t->r, r, key, add + 1 + cnt(t->l)),  l = t;
+    upd_cnt (t);
+}
+```
