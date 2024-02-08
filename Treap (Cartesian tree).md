@@ -50,3 +50,208 @@ Assim, o algoritmo de divisão é:
 2. chamar recursivamente dividir em um de seus filhos
 3. criar o resultado final reutilizando a chamada recursiva de dividir.
 
+### Mesclar
+
+![[Pasted image 20240207184448.png]]
+
+Mesclar ( $T_1$ ,  $T_2$ ) combina duas subárvores  $T_1$  e  $T_2$  e retorna a nova árvore. Esta operação também tem complexidade  $O (\log N)$ . Ela funciona sob a suposição de que  $T_1$  e  $T_2$  estão ordenadas (todas as chaves  $X$  em  $T_1$  são menores que as chaves em  $T_2$ ). Assim, precisamos combinar essas árvores sem violar a ordem das prioridades  $Y$ . Para fazer isso, escolhemos como raiz a árvore que tem maior prioridade  $Y$  no nó raiz, e chamamos recursivamente Mesclar para a outra árvore e a subárvore correspondente do nó raiz selecionado.
+
+### Inserir
+
+![[Pasted image 20240207184543.png]]
+
+Agora a implementação de Inserir ( $X$ ,  $Y$ ) se torna óbvia. Primeiro descemos na árvore (como em uma árvore de busca binária regular por X), e paramos no primeiro nó em que o valor de prioridade é menor que  $Y$ . Encontramos o lugar onde vamos inserir o novo elemento. Em seguida, chamamos Dividir (T, X) na subárvore começando no nó encontrado, e usamos as subárvores retornadas  $L$  e 
+$R$  como filhos esquerdo e direito do novo nó.
+
+Alternativamente, a inserção pode ser feita dividindo o treap inicial em  $X$  e fazendo  $2$  mesclagens com o novo nó (veja a figura).
+
+### Apagar
+
+![[Pasted image 20240207184558.png]]
+
+A implementação de Apagar ( $X$ ) também é clara. Primeiro descemos na árvore (como em uma árvore de busca binária regular por  $X$ ), procurando o elemento que queremos deletar. Uma vez que o nó é encontrado, chamamos Mesclar em seus filhos e colocamos o valor de retorno da operação no lugar do elemento que estamos deletando.
+
+Alternativamente, podemos fatorar a subárvore contendo  $X$  com  $2$  operações de divisão e mesclar os treaps restantes (veja a figura).
+
+### Construir
+
+Implementamos a operação Construir com complexidade  $O (N \log N)$  usando  
+$N$  chamadas de Inserir.
+
+### União
+
+União ( $T_1$ ,  $T_2$ ) tem complexidade teórica  $O (M \log (N / M))$ , mas na prática funciona muito bem, provavelmente com uma constante oculta muito pequena. Vamos assumir sem perda de generalidade que  $T_1 \rightarrow Y > T_2 \rightarrow Y$ , ou seja, a raiz de  $T_1$  será a raiz do resultado. Para obter o resultado, precisamos mesclar as árvores  $T_1 \rightarrow L$ ,  $T_1 \rightarrow R$  e  $T_2$  em duas árvores que poderiam ser filhas da raiz  
+$T_1$ . Para fazer isso, chamamos Dividir ( $T_2$ ,  $T_1\rightarrow X$ ), dividindo assim  $T_2$  em duas partes L e R, que então combinamos recursivamente com os filhos de  $T_1$ : União ( $T_1 \rightarrow L$ ,  $L$ ) e União ( $T_1 \rightarrow R$ ,  $R$ ), obtendo assim as subárvores esquerda e direita do resultado.
+
+## Implementação
+```cpp
+struct item {
+    int key, prior;
+    item *l, *r;
+    item () { }
+    item (int key) : key(key), prior(rand()), l(NULL), r(NULL) { }
+    item (int key, int prior) : key(key), prior(prior), l(NULL), r(NULL) { }
+};
+typedef item* pitem;
+```
+Esta é a definição do nosso item. Note que existem dois ponteiros filhos, e uma chave inteira (para a BST) e uma prioridade inteira (para o heap). A prioridade é atribuída usando um gerador de números aleatórios.
+
+```cpp
+void split (pitem t, int key, pitem & l, pitem & r) {
+    if (!t)
+        l = r = NULL;
+    else if (t->key <= key)
+        split (t->r, key, t->r, r),  l = t;
+    else
+        split (t->l, key, l, t->l),  r = t;
+}
+```
+``t`` é o treap a ser dividido, e key é o valor BST pelo qual dividir. Note que não retornamos os valores de resultado em lugar algum, em vez disso, apenas os usamos assim:
+
+```cpp
+pitem l = nullptr, r = nullptr;
+split(t, 5, l, r);
+if (l) cout << "Tamanho da subárvore esquerda: " << (l->size) << endl;
+if (r) cout << "Tamanho da subárvore direita: " << (r->size) << endl;
+```
+Esta função de divisão pode ser difícil de entender, pois tem ambos os ponteiros (``pitem``) bem como referência para esses ponteiros ``(pitem &l)``. Vamos entender em palavras o que a chamada de função ``split(t, k, l, r)`` pretende: "dividir treap t por valor ``k`` em dois treaps, e armazenar os treaps esquerdos em ``l`` e treap direito em ``r``". Ótimo! Agora, vamos aplicar esta definição às duas chamadas recursivas, usando o trabalho de caso que analisamos na seção anterior: (A primeira condição if é um caso base trivial para um treap vazio)
+
+1. Quando o valor do nó raiz é  $\le$  key, chamamos ``split (t->r, key, t->r``, r), o que significa: "dividir treap ``t->r`` (subárvore direita de t) por valor key e armazenar a subárvore esquerda em ``t->r`` e subárvore direita em r". Depois disso, definimos ``l = t``. Note agora que o valor de resultado ``l`` contém ``t->l``, t bem como ``t->r`` (que é o resultado da chamada recursiva que fizemos) todos já mesclados na ordem correta! Você deve pausar para garantir que este resultado de ``l`` e ``r`` corresponda exatamente ao que discutimos anteriormente em Descrição da Implementação.
+2. Quando o valor do nó raiz é maior que key, chamamos split ``(t->l, key, l, t->l)``, o que significa: "dividir treap ``t->l`` (subárvore esquerda de t) por valor key e armazenar a subárvore esquerda em l e subárvore direita em ``t->l``. Depois disso, definimos ``r = t``. Note agora que o valor de resultado r contém ``t->l`` (que é o resultado da chamada recursiva que fizemos), t bem como ``t->r``, todos já mesclados na ordem correta! Você deve pausar para garantir que este resultado de ``l`` e ``r`` corresponda exatamente ao que discutimos anteriormente em Descrição da Implementação.
+Se você ainda está tendo problemas para entender a implementação, você deve olhar para ela indutivamente, ou seja: não tente quebrar as chamadas recursivas repetidamente. Assuma que a implementação de divisão funciona corretamente em treap vazio, então tente executá-la para um treap de nó único, então um treap de dois nós, e assim por diante, reutilizando cada vez o seu conhecimento de que a divisão em treaps menores funciona.
+
+```cpp
+void insert (pitem & t, pitem it) {
+    if (!t)
+        t = it;
+    else if (it->prior > t->prior)
+        split (t, it->key, it->l, it->r),  t = it;
+    else
+        insert (t->key <= it->key ? t->r : t->l, it);
+}
+
+void merge (pitem & t, pitem l, pitem r) {
+    if (!l || !r)
+        t = l ? l : r;
+    else if (l->prior > r->prior)
+        merge (l->r, l->r, r),  t = l;
+    else
+        merge (r->l, l, r->l),  t = r;
+}
+
+void erase (pitem & t, int key) {
+    if (t->key == key) {
+        pitem th = t;
+        merge (t, t->l, t->r);
+        delete th;
+    }
+    else
+        erase (key < t->key ? t->l : t->r, key);
+}
+
+pitem unite (pitem l, pitem r) {
+    if (!l || !r)  return l ? l : r;
+    if (l->prior < r->prior)  swap (l, r);
+    pitem lt, rt;
+    split (r, l->key, lt, rt);
+    l->l = unite (l->l, lt);
+    l->r = unite (l->r, rt);
+    return l;
+}
+```
+
+
+
+## Manutenção dos tamanhos das subárvores
+Para estender a funcionalidade do treap, muitas vezes é necessário armazenar o número de nós na subárvore de cada nó - campo ``int cnt`` na estrutura do ``item``. Por exemplo, ele pode ser usado para encontrar o K-ésimo maior elemento da árvore em  $O (\log N)$ , ou para encontrar o índice do elemento na lista ordenada com a mesma complexidade. A implementação dessas operações será a mesma que para a árvore de busca binária regular.
+
+Quando uma árvore muda (nós são adicionados ou removidos etc.), ``cnt`` de alguns nós deve ser atualizado de acordo. Vamos criar duas funções: ``cnt()`` retornará o valor atual de ``cnt`` ou ``0`` se o nó não existir, e ``upd_cnt()`` atualizará o valor de cnt para este nó assumindo que para seus filhos ``L`` e ``R`` os valores de ``cnt`` já foram atualizados. Evidentemente, é suficiente adicionar chamadas de ``upd_cnt()`` ao final de inserir, apagar, dividir e mesclar para manter os valores de ``cnt`` atualizados.
+
+```cpp
+int cnt (pitem t) {
+    return t ? t->cnt : 0;
+}
+
+void upd_cnt (pitem t) {
+    if (t)
+        t->cnt = 1 + cnt(t->l) + cnt (t->r);
+}
+```
+
+## Construindo um Treap em  $O (N)$  no modo offline
+Dada uma lista ordenada de chaves, é possível construir um treap mais rápido do que inserindo as chaves uma de cada vez, o que leva  $O(N \log N)$ . Como as chaves estão ordenadas, uma árvore de busca binária balanceada pode ser facilmente construída em tempo linear. Os valores do heap  $Y$  são inicializados aleatoriamente e então podem ser transformados em heap independentemente das chaves  $X$  para construir o heap em  $O(N)$ .
+
+```cpp
+void heapify (pitem t) {
+    if (!t) return;
+    pitem max = t;
+    if (t->l != NULL && t->l->prior > max->prior)
+        max = t->l;
+    if (t->r != NULL && t->r->prior > max->prior)
+        max = t->r;
+    if (max != t) {
+        swap (t->prior, max->prior);
+        heapify (max);
+    }
+}
+
+pitem build (int * a, int n) {
+    // Construir um treap nos valores {a[0], a[1], ..., a[n - 1]}
+    if (n == 0) return NULL;
+    int mid = n / 2;
+    pitem t = new item (a[mid], rand ());
+    t->l = build (a, mid);
+    t->r = build (a + mid + 1, n - mid - 1);
+    heapify (t);
+    upd_cnt(t)
+    return t;
+}
+```
+Nota: chamar ``upd_cnt(t)`` é necessário apenas se você precisar dos tamanhos das subárvores.
+
+A abordagem acima sempre fornece uma árvore perfeitamente balanceada, o que geralmente é bom para fins práticos, mas ao custo de não preservar as prioridades que foram inicialmente atribuídas a cada nó. Assim, esta abordagem não é viável para resolver o seguinte problema:
+
+>- acmsguru - Árvore Cartesiana
+	Dada uma sequência de pares  $(x_i, y_i)$ , construa uma árvore cartesiana sobre eles. Todos  $x_i$  e todos  $y_i$  são únicos.
+
+Note que neste problema as prioridades não são aleatórias, portanto, apenas inserir vértices um por um poderia fornecer uma solução quadrática.
+
+Uma das possíveis soluções aqui é encontrar para cada elemento os elementos mais próximos à esquerda e à direita que têm uma prioridade menor do que este elemento. Entre esses dois elementos, aquele com a maior prioridade deve ser o pai do elemento atual.
+
+Este problema é resolvível com uma modificação de pilha mínima em tempo linear:
+
+```cpp
+void connect(auto from, auto to) {
+    vector<pitem> st;
+    for(auto it: ranges::subrange(from, to)) {
+        while(!st.empty() && st.back()->prior > it->prior) {
+            st.pop_back();
+        }
+        if(!st.empty()) {
+            if(!it->p || it->p->prior < st.back()->prior) {
+                it->p = st.back();
+            }
+        }
+        st.push_back(it);
+    }
+}
+
+pitem build(int *x, int *y, int n) {
+    vector<pitem> nodes(n);
+    for(int i = 0; i < n; i++) {
+        nodes[i] = new item(x[i], y[i]);
+    }
+    connect(nodes.begin(), nodes.end());
+    connect(nodes.rbegin(), nodes.rend());
+    for(int i = 0; i < n; i++) {
+        if(nodes[i]->p) {
+            if(nodes[i]->p->key < nodes[i]->key) {
+                nodes[i]->p->r = nodes[i];
+            } else {
+                nodes[i]->p->l = nodes[i];
+            }
+        }
+    }
+    return nodes[min_element(y, y + n) - y];
+}
+```
