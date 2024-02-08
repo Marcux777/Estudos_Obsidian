@@ -261,8 +261,8 @@ Treap implícito é uma simples modificação do treap regular que é uma estrut
 - Inserção de um elemento no array em qualquer local
 - Remoção de um elemento arbitrário
 - Encontrar soma, elemento mínimo/máximo etc. em um intervalo arbitrário
-Adição, pintura em um intervalo arbitrário
-Reversão de elementos em um intervalo arbitrário
+- Adição, pintura em um intervalo arbitrário
+- Reversão de elementos em um intervalo arbitrário
 A ideia é que as chaves devem ser índices baseados em nulo dos elementos no array. Mas não armazenaremos esses valores explicitamente (caso contrário, por exemplo, a inserção de um elemento causaria mudanças da chave em  
 $O (N)$  nós da árvore).
 
