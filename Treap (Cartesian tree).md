@@ -255,9 +255,8 @@ pitem build(int *x, int *y, int n) {
     return nodes[min_element(y, y + n) - y];
 }
 ```
-Treaps Implícitos¶
-Treap implícito é uma simples modificação do treap regular que é uma estrutura de dados muito poderosa. Na verdade, o treap implícito pode ser considerado como um array com os seguintes procedimentos implementados (todos em  
-$O (\log N)$  no modo online):
+### Treaps Implícitos
+Treap implícito é uma simples modificação do treap regular que é uma estrutura de dados muito poderosa. Na verdade, o treap implícito pode ser considerado como um array com os seguintes procedimentos implementados (todos em  $O (\log N)$  no modo online):
 
 Inserção de um elemento no array em qualquer local
 Remoção de um elemento arbitrário
