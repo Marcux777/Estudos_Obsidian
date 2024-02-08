@@ -30,21 +30,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "03280c1dc3319342",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Treap (Cartesian tree).md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Treap (Cartesian tree).md",
+                "file": "Computação/Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Treap (Cartesian tree).md",
+                "file": "Computação/Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Treap (Cartesian tree).md"
+                "file": "Computação/Data Structures.md"
               }
             }
           }
@@ -171,15 +158,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "03280c1dc3319342",
+  "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
-    "Pasted image 20240207184558.png",
-    "Pasted image 20240207184543.png",
-    "Pasted image 20240207184448.png",
-    "Pasted image 20240207184018.png",
-    "Pasted image 20240207183644.png",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
-    "Treap (Cartesian tree).md",
+    "Computação/One for All/Artigos/Treap (Cartesian tree).md",
+    "Computação/One for All/Artigos/Pasted image 20240207183644.png",
+    "Computação/One for All/Artigos/Pasted image 20240207184558.png",
+    "Computação/One for All/Artigos/Pasted image 20240207184543.png",
+    "Computação/One for All/Artigos/Pasted image 20240207184448.png",
+    "Computação/One for All/Artigos/Pasted image 20240207184018.png",
     "Computação/Data Structures.md",
     "Computação/Álgebra.md",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
@@ -209,7 +196,6 @@
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
     "Computação/One for All/Artigos/Pasted image 20240202032745.png",
-    "Computação/One for All/Artigos/Pasted image 20240130200911.png",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
