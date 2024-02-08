@@ -255,7 +255,7 @@ pitem build(int *x, int *y, int n) {
     return nodes[min_element(y, y + n) - y];
 }
 ```
-### Treaps Implícitos
+## Treaps Implícitos
 Treap implícito é uma simples modificação do treap regular que é uma estrutura de dados muito poderosa. Na verdade, o treap implícito pode ser considerado como um array com os seguintes procedimentos implementados (todos em  $O (\log N)$  no modo online):
 
 - Inserção de um elemento no array em qualquer local
@@ -263,15 +263,11 @@ Treap implícito é uma simples modificação do treap regular que é uma estrut
 - Encontrar soma, elemento mínimo/máximo etc. em um intervalo arbitrário
 - Adição, pintura em um intervalo arbitrário
 - Reversão de elementos em um intervalo arbitrário
-A ideia é que as chaves devem ser índices baseados em nulo dos elementos no array. Mas não armazenaremos esses valores explicitamente (caso contrário, por exemplo, a inserção de um elemento causaria mudanças da chave em  
-$O (N)$  nós da árvore).
+A ideia é que as chaves devem ser índices baseados em nulo dos elementos no array. Mas não armazenaremos esses valores explicitamente (caso contrário, por exemplo, a inserção de um elemento causaria mudanças da chave em  $O (N)$  nós da árvore).
 
-Note que a chave de um nó é o número de nós menores que ele (tais nós podem estar presentes não apenas em sua subárvore esquerda, mas também nas subárvores esquerdas de seus ancestrais). Mais especificamente, a chave implícita para algum nó T é o número de vértices  
-$cnt (T \rightarrow L)$  na subárvore esquerda deste nó mais valores similares  
-$cnt (P \rightarrow L) + 1$  para cada ancestral P do nó T, se T está na subárvore direita de P.
+Note que a chave de um nó é o número de nós menores que ele (tais nós podem estar presentes não apenas em sua subárvore esquerda, mas também nas subárvores esquerdas de seus ancestrais). Mais especificamente, a chave implícita para algum nó T é o número de vértices  $cnt (T \rightarrow L)$  na subárvore esquerda deste nó mais valores similares  $cnt (P \rightarrow L) + 1$  para cada ancestral P do nó T, se T está na subárvore direita de P.
 
-Agora está claro como calcular rapidamente a chave implícita do nó atual. Como em todas as operações chegamos a qualquer nó descendo na árvore, podemos apenas acumular essa soma e passá-la para a função. Se formos para a subárvore esquerda, a soma acumulada não muda, se formos para a subárvore direita ela aumenta por  
-$cnt (T \rightarrow L) +1$ .
+Agora está claro como calcular rapidamente a chave implícita do nó atual. Como em todas as operações chegamos a qualquer nó descendo na árvore, podemos apenas acumular essa soma e passá-la para a função. Se formos para a subárvore esquerda, a soma acumulada não muda, se formos para a subárvore direita ela aumenta por  $cnt (T \rightarrow L) +1$ .
 
 Aqui estão as novas implementações de Dividir e Mesclar:
 
@@ -295,5 +291,96 @@ void split (pitem t, pitem & l, pitem & r, int key, int add = 0) {
     else
         split (t->r, t->r, r, key, add + 1 + cnt(t->l)),  l = t;
     upd_cnt (t);
+}
+```
+
+Na implementação acima, após a chamada de $split(T, T_1, T_2, k)$, a árvore $T_1$ consistirá nos primeiros $k$ elementos de $T$ (ou seja, elementos que têm sua chave implícita menor que $k$) e $T_2$ consistirá em todos os demais.
+
+Agora vamos considerar a implementação de várias operações em treaps implícitos:
+
+- Inserir elemento.
+	Suponha que precisamos inserir um elemento na posição $pos$. Dividimos o treap em duas partes, que correspondem aos arrays $[0..pos-1]$ e $[pos..sz]$; para fazer isso, chamamos $split(T, T_1, T_2, pos)$. Então podemos combinar a árvore $T_1$ com o novo vértice chamando $merge(T_1, T_1, \text{new item})$ (é fácil ver que todas as pré-condições são atendidas). Finalmente, combinamos as árvores $T_1$ e $T_2$ de volta em $T$ chamando $merge(T, T_1, T_2)$.
+
+- Deletar elemento.
+	Esta operação é ainda mais fácil: encontre o elemento a ser deletado $T$, realize a fusão de seus filhos $L$ e $R$, e substitua o elemento $T$ pelo resultado da fusão. Na verdade, a exclusão de elementos no treap implícito é exatamente a mesma que no treap regular.
+
+- Encontrar soma / mínimo, etc. no intervalo.
+	Primeiro, crie um campo adicional $F$ na estrutura do item para armazenar o valor da função alvo para a subárvore deste nó. Este campo é fácil de manter de forma semelhante à manutenção dos tamanhos das subárvores: crie uma função que calcula este valor para um nó com base nos valores de seus filhos e adicione chamadas desta função no final de todas as funções que modificam a árvore.
+	Segundo, precisamos saber como processar uma consulta para um intervalo arbitrário $[A; B]$.
+	Para obter uma parte da árvore que corresponde ao intervalo $[A; B]$, precisamos chamar $split(T, T_2, T_3, B+1)$, e então $split(T_2, T_1, T_2, A)$: após isso, $T_2$ consistirá em todos os elementos no intervalo $[A; B]$, e apenas neles. Portanto, a resposta à consulta será armazenada no campo $F$ da raiz de $T_2$. Após a consulta ser respondida, a árvore deve ser restaurada chamando $merge(T, T_1, T_2)$ e $merge(T, T, T_3)$.
+
+- Adição / pintura no intervalo.
+	Agimos de maneira semelhante ao parágrafo anterior, mas em vez do campo F, armazenaremos um campo add que conterá o valor adicionado para a subárvore (ou o valor para o qual a subárvore é pintada). Antes de realizar qualquer operação, temos que "empurrar" este valor corretamente - ou seja, mudar $T \rightarrow L \rightarrow add$ e $T \rightarrow R \rightarrow add$, e limpar add no nó pai. Desta forma, após quaisquer alterações na árvore, a informação não será perdida.
+
+- Reverter no intervalo.
+	Isso é novamente semelhante à operação anterior: temos que adicionar uma flag booleana rev e definir como true quando a subárvore do nó atual precisa ser revertida. "Empurrar" este valor é um pouco complicado - trocamos os filhos deste nó e definimos esta flag como true para eles.
+
+Aqui está uma implementação de exemplo do treap implícito com reversão no intervalo. Para cada nó, armazenamos um campo chamado value que é o valor real do elemento do array na posição atual. Também fornecemos a implementação da função ``output()``, que produz um array que corresponde ao estado atual do treap implícito.
+
+```cpp
+typedef struct item * pitem;
+struct item {
+    int prior, value, cnt;
+    bool rev;
+    pitem l, r;
+};
+
+int cnt (pitem it) {
+    return it ? it->cnt : 0;
+}
+
+void upd_cnt (pitem it) {
+    if (it)
+        it->cnt = cnt(it->l) + cnt(it->r) + 1;
+}
+
+void push (pitem it) {
+    if (it && it->rev) {
+        it->rev = false;
+        swap (it->l, it->r);
+        if (it->l)  it->l->rev ^= true;
+        if (it->r)  it->r->rev ^= true;
+    }
+}
+
+void merge (pitem & t, pitem l, pitem r) {
+    push (l);
+    push (r);
+    if (!l || !r)
+        t = l ? l : r;
+    else if (l->prior > r->prior)
+        merge (l->r, l->r, r),  t = l;
+    else
+        merge (r->l, l, r->l),  t = r;
+    upd_cnt (t);
+}
+
+void split (pitem t, pitem & l, pitem & r, int key, int add = 0) {
+    if (!t)
+        return void( l = r = 0 );
+    push (t);
+    int cur_key = add + cnt(t->l);
+    if (key <= cur_key)
+        split (t->l, l, t->l, key, add),  r = t;
+    else
+        split (t->r, t->r, r, key, add + 1 + cnt(t->l)),  l = t;
+    upd_cnt (t);
+}
+
+void reverse (pitem t, int l, int r) {
+    pitem t1, t2, t3;
+    split (t, t1, t2, l);
+    split (t2, t2, t3, r-l+1);
+    t2->rev ^= true;
+    merge (t, t1, t2);
+    merge (t, t, t3);
+}
+
+void output (pitem t) {
+    if (!t)  return;
+    push (t);
+    output (t->l);
+    printf ("%d ", t->value);
+    output (t->r);
 }
 ```
