@@ -258,9 +258,9 @@ pitem build(int *x, int *y, int n) {
 ### Treaps Implícitos
 Treap implícito é uma simples modificação do treap regular que é uma estrutura de dados muito poderosa. Na verdade, o treap implícito pode ser considerado como um array com os seguintes procedimentos implementados (todos em  $O (\log N)$  no modo online):
 
-Inserção de um elemento no array em qualquer local
-Remoção de um elemento arbitrário
-Encontrar soma, elemento mínimo/máximo etc. em um intervalo arbitrário
+- Inserção de um elemento no array em qualquer local
+- Remoção de um elemento arbitrário
+- Encontrar soma, elemento mínimo/máximo etc. em um intervalo arbitrário
 Adição, pintura em um intervalo arbitrário
 Reversão de elementos em um intervalo arbitrário
 A ideia é que as chaves devem ser índices baseados em nulo dos elementos no array. Mas não armazenaremos esses valores explicitamente (caso contrário, por exemplo, a inserção de um elemento causaria mudanças da chave em  
