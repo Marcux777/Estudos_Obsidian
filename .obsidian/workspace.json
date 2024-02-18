@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/Data Structures.md",
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/Data Structures.md",
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/Data Structures.md"
+                "file": "Computação/One for All/Artigos/Trees - Data Structures.md"
               }
             }
           }
@@ -158,8 +159,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "0c8c112ee6e4d685",
+  "active": "ab9c5fe2b4ee459d",
   "lastOpenFiles": [
+    "Computação/Data Structures.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Treap (Cartesian tree).md",
     "Computação/One for All/Artigos/Pasted image 20240207183644.png",
@@ -167,7 +169,6 @@
     "Computação/One for All/Artigos/Pasted image 20240207184543.png",
     "Computação/One for All/Artigos/Pasted image 20240207184448.png",
     "Computação/One for All/Artigos/Pasted image 20240207184018.png",
-    "Computação/Data Structures.md",
     "Computação/Álgebra.md",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
