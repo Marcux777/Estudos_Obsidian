@@ -47,7 +47,7 @@ Solução: Existem 10 possibilidades para quem fica em primeiro lugar, então, u
 
 ### Amostragem com reposição
 
-Considerando n objetos e fazendo k escolhas dentre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não impede que ele seja escolhido novamente). Disso são $n^{k}$ possiveis resultados. 
+Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não impede que ele seja escolhido novamente). Disso são $n^{k}$ possiveis resultados. 
 
 ### Amostragem sem reposição
 
