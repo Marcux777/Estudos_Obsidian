@@ -55,4 +55,3 @@ Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez sem
 
 ### Permutação 
 
-
