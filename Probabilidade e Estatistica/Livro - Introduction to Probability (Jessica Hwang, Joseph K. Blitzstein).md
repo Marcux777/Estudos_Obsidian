@@ -53,5 +53,28 @@ Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez com
 
 Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez sem reposição (ou seja, escolher um determinado objeto impede que ele seja escolhido novamente). Então, há$n(n−1)⋅⋅⋅(n−k+1)$ possíveis resultados para $1 ≤ k ≤ n$, e $0$ possibilidades para $k > n$ (onde a ordem importa). Por convenção, $n(n − 1) · · · (n − k + 1) = n$ para $k = 1$.
 
-### Permutação 
+### Exemplo 1.4.10 (Problema do aniversário). 
+Existem k pessoas em uma sala. Suponha que o aniversário de cada pessoa seja igualmente provável de ser qualquer um dos 365 dias do ano (excluímos 29 de fevereiro), e que os aniversários das pessoas são independentes (definiremos independência formalmente mais tarde, mas intuitivamente significa que saber os aniversários de algumas pessoas não nos dá nenhuma informação sobre os aniversários de outras pessoas; isso não seria válido se, por exemplo, soubéssemos que duas das pessoas são gêmeas). Qual é a probabilidade de que pelo menos um par de pessoas no grupo tenha o mesmo aniversário?
+
+O problema do aniversário é um problema clássico de probabilidade. Aqui está a solução:
+
+Existem $365^{k}$ maneiras de atribuir aniversários às pessoas na sala, já que podemos imaginar os 365 dias do ano sendo amostrados k vezes, com reposição. Por suposição, todas essas possibilidades são igualmente prováveis, então a definição ingênua de probabilidade se aplica.
+
+Usada diretamente, a definição ingênua diz que só precisamos contar o número de maneiras de atribuir aniversários a k pessoas de modo que haja duas pessoas que compartilham um aniversário.
+
+Mas esse problema de contagem é difícil, já que poderia ser Emma e Steve que compartilham um aniversário, ou Steve e Naomi, ou todos os três, ou os três poderiam compartilhar um aniversário enquanto duas outras pessoas no grupo compartilham um aniversário diferente, ou várias outras possibilidades.
+
+Em vez disso, vamos contar o complemento: o número de maneiras de atribuir aniversários a k pessoas de modo que nenhuma dupla de pessoas compartilhe um aniversário. Isso equivale a amostrar os 365 dias do ano sem reposição, então o número de possibilidades é 365 · 364 · 363 · · · (365 - k + 1) para k ≤ 365. Portanto, a probabilidade de não haver correspondências de aniversário em um grupo de k pessoas é
+
+$$P (\text{sem correspondência de aniversário}) = \frac{365 · 364 · · · (365 - k + 1)}{365^k}$$
+
+e a probabilidade de pelo menos uma correspondência de aniversário é
+
+$$P (\text{pelo menos 1 correspondência de aniversário}) = 1 - \frac{365 · 364 · · · (365 - k + 1)}{365^k}$$
+
+O primeiro valor de k para o qual a probabilidade de uma correspondência excede 0,5 é k = 23. Assim, em um grupo de 23 pessoas, há uma chance maior que 50% de que haja pelo menos uma correspondência de aniversário. Em k = 57, a probabilidade de uma correspondência já excede 99%.
+
+Claro, para k = 366, temos garantia de uma correspondência, mas é surpreendente que mesmo com um número muito menor de pessoas, é extremamente provável que haja uma correspondência de aniversário. Para uma intuição rápida de por que isso não deve ser tão surpreendente, note que com 23 pessoas existem (23 escolhe 2) = 253 pares de pessoas, qualquer um dos quais poderia ser uma correspondência de aniversário.
+
+Os problemas 26 e 27 mostram que o problema do aniversário é muito mais do que um jogo divertido de festa e muito mais do que uma maneira de construir intuição sobre coincidências; também existem aplicações importantes em estatística e ciência da computação. O problema 62 explora o cenário mais geral em que a probabilidade não é necessariamente 1/365 para cada dia. Acontece que no caso de probabilidade não igual, ter pelo menos uma correspondência se torna ainda mais provável.
 
