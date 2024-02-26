@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8a3518e459948d63",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +157,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "0c8c112ee6e4d685",
+  "active": "8a3518e459948d63",
   "lastOpenFiles": [
     "Computação/Data Structures.md",
     "Algebra Linear/Espaços Vetoriais.md",
