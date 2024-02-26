@@ -74,6 +74,8 @@ $$P (\text{pelo menos 1 correspondência de aniversário}) = 1 - \frac{365 · 36
 
 O primeiro valor de k para o qual a probabilidade de uma correspondência excede 0,5 é k = 23. Assim, em um grupo de 23 pessoas, há uma chance maior que 50% de que haja pelo menos uma correspondência de aniversário. Em k = 57, a probabilidade de uma correspondência já excede 99%.
 
+![[Pasted image 20240226173805.png]]
+
 Claro, para k = 366, temos garantia de uma correspondência, mas é surpreendente que mesmo com um número muito menor de pessoas, é extremamente provável que haja uma correspondência de aniversário. Para uma intuição rápida de por que isso não deve ser tão surpreendente, note que com 23 pessoas existem (23 escolhe 2) = 253 pares de pessoas, qualquer um dos quais poderia ser uma correspondência de aniversário.
 
 Os problemas 26 e 27 mostram que o problema do aniversário é muito mais do que um jogo divertido de festa e muito mais do que uma maneira de construir intuição sobre coincidências; também existem aplicações importantes em estatística e ciência da computação. O problema 62 explora o cenário mais geral em que a probabilidade não é necessariamente 1/365 para cada dia. Acontece que no caso de probabilidade não igual, ter pelo menos uma correspondência se torna ainda mais provável.

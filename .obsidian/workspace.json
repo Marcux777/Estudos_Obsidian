@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,8 +156,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "8a3518e459948d63",
+  "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
+    "Pasted image 20240226173805.png",
     "Computação/Data Structures.md",
     "Algebra Linear/Espaços Vetoriais.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
@@ -191,7 +191,6 @@
     "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Fórmulas para o enésimo número de Fibonacci.md",
     "Computação/One for All/Artigos/Fast inverse trick.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Primos Pré-computados.md",
-    "Computação/One for All/Artigos/Representação de Montgomery.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
