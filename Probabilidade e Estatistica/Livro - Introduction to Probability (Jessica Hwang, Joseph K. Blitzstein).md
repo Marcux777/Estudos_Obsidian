@@ -83,3 +83,15 @@ Os problemas 26 e 27 mostram que o problema do aniversário é muito mais do que
 ### 1.4.2 Ajustando para supercontagem
 Em muitos problemas de contagem, não é fácil contar cada possibilidade uma vez e apenas uma vez. No entanto, se formos capazes de contar cada possibilidade exatamente c vezes para algum c, então podemos ajustar dividindo por c. Por exemplo, se tivermos contado exatamente cada possibilidade duas vezes, podemos dividir por 2 para obter a contagem correta. Chamamos isso de ajuste para supercontagem.
 
+Definição 1.4.14 (Coeficiente binomial). Para quaisquer inteiros não negativos k e n, o coeficiente binomial $$\binom{n}{k}$$, lido como "n escolhe k", é o número de subconjuntos de tamanho k para um conjunto de tamanho n.
+
+Por exemplo, $$\binom{4}{2} = 6$$, conforme mostrado no Exemplo 1.4.13. O coeficiente binomial $$\binom{n}{k}$$ às vezes é chamado de combinação, mas não usamos essa terminologia aqui, pois "combinação" é uma palavra de uso geral muito útil. Algebricamente, os coeficientes binomiais podem ser calculados da seguinte maneira.
+
+Teorema 1.4.15 (Fórmula do coeficiente binomial). Para k ≤ n, temos
+$$\binom{n}{k} = \frac{n(n - 1) \cdot \ldots \cdot (n - k + 1)}{k!} = \frac{n!}{(n - k)!k!}$$.
+
+Para k > n, temos $$\binom{n}{k} = 0$$.
+
+Prova. Seja A um conjunto com |A| = n. Qualquer subconjunto de A tem tamanho no máximo n, então $$\binom{n}{k} = 0$$ para k > n. Agora, deixe k ≤ n. Pelo Teorema 1.4.8, existem n(n - 1) · · · (n - k + 1) maneiras de fazer uma escolha ordenada de k elementos sem reposição. Isso superconta cada subconjunto de interesse por um fator de k! (já que não nos importamos com a ordem desses elementos), então podemos obter a contagem correta dividindo por k!.
+
+Observação 1.4.16. O coeficiente binomial $$\binom{n}{k}$$ é frequentemente definido em termos de fatoriais, mas lembre-se de que $$\binom{n}{k} = 0$$ se k > n, mesmo que o fatorial de um número negativo seja indefinido. Além disso, a expressão do meio no Teorema 1.4.15 é frequentemente melhor para cálculo do que a expressão com fatoriais, pois os fatoriais crescem extremamente rápido. Por exemplo, $$\binom{100}{2} = \frac{100 \cdot 99}{2} = 4950$$ pode até ser feito à mão, enquanto calcular $$\binom{100}{2} = \frac{100!}{98!\cdot2!}$$ calculando primeiro 100! e 98! seria desperdício e possivelmente perigoso por causa dos números extremamente grandes envolvidos (100! ≈ 9.33 × 10^157).
