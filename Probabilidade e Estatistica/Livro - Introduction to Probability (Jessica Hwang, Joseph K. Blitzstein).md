@@ -80,3 +80,6 @@ Claro, para k = 366, temos garantia de uma correspondência, mas é surpreendent
 
 Os problemas 26 e 27 mostram que o problema do aniversário é muito mais do que um jogo divertido de festa e muito mais do que uma maneira de construir intuição sobre coincidências; também existem aplicações importantes em estatística e ciência da computação. O problema 62 explora o cenário mais geral em que a probabilidade não é necessariamente 1/365 para cada dia. Acontece que no caso de probabilidade não igual, ter pelo menos uma correspondência se torna ainda mais provável.
 
+### 1.4.2 Ajustando para supercontagem
+Em muitos problemas de contagem, não é fácil contar cada possibilidade uma vez e apenas uma vez. No entanto, se formos capazes de contar cada possibilidade exatamente c vezes para algum c, então podemos ajustar dividindo por c. Por exemplo, se tivermos contado exatamente cada possibilidade duas vezes, podemos dividir por 2 para obter a contagem correta. Chamamos isso de ajuste para supercontagem.
+
