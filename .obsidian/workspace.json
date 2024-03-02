@@ -18,16 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8a3518e459948d63",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
-              }
-            }
           }
         ]
       }
@@ -158,6 +148,8 @@
   },
   "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
+    "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+    "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Pasted image 20240226173805.png",
     "Computação/Data Structures.md",
     "Algebra Linear/Espaços Vetoriais.md",
@@ -169,8 +161,6 @@
     "Computação/One for All/Artigos/Pasted image 20240207184448.png",
     "Computação/One for All/Artigos/Pasted image 20240207184018.png",
     "Computação/Álgebra.md",
-    "Probabilidade e Estatistica/Pasted image 20240206172609.png",
-    "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
@@ -194,7 +184,6 @@
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
-    "Computação/One for All/Artigos/Pasted image 20240202032745.png",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",

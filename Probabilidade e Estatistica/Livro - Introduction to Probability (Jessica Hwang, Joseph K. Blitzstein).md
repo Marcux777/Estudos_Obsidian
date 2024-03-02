@@ -90,12 +90,47 @@ Por exemplo, $$\binom{4}{2} = 6$$, conforme mostrado no Exemplo 1.4.13. O coefic
 
 ### Teorema 1.4.15 (Fórmula do coeficiente binomial). 
 Para k ≤ n, temos
-$$\binom{n}{k} = \frac{n(n - 1) \cdot \ldots \cdot (n - k + 1)}{k!} = \frac{n!}{(n - k)!k!}$$.
+$$\binom{n}{k} = \frac{n(n - 1) \cdot \ldots \cdot (n - k + 1)}{k!} = \frac{n!}{(n - k)!k!}.$$
 
 Para k > n, temos $$\binom{n}{k} = 0$$.
 
-Prova. Seja A um conjunto com |A| = n. Qualquer subconjunto de A tem tamanho no máximo n, então $$\binom{n}{k} = 0$$ para k > n. Agora, deixe k ≤ n. Pelo Teorema 1.4.8, existem n(n - 1) · · · (n - k + 1) maneiras de fazer uma escolha ordenada de k elementos sem reposição. Isso superconta cada subconjunto de interesse por um fator de k! (já que não nos importamos com a ordem desses elementos), então podemos obter a contagem correta dividindo por k!.
+Prova. Seja A um conjunto com |A| = n. Qualquer subconjunto de A tem tamanho no máximo n, então $$\binom{n}{k} = 0$$para k > n. Agora, deixe k ≤ n. Pelo Teorema 1.4.8, existem n(n - 1) · · · (n - k + 1) maneiras de fazer uma escolha ordenada de k elementos sem reposição. Isso superconta cada subconjunto de interesse por um fator de k! (já que não nos importamos com a ordem desses elementos), então podemos obter a contagem correta dividindo por k!.
 
 ### Observação 1.4.16. 
-O coeficiente binomial $$\binom{n}{k}$$ é frequentemente definido em termos de fatoriais, mas lembre-se de que $$\binom{n}{k} = 0$$ se k > n, mesmo que o fatorial de um número negativo seja indefinido. Além disso, a expressão do meio no Teorema 1.4.15 é frequentemente melhor para cálculo do que a expressão com fatoriais, pois os fatoriais crescem extremamente rápido. Por exemplo, $$\binom{100}{2} = \frac{100 \cdot 99}{2} = 4950$$ pode até ser feito à mão, enquanto calcular $$\binom{100}{2} = \frac{100!}{98!\cdot2!}$$ calculando primeiro 100! e 98! seria desperdício e possivelmente perigoso por causa dos números extremamente grandes envolvidos (100! ≈ 9.33 × 10^157).
+O coeficiente binomial $$\binom{n}{k}$$ é frequentemente definido em termos de fatoriais, mas lembre-se de que $$\binom{n}{k} = 0$$ se k > n, mesmo que o fatorial de um número negativo seja indefinido. Além disso, a expressão do meio no Teorema 1.4.15 é frequentemente melhor para cálculo do que a expressão com fatoriais, pois os fatoriais crescem extremamente rápido. Por exemplo, $$\binom{100}{2} = \frac{100 \cdot 99}{2} = 4950$$ pode até ser feito à mão, enquanto calcular $$\binom{100}{2} = \frac{100!}{98!\cdot2!}$$ calculando primeiro 100! e 98! seria desperdício e possivelmente perigoso por causa dos números extremamente grandes envolvidos ($100! ≈ 9.33 × 10^{157}$).
 
+### Exemplo 1.4.19 (Teorema Binomial). 
+O teorema binomial afirma que
+$$(x + y)^n = \sum_{k=0}^{n} {n \choose k} x^k y^{n-k},$$
+
+Para qualquer inteiro não negativo `n`. Para provar o teorema binomial, expanda o produto
+$$(x + y)(x + y) \ldots (x + y)$$
+Assim como $(a + b)(c + d) = ac + ad + bc + bd$ é a soma dos termos onde escolhemos `a` ou `b` do primeiro fator (mas não ambos) e `c` ou `d` do segundo fator (mas não ambos), os termos de $(x + y)^n$ são obtidos escolhendo `x` ou `y` (mas não ambos) de cada fator. Existem ${n \choose k}$ maneiras de escolher exatamente `k` dos `x's`, e cada uma dessas escolhas produz o termo $x^k y^{n-k}$. O teorema binomial segue.
+
+Podemos usar coeficientes binomiais para calcular probabilidades em muitos problemas para os quais a definição ingênua se aplica.
+
+#### Exemplo 1.4.20 (Full house no pôquer). 
+Uma mão de 5 cartas é distribuída de um baralho padrão de 52 cartas, bem embaralhado. A mão é chamada de full house no pôquer se consiste em três cartas de algum naipe e duas cartas de outro naipe, por exemplo, três 7's e dois 10's (em qualquer ordem). Qual é a probabilidade de um full house?
+
+Solução:
+Todas as ${52 \choose 5}$ mãos possíveis são igualmente prováveis por simetria, então a definição ingênua é aplicável. Para encontrar o número de mãos de full house, use a regra da multiplicação (e imagine a árvore). Existem 13 escolhas para o naipe do qual temos três cartas; para concretizar, suponha que temos três 7's e foque nesse ramo da árvore. Existem ${4 \choose 3}$ maneiras de escolher quais 7's temos. Então, existem 12 escolhas para o naipe do qual temos duas cartas, digamos 10's para concretizar, e ${4 \choose 2}$ maneiras de escolher dois 10's. Assim,
+$$P(\text{full house}) = \frac{13{4 \choose 3}12{4 \choose 2}}{{52 \choose 5}} = \frac{3744}{2598960} \approx 0.00144.$$
+A aproximação decimal é mais útil ao jogar pôquer, mas a resposta em termos de coeficientes binomiais é exata e autoanotada (ver ${52 \choose 5}$ é uma dica muito maior sobre sua origem do que ver 2598960).
+
+### Exemplo 1.4.21 (Problema de Newton-Pepys). 
+Isaac Newton foi consultado sobre o seguinte problema por Samuel Pepys, que queria a informação para fins de jogo. Qual dos seguintes eventos tem a maior probabilidade?
+A: Pelo menos um 6 aparece quando 6 dados justos são lançados.
+B: Pelo menos dois 6's aparecem quando 12 dados justos são lançados.
+C: Pelo menos três 6's aparecem quando 18 dados justos são lançados.
+
+Solução:
+Os três experimentos têm $6^6$, $6^{12}$ e $6^{18}$ resultados possíveis, respectivamente, e por simetria, a definição ingênua se aplica em todos os três experimentos.
+A: Em vez de contar o número de maneiras de obter pelo menos um 6, é mais fácil contar o número de maneiras de não obter nenhum 6. Não obter nenhum 6 é equivalente a amostrar os números de 1 a 5 com reposição 6 vezes, então $5^6$ resultados são favoráveis a Ac (e $6^6 - 5^6$ são favoráveis a A). Assim,
+$$P(A) = 1 - \frac{5^6}{6^6} \approx 0.67.$$
+B: Novamente, contamos primeiro os resultados em $B^c$. Existem 5^12 maneiras de não obter nenhum 6 em 12 lançamentos de dados. Existem ${12 \choose 1}5^{11}$ maneiras de obter exatamente um 6: primeiro escolhemos qual dado cairá 6, depois amostramos os números de 1 a 5 com reposição para os outros 11 dados. Somando estes, obtemos o número de maneiras de falhar em obter pelo menos dois 6's. Então,
+$$P(B) = 1 - \frac{5^{12} + {12 \choose 1}5^{11}}{6^{12}} \approx 0.62.$$
+C: Contamos os resultados em $C^c$, ou seja, o número de maneiras de obter zero, um ou dois 6's em 18 lançamentos de dados. Existem $5^{18}$ maneiras de não obter nenhum 6, ${18 \choose 1}5^{17}$ maneiras de obter exatamente um 6, e ${18 \choose 2}5^{16}$ maneiras de obter exatamente dois 6's (escolha quais dois dados cairão 6, depois decida como os outros 16 dados cairão).
+$$P(C) = 1 - \frac{5^{18} + {18 \choose 1}5^{17} + {18 \choose 2}5^{16}}{6^{18}} \approx 0.60.$$
+Portanto, A tem a maior probabilidade.
+Newton chegou à resposta correta usando cálculos semelhantes. Newton também forneceu a Pepys um argumento intuitivo de por que A era o mais provável dos três; no entanto, sua intuição era inválida. Como explicado em Stigler [24], o uso de dados carregados poderia resultar em uma ordenação diferente de A, B, C, mas o argumento intuitivo de Newton não dependia dos dados serem justos.
+Neste livro, nos importamos com a contagem não por si só, mas porque às vezes nos ajuda a encontrar probabilidades. Aqui está um exemplo de um problema de contagem elegante, mas traiçoeiro; a solução é elegante, mas é raro que o resultado possa ser usado com a definição ingênua de probabilidade.
