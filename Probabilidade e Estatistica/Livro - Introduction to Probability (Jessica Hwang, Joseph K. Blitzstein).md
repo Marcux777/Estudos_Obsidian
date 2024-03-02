@@ -125,7 +125,7 @@ C: Pelo menos três 6's aparecem quando 18 dados justos são lançados.
 
 Solução:
 Os três experimentos têm $6^6$, $6^{12}$ e $6^{18}$ resultados possíveis, respectivamente, e por simetria, a definição ingênua se aplica em todos os três experimentos.
-A: Em vez de contar o número de maneiras de obter pelo menos um 6, é mais fácil contar o número de maneiras de não obter nenhum 6. Não obter nenhum 6 é equivalente a amostrar os números de 1 a 5 com reposição 6 vezes, então $5^6$ resultados são favoráveis a Ac (e $6^6 - 5^6$ são favoráveis a A). Assim,
+A: Em vez de contar o número de maneiras de obter pelo menos um 6, é mais fácil contar o número de maneiras de não obter nenhum 6. Não obter nenhum 6 é equivalente a amostrar os números de 1 a 5 com reposição 6 vezes, então $5^6$ resultados são favoráveis a $A^c$ (e $6^6 - 5^6$ são favoráveis a A). Assim,
 $$P(A) = 1 - \frac{5^6}{6^6} \approx 0.67.$$
 B: Novamente, contamos primeiro os resultados em $B^c$. Existem 5^12 maneiras de não obter nenhum 6 em 12 lançamentos de dados. Existem ${12 \choose 1}5^{11}$ maneiras de obter exatamente um 6: primeiro escolhemos qual dado cairá 6, depois amostramos os números de 1 a 5 com reposição para os outros 11 dados. Somando estes, obtemos o número de maneiras de falhar em obter pelo menos dois 6's. Então,
 $$P(B) = 1 - \frac{5^{12} + {12 \choose 1}5^{11}}{6^{12}} \approx 0.62.$$
@@ -134,3 +134,10 @@ $$P(C) = 1 - \frac{5^{18} + {18 \choose 1}5^{17} + {18 \choose 2}5^{16}}{6^{18}}
 Portanto, A tem a maior probabilidade.
 Newton chegou à resposta correta usando cálculos semelhantes. Newton também forneceu a Pepys um argumento intuitivo de por que A era o mais provável dos três; no entanto, sua intuição era inválida. Como explicado em Stigler [24], o uso de dados carregados poderia resultar em uma ordenação diferente de A, B, C, mas o argumento intuitivo de Newton não dependia dos dados serem justos.
 Neste livro, nos importamos com a contagem não por si só, mas porque às vezes nos ajuda a encontrar probabilidades. Aqui está um exemplo de um problema de contagem elegante, mas traiçoeiro; a solução é elegante, mas é raro que o resultado possa ser usado com a definição ingênua de probabilidade.
+
+### Exemplo 1.4.22 (Bose-Einstein). 
+Quantas maneiras existem de escolher `k` vezes de um conjunto de `n` objetos com reposição, se a ordem não importa (só nos importamos com quantas vezes cada objeto foi escolhido, não a ordem em que foram escolhidos)?
+Solução:
+Quando a ordem importa, a resposta é $n^k$ pela regra da multiplicação, mas este problema é muito mais difícil. Vamos resolvê-lo resolvendo um problema isomorfo (o mesmo problema sob uma forma diferente).
+Vamos encontrar o número de maneiras de colocar `k` partículas indistinguíveis em `n` caixas distinguíveis. Ou seja, trocar as partículas de qualquer maneira não é considerado uma possibilidade separada: tudo o que importa são as contagens de quantas partículas estão em cada caixa.
+Este cenário é conhecido como um problema de Bose-Einstein, uma vez que os físicos Satyendra Nath Bose e Albert Einstein estudaram problemas relacionados sobre partículas indistinguíveis na década de 1920, usando suas ideias para prever com sucesso a existência de um estranho estado da matéria conhecido como condensado de Bose-Einstein.
