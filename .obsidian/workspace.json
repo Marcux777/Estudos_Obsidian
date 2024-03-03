@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Redes de Computadores/Redes de Computadores.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Redes de Computadores/Redes de Computadores.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+                "file": "Redes de Computadores/Redes de Computadores.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md"
+                "file": "Redes de Computadores/Redes de Computadores.md"
               }
             }
           }
@@ -149,6 +149,9 @@
   "active": "0c8c112ee6e4d685",
   "lastOpenFiles": [
     "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
+    "Redes de Computadores/Redes de Computadores.md",
+    "Sem título",
+    "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Pasted image 20240226173805.png",
     "Computação/Data Structures.md",
@@ -190,8 +193,6 @@
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem",
-    "Computação/One for All/Artigos/Algebra/Sieve of Eratosthenes",
-    "Computação/One for All/Artigos/Algebra/Primality tests"
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Chinese Remainder Theorem"
   ]
 }
