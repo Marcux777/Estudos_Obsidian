@@ -45,13 +45,16 @@ Solução: Existem 10 possibilidades para quem fica em primeiro lugar, então, u
 
 
 
-### Amostragem com reposição
-
-Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não impede que ele seja escolhido novamente). Disso são $n^{k}$ possíveis resultados. 
+### Teorema 1.4.7 (Amostragem com reposição). 
+Considere `n` objetos e faça `k` escolhas entre eles, uma de cada vez com reposição (ou seja, escolher um determinado objeto não o impede de ser escolhido novamente). Então, existem $n^k$ resultados possíveis (onde a ordem importa, no sentido de que, por exemplo, escolher o objeto 3 e depois o objeto 7 é contado como um resultado diferente de escolher o objeto 7 e depois o objeto 3). 
+Por exemplo, imagine um jarro com `n` bolas, numeradas de 1 a `n`. 
+Amostramos bolas uma de cada vez com reposição, o que significa que cada vez que uma bola é escolhida, ela é devolvida ao jarro. Cada bola amostrada é um sub-experimento com `n` resultados possíveis, e existem `k` sub-experimentos. Assim, pela regra da multiplicação, existem $n^k$ maneiras de obter uma amostra de tamanho `k`.
 
 ### Amostragem sem reposição
 
-Considerando $n$ objetos e fazendo $k$ escolhas dentre eles, uma de cada vez sem reposição (ou seja, escolher um determinado objeto impede que ele seja escolhido novamente). Então, há$n(n−1)⋅⋅⋅(n−k+1)$ possíveis resultados para $1 ≤ k ≤ n$, e $0$ possibilidades para $k > n$ (onde a ordem importa). Por convenção, $n(n − 1) · · · (n − k + 1) = n$ para $k = 1$.
+Considere `n` objetos e faça `k` escolhas entre eles, uma de cada vez sem reposição (ou seja, escolher um determinado objeto impede que ele seja escolhido novamente). Então, existem $n(n−1)…(n−k+1)$ resultados possíveis para $1≤k≤n$, e 0 possibilidades para $k>n$ (onde a ordem importa). Por convenção, $n(n−1)…(n−k+1)=n$ para $k=1$.
+
+Este resultado também segue diretamente da regra da multiplicação: cada bola amostrada é novamente um sub-experimento, e o número de resultados possíveis diminui em 1 a cada vez. Note que para a amostragem de `k` de `n` objetos sem reposição, precisamos que $k≤n$, enquanto na amostragem com reposição os objetos são inesgotáveis.
 
 ### Exemplo 1.4.10 (Problema do aniversário). 
 Existem k pessoas em uma sala. Suponha que o aniversário de cada pessoa seja igualmente provável de ser qualquer um dos 365 dias do ano (excluímos 29 de fevereiro), e que os aniversários das pessoas são independentes (definiremos independência formalmente mais tarde, mas intuitivamente significa que saber os aniversários de algumas pessoas não nos dá nenhuma informação sobre os aniversários de outras pessoas; isso não seria válido se, por exemplo, soubéssemos que duas das pessoas são gêmeas). Qual é a probabilidade de que pelo menos um par de pessoas no grupo tenha o mesmo aniversário?
@@ -141,3 +144,4 @@ Solução:
 Quando a ordem importa, a resposta é $n^k$ pela regra da multiplicação, mas este problema é muito mais difícil. Vamos resolvê-lo resolvendo um problema isomorfo (o mesmo problema sob uma forma diferente).
 Vamos encontrar o número de maneiras de colocar `k` partículas indistinguíveis em `n` caixas distinguíveis. Ou seja, trocar as partículas de qualquer maneira não é considerado uma possibilidade separada: tudo o que importa são as contagens de quantas partículas estão em cada caixa.
 Este cenário é conhecido como um problema de Bose-Einstein, uma vez que os físicos Satyendra Nath Bose e Albert Einstein estudaram problemas relacionados sobre partículas indistinguíveis na década de 1920, usando suas ideias para prever com sucesso a existência de um estranho estado da matéria conhecido como condensado de Bose-Einstein.
+
