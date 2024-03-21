@@ -12,4 +12,13 @@
 	 - Serviços:
 		 - No remetente: cada camada usa os serviços da camada que está logo abaixo dela
 
-- Modelo OSI
+- Modelo OSI: ISO é um organismo multinacional dedicada ao acordo mundial sobre as normas internacionais. Uma norma ISO é a OSI.
+
+	- 7 Camadas:
+		7 - Aplicação
+		6 - Apresentação
+		5 - Sessão
+		4 - Transporte
+		3 - Rede
+		2 - Enlace de dados
+		1 - Física
