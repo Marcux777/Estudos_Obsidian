@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redes de Computadores/Redes de Computadores.md",
+                "file": "Redes de Computadores/Capitulo 1.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "7a7c380efda82b0d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.11"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Redes de Computadores/Redes de Computadores.md",
+                "file": "Redes de Computadores/Capitulo 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Redes de Computadores/Redes de Computadores.md",
+                "file": "Redes de Computadores/Capitulo 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Redes de Computadores/Redes de Computadores.md"
+                "file": "Redes de Computadores/Capitulo 1.md"
               }
             }
           }
@@ -157,10 +146,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "7a7c380efda82b0d",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
-    "Redes de Computadores/Redes de Computadores.md",
+    "Redes de Computadores/Capitulo 1.md",
     "Sem título",
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
