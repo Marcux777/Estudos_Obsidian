@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sem título.md",
+                "file": "Input - Output.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sem título.md",
+                "file": "Input - Output.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sem título.md",
+                "file": "Input - Output.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sem título.md"
+                "file": "Input - Output.md"
               }
             }
           }
@@ -161,9 +161,9 @@
   },
   "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "C",
+    "Curso Python",
     "Redes de Computadores/Capitulo 2.md",
-    "Sem título.md",
+    "Input - Output.md",
     "Redes de Computadores/Capitulo 1.md",
     "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Redes de Computadores",
