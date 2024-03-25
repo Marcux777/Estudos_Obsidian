@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "795e037895851727",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sem título.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Input - Output.md",
+                "file": "Sem título.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Input - Output.md",
+                "file": "Sem título.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Input - Output.md"
+                "file": "Sem título.md"
               }
             }
           }
@@ -159,10 +171,11 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "795e037895851727",
   "lastOpenFiles": [
-    "Curso Python",
     "Redes de Computadores/Capitulo 2.md",
+    "Sem título.md",
+    "Curso Python",
     "Input - Output.md",
     "Redes de Computadores/Capitulo 1.md",
     "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
