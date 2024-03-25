@@ -13,6 +13,7 @@
 		Welcome to_Python
 		```
 	````
+	
 	-  Parâmetro `sep` no Print -> Separa os parametros do print
 	````
 		print("OLÁ", "Tenha", "um", "bom", "dia", sep = '-')
@@ -20,5 +21,14 @@
 		OLÁ-Tenha-um-bom-dia
 		```
 	````
+	
+	- Output formatado -> É possivel formatar a saida utilizando de máscaras `{}`
+		````
+		print('I love {} for{}!'.format('Paçoquinha','ever'))
+		
+		
+		I love Paçoquinha forever!
+		````
+		
 - Comentários -> ``# Utilizamos aqui a hashtag mesmo até o fim da linha``. 
 ``### aqui é para pegar uma ou mais de uma linha ###``
