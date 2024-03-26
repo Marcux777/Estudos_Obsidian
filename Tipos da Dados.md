@@ -137,5 +137,5 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 ## Tuplas
 
 São muito parecidas com Listas, diferenciando em 2 aspectos:
-	1° - Tuplas são imutaveis, uma vez criadas, os valores não podem ser alterados.
+	1° - Tuplas são imutáveis, uma vez criadas, os valores não podem ser alterados.
 	2° - A Sintaxe, tuplas são criadas com ``()``, enquanto listas são com `[]`
