@@ -48,7 +48,7 @@
 	print(List) 
 	
 	List = [1, 2, 'Balela', 4, 'ok', 6, 'Triste']
-	print("\nList with the use of Mixed Values: ")
+	print("\nList com valores diversos: ")
 	print(List)
 ````
 
@@ -61,4 +61,40 @@ Para pegar um valor em especifico, podemos dizer a posição que queremos
 	print(List[2])
 
 ````
+E podemos fazer também um array multidimensional
+````
+	List = [['Memories', 'is', 'Broken'], ['The', 'truth', 'goes', 'unspoken'], ["I've", "even", 'forgotten', 'my', 'name']]
+	
+	print("Pegando um elemento: ")
+	
+	print(List[0][1])
+	
+	print(List[2][0])
+````
 
+Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
+````
+	List = [['Memories', 'is', 'Broken'], ['The', 'truth', 'goes', 'unspoken'], ["I've", "even", 'forgotten', 'my', 'name']]
+	
+	print("Pegando um elemento: ")
+	print(List[0][-1])
+	
+	print(List[-2][0])
+````
+
+- Funções:
+	`append()` -> adiciona elementos diversos ao final da lista.
+	````
+		List = []
+		print("Lista Inicial: ")
+		print(List)			 
+		List.append(1)
+		List.append(2)
+		List.append(4)
+		print("\nLista depois de adicionados os 3 elementos: ")
+		print(List)
+	````
+	`insert()` -> Insere elementos em locais específicos da lista.
+````
+
+```
