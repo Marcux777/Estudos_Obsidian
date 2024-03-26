@@ -43,13 +43,13 @@
 ->Basicamente, um vetor dinâmico. É uma coleção de itens, homogêneos ou não.
 	Exemplo:
 ````
-	List = [1, 2, 4, 4, 3, 3, 3, 6, 5]
-	print("\nLista de inteiros: ")
-	print(List) 
-	
-	List = [1, 2, 'Balela', 4, 'ok', 6, 'Triste']
-	print("\nList com valores diversos: ")
-	print(List)
+		List = [1, 2, 4, 4, 3, 3, 3, 6, 5]
+		print("\nLista de inteiros: ")
+		print(List) 
+		
+		List = [1, 2, 'Balela', 4, 'ok', 6, 'Triste']
+		print("\nList com valores diversos: ")
+		print(List)
 ````
 
 Para pegar um valor em especifico, podemos dizer a posição que queremos
@@ -59,7 +59,6 @@ Para pegar um valor em especifico, podemos dizer a posição que queremos
 	print("Pegando um elemento: ")
 	print(List[0])
 	print(List[2])
-
 ````
 E podemos fazer também um array multidimensional
 ````
@@ -83,8 +82,8 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 ````
 
 - Funções:
-	`append()` -> adiciona elementos diversos ao final da lista.
-	````
+	- `append()` -> adiciona elementos diversos ao final da lista.
+		````
 		List = []
 		print("Lista Inicial: ")
 		print(List)			 
@@ -93,8 +92,24 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 		List.append(4)
 		print("\nLista depois de adicionados os 3 elementos: ")
 		print(List)
-	````
-	`insert()` -> Insere elementos em locais específicos da lista.
-````
-
-```
+		````
+	- `insert()` -> Insere elementos em locais específicos da lista.
+		````
+		List = [1,2,3,4]
+		print("Lista Inicial: ")
+		print(List)
+		
+		List.insert(1, 12)
+		print(List)
+		````
+	- `extend()` -> Insere multiplos elementos ao final da lista.
+		````
+		List = [1, 2, 3, 4]
+		print("Lista Inicial: ")
+		print(List)
+		 
+		List.extend([8, 'Memories', 'Broken'])
+		print("\nLista depois: ")
+		print(List)
+		````
+	- `pop()` -> Remove e retorna, por padrão, o elemento da frente da lista. 
