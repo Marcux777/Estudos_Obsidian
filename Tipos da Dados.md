@@ -26,4 +26,16 @@
 	print(Str[::-1]) 
 	```
 	Documentação: https://docs.python.org/3/library/string.html
-## 
+## Numéricos
+- ### Inteiros 
+	Basicamente, valores do conjunto dos inteiros.
+
+- ### Reais
+	Basicamente, valores de ponto flutuantes.
+	Exemplo no print:
+		
+		
+	````
+	print('{.2f}'.format())
+```
+	
