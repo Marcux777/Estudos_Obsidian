@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Segment Tree.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/One for All/Artigos/Segment Tree.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/One for All/Artigos/Segment Tree.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/One for All/Artigos/Segment Tree.md"
+                "file": "Curso Python/Tipos da Dados.md"
               }
             }
           }
@@ -162,6 +162,7 @@
   },
   "active": "06017305dec89e13",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
     "Computação/Álgebra.md",
@@ -197,7 +198,6 @@
     "Computação/One for All/Artigos/Algebra/Integer factorization/Divisão de Teste - Fatoração de inteiros.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Implementação do Algoritmo de Garner.md",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Peneirando até a raiz.md",
-    "Computação/One for All/Artigos/Algoritmo para encontrar uma raiz primitiva - Primitive Root.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
