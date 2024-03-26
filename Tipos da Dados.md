@@ -33,9 +33,15 @@
 - ### Reais
 	Basicamente, valores de ponto flutuantes.
 	Exemplo no print:
-		
-		
+	 ````
+	num = 3.14159
+	print('{:.2f}'.format(num))
 	````
-	print('{.2f}'.format())
+
+## Boleana 
+	-> Basicamente verdadeiro ou falso.
+## List
+	->Basicamente, um vetor dinâmico. É uma coleção de itens.
+		````
+			
 ```
-	
