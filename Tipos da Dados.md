@@ -33,15 +33,32 @@
 - ### Reais
 	Basicamente, valores de ponto flutuantes.
 	Exemplo no print:
-	 ````
+	````
 	num = 3.14159
 	print('{:.2f}'.format(num))
 	````
-
 ## Boleana 
-	-> Basicamente verdadeiro ou falso.
+-> Basicamente verdadeiro ou falso.
 ## List
-	->Basicamente, um vetor dinâmico. É uma coleção de itens.
-		````
-			
-```
+->Basicamente, um vetor dinâmico. É uma coleção de itens, homogêneos ou não.
+	Exemplo:
+````
+	List = [1, 2, 4, 4, 3, 3, 3, 6, 5]
+	print("\nLista de inteiros: ")
+	print(List) 
+	
+	List = [1, 2, 'Balela', 4, 'ok', 6, 'Triste']
+	print("\nList with the use of Mixed Values: ")
+	print(List)
+````
+
+Para pegar um valor em especifico, podemos dizer a posição que queremos
+````
+	List = ['Memories', 'is', 'Broken']
+ 
+	print("Pegando um elemento: ")
+	print(List[0])
+	print(List[2])
+
+````
+
