@@ -16,7 +16,7 @@
 	Ou até mesmo invertendo uma string ou pegando uma parte da string
 	```
 	Str = "Bora Pro volei"
-print("String: ") 
+	print("String: ") 
 	print(Str) 
 	
 	print("Substring: ") 
@@ -24,6 +24,6 @@ print("String: ")
 	
 	print("\nInvertida: ") 
 	print(Str[::-1]) 
-	
-		
 	```
+	Documentação: https://docs.python.org/3/library/string.html
+## 
