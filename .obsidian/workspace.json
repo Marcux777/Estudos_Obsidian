@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tipos da Dados.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tipos da Dados.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tipos da Dados.md",
+                "file": "Curso Python/Tipos da Dados.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tipos da Dados.md"
+                "file": "Curso Python/Tipos da Dados.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "06017305dec89e13",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Curso Python/Input - Output.md",
-    "Tipos da Dados.md",
+    "Curso Python/Tipos da Dados.md",
     "Redes de Computadores/Capitulo 2.md",
     "Curso Python",
     "Redes de Computadores/Capitulo 1.md",
