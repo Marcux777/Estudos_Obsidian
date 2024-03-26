@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md",
+                "file": "Computação/One for All/Artigos/Segment Tree.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md",
+                "file": "Computação/One for All/Artigos/Segment Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md",
+                "file": "Computação/One for All/Artigos/Segment Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md"
+                "file": "Computação/One for All/Artigos/Segment Tree.md"
               }
             }
           }
@@ -159,10 +159,13 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "06017305dec89e13",
   "lastOpenFiles": [
-    "Curso Python/Input - Output.md",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Computação/Data Structures.md",
+    "Computação/Álgebra.md",
     "Curso Python/Tipos da Dados.md",
+    "Curso Python/Input - Output.md",
     "Redes de Computadores/Capitulo 2.md",
     "Curso Python",
     "Redes de Computadores/Capitulo 1.md",
@@ -170,16 +173,13 @@
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Pasted image 20240226173805.png",
-    "Computação/Data Structures.md",
     "Algebra Linear/Espaços Vetoriais.md",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Treap (Cartesian tree).md",
     "Computação/One for All/Artigos/Pasted image 20240207183644.png",
     "Computação/One for All/Artigos/Pasted image 20240207184558.png",
     "Computação/One for All/Artigos/Pasted image 20240207184543.png",
     "Computação/One for All/Artigos/Pasted image 20240207184448.png",
     "Computação/One for All/Artigos/Pasted image 20240207184018.png",
-    "Computação/Álgebra.md",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",

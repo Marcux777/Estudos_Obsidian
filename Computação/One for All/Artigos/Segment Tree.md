@@ -1,8 +1,7 @@
 # Árvore de Segmentos
 Uma Árvore de Segmentos é uma estrutura de dados que armazena informações sobre intervalos de array como uma árvore. Isso permite responder consultas de intervalo em um array de maneira eficiente, enquanto ainda é flexível o suficiente para permitir a rápida modificação do array. Isso inclui encontrar a soma de elementos consecutivos do array  $a[l \dots r]$ , ou encontrar o elemento mínimo em um intervalo desse tipo em  $O(\log n)$  tempo. Entre responder a essas consultas, a Árvore de Segmentos permite modificar o array substituindo um elemento, ou mesmo alterando os elementos de todo um subsegmento (por exemplo, atribuindo todos os elementos  $a[l \dots r]$  a qualquer valor, ou adicionando um valor a todos os elementos no subsegmento).
 
-Em geral, uma Árvore de Segmentos é uma estrutura de dados muito flexível, e um grande número de problemas pode ser resolvido com ela. Além disso, também é possível aplicar operações mais complexas e responder a consultas mais complexas (veja versões avançadas de Árvores de Segmentos). Em particular, a Árvore de Segmentos pode ser facilmente generalizada para dimensões maiores. Por exemplo, com uma Árvore de Segmentos bidimensional, você pode responder a consultas de soma ou mínimo sobre algum sub-retângulo de uma matriz dada em apenas  
-$O(\log^2 n)$  tempo.
+Em geral, uma Árvore de Segmentos é uma estrutura de dados muito flexível, e um grande número de problemas pode ser resolvido com ela. Além disso, também é possível aplicar operações mais complexas e responder a consultas mais complexas (veja versões avançadas de Árvores de Segmentos). Em particular, a Árvore de Segmentos pode ser facilmente generalizada para dimensões maiores. Por exemplo, com uma Árvore de Segmentos bidimensional, você pode responder a consultas de soma ou mínimo sobre algum sub-retângulo de uma matriz dada em apenas  $O(\log^2 n)$  tempo.
 
 Uma propriedade importante das Árvores de Segmentos é que elas requerem apenas uma quantidade linear de memória. A Árvore de Segmentos padrão requer 
 $4n$  vértices para trabalhar em um array de tamanho  $n$ .
@@ -672,17 +671,7 @@ Assim, construímos uma Árvore de Segmentos 2D: primeiro a Árvore de Segmentos
 
 Para tornar o processo de construção mais compreensível, podemos esquecer por um momento que a matriz é bidimensional e considerar apenas a primeira coordenada. Construiremos uma Árvore de Segmentos unidimensional usando apenas a primeira coordenada. Mas, em vez de armazenar um número em um segmento, armazenamos uma Árvore de Segmentos inteira: ou seja, neste momento, lembramos que também temos uma segunda coordenada; mas, como neste momento a primeira coordenada já está fixa em algum intervalo $[l \dots r]$, efetivamente trabalhamos com uma faixa $a[l \dots r, 0 \dots m-1]$ e construímos uma Árvore de Segmentos para ela.
 
-Aqui está a implementação da construção de uma Árvore de Segmentos 2D. Representa na verdade dois blocos separados: a construção de uma Árvore de Segmentos ao longo da coordenada $x$ (<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mtext>build</mtext>
-    <mi>x</mi>
-  </msub>
-</math>), e a coordenada $y$ (<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msub>
-    <mtext>build</mtext>
-    <mi>y</mi>
-  </msub>
-</math>). Para os nós folha em $\text{build}_y$, temos que separar dois casos: quando o segmento atual da primeira coordenada $[tlx \dots trx]$ tem comprimento 1, e quando tem um comprimento maior que um. No primeiro caso, simplesmente pegamos o valor correspondente da matriz, e no segundo caso podemos combinar os valores de duas Árvores de Segmentos dos filhos esquerdo e direito na coordenada $x$.
+Aqui está a implementação da construção de uma Árvore de Segmentos 2D. Representa na verdade dois blocos separados: a construção de uma Árvore de Segmentos ao longo da coordenada $x$ $(\text{build}_x)$,e a coordenada $y$ $(\text{build}_y)$. Para os nós folha em $\text{build}_y$, temos que separar dois casos: quando o segmento atual da primeira coordenada $[tlx \dots trx]$ tem comprimento 1, e quando tem um comprimento maior que um. No primeiro caso, simplesmente pegamos o valor correspondente da matriz, e no segundo caso podemos combinar os valores de duas Árvores de Segmentos dos filhos esquerdo e direito na coordenada $x$.
 
 ```cpp
 void build_y(int vx, int lx, int rx, int vy, int ly, int ry) {
@@ -837,11 +826,10 @@ Para cada modificação da Árvore de Segmentos, receberemos um novo vértice ra
 Com a abordagem descrita acima, quase qualquer Árvore de Segmentos pode ser transformada em uma estrutura de dados persistente.
 
 
-#### Encontrando o  $k$ -ésimo menor número em um intervalo¶
+#### Encontrando o  $k$ -ésimo menor número em um intervalo
 Desta vez, temos que responder consultas do tipo "Qual é o  $k$ -ésimo menor elemento no intervalo  $a[l \dots r]$ . Essa consulta pode ser respondida usando uma busca binária e uma Árvore de Ordenação por Fusão, mas a complexidade de tempo para uma única consulta seria  $O(\log^3 n)$ . Vamos realizar a mesma tarefa usando uma Árvore de Segmento persistente em  $O(\log n)$ .
 
-Primeiro, vamos discutir uma solução para um problema mais simples: vamos considerar apenas arrays nos quais os elementos são limitados por  $0 \le a[i] \lt n$ . E queremos apenas encontrar o  $k$ -ésimo menor elemento em algum prefixo do array  
-$a$ . Será muito fácil estender as ideias desenvolvidas posteriormente para arrays não restritos e consultas de intervalo não restritas. Note que estaremos usando indexação baseada em 1 para  $a$ .
+Primeiro, vamos discutir uma solução para um problema mais simples: vamos considerar apenas arrays nos quais os elementos são limitados por  $0 \le a[i] \lt n$ . E queremos apenas encontrar o  $k$ -ésimo menor elemento em algum prefixo do array  $a$ . Será muito fácil estender as ideias desenvolvidas posteriormente para arrays não restritos e consultas de intervalo não restritas. Note que estaremos usando indexação baseada em 1 para  $a$ .
 
 Vamos usar uma Árvore de Segmento que conta todos os números que aparecem, ou seja, na Árvore de Segmento armazenaremos o histograma do array. Portanto, os vértices folha armazenarão com que frequência os valores  $0$ ,  $1$ ,  $\dots$ ,  $n-1$  aparecerão no array, e os outros vértices armazenam quantos números em algum intervalo estão no array. Em outras palavras, criamos uma Árvore de Segmento regular com consultas de soma sobre o histograma do array. Mas, em vez de criar todas as  $n$  Árvores de Segmento para cada prefixo possível, criaremos uma persistente, que conterá a mesma informação. Começaremos com uma Árvore de Segmento vazia (todas as contagens serão  $0$ ) apontada por  $root_0$ , e adicionaremos os elementos  $a[1]$ ,  $a[2]$ ,  $\dots$ ,  $a[n]$  um após o outro. Para cada modificação, receberemos um novo vértice raiz, vamos chamar  $root_i$  a raiz da Árvore de Segmento após inserir os primeiros  $i$  elementos do array  $a$ . A Árvore de Segmento enraizada em  $root_i$  conterá o histograma do prefixo  $a[1 \dots i]$ . Usando esta Árvore de Segmento, podemos encontrar em  $O(\log n)$  tempo a posição do  $k$ -ésimo elemento usando a mesma técnica discutida em Contando o número de zeros, procurando pelo  $k$ -ésimo zero.
 
@@ -849,9 +837,7 @@ Agora, para a versão não restrita do problema.
 
 Primeiro, para a restrição nas consultas: em vez de realizar apenas essas consultas sobre um prefixo de  a , queremos usar quaisquer segmentos arbitrários  $a[l…r]$ . Aqui, precisamos de uma Árvore de Segmento que represente o histograma dos elementos no intervalo  $a[l…r]$ . É fácil ver que tal Árvore de Segmento é apenas a diferença entre a Árvore de Segmento enraizada em  $root_{r}$​  e a Árvore de Segmento enraizada em  $root_{l-1}$​ , ou seja, cada vértice na Árvore de Segmento  $[l…r]$  pode ser computado com o vértice da árvore  $root_{r}$​  menos o vértice da árvore $root_{l-1}$​ .
 
-Na implementação da função <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mtext>find_kth</mtext>
-</math>, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
+Na implementação da função $find$ $${kth}$, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
 
 Aqui estão as funções modificadas <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mtext>build</mtext>
