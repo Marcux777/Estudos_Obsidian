@@ -837,7 +837,7 @@ Agora, para a versão não restrita do problema.
 
 Primeiro, para a restrição nas consultas: em vez de realizar apenas essas consultas sobre um prefixo de  a , queremos usar quaisquer segmentos arbitrários  $a[l…r]$ . Aqui, precisamos de uma Árvore de Segmento que represente o histograma dos elementos no intervalo  $a[l…r]$ . É fácil ver que tal Árvore de Segmento é apenas a diferença entre a Árvore de Segmento enraizada em  $root_{r}$​  e a Árvore de Segmento enraizada em  $root_{l-1}$​ , ou seja, cada vértice na Árvore de Segmento  $[l…r]$  pode ser computado com o vértice da árvore  $root_{r}$​  menos o vértice da árvore $root_{l-1}$​ .
 
-Na implementação da função $find$ $${kth}$, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
+Na implementação da função $find$ ${kth}$, isso pode ser tratado passando dois ponteiros de vértice e calculando a contagem/soma do segmento atual como diferença das duas contagens/somas dos vértices.
 
 Aqui estão as funções modificadas <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mtext>build</mtext>

@@ -1,4 +1,11 @@
 {
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Tabloid",
+    "landscape": true,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
