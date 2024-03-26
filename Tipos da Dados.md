@@ -102,7 +102,7 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 		List.insert(1, 12)
 		print(List)
 		````
-	- `extend()` -> Insere multiplos elementos ao final da lista.
+	- `extend()` -> Insere múltiplos elementos ao final da lista.
 		````
 		List = [1, 2, 3, 4]
 		print("Lista Inicial: ")
@@ -112,4 +112,25 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 		print("\nLista depois: ")
 		print(List)
 		````
-	- `pop()` -> Remove e retorna, por padrão, o elemento da frente da lista. 
+	- `pop()` -> Remove e retorna, por padrão, o ultimo elemento da lista. Para especificar, só passar a posição do elemento como parâmetro.
+		````
+		List = [1, 2, 3, 4, 5]
+	
+		List.pop()
+		print("\nLista após o pop: ")
+		print(List)
+		 
+		List.pop(2)
+		print("\nLista após o elemento especificado for excluido: ")
+		print(List)
+		````
+	- ``Sort()`` -> Ordena em ordem crescente.
+		````
+		List = [5, 8 , 23, 235, 2, 234, 325, 32, 35]
+		print("\nLista antes do sort: ")
+		print(List)
+		List.sort()
+		print("\nLista após o sort: ")
+		print(List)
+		````
+
