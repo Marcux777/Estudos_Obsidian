@@ -139,3 +139,25 @@ Ou podemos pegar uma posição negativa, que pega "começa" pelo final da lista.
 São muito parecidas com Listas, diferenciando em 2 aspectos:
 	1° - Tuplas são imutáveis, uma vez criadas, os valores não podem ser alterados.
 	2° - A Sintaxe, tuplas são criadas com ``()``, enquanto listas são com `[]`
+
+Exemplo:
+~~~
+Tuple1 = ()
+print("Tupla Inicial: ")
+print(Tuple1)
+
+
+Tuple1 = ('Vi', 'Tu')
+print("\nTupla com as strings: ")
+print(Tuple1)
+
+
+list1 = [1, 2, 4, 5, 6]
+print("\nTuple usando List: ")
+print(tuple(list1))
+
+Tuple1 = tuple('I... AM... ATOMIC!!!!!!!!')
+print("\nTuple com o uso da função: ")
+print(Tuple1)
+~~~~
+
