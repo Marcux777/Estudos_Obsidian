@@ -26,14 +26,26 @@
               "type": "markdown",
               "state": {
                 "file": "Curso Python/Tipos da Dados.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b468c5a9dd8e262a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Analise de Dados com.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md",
+                "file": "Analise de Dados com.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md",
+                "file": "Analise de Dados com.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Curso Python/Tipos da Dados.md"
+                "file": "Analise de Dados com.md"
               }
             }
           }
@@ -160,13 +172,14 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "06017305dec89e13",
+  "active": "b468c5a9dd8e262a",
   "lastOpenFiles": [
+    "Curso Python/Tipos da Dados.md",
+    "Analise de Dados com.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
     "Computação/Álgebra.md",
-    "Curso Python/Tipos da Dados.md",
     "Curso Python/Input - Output.md",
     "Redes de Computadores/Capitulo 2.md",
     "Curso Python",
@@ -197,7 +210,6 @@
     "Computação/One for All/Artigos/Algebra/Primality tests/Versão Determinística.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Divisão de Teste - Fatoração de inteiros.md",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm/Implementação do Algoritmo de Garner.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Peneirando até a raiz.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
