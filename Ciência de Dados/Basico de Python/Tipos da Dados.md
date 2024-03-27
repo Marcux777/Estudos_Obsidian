@@ -140,24 +140,27 @@ São muito parecidas com Listas, diferenciando em 2 aspectos:
 	1° - Tuplas são imutáveis, uma vez criadas, os valores não podem ser alterados.
 	2° - A Sintaxe, tuplas são criadas com ``()``, enquanto listas são com `[]`
 
-Exemplo:
-~~~
-Tuple1 = ()
-print("Tupla Inicial: ")
-print(Tuple1)
+- Exemplo:
+	~~~
+	Tuple1 = ()
+	print("Tupla Inicial: ")
+	print(Tuple1)
+	
+	
+	Tuple1 = ('Vi', 'Tu')
+	print("\nTupla com as strings: ")
+	print(Tuple1)
+	
+	
+	list1 = [1, 2, 4, 5, 6]
+	print("\nTuple usando List: ")
+	print(tuple(list1))
+	
+	Tuple1 = tuple('I... AM... ATOMIC!!!!!!!!')
+	print("\nTuple com o uso da função: ")
+	print(Tuple1)
+	~~~~
 
-
-Tuple1 = ('Vi', 'Tu')
-print("\nTupla com as strings: ")
-print(Tuple1)
-
-
-list1 = [1, 2, 4, 5, 6]
-print("\nTuple usando List: ")
-print(tuple(list1))
-
-Tuple1 = tuple('I... AM... ATOMIC!!!!!!!!')
-print("\nTuple com o uso da função: ")
-print(Tuple1)
-~~~~
+### Criando uma Tupla com Tipos de Dados Mistos.
+As tuplas podem conter qualquer número de elementos e de qualquer tipo de dados (como strings, inteiros, listas, etc.). As tuplas também podem ser criadas com um único elemento, mas é um pouco complicado. Ter um elemento entre parênteses não é suficiente, deve haver uma 'vírgula' no final para torná-lo uma tupla.
 
