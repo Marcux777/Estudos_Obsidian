@@ -3,4 +3,4 @@
 
 - [[Tipos da Dados]]
 
-- 
+- [[Funções]]
