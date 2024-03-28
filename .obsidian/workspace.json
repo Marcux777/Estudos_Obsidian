@@ -13,75 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Input - Output.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06017305dec89e13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b468c5a9dd8e262a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Analise de Dados com Python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c33d0e3d7ff9cd2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sumario.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f613d9df58617bc1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Basico de Python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5220db3a60181a94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,19 +146,19 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5220db3a60181a94",
+  "active": "e61f27ca82f49923",
   "lastOpenFiles": [
-    "Basico de Python.md",
+    "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-    "Sumario.md",
     "Analise de Dados com Python.md",
+    "Sumario.md",
+    "Basico de Python.md",
     "Ciência de Dados",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/Álgebra.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
-    "Ciência de Dados/Basico de Python/Input - Output.md",
     "Redes de Computadores/Capitulo 2.md",
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",

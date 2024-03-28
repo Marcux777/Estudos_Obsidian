@@ -164,3 +164,39 @@ São muito parecidas com Listas, diferenciando em 2 aspectos:
 ### Criando uma Tupla com Tipos de Dados Mistos.
 As tuplas podem conter qualquer número de elementos e de qualquer tipo de dados (como strings, inteiros, listas, etc.). As tuplas também podem ser criadas com um único elemento, mas é um pouco complicado. Ter um elemento entre parênteses não é suficiente, deve haver uma 'vírgula' no final para torná-lo uma tupla.
 
+~~~~
+	Tuple1 = (5, 'Ué', 7, 'Puts')
+	print("\nTuple com dados mixos: ")
+	print(Tuple1)
+	
+	Tuple1 = (0, 1, 2, 3)
+	Tuple2 = ('python', 'gordola')
+	Tuple3 = (Tuple1, Tuple2)
+	print("\nTuple com tuplas aninhadas: ")
+	print(Tuple3)
+	
+	Tuple1 = ('Geeks',) * 3
+	print("\nTuple com repetição: ")
+	print(Tuple1)
+	
+	Tuple1 = ('Geeks')
+	n = 5
+	print("\nTuple com um loop")
+	for i in range(int(n)):
+		Tuple1 = (Tuple1,)
+		print(Tuple1)
+~~~~
+
+#### Acessando Tuplas
+As tuplas são imutáveis e geralmente contêm uma sequência de elementos heterogêneos que são acessados por meio de desempacotamento ou indexação (ou mesmo por atributo, no caso de tuplas nomeadas). As listas são mutáveis e seus elementos são geralmente homogêneos e são acessados por meio de iteração sobre a lista.
+
+~~~~
+Tuple1 = ("Vasco", "da", "Gama")
+
+a, b, c = Tuple1
+print("\nValues depois de separados: ")
+print(a)
+print(b)
+print(c)
+~~~~
+
