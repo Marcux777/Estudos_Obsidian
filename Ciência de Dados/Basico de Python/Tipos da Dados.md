@@ -200,3 +200,74 @@ print(b)
 print(c)
 ~~~~
 
+## Sets
+Em Python, um Conjunto é uma coleção não ordenada de tipos de dados que é iterável, mutável e não tem elementos duplicados. A ordem dos elementos em um conjunto é indefinida, embora possa consistir em vários elementos. A principal vantagem de usar um conjunto, em oposição a uma lista, é que ele tem um método altamente otimizado para verificar se um elemento específico está contido no conjunto.
+
+~~~~
+set1 = set()
+print("Conjunto inicial em branco: ")
+print(set1)
+
+set1 = set("GeeksForGeeks")
+print("\nConjunto com o uso de String: ")
+print(set1)
+
+String = 'GeeksForGeeks'
+set1 = set(String)
+print("\nConjunto com o uso de um Objeto: ")
+print(set1)
+
+
+set1 = set(["Geeks", "For", "Geeks"])
+print("\nConjunto com o uso de Lista: ")
+print(set1)
+
+# Criando um Conjunto com
+# o uso de uma tupla
+t=("Geeks","for","Geeks")
+print("\nConjunto com o uso de Tupla: ")
+print(set(t))
+
+# Criando um Conjunto com
+# o uso de um dicionário
+d={"Geeks":1,"for":2,"Geeks":3}
+print("\nConjunto com o uso de Dicionário: ")
+print(set(d))
+~~~~
+
+Um conjunto contém apenas elementos únicos, mas no momento da criação do conjunto, vários valores duplicados também podem ser passados. A ordem dos elementos em um conjunto é indefinida e é inalterável. O tipo de elementos em um conjunto não precisa ser o mesmo, vários valores de tipos de dados diferentes também podem ser passados para o conjunto.
+
+### Usando o método remove() ou o método discard(): 
+Elementos podem ser removidos do Conjunto usando a função integrada remove(), mas um KeyError surge se o elemento não existir no conjunto. Para remover elementos de um conjunto sem KeyError, use discard(), se o elemento não existir no conjunto, ele permanece inalterado.
+
+~~~~
+# Programa Python para demonstrar
+# Remoção de elementos em um Conjunto
+
+# Criando um Conjunto
+set1 = set([1, 2, 3, 4, 5, 6,
+            7, 8, 9, 10, 11, 12])
+print("Conjunto inicial: ")
+print(set1)
+
+# Removendo elementos do Conjunto
+# usando o método Remove()
+set1.remove(5)
+set1.remove(6)
+print("\nConjunto após a remoção de dois elementos: ")
+print(set1)
+
+# Removendo elementos do Conjunto
+# usando o método Discard()
+set1.discard(8)
+set1.discard(9)
+print("\nConjunto após descartar dois elementos: ")
+print(set1)
+
+# Removendo elementos do Conjunto
+# usando o método iterador
+for i in range(1, 5):
+    set1.remove(i)
+print("\nConjunto após remover uma série de elementos: ")
+print(set1)
+~~~~
