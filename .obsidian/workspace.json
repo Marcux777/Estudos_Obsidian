@@ -4,41 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "17d28e2aeedadc10",
+        "id": "db57b8f2609a0fc3",
         "type": "tabs",
         "children": [
           {
-            "id": "e61f27ca82f49923",
+            "id": "232b01e8d6b4340a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b2cd511a7d47dc5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Loops.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2180dab682a4c2a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Loops.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -170,14 +146,14 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "e61f27ca82f49923",
+  "active": "232b01e8d6b4340a",
   "lastOpenFiles": [
-    "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Loops.md",
-    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-    "Ciência de Dados/Basico de Python.md",
     "Ciência de Dados/Basico de Python/Input - Output.md",
+    "Ciência de Dados/Basico de Python/Funções.md",
+    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
     "Ciência de Dados/Analise de Dados com Python.md",
+    "Ciência de Dados/Basico de Python.md",
     "Sumario.md",
     "Ciência de Dados",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",

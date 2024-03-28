@@ -3,7 +3,7 @@
   "promptDelete": false,
   "pdfExportSettings": {
     "includeName": true,
-    "pageSize": "Tabloid",
+    "pageSize": "A4",
     "landscape": true,
     "margin": "0",
     "downscalePercent": 100
