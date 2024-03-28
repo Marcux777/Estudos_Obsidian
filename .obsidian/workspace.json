@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
+                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
+                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
+                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md"
+                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md"
               }
             }
           }
@@ -172,10 +172,10 @@
   },
   "active": "e61f27ca82f49923",
   "lastOpenFiles": [
+    "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Loops.md",
     "Ciência de Dados/Basico de Python/Tipos da Dados.md",
     "Ciência de Dados/Basico de Python.md",
-    "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados/Analise de Dados com Python.md",
     "Sumario.md",
