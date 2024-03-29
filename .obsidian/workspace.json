@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Condicio.md",
+                "file": "Ciência de Dados/Basico de Python/Funções.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Condicio.md",
+                "file": "Ciência de Dados/Basico de Python/Funções.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Condicio.md",
+                "file": "Ciência de Dados/Basico de Python/Funções.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Condicio.md"
+                "file": "Ciência de Dados/Basico de Python/Funções.md"
               }
             }
           }
@@ -161,8 +161,8 @@
   },
   "active": "41991144cd7cee88",
   "lastOpenFiles": [
+    "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
     "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-    "Condicio.md",
     "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados/Basico de Python/Loops.md",
