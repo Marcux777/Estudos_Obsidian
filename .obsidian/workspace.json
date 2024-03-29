@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "232b01e8d6b4340a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "41991144cd7cee88",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -162,10 +149,10 @@
   "active": "41991144cd7cee88",
   "lastOpenFiles": [
     "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
-    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
     "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados/Basico de Python/Loops.md",
+    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
     "Ciência de Dados/Analise de Dados com Python.md",
     "Ciência de Dados/Basico de Python.md",
     "Sumario.md",

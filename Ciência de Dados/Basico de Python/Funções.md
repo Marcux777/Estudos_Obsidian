@@ -1,3 +1,5 @@
+
+---
 # Funções em Python
 
 Funções são um dos principais blocos de construção de um programa em Python.
@@ -97,7 +99,8 @@ print(fatorial(5))  # Saída: 120
 
 ## Pilha de Chamadas
 
-Quando uma função recursiva é chamada, Python usa uma estrutura de dados chamada pilha de chamadas para controlar as funções que foram invocadas mas ainda não foram concluídas. Cada chamada recursiva adiciona um novo quadro à pilha até que o caso base seja alcançado. Depois disso, a pilha começa a se desfazer, retornando os valores até a primeira chamada.
+Quando uma função recursiva é chamada, Python
+usa uma estrutura de dados chamada pilha de chamadas para controlar as funções que foram invocadas mas ainda não foram concluídas. Cada chamada recursiva adiciona um novo quadro à pilha até que o caso base seja alcançado. Depois disso, a pilha começa a se desfazer, retornando os valores até a primeira chamada.
 
 ## Recursividade e Iteração
 

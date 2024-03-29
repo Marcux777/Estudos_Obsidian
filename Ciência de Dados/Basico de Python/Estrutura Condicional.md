@@ -59,8 +59,6 @@ print(f"Você é {status} de idade.")
 
 Este código atribui "maior" ou "menor" à variável `status`, dependendo da idade, e depois imprime a mensagem correspondente.
 
-Certamente! Vamos adicionar informações sobre os conectivos lógicos em Python ao artigo.
-
 ---
 
 # Conectivos Lógicos em Python
