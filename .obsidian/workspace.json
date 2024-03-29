@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "db57b8f2609a0fc3",
+        "id": "7c91ee4df24449d9",
         "type": "tabs",
         "children": [
           {
-            "id": "41991144cd7cee88",
+            "id": "be2f1734de5f1ff7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Ciência de Dados/Basico de Python/Funções.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,15 +138,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "41991144cd7cee88",
+  "active": "be2f1734de5f1ff7",
   "lastOpenFiles": [
-    "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
-    "Ciência de Dados/Basico de Python/Funções.md",
-    "Ciência de Dados/Basico de Python/Input - Output.md",
-    "Ciência de Dados/Basico de Python/Loops.md",
-    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-    "Ciência de Dados/Analise de Dados com Python.md",
     "Ciência de Dados/Basico de Python.md",
+    "Ciência de Dados/Basico de Python/Funções.md",
+    "Ciência de Dados/Basico de Python/Loops.md",
+    "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
+    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
+    "Ciência de Dados/Basico de Python/Input - Output.md",
+    "Ciência de Dados/Analise de Dados com Python.md",
     "Sumario.md",
     "Ciência de Dados",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
