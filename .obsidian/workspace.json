@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7c91ee4df24449d9",
+        "id": "2b6827991302682b",
         "type": "tabs",
         "children": [
           {
-            "id": "be2f1734de5f1ff7",
+            "id": "d8074598e2e245d8",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "be2f1734de5f1ff7",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Ciência de Dados/Basico de Python.md",
     "Ciência de Dados/Basico de Python/Funções.md",
