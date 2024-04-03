@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "924c32237d82494b",
@@ -146,7 +147,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "95efa4708c976d05",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Variaveis Aleatorias.md",
     "Computação/One for All/Artigos/Segment Tree.md",
