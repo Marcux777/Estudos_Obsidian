@@ -4,11 +4,11 @@ Elas podem ser **discretas**, com valores enumeráveis e probabilidades associad
 A distribuição de probabilidades de uma variável aleatória é um conceito central que descreve como as probabilidades são atribuídas aos seus possíveis valores, seja por meio de tabelas, gráficos ou funções matemáticas. 
 Cada tipo de distribuição tem suas próprias hipóteses e é aplicável a situações que correspondam a essas premissas. A correta aplicação de uma distribuição de probabilidades depende da adequação entre as hipóteses da distribuição e as características observadas na realidade.
 
-## MODELOS PARA VARIÁVEIS ALEATÓRIAS
+## MODELOS PARA VARIÁVEIS ALEATÓRIAS DISCRETAS
 
 Uma variável aleatória discreta assume um número finito ou infinito enumerável de valores.
 
-### Modelo Geral:
+### Modelo Geral
 
 - *Função de Probabilidade*, f(x): A probabilidade de que a variável X assuma um particular valor x, é a função de probabilidade de X que se representa por$f(x) = P(X = x)$. A função $f(x)$ determina a distribuição de probabilidades da variável aleatória e, pode ser expressa por uma tabela, gráfico ou fórmula. $$f(x) = P(X = x)$$Para uma variável aleatória discreta, os possíveis valores podem ser listados, com as correspondentes probabilidades. Isto não ocorre para uma variável aleatória contínua, pois o espaço amostral em questão é infinito não enumerável.
 
@@ -20,7 +20,7 @@ Para uma variável aleatória **discreta**, a FDA é uma função degrau, onde c
 - **Discreta**: A função é descontínua e assume valores específicos em pontos particulares.
 - **Contínua**: A função é contínua e é definida para todos os valores reais.
 
-$$F(x) = \int_{-\infty}^{x} f(t) dtF(x)=∫−∞x​f(t)dt$$
+$$F(x) = \int_{-\infty}^{x} f(t) dtF(x)$$
 
 Onde ( f(t) ) é a função densidade de probabilidade da variável aleatória ( X ).
 
@@ -33,9 +33,22 @@ Onde ( f(t) ) é a função densidade de probabilidade da variável aleatória (
 
 $$\sigma = DP(X) = +\sqrt{V(X)}​$$
 
+
+## MODELOS PARA VARIÁVEIS ALEATÓRIAS CONTÍNUAS
+
+### Modelo Geral
+
 - A **Função Densidade de Probabilidade (f.d.p.)** ( f(x) ) para uma variável aleatória contínua ( X ) é uma função que atende às seguintes condições:
 
 1. $f(x) \geq 0$ para todo $( x )$ no conjunto de todos os números reais ($\mathbb{R}_x$ ).
 2. A integral de $f(x)$ sobre $\mathbb{R}_x$ é igual a 1:$$\int_{\mathbb{R}_x} f(x) \, dx = 1$$
 3. A função $f(x)$ não fornece diretamente valores de probabilidade. Para calcular a probabilidade de $X$  estar entre dois valores $x_1$ e $x_2$, calculamos a integral definida da função $f(x)$ entre $x_1$ e $x_2$:
 $$    P(x_1 < X < x_2) = \int_{x_1}^{x_2} f(x) \, dx$$A probabilidade calculada é a área sob a curva de $f(x)$ entre $X = x_1$ e  $X = x_2$, com $x_1 < x_2$.
+
+- A **Função de Distribuição Acumulada (FDA)**, $F(x)$ , para uma variável aleatória $X$, é definida como a probabilidade de $X$ ser menor ou igual a um valor $x$ . Matematicamente, é representada pela integral da função densidade de probabilidade $f(x)$ de $-\infty$ até $x$:$$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(x) \, dx, F(x) = \frac{d}{dx}F(X)$$
+
+A derivada de $F(x)$ em relação a $x$ nos dá a função densidade de probabilidade $f(x)$:$$\frac{d}{dx}F(x) = f(x)dxd​F(x)=f(x)$$As propriedades da FDA são:
+- $( 0 \leq F(X) \leq 1 )$
+- $( \lim_{x \to +\infty} F(x) = 1 ), ou seja, ( F(+\infty) = 1 )$
+- $( \lim_{x \to -\infty} F(x) = 0 ), ou seja, ( F(-\infty) = 0 )$
+- $F(X)$ é uma função não decrescente, portanto, se $( a < b ), então ( F(a) \leq F(b) ).$
