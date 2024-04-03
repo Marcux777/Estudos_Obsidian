@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2b6827991302682b",
+        "id": "5bb1870f93d5edc1",
         "type": "tabs",
         "children": [
           {
-            "id": "d8074598e2e245d8",
+            "id": "a4d0e8b1b4a672b8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "Computação/Data Structures.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.5.12"
               }
             }
           }
@@ -85,7 +83,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/Data Structures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +99,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/Data Structures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Computação/Data Structures.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,8 +140,11 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "d8074598e2e245d8",
+  "active": "a4d0e8b1b4a672b8",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Segment Tree.md",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Computação/Data Structures.md",
     "Ciência de Dados/Basico de Python.md",
     "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Loops.md",
@@ -159,9 +156,6 @@
     "Ciência de Dados",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Segment Tree.md",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
-    "Computação/Data Structures.md",
     "Redes de Computadores/Capitulo 2.md",
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",
