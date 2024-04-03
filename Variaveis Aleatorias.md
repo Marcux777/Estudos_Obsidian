@@ -37,9 +37,5 @@ $$\sigma = DP(X) = +\sqrt{V(X)}​$$
 
 1. $f(x) \geq 0$ para todo $( x )$ no conjunto de todos os números reais ($\mathbb{R}_x$ ).
 2. A integral de $f(x)$ sobre $\mathbb{R}_x$ é igual a 1:$$\int_{\mathbb{R}_x} f(x) \, dx = 1$$
-3. A função $f(x)$ não fornece diretamente valores de probabilidade. Para calcular a probabilidade de $X$  estar entre dois valores $x_1$ e $x_2$, calculamos a integral definida da função $f(x)$ entre $x_1$ e ( x_2 :
-    
-    P(x_1 < X < x_2) = \int_{x_1}^{x_2} f(x) \, dxP(x1​<X<x2​)=∫x1​x2​​f(x)dx
-    
-
-A probabilidade calculada é a área sob a curva de ( f(x) ) entre ( X = x_1 ) e ( X = x_2 ), com ( x_1 < x_2 ).
+3. A função $f(x)$ não fornece diretamente valores de probabilidade. Para calcular a probabilidade de $X$  estar entre dois valores $x_1$ e $x_2$, calculamos a integral definida da função $f(x)$ entre $x_1$ e $x_2$:
+$$    P(x_1 < X < x_2) = \int_{x_1}^{x_2} f(x) \, dx$$A probabilidade calculada é a área sob a curva de $f(x)$ entre $X = x_1$ e  $X = x_2$, com $x_1 < x_2$.
