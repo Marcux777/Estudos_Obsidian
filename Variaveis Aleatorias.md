@@ -4,7 +4,7 @@ Elas podem ser **discretas**, com valores enumeráveis e probabilidades associad
 A distribuição de probabilidades de uma variável aleatória é um conceito central que descreve como as probabilidades são atribuídas aos seus possíveis valores, seja por meio de tabelas, gráficos ou funções matemáticas. 
 Cada tipo de distribuição tem suas próprias hipóteses e é aplicável a situações que correspondam a essas premissas. A correta aplicação de uma distribuição de probabilidades depende da adequação entre as hipóteses da distribuição e as características observadas na realidade.
 
-## MODELOS PARA VARIÁVEIS ALEATÓRIAS DISCRETAS
+## MODELOS PARA VARIÁVEIS ALEATÓRIAS
 
 Uma variável aleatória discreta assume um número finito ou infinito enumerável de valores.
 
@@ -28,9 +28,18 @@ Onde ( f(t) ) é a função densidade de probabilidade da variável aleatória (
 
 - O **Valor Esperado** de uma variável aleatória, também conhecido como **esperança** ou **expectância**, é uma medida que resume a distribuição de probabilidade dessa variável. Para uma variável aleatória discreta $( X )$ que assume valores $( x_1, x_2, ..., x_i, ... )$ com probabilidades correspondentes $( p_1, p_2, ..., p_i, ... )$, o valor esperado $( E(X) )$ é calculado como:$$ E(X) = \sum_{i=1}^{\infty} p_i x_i $$Se a função de probabilidade ($f(x_i)$) é conhecida, o valor esperado também pode ser expresso como:$$ E(X) = \sum x_i f(x_i) $$Essencialmente, o valor esperado é a média ponderada dos possíveis valores que a variável aleatória pode assumir, com as probabilidades atuando como os pesos.
 
-- A **variância** de uma variável aleatória discreta $( \sigma^2 )$ é uma medida que indica a dispersão dos valores em torno da média (valor esperado). A variância é definida como a média dos quadrados das diferenças entre cada valor e a média da variável aleatória. Matematicamente, para uma variável aleatória discreta $( X )$, a variância $( \sigma^2 )$ é expressa como:$$\sigma^2 = V(X) = E(X_i - E(X))^2$$A fórmula operacional para calcular a variância é:$$\sigma^2 = V(X) = E(X^2) - [E(X)]^2$$Onde $( E(X^2) )$ é a média dos quadrados dos valores que $( X )$ pode assumir, e $( E(X) )$ é o valor esperado de $( X )$. Para uma variável aleatória discreta que assume valores $( x_i )$ com probabilidades $( p_i )$, temos:$$E(X^2) = \sum_{i=1}^{\infty} x_i^2 p_i = E(X^2)=\sum_{i=1}^∞​xi^2​pi​$$
-
-
+- A **variância** de uma variável aleatória discreta $( \sigma^2 )$ é uma medida que indica a dispersão dos valores em torno da média (valor esperado). A variância é definida como a média dos quadrados das diferenças entre cada valor e a média da variável aleatória. Matematicamente, para uma variável aleatória discreta $( X )$, a variância $( \sigma^2 )$ é expressa como:$$\sigma^2 = V(X) = E(X_i - E(X))^2$$A fórmula operacional para calcular a variância é:$$\sigma^2 = V(X) = E(X^2) - [E(X)]^2$$Onde $( E(X^2) )$ é a média dos quadrados dos valores que $( X )$ pode assumir, e $( E(X) )$ é o valor esperado de $( X )$. Para uma variável aleatória discreta que assume valores $( x_i )$ com probabilidades $( p_i )$, temos:$$E(X^2) = \sum_{i=1}^{\infty} x_i^2 p_i =\sum_{i=1}^∞​xi^2​pi​$$
 - E o **desvio padrão** $( \sigma )$ é a raiz quadrada da variância, fornecendo uma medida de dispersão na mesma unidade da variável aleatória:
 
-$$\sigma = DP(X) = \sqrt{V(X)}σ=DP(X)=V(X)​$$
+$$\sigma = DP(X) = +\sqrt{V(X)}​$$
+
+- A **Função Densidade de Probabilidade (f.d.p.)** ( f(x) ) para uma variável aleatória contínua ( X ) é uma função que atende às seguintes condições:
+
+1. $f(x) \geq 0$ para todo $( x )$ no conjunto de todos os números reais ($\mathbb{R}_x$ ).
+2. A integral de $f(x)$ sobre $\mathbb{R}_x$ é igual a 1:$$\int_{\mathbb{R}_x} f(x) \, dx = 1$$
+3. A função $f(x)$ não fornece diretamente valores de probabilidade. Para calcular a probabilidade de $X$  estar entre dois valores $x_1$ e $x_2$, calculamos a integral definida da função $f(x)$ entre $x_1$ e ( x_2 :
+    
+    P(x_1 < X < x_2) = \int_{x_1}^{x_2} f(x) \, dxP(x1​<X<x2​)=∫x1​x2​​f(x)dx
+    
+
+A probabilidade calculada é a área sob a curva de ( f(x) ) entre ( X = x_1 ) e ( X = x_2 ), com ( x_1 < x_2 ).
