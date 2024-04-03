@@ -10,7 +10,8 @@ Uma variável aleatória discreta assume um número finito ou infinito enumeráv
 
 ### Modelo Geral:
 
-- *Função de Probabilidade*, f(x): A probabilidade de que a variável X assuma um particular valor x, é a função de probabilidade de X que se representa por$f(x) = P(X = x)$. A função $f(x)$ determina a distribuição de probabilidades da variável aleatória e, pode ser expressa por uma tabela, gráfico ou fórmula. $$f(x) = P(X = x)$$
+- *Função de Probabilidade*, f(x): A probabilidade de que a variável X assuma um particular valor x, é a função de probabilidade de X que se representa por$f(x) = P(X = x)$. A função $f(x)$ determina a distribuição de probabilidades da variável aleatória e, pode ser expressa por uma tabela, gráfico ou fórmula. $$f(x) = P(X = x)$$Para uma variável aleatória discreta, os possíveis valores podem ser listados, com as correspondentes probabilidades. Isto não ocorre para uma variável aleatória contínua, pois o espaço amostral em questão é infinito não enumerável.
+
 - A **Função de Distribuição Acumulada (FDA)**, também conhecida como função de repartição, é uma função que mapeia cada número real ( x ) para a probabilidade de que uma variável aleatória ( X ) assuma um valor menor ou igual a ( x ). Em termos matemáticos, é expressa como:
 $$F(x) = P(X \leq x)F(x)=P(X≤x)$$
 
@@ -22,3 +23,9 @@ Para uma variável aleatória **discreta**, a FDA é uma função degrau, onde c
 $$F(x) = \int_{-\infty}^{x} f(t) dtF(x)=∫−∞x​f(t)dt$$
 
 Onde ( f(t) ) é a função densidade de probabilidade da variável aleatória ( X ).
+
+### CARACTERÍSTICAS NUMÉRICAS:
+
+- O **Valor Esperado** de uma variável aleatória, também conhecido como **esperança** ou **expectância**, é uma medida que resume a distribuição de probabilidade dessa variável. Para uma variável aleatória discreta $( X )$ que assume valores $( x_1, x_2, ..., x_i, ... )$ com probabilidades correspondentes $( p_1, p_2, ..., p_i, ... )$, o valor esperado $( E(X) )$ é calculado como:$$ E(X) = \sum_{i=1}^{\infty} p_i x_i $$Se a função de probabilidade ($f(x_i)$) é conhecida, o valor esperado também pode ser expresso como:$$ E(X) = \sum x_i f(x_i) $$Essencialmente, o valor esperado é a média ponderada dos possíveis valores que a variável aleatória pode assumir, com as probabilidades atuando como os pesos.
+
+- 
