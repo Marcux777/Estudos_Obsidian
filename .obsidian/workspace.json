@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "5bb1870f93d5edc1",
+        "id": "834d280001b14046",
         "type": "tabs",
         "children": [
           {
-            "id": "a4d0e8b1b4a672b8",
+            "id": "95efa4708c976d05",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.12"
+                "file": "Variaveis Aleatorias.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Variaveis Aleatorias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Variaveis Aleatorias.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Variaveis Aleatorias.md"
+              }
             }
           }
         ]
@@ -140,8 +146,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "a4d0e8b1b4a672b8",
+  "active": "95efa4708c976d05",
   "lastOpenFiles": [
+    "Variaveis Aleatorias.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
@@ -178,7 +185,6 @@
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Segmented Sieve.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Implementação - Algoritmo de Euclides para calcular o maior divisor comum.md",
     "Computação/One for All/Artigos/Transformação Rápida.md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Implementação - Algoritmo de Brent.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",
