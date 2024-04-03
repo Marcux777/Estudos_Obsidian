@@ -28,4 +28,9 @@ Onde ( f(t) ) é a função densidade de probabilidade da variável aleatória (
 
 - O **Valor Esperado** de uma variável aleatória, também conhecido como **esperança** ou **expectância**, é uma medida que resume a distribuição de probabilidade dessa variável. Para uma variável aleatória discreta $( X )$ que assume valores $( x_1, x_2, ..., x_i, ... )$ com probabilidades correspondentes $( p_1, p_2, ..., p_i, ... )$, o valor esperado $( E(X) )$ é calculado como:$$ E(X) = \sum_{i=1}^{\infty} p_i x_i $$Se a função de probabilidade ($f(x_i)$) é conhecida, o valor esperado também pode ser expresso como:$$ E(X) = \sum x_i f(x_i) $$Essencialmente, o valor esperado é a média ponderada dos possíveis valores que a variável aleatória pode assumir, com as probabilidades atuando como os pesos.
 
-- 
+- A **variância** de uma variável aleatória discreta $( \sigma^2 )$ é uma medida que indica a dispersão dos valores em torno da média (valor esperado). A variância é definida como a média dos quadrados das diferenças entre cada valor e a média da variável aleatória. Matematicamente, para uma variável aleatória discreta $( X )$, a variância $( \sigma^2 )$ é expressa como:$$\sigma^2 = V(X) = E(X_i - E(X))^2$$A fórmula operacional para calcular a variância é:$$\sigma^2 = V(X) = E(X^2) - [E(X)]^2$$Onde $( E(X^2) )$ é a média dos quadrados dos valores que $( X )$ pode assumir, e $( E(X) )$ é o valor esperado de $( X )$. Para uma variável aleatória discreta que assume valores $( x_i )$ com probabilidades $( p_i )$, temos:$$E(X^2) = \sum_{i=1}^{\infty} x_i^2 p_i = E(X^2)=\sum_{i=1}^∞​xi^2​pi​$$
+
+
+- E o **desvio padrão** $( \sigma )$ é a raiz quadrada da variância, fornecendo uma medida de dispersão na mesma unidade da variável aleatória:
+
+$$\sigma = DP(X) = \sqrt{V(X)}σ=DP(X)=V(X)​$$
