@@ -93,3 +93,5 @@ A distribuição exponencial envolve probabilidades ao longo do tempo ou da dist
 \\
 \end{cases}
 $$
+### DISTRIBUIÇÃO NORMAL:
+A distribuição normal é a mais importante distribuição de probabilidades, não apenas na teoria estatística, como também nas aplicações industriais. Tem uma posição única na teoria das probabilidades, pois pode ser utilizada como aproximação de outras distribuições. Por outro lado, a distribuição normal representa o resultado da atuação conjunta de causas aleatórias e, por isso, é fundamental no controle estatístico de processos, particularmente na teoria dos gráficos de controle de fabricação.
