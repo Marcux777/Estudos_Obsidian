@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "834d280001b14046",
+        "id": "65e27004ac1a851d",
         "type": "tabs",
         "children": [
           {
-            "id": "95efa4708c976d05",
+            "id": "311d9f436781dc53",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Variáveis Aleatórias.md",
+                "file": "Probabilidade e Estatistica/Variáveis Aleatórias.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "34aca73a308ceaef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sem título.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "924c32237d82494b",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Variáveis Aleatórias.md",
+                "file": "Sem título.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Variáveis Aleatórias.md",
+                "file": "Sem título.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Variáveis Aleatórias.md"
+                "file": "Sem título.md"
               }
             }
           }
@@ -147,9 +159,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "95efa4708c976d05",
+  "active": "34aca73a308ceaef",
   "lastOpenFiles": [
-    "Variáveis Aleatórias.md",
+    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
+    "Sem título.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
@@ -185,7 +198,6 @@
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Segmented Sieve.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Implementação - Algoritmo de Euclides para calcular o maior divisor comum.md",
-    "Computação/One for All/Artigos/Transformação Rápida.md",
     "Computação/One for All/Artigos/Pasted image 20240202044455.png",
     "Computação/One for All/Artigos/Pasted image 20240202044844.png",
     "Computação/One for All/Artigos/Pasted image 20240202045138.png",

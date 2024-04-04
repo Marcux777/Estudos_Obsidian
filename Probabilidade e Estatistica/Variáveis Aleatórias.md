@@ -63,23 +63,18 @@ Essas fórmulas são usadas para calcular as medidas de tendência central e dis
 ## PROPRIEDADES DA MÉDIA E DA VARIÂNCIA DE VARIÁVEIS ALEATÓRIAS
 
 #### **Média (E(X)):**
-
 1. A média de uma constante ( k ) é a própria constante:
-$$    E(k) = k$$   
+$$    E(k) = k$$
 2. Multiplicando uma variável aleatória ( X ) por uma constante ( k ), a média é multiplicada pela constante:$$    E(kX) = kE(X)$$
 3. Adicionando ou subtraindo uma constante ( k ) de uma variável aleatória ( X ), a média é somada ou subtraída pela constante:$$    E(X \pm k) = E(X) \pm k$$
 4. A média da soma ou diferença de duas variáveis aleatórias ( X ) e ( Y ) é a soma ou diferença das médias:$$    E(X \pm Y) = E(X) \pm E(Y)$$
-    
 5. A média do produto de duas variáveis aleatórias independentes ( X ) e ( Y ) é o produto das médias:$$    E(XY) = E(X)E(Y)$$
 #### **Variância (V(X)):**
-
 1. A variância de uma constante é zero:$$    V(k) = 0$$
 2. Multiplicando uma variável aleatória ( X ) por uma constante ( k ), a variância é multiplicada pelo quadrado da constante:
 $$    V(kX) = k^2V(X)$$
-    
 3. Adicionando ou subtraindo uma constante ( k ) de uma variável aleatória ( X ), a variância não se altera:$$    V(X \pm k) = V(X)$$
 4. A variância da soma ou diferença de duas variáveis aleatórias independentes ( X ) e ( Y ) é a soma das variâncias:$$    V(X \pm Y) = V(X) + V(Y)$$
-    
 5. A variância do produto de duas variáveis aleatórias independentes não é simplesmente o produto das variâncias (a menos que uma delas seja uma constante). Para variáveis não constantes, essa propriedade não se aplica diretamente.
 
 Essas propriedades são úteis para simplificar cálculos e entender como diferentes operações afetam a distribuição de uma variável aleatória.
