@@ -31,7 +31,7 @@ Experimento de Bernoulli – é um experimento onde só podem correr dois result
 - Desvio Padrão:
 	$DP(x) = +\sqrt{n.p.q}$
 
-### DISTRIBUIÇÃO DE POISSON
+### **DISTRIBUIÇÃO DE POISSON**
 
 A distribuição de Poisson é útil para descrever as probabilidades do número de ocorrências num campo ou intervalo contínuo (em geral tempo ou espaço).
 
@@ -40,5 +40,18 @@ A utilização da distribuição de Poisson baseia-se nas seguintes hipóteses:
 -  A probabilidade de mais de uma ocorrência num único ponto é aproximadamente zero. 
 - O número de ocorrências em qualquer intervalo é independente do número de ocorrências em outros intervalos. 
 
-Se uma v.a. é descrita por uma distribuição de Poisson, então a probabilidade de realizar (observar) qualquer número dado de ocorrências por unidade de medida (minuto, hora, centímetro, etc.) é dada pela fórmula:
+Se uma v.a. é descrita por uma distribuição de Poisson, então a probabilidade de realizar (observar) qualquer número dado de ocorrências por unidade de medida (minuto, hora, centímetro, etc.) é dada pela fórmula:$$ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!} $$
+#### CARACTERÍSTICAS NUMÉRICAS:
 
+- Média: 
+	$\mu = E(X) = \lambda$
+- Variância:
+	$\sigma^2 = V(X) = \lambda$
+- Desvio Padrão:
+	$\sigma = DP(X) = +\sqrt\lambda$
+
+#### Aproximação de Poisson para eventos binomiais raros: 
+A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no caso limite; ou seja, quando n é muito grande ( n → $\infinity$) e p muito pequeno ( p → 0), pode ser calculada por uma aproximação de Poisson, dada por:
+
+  A probabilidade de \( k \) sucessos é dada por:
+  $$ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, onde \lambda = n.p$$
