@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sem título.md",
+                "file": "Modelos Probabilisticos.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sem título.md",
+                "file": "Modelos Probabilisticos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sem título.md",
+                "file": "Modelos Probabilisticos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sem título.md"
+                "file": "Modelos Probabilisticos.md"
               }
             }
           }
@@ -162,7 +162,7 @@
   "active": "34aca73a308ceaef",
   "lastOpenFiles": [
     "Probabilidade e Estatistica/Variáveis Aleatórias.md",
-    "Sem título.md",
+    "Modelos Probabilisticos.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
