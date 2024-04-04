@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Variaveis Aleatorias.md",
+                "file": "Variáveis Aleatórias.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Variaveis Aleatorias.md",
+                "file": "Variáveis Aleatórias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Variaveis Aleatorias.md",
+                "file": "Variáveis Aleatórias.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Variaveis Aleatorias.md"
+                "file": "Variáveis Aleatórias.md"
               }
             }
           }
@@ -147,9 +147,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "95efa4708c976d05",
   "lastOpenFiles": [
-    "Variaveis Aleatorias.md",
+    "Variáveis Aleatórias.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",

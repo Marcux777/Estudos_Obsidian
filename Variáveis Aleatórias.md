@@ -38,17 +38,48 @@ $$\sigma = DP(X) = +\sqrt{V(X)}​$$
 
 ### Modelo Geral
 
-- A **Função Densidade de Probabilidade (f.d.p.)** ( f(x) ) para uma variável aleatória contínua ( X ) é uma função que atende às seguintes condições:
+- A **Função Densidade de Probabilidade (f.d.p.)**, $f(x)$ para uma variável aleatória contínua $X$ é uma função que atende às seguintes condições:
 
-1. $f(x) \geq 0$ para todo $( x )$ no conjunto de todos os números reais ($\mathbb{R}_x$ ).
+1. $f(x) \geq 0$ para todo $( x )$ no conjunto de todos os números reais ($\mathbb{R}_x$).
 2. A integral de $f(x)$ sobre $\mathbb{R}_x$ é igual a 1:$$\int_{\mathbb{R}_x} f(x) \, dx = 1$$
 3. A função $f(x)$ não fornece diretamente valores de probabilidade. Para calcular a probabilidade de $X$  estar entre dois valores $x_1$ e $x_2$, calculamos a integral definida da função $f(x)$ entre $x_1$ e $x_2$:
 $$    P(x_1 < X < x_2) = \int_{x_1}^{x_2} f(x) \, dx$$A probabilidade calculada é a área sob a curva de $f(x)$ entre $X = x_1$ e  $X = x_2$, com $x_1 < x_2$.
 
-- A **Função de Distribuição Acumulada (FDA)**, $F(x)$ , para uma variável aleatória $X$, é definida como a probabilidade de $X$ ser menor ou igual a um valor $x$ . Matematicamente, é representada pela integral da função densidade de probabilidade $f(x)$ de $-\infty$ até $x$:$$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(x) \, dx, F(x) = \frac{d}{dx}F(X)$$
-
-A derivada de $F(x)$ em relação a $x$ nos dá a função densidade de probabilidade $f(x)$:$$\frac{d}{dx}F(x) = f(x)dxd​F(x)=f(x)$$As propriedades da FDA são:
+- A **Função de Distribuição Acumulada (FDA)**, $F(x)$ , para uma variável aleatória $X$, é definida como a probabilidade de $X$ ser menor ou igual a um valor $x$ . Matematicamente, é representada pela integral da função densidade de probabilidade $f(x)$ de $-\infty$ até $x$:$$F(x) = P(X \leq x) = \int_{-\infty}^{x} f(x) \, dx$$$$F(x) = \frac{d}{dx}F(X)$$As propriedades da FDA são:
 - $( 0 \leq F(X) \leq 1 )$
-- $( \lim_{x \to +\infty} F(x) = 1 ), ou seja, ( F(+\infty) = 1 )$
-- $( \lim_{x \to -\infty} F(x) = 0 ), ou seja, ( F(-\infty) = 0 )$
-- $F(X)$ é uma função não decrescente, portanto, se $( a < b ), então ( F(a) \leq F(b) ).$
+- $\lim_{{x \to +\infty}} F(x) = 1$, ou seja, $F(+\infty) = 1$
+- $\lim_{x \to -\infty} F(x) = 0$, ou seja, $F(-\infty) = 0$
+- $F(X)$ é uma função não decrescente, portanto, se $( a < b )$, então $( F(a) \leq F(b) ).$
+
+### Características Numéricas
+
+- **Valor Esperado (E(X))**:$$ E(X) = \int_{-\infty}^{\infty} x \cdot f(x) \, dx $$
+
+- **Variância (\( \sigma^2 \) ou V(X))**: $$ V(X) = E(X^2) - [E(X)]^2 = \int_{-\infty}^{\infty} x^2 \cdot f(x) \, dx - \left[] \int_{-\infty}^{\infty} x \cdot f(x) \, dx \right]^2 $$
+- **Desvio Padrão (DP(X) ou $\sigma$**:$$ \sigma = DP(X) = \sqrt{V(X)} $$
+
+Essas fórmulas são usadas para calcular as medidas de tendência central e dispersão de uma variável aleatória contínua, fornecendo informações importantes sobre a distribuição de probabilidade da variável.
+
+## PROPRIEDADES DA MÉDIA E DA VARIÂNCIA DE VARIÁVEIS ALEATÓRIAS
+
+#### **Média (E(X)):**
+
+1. A média de uma constante ( k ) é a própria constante:
+$$    E(k) = k$$   
+2. Multiplicando uma variável aleatória ( X ) por uma constante ( k ), a média é multiplicada pela constante:$$    E(kX) = kE(X)$$
+3. Adicionando ou subtraindo uma constante ( k ) de uma variável aleatória ( X ), a média é somada ou subtraída pela constante:$$    E(X \pm k) = E(X) \pm k$$
+4. A média da soma ou diferença de duas variáveis aleatórias ( X ) e ( Y ) é a soma ou diferença das médias:$$    E(X \pm Y) = E(X) \pm E(Y)$$
+    
+5. A média do produto de duas variáveis aleatórias independentes ( X ) e ( Y ) é o produto das médias:$$    E(XY) = E(X)E(Y)$$
+#### **Variância (V(X)):**
+
+1. A variância de uma constante é zero:$$    V(k) = 0$$
+2. Multiplicando uma variável aleatória ( X ) por uma constante ( k ), a variância é multiplicada pelo quadrado da constante:
+$$    V(kX) = k^2V(X)$$
+    
+3. Adicionando ou subtraindo uma constante ( k ) de uma variável aleatória ( X ), a variância não se altera:$$    V(X \pm k) = V(X)$$
+4. A variância da soma ou diferença de duas variáveis aleatórias independentes ( X ) e ( Y ) é a soma das variâncias:$$    V(X \pm Y) = V(X) + V(Y)$$
+    
+5. A variância do produto de duas variáveis aleatórias independentes não é simplesmente o produto das variâncias (a menos que uma delas seja uma constante). Para variáveis não constantes, essa propriedade não se aplica diretamente.
+
+Essas propriedades são úteis para simplificar cálculos e entender como diferentes operações afetam a distribuição de uma variável aleatória.
