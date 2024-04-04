@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modelos Probabilisticos.md",
+                "file": "Probabilidade e Estatistica/Variáveis Aleatórias.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "924c32237d82494b",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Modelos Probabilisticos.md",
+                "file": "Probabilidade e Estatistica/Variáveis Aleatórias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Modelos Probabilisticos.md",
+                "file": "Probabilidade e Estatistica/Variáveis Aleatórias.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Modelos Probabilisticos.md"
+                "file": "Probabilidade e Estatistica/Variáveis Aleatórias.md"
               }
             }
           }
@@ -160,10 +159,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "34aca73a308ceaef",
   "lastOpenFiles": [
-    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Modelos Probabilisticos.md",
+    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",

@@ -86,7 +86,10 @@ A distribuição exponencial envolve probabilidades ao longo do tempo ou da dist
 0 & \text{, para } x < 0 \\
 \lambda.e^{-\lambda.x}; & \text{, para } x \geq 0, \lambda > 0 
 \end{cases}$$
-- **função de distribuição acumulada,** $F(X)$, é dada por:$$\begin{cases} 
-0 & \text{,}x < 0 \\
-\int 
-\end{cases}$$
+- **função de distribuição acumulada,** $F(X)$, é dada por:$$\begin{cases}
+0, x < 0; \\
+\\
+\int^{x}_{0}\lambda.e^{-\lambda.x}dx = 1-e^{-\lambda.x}, t>0
+\\
+\end{cases}
+$$
