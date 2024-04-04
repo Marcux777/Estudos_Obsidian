@@ -58,7 +58,7 @@ A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no 
 
 ## MODELOS PARA VARIÁVEIS ALEATÓRIAS CONTÍNUAS
 
-### DISTRIBUIÇÃO UNIFORME
+### DISTRIBUIÇÃO UNIFORME ($X: U(a,b)$)
 Quando uma variável aleatória pode tomar qualquer valor numa escala contínua entre dois pontos a e b de tal maneira que nenhum valor seja mais provável que outro, então as probabilidades associadas à variável podem ser descritas pela distribuição uniforme.
 - A função *densidade de probabilidade*, f(x), é dada por:$$
 f(x) = 
@@ -76,5 +76,17 @@ F(x) = P(X = x) = \int^x_{-\infty}\frac{1}{b-a}du =
 \end{cases}
 $$
 #### CARACTERÍSTICAS NUMÉRICAS:
-- Média: 
-	$$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{b}_{a} x.\frac{1}{b-a}dx$$
+- Média: $$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{b}_{a} x.\frac{1}{b-a}dx$$$$E(X) = \frac{a+b}{2}$$
+- Variância:$$V(X) = \int^{\infty}_{-\infty} x^2.\frac{1}{b-a}dx - [E(X)]^2$$$$V(X) = \frac{(b-a)^2}{12}$$
+- Desvio Padrão:$$\sigma = DP(X) = +\sqrt{V(X)}$$
+### DISTRIBUIÇÃO EXPONENCIAL:
+A distribuição exponencial envolve probabilidades ao longo do tempo ou da distância entre ocorrências num intervalo contínuo. Por exemplo, a exponencial descreve em sistemas de filas de espera o comportamento de variáveis tais como tempo médio entre as chegadas e tempo de serviço.
+
+- **Função de densidade de probabilidade,** $f(x)$, é dada por:$$\begin{cases} 
+0 & \text{, para } x < 0 \\
+\lambda.e^{-\lambda.x}; & \text{, para } x \geq 0, \lambda > 0 
+\end{cases}$$
+- **função de distribuição acumulada,** $F(X)$, é dada por:$$\begin{cases} 
+0 & \text{,}x < 0 \\
+\int 
+\end{cases}$$
