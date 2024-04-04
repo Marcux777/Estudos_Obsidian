@@ -51,7 +51,30 @@ Se uma v.a. é descrita por uma distribuição de Poisson, então a probabilidad
 	$\sigma = DP(X) = +\sqrt\lambda$
 
 #### Aproximação de Poisson para eventos binomiais raros: 
-A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no caso limite; ou seja, quando n é muito grande ( n → $\infinity$) e p muito pequeno ( p → 0), pode ser calculada por uma aproximação de Poisson, dada por:
+A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no caso limite; ou seja, quando n é muito grande ( $n → \infty$) e p muito pequeno ( $p → 0$), pode ser calculada por uma aproximação de Poisson, dada por:
 
-  A probabilidade de \( k \) sucessos é dada por:
+  A probabilidade de ( $k$) sucessos é dada por:
   $$ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, onde \lambda = n.p$$
+
+## MODELOS PARA VARIÁVEIS ALEATÓRIAS CONTÍNUAS
+
+### DISTRIBUIÇÃO UNIFORME
+Quando uma variável aleatória pode tomar qualquer valor numa escala contínua entre dois pontos a e b de tal maneira que nenhum valor seja mais provável que outro, então as probabilidades associadas à variável podem ser descritas pela distribuição uniforme.
+- A função *densidade de probabilidade*, f(x), é dada por:$$
+f(x) = 
+\begin{cases} 
+\frac{1}{b-a} & \text{se } a \leq x \leq b \\
+0 & \text{se } x < a \text{ ou } x > b
+\end{cases}
+$$
+- A função de distribuição acumulada, F(x), é dada por:$$
+F(x) = P(X = x) = \int^x_{-\infty}\frac{1}{b-a}du = 
+\begin{cases} 
+0; & \text{se } x < a \\
+\frac{x-a}{b-a}; & \text{se } a \leq x \leq b \\
+1; & \text{se } x > b 
+\end{cases}
+$$
+#### CARACTERÍSTICAS NUMÉRICAS:
+- Média: 
+	$$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{b}_{a} x.\frac{1}{b-a}dx$$

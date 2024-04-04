@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "924c32237d82494b",
@@ -159,7 +160,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "34aca73a308ceaef",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Modelos Probabilisticos.md",
