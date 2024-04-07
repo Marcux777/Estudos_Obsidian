@@ -101,7 +101,7 @@ A distribuição exponencial envolve probabilidades ao longo do tempo ou da dist
 \\
 \end{cases}
 $$
-### DISTRIBUIÇÃO NORMAL:
+### DISTRIBUIÇÃO NORMAL $(X: N(\mu, \sigma^2))$:
 A distribuição normal é a mais importante distribuição de probabilidades, não apenas na teoria estatística, como também nas aplicações industriais. Tem uma posição única na teoria das probabilidades, pois pode ser utilizada como aproximação de outras distribuições. Por outro lado, a distribuição normal representa o resultado da atuação conjunta de causas aleatórias e, por isso, é fundamental no controle estatístico de processos, particularmente na teoria dos gráficos de controle de fabricação. Sua origem remontam a Gauss em seus trabalhos sobre erros de observações astronômicas, dando o nome de *distribuição gaussiana*.
 - Definição: 
 	Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $\sigma^2$, $-\infty < \mu < +\infty$ e $0 < \sigma^2 < \infty$, se sua densidade é dada por $$\Large f(x; \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-(x - \mu)^2}{2\sigma^2}}$$
@@ -113,7 +113,7 @@ A distribuição normal é a mais importante distribuição de probabilidades, n
 - Média: $$\large E(X) = \mu$$
 - Variância: $$\large V(X) = \sigma^2$$
 
-Além disso, quando $\large f(x; \mu; \sigma^2) \rightarrow 0$, quando $\large x \rightarrow \pm \infty$, $\large \mu - \sigma$ e    $\large \mu + \sigma$ são pontos de inflexão de $\large f(x; \mu, \sigma^2)$, $\large x = \mu$ é ponto de máximo de $\large f(x; \mu, \sigma^2)$, e o valor máximo é $\large \frac{1}{\sigma\sqrt{2\pi}}$. A densidade $\large f(x; \mu, \sigma^2)$ é simétrica em relação a reta $\large x = \mu$ , $$\Large f(\mu + x; \mu, \sigma^2) = f(\mu - x; \mu, \sigma^2)$$para todo $x$ real.
+Além disso, quando $\large f(x; \mu; \sigma^2) \rightarrow 0$, quando $\large x \rightarrow \pm \infty$, $\large \mu - \sigma$ e $\large \mu + \sigma$ são pontos de inflexão de $\large f(x; \mu, \sigma^2)$, $\large x = \mu$ é ponto de máximo de $\large f(x; \mu, \sigma^2)$, e o valor máximo é $\large \frac{1}{\sigma\sqrt{2\pi}}$. A densidade $\large f(x; \mu, \sigma^2)$ é simétrica em relação a reta $\large x = \mu$ , $$\Large f(\mu + x; \mu, \sigma^2) = f(\mu - x; \mu, \sigma^2)$$para todo $x$ real.
 
 Usando a notação $X: N(\mu, \sigma^2)$.
 
@@ -128,4 +128,8 @@ indicada só poderá ser obtida, aproximadamente, por meio de integração numé
 No entanto, para cada valor de $μ$ e cada valor de $σ$, teríamos de obter $P(a < X < b)$ para
 diversos valores de $a$ e $b$. Essa tarefa é facilitada através do uso de $\Large Z = \frac{X - \mu}{\sigma}$, de sorte que
 somente é necessário construir uma tabela para a distribuição normal padrão.
+
+Por exemplo, temos a transformação de $P(2 \$
+
+![[Pasted image 20240407141106.png]]
 
