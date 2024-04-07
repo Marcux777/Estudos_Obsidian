@@ -90,11 +90,11 @@ $$
 ### DISTRIBUIÇÃO EXPONENCIAL:
 A distribuição exponencial envolve probabilidades ao longo do tempo ou da distância entre ocorrências num intervalo contínuo. Por exemplo, a exponencial descreve em sistemas de filas de espera o comportamento de variáveis tais como tempo médio entre as chegadas e tempo de serviço.
 
-- **Função de densidade de probabilidade,** $f(x)$, é dada por:$$\begin{cases} 
+- **Função de densidade de probabilidade,** $f(x)$, é dada por:$$\çarge\begin{cases} 
 0 & \text{, para } x < 0 \\
 \lambda.e^{-\lambda.x}; & \text{, para } x \geq 0, \lambda > 0 
 \end{cases}$$
-- **função de distribuição acumulada,** $F(X)$, é dada por:$$\begin{cases}
+- **função de distribuição acumulada,** $F(X)$, é dada por:$$\large\begin{cases}
 0, x < 0; \\
 \\
 \int^{x}_{0}\lambda.e^{-\lambda.x}dx = 1-e^{-\lambda.x}, t>0
@@ -103,5 +103,5 @@ A distribuição exponencial envolve probabilidades ao longo do tempo ou da dist
 $$
 ### DISTRIBUIÇÃO NORMAL:
 A distribuição normal é a mais importante distribuição de probabilidades, não apenas na teoria estatística, como também nas aplicações industriais. Tem uma posição única na teoria das probabilidades, pois pode ser utilizada como aproximação de outras distribuições. Por outro lado, a distribuição normal representa o resultado da atuação conjunta de causas aleatórias e, por isso, é fundamental no controle estatístico de processos, particularmente na teoria dos gráficos de controle de fabricação. Sua origem remontam a Gauss em seus trabalhos sobre erros de observações astronômicas, dando o nome de *distribuição gaussiana*.
-- Definição: Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $$\sigma^2$
+- Definição: Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $\sigma^2$, $-\infty < \mu < +\infty$ e $0 < \sigma^2 < \infty$, se sua densidade é dada por $$\Large f(x, \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-(x - \mu)^2}{2\sigma^2}}$$
 
