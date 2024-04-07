@@ -106,4 +106,7 @@ A distribuição normal é a mais importante distribuição de probabilidades, n
 - Definição: 
 	Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $\sigma^2$, $-\infty < \mu < +\infty$ e $0 < \sigma^2 < \infty$, se sua densidade é dada por $$\Large f(x; \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-(x - \mu)^2}{2\sigma^2}}$$
 	Pode-se provar que $\large \int^\infty_{-\infty}f(x; \mu, \sigma^2)dx = 1$ e $\large f(x; \mu, \sigma^2) \geq 0$
-	![[Pasted image 20240407124805.png]]
+
+
+![[Pasted image 20240407124816.png]]
+
