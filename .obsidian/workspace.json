@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9b7a1a0a87cef6d2",
+        "id": "8b579b8a25597aa1",
         "type": "tabs",
         "children": [
           {
-            "id": "8f52608726d4305f",
+            "id": "b671e8db6648d7af",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "8f52608726d4305f",
+  "active": "b671e8db6648d7af",
   "lastOpenFiles": [
     "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Modelos Probabilisticos.md",
