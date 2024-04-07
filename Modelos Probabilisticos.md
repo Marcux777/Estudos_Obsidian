@@ -5,18 +5,18 @@
 Experimento de Bernoulli – é um experimento onde só podem correr dois resultados: “sucesso” ou “fracasso”. A probabilidade de sucesso é p e a probabilidade de fracasso é q = 1 – p.
 #### CARACTERÍSTICAS NUMÉRICAS: 
 - Média: 
-	$E(X) = \sum^n_{i=1} p_i.x_i$
-	$E(X) = P$
+	$\large E(X) = \sum^n_{i=1} p_i.x_i$
+	$\large E(X) = P$
 - Variância V(X): 
-	${\sigma}^2 = V(X) = E(X^2) - [E(X)]^2 = p - p^2 = p(1-p) = p.q$  
-	$V(X) = p.q$
+	$\large {\sigma}^2 = V(X) = E(X^2) - [E(X)]^2 = p - p^2 = p(1-p) = p.q$  
+	$\large V(X) = p.q$
 - Desvio padrão: 
-	DP(X)= + $\sqrt{p.q}$
+	DP(X)= + $\large \sqrt{p.q}$
 
 ### *DISTRIBUIÇÃO BINOMIAL ($X: B(n, p)$)*
 
-- **Fórmula da Probabilidade Binomial**:$$ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} $$
-- **Coeficiente Binomial**:$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
+- **Fórmula da Probabilidade Binomial**:$$\large P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} $$
+- **Coeficiente Binomial**:$$\large \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
 - **Número de ensaios** ($n$): Número total de experimentos realizados.
 - **Número de sucessos** ($k$): Número de vezes que o resultado desejado ocorre.
 - **Probabilidade de sucesso** ($p$): Probabilidade de um sucesso em um único ensaio.
@@ -25,20 +25,20 @@ Experimento de Bernoulli – é um experimento onde só podem correr dois result
 #### CARACTERÍSTICAS NUMÉRICAS:
 
 - Média:
-	$E(X) = n.p$
+	$\large E(X) = n.p$
 - Variância:
-	$V(X) = n.p.q$
+	$\large V(X) = n.p.q$
 - Desvio Padrão:
-	$DP(x) = +\sqrt{n.p.q}$
+	$\large DP(x) = +\sqrt{n.p.q}$
 
 
 ### DISTRIBUIÇÃO HIPERGEOMÉTRICA $(X: hip(N,r,n))$
 Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. 
-A exemplo, considere uma população de $N$ objetos, $r$ dos quais têm o atributo $A$ e $N - r$ têm o atributo B. Um grupo de $n$ elementos é escolhido ao acaso, sem reposição. Estamos interessados em calcular a probabilidade de que esse grupo contenha $k$ elementos com o atributo $A$. Usando  principio multiplicativo, essa probabilidade é dada por $$P_k = \frac{\binom{r}{k}.\binom{N-r}{n-k}}{\binom{N}{n}}$$
-onde $max(0, n-N+r) \leq k \leq min(r, n)$
+A exemplo, considere uma população de $N$ objetos, $r$ dos quais têm o atributo $A$ e $N - r$ têm o atributo B. Um grupo de $n$ elementos é escolhido ao acaso, sem reposição. Estamos interessados em calcular a probabilidade de que esse grupo contenha $k$ elementos com o atributo $A$. Usando  principio multiplicativo, essa probabilidade é dada por $$\Large P_k = \frac{\binom{r}{k}.\binom{N - r}{n-k}}{\binom{N}{n}}$$
+onde $\large max(0, n-N+r) \leq k \leq min(r, n)$
 
-- Média:$$E(X) = n.p$$
-- Variância: $$V(X) = n.p(1 - p)\frac{N-n}{N-1}$$
+- Média:$$\large E(X) = n.p$$
+- Variância: $$\large V(X) = n.p(1 - p)\frac{N-n}{N-1}$$
 ### **DISTRIBUIÇÃO DE POISSON**
 
 A distribuição de Poisson é útil para descrever as probabilidades do número de ocorrências num campo ou intervalo contínuo (em geral tempo ou espaço).
@@ -48,21 +48,21 @@ A utilização da distribuição de Poisson baseia-se nas seguintes hipóteses:
 -  A probabilidade de mais de uma ocorrência num único ponto é aproximadamente zero. 
 - O número de ocorrências em qualquer intervalo é independente do número de ocorrências em outros intervalos. 
 
-Se uma v.a. é descrita por uma distribuição de Poisson, então a probabilidade de realizar (observar) qualquer número dado de ocorrências por unidade de medida (minuto, hora, centímetro, etc.) é dada pela fórmula:$$ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!} $$
+Se uma v.a. é descrita por uma distribuição de Poisson, então a probabilidade de realizar (observar) qualquer número dado de ocorrências por unidade de medida (minuto, hora, centímetro, etc.) é dada pela fórmula:$$\large P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!} $$
 #### CARACTERÍSTICAS NUMÉRICAS:
 
 - Média: 
-	$\mu = E(X) = \lambda$
+	$\large \mu = E(X) = \lambda$
 - Variância:
-	$\sigma^2 = V(X) = \lambda$
+	$\large \sigma^2 = V(X) = \lambda$
 - Desvio Padrão:
-	$\sigma = DP(X) = +\sqrt\lambda$
+	$\large \sigma = DP(X) = +\sqrt\lambda$
 
 #### Aproximação de Poisson para eventos binomiais raros: 
 A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no caso limite; ou seja, quando n é muito grande ( $n → \infty$) e p muito pequeno ( $p → 0$), pode ser calculada por uma aproximação de Poisson, dada por:
 
-  A probabilidade de ( $k$) sucessos é dada por:
-  $$ P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, onde \lambda = n.p$$
+  A probabilidade de ($k$) sucessos é dada por:
+  $$\large P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, onde \lambda = n.p$$
 
 ## MODELOS PARA VARIÁVEIS ALEATÓRIAS CONTÍNUAS
 
@@ -129,7 +129,7 @@ No entanto, para cada valor de $μ$ e cada valor de $σ$, teríamos de obter $P(
 diversos valores de $a$ e $b$. Essa tarefa é facilitada através do uso de $\Large Z = \frac{X - \mu}{\sigma}$, de sorte que
 somente é necessário construir uma tabela para a distribuição normal padrão.
 
-Por exemplo, temos a transformação de $P(2 \$
+Por exemplo, temos a transformação de $P(2 \leq X \leq 5)$ para $P(-0,25 \leq Z \leq 0,5)$
 
 ![[Pasted image 20240407141106.png]]
 
