@@ -1,8 +1,17 @@
 
 ## MODELOS PARA VARIÁVEIS ALEATÓRIAS DISCRETAS
 
-### DISTRIUBIÇÃO D
+### DISTRIUBIÇÃO UNIFORME DISCRETA
+É o caso mais simples de v.a. discreta. Em que cada valor possivel ocorre com a mesma probabilidade.
 
+- Definição:
+	  A v.a. discreta $X$, assumindo os valores $x_1, ..., x_k$ tem distribuição uniforme se, e somente se, $$P(X = x_i) = p(x_i) = p = \frac{1}{k}$$
+	  para todo $i = 1, 2, ..., k$.
+	  
+- Média:
+	 $E(X) = \frac{1}{k}\sum^{k}_{i=1}x_i$ 
+- Variância:
+	 $V(X) = $
 ### *DISTRIBUIÇÃO DE BERNOULLI* 
 Experimento de Bernoulli – é um experimento onde só podem correr dois resultados: “sucesso” ou “fracasso”. A probabilidade de sucesso é p e a probabilidade de fracasso é q = 1 – p.
 #### CARACTERÍSTICAS NUMÉRICAS: 
