@@ -110,3 +110,5 @@ A distribuição normal é a mais importante distribuição de probabilidades, n
 
 ![[Pasted image 20240407124816.png]]
 
+- Média: $$\large E(X) = \mu$$
+- Variancia: $$\large V(X) = \sigma^2$$
