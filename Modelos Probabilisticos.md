@@ -113,4 +113,8 @@ A distribuição normal é a mais importante distribuição de probabilidades, n
 - Média: $$\large E(X) = \mu$$
 - Variância: $$\large V(X) = \sigma^2$$
 
-Além disso, quando $\large f(x; \mu; \sigma^2) \rightarrow 0$, quando $\large x \rightarrow \pm \infty$, $\large \mu - \sigma$ e    $\large \mu + \sigma$ são pontos de inflexão de $\large f(x; \mu, \sigma^2)$, $\large x = \mu$ é ponto de maxi
+Além disso, quando $\large f(x; \mu; \sigma^2) \rightarrow 0$, quando $\large x \rightarrow \pm \infty$, $\large \mu - \sigma$ e    $\large \mu + \sigma$ são pontos de inflexão de $\large f(x; \mu, \sigma^2)$, $\large x = \mu$ é ponto de máximo de $\large f(x; \mu, \sigma^2)$, e o valor máximo é $\large \frac{1}{\sigma\sqrt{2\pi}}$. A densidade $\large f(x; \mu, \sigma^2)$ é simétrica em relação a reta $\large x = \mu$ , $$f(\mu + x; \mu, \sigma^2) = f(\mu - x; \mu, \sigma^2)$$para todo $x$ real.
+
+Usando a notação $X: N(\mu, \sigma^2)$.
+
+Quando $\mu = 0$ e $\sigma^2 = 1$, temos uma distribuição *padrão* ou *reduzida*, ou, $N(0, 1)$. Para essa função de densidade $$large \phi(z) = \frac$$
