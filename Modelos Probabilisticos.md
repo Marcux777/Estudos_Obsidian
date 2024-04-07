@@ -11,7 +11,11 @@
 - Média:
 	 $E(X) = \frac{1}{k}\sum^{k}_{i=1}x_i$ 
 - Variância:
-	 $V(X) = $
+	 $$V(X) = 
+	 \frac{1}{k}´´´´[´´
+	 \sum x_{i}^2 - \frac{(\sum{x_i})^2}{k}\\
+	 ]
+	 $$
 ### *DISTRIBUIÇÃO DE BERNOULLI* 
 Experimento de Bernoulli – é um experimento onde só podem correr dois resultados: “sucesso” ou “fracasso”. A probabilidade de sucesso é p e a probabilidade de fracasso é q = 1 – p.
 #### CARACTERÍSTICAS NUMÉRICAS: 
