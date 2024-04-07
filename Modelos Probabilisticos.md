@@ -33,7 +33,8 @@ Experimento de Bernoulli – é um experimento onde só podem correr dois result
 
 
 ### DISTRIBUIÇÃO HIPERGEOMÉTRICA
-Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. A exemplo, considere uma população de $N$ objetos, r dos quais têm o atributo $A$ e $N - r$ tês 
+Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. A exemplo, considere uma população de $N$ objetos, $r$ dos quais têm o atributo $A$ e $N - r$ têm o atributo B. Um grupo de $n$ elementos é escolhido ao acaso, sem reposição. Estamos interessados em calcular a probabilidade de que esse grupo contenha $k$ elementos com o atributo $A$. Usando  principio multiplicativo, essa probabilidade é dada por $$P_k = \frac{\binom{r}{k}.\binom{N-r}{n-k}}{\binom{N}{n}}$$
+onde $max(0, n-N+r) \leq k \leq min(r, n)$
 ### **DISTRIBUIÇÃO DE POISSON**
 
 A distribuição de Poisson é útil para descrever as probabilidades do número de ocorrências num campo ou intervalo contínuo (em geral tempo ou espaço).
