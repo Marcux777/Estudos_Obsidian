@@ -1,7 +1,7 @@
 
 ## MODELOS PARA VARIÁVEIS ALEATÓRIAS DISCRETAS
 
-### *DISTRIBUIÇÃO DE BERNOULLI* 
+### *DISTRIBUIÇÃO DE BERNOULLI* $(X: Ber(p))$ 
 Experimento de Bernoulli – é um experimento onde só podem correr dois resultados: “sucesso” ou “fracasso”. A probabilidade de sucesso é p e a probabilidade de fracasso é q = 1 – p.
 #### CARACTERÍSTICAS NUMÉRICAS: 
 - Média: 
@@ -32,9 +32,13 @@ Experimento de Bernoulli – é um experimento onde só podem correr dois result
 	$DP(x) = +\sqrt{n.p.q}$
 
 
-### DISTRIBUIÇÃO HIPERGEOMÉTRICA
-Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. A exemplo, considere uma população de $N$ objetos, $r$ dos quais têm o atributo $A$ e $N - r$ têm o atributo B. Um grupo de $n$ elementos é escolhido ao acaso, sem reposição. Estamos interessados em calcular a probabilidade de que esse grupo contenha $k$ elementos com o atributo $A$. Usando  principio multiplicativo, essa probabilidade é dada por $$P_k = \frac{\binom{r}{k}.\binom{N-r}{n-k}}{\binom{N}{n}}$$
+### DISTRIBUIÇÃO HIPERGEOMÉTRICA $(X: hip(N,r,n))$
+Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. 
+A exemplo, considere uma população de $N$ objetos, $r$ dos quais têm o atributo $A$ e $N - r$ têm o atributo B. Um grupo de $n$ elementos é escolhido ao acaso, sem reposição. Estamos interessados em calcular a probabilidade de que esse grupo contenha $k$ elementos com o atributo $A$. Usando  principio multiplicativo, essa probabilidade é dada por $$P_k = \frac{\binom{r}{k}.\binom{N-r}{n-k}}{\binom{N}{n}}$$
 onde $max(0, n-N+r) \leq k \leq min(r, n)$
+
+- Média:$$E(X) = n.p$$
+- Variância: $$V(X) = n.p(1 - p)\frac{N-n}{N-1}$$
 ### **DISTRIBUIÇÃO DE POISSON**
 
 A distribuição de Poisson é útil para descrever as probabilidades do número de ocorrências num campo ou intervalo contínuo (em geral tempo ou espaço).
