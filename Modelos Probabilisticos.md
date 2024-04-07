@@ -1,21 +1,6 @@
 
 ## MODELOS PARA VARIÁVEIS ALEATÓRIAS DISCRETAS
 
-### DISTRIUBIÇÃO UNIFORME DISCRETA
-É o caso mais simples de v.a. discreta. Em que cada valor possivel ocorre com a mesma probabilidade.
-
-- Definição:
-	  A v.a. discreta $X$, assumindo os valores $x_1, ..., x_k$ tem distribuição uniforme se, e somente se, $$P(X = x_i) = p(x_i) = p = \frac{1}{k}$$
-	  para todo $i = 1, 2, ..., k$.
-	  
-- Média:
-	 $E(X) = \frac{1}{k}\sum^{k}_{i=1}x_i$ 
-- Variância:
-	 $$V(X) = 
-	 \frac{1}{k}´´´´[´´
-	 \sum x_{i}^2 - \frac{(\sum{x_i})^2}{k}\\
-	 ]
-	 $$
 ### *DISTRIBUIÇÃO DE BERNOULLI* 
 Experimento de Bernoulli – é um experimento onde só podem correr dois resultados: “sucesso” ou “fracasso”. A probabilidade de sucesso é p e a probabilidade de fracasso é q = 1 – p.
 #### CARACTERÍSTICAS NUMÉRICAS: 
@@ -46,6 +31,9 @@ Experimento de Bernoulli – é um experimento onde só podem correr dois result
 - Desvio Padrão:
 	$DP(x) = +\sqrt{n.p.q}$
 
+
+### DISTRIBUIÇÃO HIPERGEOMÉTRICA
+Essa é adequada quando consideramos extrações casuais feitas sem reposição de uma população dividida segundo dois atributos. A exemplo, considere uma população de $N$ objetos, r dos quais têm o atributo $A$ e $N - r$ tês 
 ### **DISTRIBUIÇÃO DE POISSON**
 
 A distribuição de Poisson é útil para descrever as probabilidades do número de ocorrências num campo ou intervalo contínuo (em geral tempo ou espaço).
