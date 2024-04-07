@@ -119,3 +119,5 @@ Usando a notação $X: N(\mu, \sigma^2)$.
 
 Quando $\mu = 0$ e $\sigma^2 = 1$, temos uma distribuição *padrão* ou *reduzida*, ou, $N(0, 1)$. Para essa função de densidade $$\Large \phi(Z) = \frac{1}{\sqrt{2\pi}}e^{\frac{-Z^2}{2}}, -\infty < Z < \infty.$$
 Se $X: N(\mu; \sigma^2)$, então v.a. definida por $$\Large Z = \frac{X - \mu}{\sigma}$$
+Suponha, então, que X: $N(\mu, \sigma^2)$ e que queiramos $$\large P(a < X < b) = \int^b_af(x)dx$$
+
