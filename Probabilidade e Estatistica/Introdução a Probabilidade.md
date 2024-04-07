@@ -1,4 +1,4 @@
-Teoria apenas
+Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein)
 ## Espaço amostral e Evento
 
 A ferramenta de trabalho matemática para probabilidade é construída em volta de conjuntos.

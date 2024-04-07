@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8b579b8a25597aa1",
+        "id": "f7c7a735438ba967",
         "type": "tabs",
         "children": [
           {
-            "id": "b671e8db6648d7af",
+            "id": "1c64335a50821659",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sumario.md",
+                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sumario.md",
+                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sumario.md",
+                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sumario.md"
+                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md"
               }
             }
           }
@@ -146,17 +146,19 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b671e8db6648d7af",
+  "active": "1c64335a50821659",
   "lastOpenFiles": [
-    "Ciência de Dados/Basico de Python.md",
-    "Sumario.md",
-    "Probabilidade e Estatistica/Pasted image 20240407141106.png",
+    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
+    "Probabilidade e Estatistica/Introdução a Probabilidade.md",
+    "Probabilidade e Estatistica/Probabilidade e Estatística.md",
     "Modelos Probabilísticos.pdf",
     "Probabilidade e Estatistica/Modelos Probabilísticos.md",
+    "Sumario.md",
+    "Ciência de Dados/Basico de Python.md",
+    "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
     "Probabilidade e Estatistica/Pasted image 20240407124805.png",
-    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
@@ -172,7 +174,6 @@
     "Redes de Computadores/Capitulo 2.md",
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",
-    "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Probabilidade e Estatistica/Pasted image 20240226173805.png",
@@ -187,7 +188,6 @@
     "Computação/One for All/Artigos/Formal power series.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo Rho de Pollard.md",
     "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Segmented Sieve.md",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
