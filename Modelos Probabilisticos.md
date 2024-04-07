@@ -111,4 +111,6 @@ A distribuição normal é a mais importante distribuição de probabilidades, n
 ![[Pasted image 20240407124816.png]]
 
 - Média: $$\large E(X) = \mu$$
-- Variancia: $$\large V(X) = \sigma^2$$
+- Variância: $$\large V(X) = \sigma^2$$
+
+Além disso, quando $\large f(x; \mu; \sigma^2) \rightarrow 0$, quando $\large x \rightarrow \pm \infty$, $\large \mu - \sigma$ e    $\large \mu + \sigma$ são pontos de inflexão de $\large f(x; \mu, \sigma^2)$, $\large x = \mu$ é ponto de maxi
