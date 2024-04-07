@@ -83,8 +83,8 @@ F(x) = P(X = x) = \int^x_{-\infty}\frac{1}{b-a}du =
 1; & \text{se } x > b 
 \end{cases}
 $$
-#### CARACTERÍSTICAS NUMÉRICAS:
-- Média: $$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{b}_{a} x.\frac{1}{b-a}dx$$$$E(X) = \frac{a+b}{2}$$
+#### CARACTERÍSTICAS NUMÉRICAS $(X: \mu(\alpha, \beta))$:
+- Média: $$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{\beta}_{\alpha} x.\frac{1}{\beta-\alpha}dx$$$$E(X) = \frac{\alpha+\beta}{2}$$
 - Variância:$$V(X) = \int^{\infty}_{-\infty} x^2.\frac{1}{b-a}dx - [E(X)]^2$$$$V(X) = \frac{(b-a)^2}{12}$$
 - Desvio Padrão:$$\sigma = DP(X) = +\sqrt{V(X)}$$
 ### DISTRIBUIÇÃO EXPONENCIAL:
