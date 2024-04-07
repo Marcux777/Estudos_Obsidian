@@ -68,14 +68,14 @@ A probabilidade de ocorrência de um valor x de uma distribuição Binomial, no 
 
 ### DISTRIBUIÇÃO UNIFORME ($X: U(a,b)$)
 Quando uma variável aleatória pode tomar qualquer valor numa escala contínua entre dois pontos a e b de tal maneira que nenhum valor seja mais provável que outro, então as probabilidades associadas à variável podem ser descritas pela distribuição uniforme.
-- A função *densidade de probabilidade*, f(x), é dada por:$$
+- A função *densidade de probabilidade*, f(x), é dada por:$$\large
 f(x) = 
 \begin{cases} 
 \frac{1}{b-a} & \text{se } a \leq x \leq b \\
 0 & \text{se } x < a \text{ ou } x > b
 \end{cases}
 $$
-- A função de distribuição acumulada, F(x), é dada por:$$
+- A função de distribuição acumulada, F(x), é dada por:$$\large
 F(x) = P(X = x) = \int^x_{-\infty}\frac{1}{b-a}du = 
 \begin{cases} 
 0; & \text{se } x < a \\
@@ -84,13 +84,13 @@ F(x) = P(X = x) = \int^x_{-\infty}\frac{1}{b-a}du =
 \end{cases}
 $$
 #### CARACTERÍSTICAS NUMÉRICAS $(X: \mu(\alpha, \beta))$:
-- Média: $$E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{\beta}_{\alpha} x.\frac{1}{\beta-\alpha}dx$$$$E(X) = \frac{\alpha+\beta}{2}$$
-- Variância:$$V(X) = \int^{\infty}_{-\infty} x^2.\frac{1}{b-a}dx - [E(X)]^2$$$$V(X) = \frac{(b-a)^2}{12}$$
-- Desvio Padrão:$$\sigma = DP(X) = +\sqrt{V(X)}$$
+- Média: $$\large E(X) = \int^\infty_{-\infty} x.f(x)dx = \int^{\beta}_{\alpha} x.\frac{1}{\beta-\alpha}dx$$$$E(X) = \frac{\alpha+\beta}{2}$$
+- Variância:$$\large V(X) = \int^{\infty}_{-\infty} x^2.\frac{1}{b-a}dx - [E(X)]^2$$$$\large V(X) = \frac{(b-a)^2}{12}$$
+- Desvio Padrão:$$\large \sigma = DP(X) = +\sqrt{V(X)}$$
 ### DISTRIBUIÇÃO EXPONENCIAL:
 A distribuição exponencial envolve probabilidades ao longo do tempo ou da distância entre ocorrências num intervalo contínuo. Por exemplo, a exponencial descreve em sistemas de filas de espera o comportamento de variáveis tais como tempo médio entre as chegadas e tempo de serviço.
 
-- **Função de densidade de probabilidade,** $f(x)$, é dada por:$$\çarge\begin{cases} 
+- **Função de densidade de probabilidade,** $f(x)$, é dada por:$$\large\begin{cases} 
 0 & \text{, para } x < 0 \\
 \lambda.e^{-\lambda.x}; & \text{, para } x \geq 0, \lambda > 0 
 \end{cases}$$
@@ -103,5 +103,7 @@ A distribuição exponencial envolve probabilidades ao longo do tempo ou da dist
 $$
 ### DISTRIBUIÇÃO NORMAL:
 A distribuição normal é a mais importante distribuição de probabilidades, não apenas na teoria estatística, como também nas aplicações industriais. Tem uma posição única na teoria das probabilidades, pois pode ser utilizada como aproximação de outras distribuições. Por outro lado, a distribuição normal representa o resultado da atuação conjunta de causas aleatórias e, por isso, é fundamental no controle estatístico de processos, particularmente na teoria dos gráficos de controle de fabricação. Sua origem remontam a Gauss em seus trabalhos sobre erros de observações astronômicas, dando o nome de *distribuição gaussiana*.
-- Definição: Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $\sigma^2$, $-\infty < \mu < +\infty$ e $0 < \sigma^2 < \infty$, se sua densidade é dada por $$\Large f(x, \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-(x - \mu)^2}{2\sigma^2}}$$
-
+- Definição: 
+	Dizemos que a v.a. X tem distribuição normal com parâmetros $\mu$ e $\sigma^2$, $-\infty < \mu < +\infty$ e $0 < \sigma^2 < \infty$, se sua densidade é dada por $$\Large f(x; \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-(x - \mu)^2}{2\sigma^2}}$$
+	Pode-se provar que $\large \int^\infty_{-\infty}f(x; \mu, \sigma^2)dx = 1$ e $\large f(x; \mu, \sigma^2) \geq 0$
+	![[Pasted image 20240407124805.png]]
