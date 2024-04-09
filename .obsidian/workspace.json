@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "faa32e5b5eaf3de8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Limpeza de Dados em Ciência de Dados.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "ff5147bd0e422211",
             "type": "leaf",
             "state": {
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Analisando Dados Numéricos com NumPy.md",
+                "file": "Limpeza de Dados em Ciência de Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Analisando Dados Numéricos com NumPy.md",
+                "file": "Limpeza de Dados em Ciência de Dados.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analisando Dados Numéricos com NumPy.md"
+                "file": "Limpeza de Dados em Ciência de Dados.md"
               }
             }
           }
@@ -159,9 +171,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "ff5147bd0e422211",
+  "active": "faa32e5b5eaf3de8",
   "lastOpenFiles": [
     "Ciência de Dados/Analise de Dados com Python.md",
+    "Limpeza de Dados em Ciência de Dados.md",
     "Analisando Dados Numéricos com NumPy.md",
     "Ciência de Dados/Basico de Python.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
@@ -200,7 +213,6 @@
     "Computação/One for All/Artigos/Pasted image 20240207184543.png",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
-    "Computação/One for All/Artigos/Formal power series.md",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
