@@ -1,4 +1,4 @@
-
+Processamento de Dados é a tarefa de converter dados de uma forma dada para uma forma muito mais utilizável e desejada, ou seja, torná-los mais significativos e informativos. A saída desse processo completo pode estar em qualquer forma desejada, como gráficos, vídeos, tabelas, imagens e muitos mais, dependendo da tarefa que estamos realizando e dos requisitos da máquina.
 ### Analisando Dados Numéricos com NumPy
 
 NumPy é um pacote de processamento de array em Python e fornece um objeto de array multidimensional de alto desempenho e ferramentas para trabalhar com esses arrays. É o pacote fundamental para computação científica com Python.
