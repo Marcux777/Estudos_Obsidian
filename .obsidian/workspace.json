@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analise e Visualização dos dados em Python.md",
-                "mode": "source",
+                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Analise e Visualização dos dados em Python.md",
+                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Analise e Visualização dos dados em Python.md",
+                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analise e Visualização dos dados em Python.md"
+                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md"
               }
             }
           }
@@ -159,10 +159,10 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "4ee2effe36e316e2",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
     "Limpeza de Dados em Ciência de Dados.md",
-    "Analise e Visualização dos dados em Python.md",
+    "Ciência de Dados/Analise e Visualização dos dados em Python.md",
     "Visualização de dados.md",
     "Analisando Dados Numéricos com NumPy.md",
     "Ciência de Dados/Basico de Python.md",
