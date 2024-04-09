@@ -35,5 +35,5 @@ print("\nMatrix c : \n", c)
 	 [0. 0. 0.]]
 ~~~~
 
-sobre as Funções da biblioteca:
-https://numpy.org/doc/stable/user/quickstart.html
+Documentação da biblioteca, para entender os métodos:
+https://numpy.org/doc/stable/user/index.html#user
