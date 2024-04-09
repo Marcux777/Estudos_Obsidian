@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f7c7a735438ba967",
+        "id": "8b579b8a25597aa1",
         "type": "tabs",
         "children": [
           {
-            "id": "1c64335a50821659",
+            "id": "b671e8db6648d7af",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Probabilidade e Estatistica/Probabilidade e Estatística.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,52 +138,53 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1c64335a50821659",
+  "active": "b671e8db6648d7af",
   "lastOpenFiles": [
-    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
-    "Probabilidade e Estatistica/Introdução a Probabilidade.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
-    "Modelos Probabilísticos.pdf",
-    "Probabilidade e Estatistica/Modelos Probabilísticos.md",
-    "Sumario.md",
-    "Ciência de Dados/Basico de Python.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
     "Probabilidade e Estatistica/Pasted image 20240407124805.png",
+    "Probabilidade e Estatistica/Pasted image 20240226173805.png",
+    "Probabilidade e Estatistica/Modelos Probabilísticos.md",
+    "Probabilidade e Estatistica/Introdução a Probabilidade.md",
+    "Probabilidade e Estatistica/Variáveis Aleatórias.md",
+    "Modelos Probabilisticos.md",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
+    "Ciência de Dados/Basico de Python.md",
     "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Loops.md",
     "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
     "Ciência de Dados/Basico de Python/Tipos da Dados.md",
     "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados/Analise de Dados com Python.md",
+    "Sumario.md",
     "Ciência de Dados",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/Álgebra.md",
     "Redes de Computadores/Capitulo 2.md",
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",
+    "Probabilidade e Estatistica/Livro - Introduction to Probability (Jessica Hwang, Joseph K. Blitzstein).md",
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
-    "Probabilidade e Estatistica/Pasted image 20240226173805.png",
+    "Pasted image 20240226173805.png",
     "Algebra Linear/Espaços Vetoriais.md",
     "Computação/One for All/Artigos/Treap (Cartesian tree).md",
     "Computação/One for All/Artigos/Pasted image 20240207183644.png",
     "Computação/One for All/Artigos/Pasted image 20240207184558.png",
     "Computação/One for All/Artigos/Pasted image 20240207184543.png",
-    "Computação/One for All/Artigos/Pasted image 20240207184448.png",
     "Probabilidade e Estatistica",
     "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
     "Computação/One for All/Artigos/Formal power series.md",
     "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo Rho de Pollard.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
     "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation"
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm"
   ]
 }
