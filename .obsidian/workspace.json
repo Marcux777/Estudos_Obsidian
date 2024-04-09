@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Limpeza de Dados em Ciência de Dados.md",
+                "file": "Analisando Dados Numéricos com NumPy.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Limpeza de Dados em Ciência de Dados.md",
+                "file": "Analisando Dados Numéricos com NumPy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Limpeza de Dados em Ciência de Dados.md",
+                "file": "Analisando Dados Numéricos com NumPy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Limpeza de Dados em Ciência de Dados.md"
+                "file": "Analisando Dados Numéricos com NumPy.md"
               }
             }
           }
@@ -174,8 +174,8 @@
   "active": "faa32e5b5eaf3de8",
   "lastOpenFiles": [
     "Ciência de Dados/Analise de Dados com Python.md",
-    "Limpeza de Dados em Ciência de Dados.md",
     "Analisando Dados Numéricos com NumPy.md",
+    "Limpeza de Dados em Ciência de Dados.md",
     "Ciência de Dados/Basico de Python.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",

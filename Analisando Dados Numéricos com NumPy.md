@@ -4,7 +4,7 @@ NumPy é um pacote de processamento de array em Python e fornece um objeto de ar
 O Array NumPy é uma tabela de elementos (geralmente números), todos do mesmo tipo, indexados por uma tupla de inteiros positivos. No NumPy, o número de dimensões do array é chamado de rank do array. Uma tupla de inteiros que dá o tamanho do array ao longo de cada dimensão é conhecida como a forma do array.
 
 #### Criando Array NumPy 
-Os arrays NumPy podem ser criados de várias maneiras, com várias dimensões. Também pode ser criado com o uso de diferentes tipos de dados, como listas, tuplas, etc. O tipo do array resultante é deduzido a partir do tipo de elementos nas sequências. O NumPy oferece várias funções para criar arrays com conteúdo inicial de espaço reservado. Isso minimiza a necessidade de aumentar arrays, uma operação cara.
+Os arrays NumPy podem ser criados de várias maneiras, com várias dimensões. Também pode ser criado com o uso de diferentes tipos de dados, como listas, tuplas, etc, mas, diferente da lista em Python, os arrays NumPy são homogêneos. O tipo do array resultante é deduzido a partir do tipo de elementos nas sequências. O NumPy oferece várias funções para criar arrays com conteúdo inicial de espaço reservado. Isso minimiza a necessidade de aumentar arrays, uma operação cara.
 
 ~~~~ Python3
 import numpy as np
@@ -35,3 +35,5 @@ print("\nMatrix c : \n", c)
 	 [0. 0. 0.]]
 ~~~~
 
+sobre as Funções da biblioteca:
+https://numpy.org/doc/stable/user/quickstart.html
