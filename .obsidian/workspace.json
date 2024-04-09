@@ -13,31 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciência de Dados/Analise de Dados com Python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "faa32e5b5eaf3de8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Analisando Dados Numéricos com NumPy.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "28145b492087f0b0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Visualização de dados.md",
+                "file": "Ciência de Dados/Basico de Python.md",
                 "mode": "source",
                 "source": false
               }
@@ -54,21 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ff5147bd0e422211",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Analisando Dados Numéricos com NumPy.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,13 +161,13 @@
   },
   "active": "4ee2effe36e316e2",
   "lastOpenFiles": [
-    "Analisando Dados Numéricos com NumPy.md",
-    "Visualização de dados.md",
-    "Ciência de Dados/Analise de Dados com Python.md",
-    "Analise e Visualização dos dados em Python.md",
-    "Pandas.md",
     "Limpeza de Dados em Ciência de Dados.md",
+    "Analise e Visualização dos dados em Python.md",
+    "Visualização de dados.md",
+    "Analisando Dados Numéricos com NumPy.md",
     "Ciência de Dados/Basico de Python.md",
+    "Ciência de Dados/Analise de Dados com Python.md",
+    "Pandas.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
