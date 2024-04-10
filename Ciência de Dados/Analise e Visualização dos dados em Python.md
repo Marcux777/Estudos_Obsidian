@@ -90,6 +90,11 @@ GeoPandas é uma ferramenta de código aberto para adicionar suporte a dados geo
 Documentação da Biblioteca:
 https://geopandas.org/en/stable/docs.html
 
+### Bokeh
+
+Documentação da Biblioteca:
+https://docs.bokeh.org/en/latest/
+
 ### Scikit-learn
 
 Documentação da Biblioteca:
