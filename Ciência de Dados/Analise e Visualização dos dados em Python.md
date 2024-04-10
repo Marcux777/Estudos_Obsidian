@@ -79,8 +79,18 @@ Pyplot é um módulo Matplotlib que fornece uma interface semelhante ao MATLAB. 
 Documentação da Biblioteca:
 https://matplotlib.org/stable/index.html
 
+### Seaborn
+
+Documentação da Biblioteca:
+https://seaborn.pydata.org/tutorial.html
+
 ### GeoPandas
 GeoPandas é uma ferramenta de código aberto para adicionar suporte a dados geográficos a objetos Pandas.
 
 Documentação da Biblioteca:
 https://geopandas.org/en/stable/docs.html
+
+### Scikit-learn
+
+Documentação da Biblioteca:
+https://scikit-learn.org/stable/user_guide.html
