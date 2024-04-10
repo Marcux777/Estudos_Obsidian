@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
+                "file": "Ciência de Dados/Basico de Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
+                "file": "Ciência de Dados/Basico de Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md"
+                "file": "Ciência de Dados/Basico de Python.md"
               }
             }
           }
