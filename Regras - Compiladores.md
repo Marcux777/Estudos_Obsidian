@@ -87,3 +87,12 @@ A tabela LL(1) é composta por linhas e colunas, onde cada linha representa um s
 A construção da tabela LL(1) envolve a utilização dos conceitos de **First** e **Follow** de cada símbolo não terminal da gramática. O conjunto **First(A)** contém todos os símbolos terminais que podem iniciar uma derivação à esquerda a partir do símbolo não terminal A. O conjunto **Follow(A)** contém todos os símbolos terminais que podem aparecer após A em qualquer derivação à esquerda.
 
 A partir dos conjuntos First e Follow, é possível determinar as entradas da tabela LL(1) para cada combinação de símbolo não terminal e símbolo terminal ou $. Essa construção garante que o analisador LL(1) possa tomar decisões corretas durante a análise da entrada, evitando ambiguidades e erros.
+
+## **First** e **Follow** 
+são dois conceitos fundamentais na teoria de compiladores e são usados na construção de tabelas de análise para gramáticas LL(1) e SLR(1).
+
+- **First(A)**: O conjunto First de um símbolo não terminal A é o conjunto de todos os símbolos terminais que podem iniciar uma cadeia derivada a partir de A. Em outras palavras, se temos uma produção A -> α, então todos os símbolos terminais que podem começar uma cadeia derivada a partir de α estão no conjunto First(A). Se α pode derivar a cadeia vazia (ε), então ε também está no conjunto First(A).
+
+- **Follow(A)**: O conjunto Follow de um símbolo não terminal A é o conjunto de todos os símbolos terminais que podem aparecer imediatamente após A em qualquer sentença derivada a partir do símbolo inicial da gramática. Em outras palavras, se temos uma produção da forma B -> αAβ, então qualquer símbolo terminal que possa iniciar uma cadeia derivada a partir de β está no conjunto Follow(A). Se A pode ser seguido pelo fim da entrada (geralmente representado pelo símbolo $), então $ também está no conjunto Follow(A).
+
+Esses conjuntos são usados na construção da tabela de análise para determinar qual produção usar em cada passo do processo de análise. A construção desses conjuntos pode ser feita de forma iterativa, começando com conjuntos vazios e adicionando símbolos até que os conjuntos não mudem mais. Isso garante que o analisador possa tomar decisões corretas durante a análise da entrada, evitando ambiguidades e erros.
