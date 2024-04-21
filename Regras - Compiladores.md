@@ -87,31 +87,3 @@ A tabela LL(1) é composta por linhas e colunas, onde cada linha representa um s
 A construção da tabela LL(1) envolve a utilização dos conceitos de **First** e **Follow** de cada símbolo não terminal da gramática. O conjunto **First(A)** contém todos os símbolos terminais que podem iniciar uma derivação à esquerda a partir do símbolo não terminal A. O conjunto **Follow(A)** contém todos os símbolos terminais que podem aparecer após A em qualquer derivação à esquerda.
 
 A partir dos conjuntos First e Follow, é possível determinar as entradas da tabela LL(1) para cada combinação de símbolo não terminal e símbolo terminal ou $. Essa construção garante que o analisador LL(1) possa tomar decisões corretas durante a análise da entrada, evitando ambiguidades e erros.
-
-**Exemplo de tabela LL(1):**
-
-Considere a seguinte gramática para expressões aritméticas simples:
-
-```
-E -> T E'
-E' -> + T E' | - T E' | ε
-T -> F T'
-T' -> * F T' | / F T' | ε
-F -> num | ( E )
-```
-
-A tabela LL(1) para essa gramática pode ser construída da seguinte forma:
-
-| Símbolo Não Terminal | $ | num | ( | + | - | * | / | ) | |—|—|—|—|—|—|—|—| | E | - | push F | push (E) | - | - | - | - | - | | E’ | acc | - | - | push E’+E | push E’-E | - | - | pop | | T | - | push F | push (E) | - | - | - | - | - | | T’ | pop | - | - | pop | pop | push T’*T | push T’/T | pop | | F | - | push num | push (E) | - | - | - | - | - |
-
-**Observações importantes:**
-
-- A tabela LL(1) só pode ser construída para gramáticas LL(1).
-- A tabela LL(1) pode ser utilizada por diferentes tipos de analisadores descendentes LL(1).
-- A construção da tabela LL(1) pode ser automatizada utilizando ferramentas de compiladores.
-
-**Recursos adicionais:**
-
-- Wikipedia: Gramática formal: https://pt.wikipedia.org/wiki/Gram%C3%A1tica_formal
-- Site do Professor Francisco de Assis da Silva: Gramáticas Formais: https://es.wiktionary.org/wiki/removido
-- Livro: Introduction to Automata, Languages, and Computation: https://es.wiktionary.org/wiki/removido
