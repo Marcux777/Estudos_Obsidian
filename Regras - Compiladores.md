@@ -70,3 +70,48 @@ Os conceitos de fatoração à esquerda, fatoração à direita e eliminação d
 **Limitações das gramáticas LL(1):**
 
 Nem todas as gramáticas formais podem ser expressas como gramáticas LL(1). Gramáticas que contêm ambiguidade ou recursão à esquerda não podem ser analisadas por um analisador LL(1). Nesses casos, podem ser necessários outros tipos de analisadores sintáticos, como analisadores LR ou SLR.
+
+Na análise sintática LL(1), a tabela é fundamental no processo de **análise descendente**. Ela orienta o **analisador sintático**, indicando qual ação deve ser tomada (**reduzir**, **deslocar** ou **aceitar**) para cada símbolo de entrada e símbolo no topo da pilha.
+
+A tabela LL(1) é composta por linhas e colunas, onde cada linha representa um símbolo não terminal da gramática e cada coluna representa um símbolo terminal ou o símbolo especial $ (fim da entrada). Cada célula da tabela contém uma entrada que indica a ação a ser tomada pelo analisador sintático.
+
+**Entradas da tabela LL(1):**
+
+- **Redução:** Se a célula contiver uma regra gramatical (A -> α), o analisador deve **reduzir** a pilha, substituindo o símbolo não terminal A no topo da pilha pelos símbolos do lado direito da regra (α).
+- **Deslocamento:** Se a célula contiver um símbolo terminal a, o analisador deve **deslocar** o símbolo a da entrada para a pilha.
+- **Aceitação:** Se a célula contiver o símbolo especial $ e o símbolo de topo da pilha for o símbolo inicial da gramática, o analisador deve **aceitar** a entrada como uma sentença válida da linguagem.
+- **Erro:** Se a célula estiver vazia e o símbolo de entrada não for $ ou o símbolo de topo da pilha não for um símbolo terminal, o analisador deve **sinalizar um erro** de análise.
+
+**Construção da tabela LL(1):**
+
+A construção da tabela LL(1) envolve a utilização dos conceitos de **First** e **Follow** de cada símbolo não terminal da gramática. O conjunto **First(A)** contém todos os símbolos terminais que podem iniciar uma derivação à esquerda a partir do símbolo não terminal A. O conjunto **Follow(A)** contém todos os símbolos terminais que podem aparecer após A em qualquer derivação à esquerda.
+
+A partir dos conjuntos First e Follow, é possível determinar as entradas da tabela LL(1) para cada combinação de símbolo não terminal e símbolo terminal ou $. Essa construção garante que o analisador LL(1) possa tomar decisões corretas durante a análise da entrada, evitando ambiguidades e erros.
+
+**Exemplo de tabela LL(1):**
+
+Considere a seguinte gramática para expressões aritméticas simples:
+
+```
+E -> T E'
+E' -> + T E' | - T E' | ε
+T -> F T'
+T' -> * F T' | / F T' | ε
+F -> num | ( E )
+```
+
+A tabela LL(1) para essa gramática pode ser construída da seguinte forma:
+
+| Símbolo Não Terminal | $ | num | ( | + | - | * | / | ) | |—|—|—|—|—|—|—|—| | E | - | push F | push (E) | - | - | - | - | - | | E’ | acc | - | - | push E’+E | push E’-E | - | - | pop | | T | - | push F | push (E) | - | - | - | - | - | | T’ | pop | - | - | pop | pop | push T’*T | push T’/T | pop | | F | - | push num | push (E) | - | - | - | - | - |
+
+**Observações importantes:**
+
+- A tabela LL(1) só pode ser construída para gramáticas LL(1).
+- A tabela LL(1) pode ser utilizada por diferentes tipos de analisadores descendentes LL(1).
+- A construção da tabela LL(1) pode ser automatizada utilizando ferramentas de compiladores.
+
+**Recursos adicionais:**
+
+- Wikipedia: Gramática formal: https://pt.wikipedia.org/wiki/Gram%C3%A1tica_formal
+- Site do Professor Francisco de Assis da Silva: Gramáticas Formais: https://es.wiktionary.org/wiki/removido
+- Livro: Introduction to Automata, Languages, and Computation: https://es.wiktionary.org/wiki/removido
