@@ -25,18 +25,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e7348c023178c5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Sem título.md",
                 "mode": "source",
                 "source": false
@@ -44,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,7 +159,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "8e7348c023178c5b",
+  "active": "d855c8aa1a10aaa5",
   "lastOpenFiles": [
     "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Sem título.md",
