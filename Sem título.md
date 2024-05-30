@@ -7,7 +7,7 @@ O primeiro passo para a aplicação do ACO a um problema de otimização combina
 - $f:S→R+0$ é uma função objetivo a ser minimizada (como maximizar sobre $f$ é o mesmo que minimizar sobre $-f$, todo COP pode ser descrito como um problema de minimização).
   
 
-O espaço de busca $S$ é definido da seguinte forma. Um conjunto de variáveis discretas $X_i$, $i=1,…,n$, com valores $v^j_i ∈ Di={v^1_i,…,v^{|Di|}_i}$, é dado. Elementos de S são atribuições completas, ou seja, atribuições nas quais cada variável $X_i$ tem um valor **$v^{j}_{i}$** atribuído de seu domínio $D_i$. O conjunto de soluções viáveis $S_Ω$ é dado pelos elementos de $S$ que satisfazem todas as restrições no conjunto $Ω$.
+O espaço de busca $S$ é definido da seguinte forma. Um conjunto de variáveis discretas $X_i$, $i=1,…,n$, com valores $v^j_i ∈ Di={v^1_i,…,v^{|Di|}_i}$, é dado. Elementos de $S$ são atribuições completas, ou seja, atribuições nas quais cada variável $X_i$ tem um valor $v^{j}_{i}$ atribuído de seu domínio $D_i$. O conjunto de soluções viáveis $S_Ω$ é dado pelos elementos de $S$ que satisfazem todas as restrições no conjunto $Ω$.
 
 Uma solução $s^{∗}∈ S_{Ω}$ é chamada de ótimo global se e somente se
 $$f(s^{∗})≤f(s) ∀s∈S_{Ω}$$
