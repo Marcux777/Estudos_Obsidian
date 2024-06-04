@@ -127,12 +127,7 @@ void union_sets(int a, int b) {
 Ambas as otimizações são equivalentes em termos de complexidade de tempo e espaço. Portanto, na prática, você pode usar qualquer uma delas.
 
 ### Complexidade de Tempo
-Como mencionado antes, se combinarmos ambas as otimizações - compressão de caminho com união por tamanho / classificação - alcançaremos consultas de tempo quase constante. Acontece que a complexidade de tempo amortizada final é  
-$O(\alpha(n))$ , onde  
-$\alpha(n)$  é a função inversa de Ackermann, que cresce muito lentamente. Na verdade, ela cresce tão lentamente, que não excede  
-$4$  para todos os  
-$n$  razoáveis (aproximadamente  
-$n < 10^{600}$ ).
+Como mencionado antes, se combinarmos ambas as otimizações - compressão de caminho com união por tamanho / classificação - alcançaremos consultas de tempo quase constante. Acontece que a complexidade de tempo amortizada final é  $O(\alpha(n))$ , onde  $\alpha(n)$  é a função inversa de Ackermann, que cresce muito lentamente. Na verdade, ela cresce tão lentamente, que não excede $4$  para todos os  $n$  razoáveis (aproximadamente $n < 10^{600}$ ).
 
 A complexidade amortizada é o tempo total por operação, avaliada ao longo de uma sequência de várias operações. A ideia é garantir o tempo total de toda a sequência, enquanto permite que operações individuais sejam muito mais lentas do que o tempo amortizado. Por exemplo, em nosso caso, uma única chamada pode levar  
 $O(\log n)$  no pior caso, mas se fizermos  

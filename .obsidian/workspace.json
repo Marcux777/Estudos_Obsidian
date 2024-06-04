@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciência de Dados/Analise e Visualização dos dados em Python.md",
-                "mode": "source",
+                "file": "Sem título.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sem título.md",
+                "file": "Computação/One for All/Artigos/Disjoint Set Union.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,12 +158,17 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "d855c8aa1a10aaa5",
+  "active": "4ee2effe36e316e2",
   "lastOpenFiles": [
-    "Regras - Compiladores.md",
-    "Sem título.md",
-    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Ciência de Dados/Analise e Visualização dos dados em Python.md",
+    "Computação/One for All/Artigos/Disjoint Set Union.md",
+    "Computação/One for All/Artigos/Trees - Data Structures.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
+    "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+    "Computação/Álgebra.md",
+    "Sem título.md",
+    "Regras - Compiladores.md",
+    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Ciência de Dados/Sumario.md",
     "Ciência de Dados/Básico de Python.md",
     "Limpeza de Dados em Ciência de Dados.md",
@@ -183,16 +187,11 @@
     "Probabilidade e Estatistica/Variáveis Aleatórias.md",
     "Modelos Probabilisticos.md",
     "Computação/One for All/Artigos/Segment Tree.md",
-    "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
     "Ciência de Dados/Basico de Python/Funções.md",
     "Ciência de Dados/Basico de Python/Loops.md",
     "Ciência de Dados/Basico de Python/Estrutura Condicional.md",
-    "Ciência de Dados/Basico de Python/Tipos da Dados.md",
-    "Ciência de Dados/Basico de Python/Input - Output.md",
     "Ciência de Dados",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
-    "Computação/Álgebra.md",
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
