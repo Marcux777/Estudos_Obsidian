@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Ant Colony Optimization.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -144,7 +144,8 @@
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
-      "markdown-importer:Abrir importador Markdown": false
+      "markdown-importer:Abrir importador Markdown": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "b4b3e1b4c6ab11e4",

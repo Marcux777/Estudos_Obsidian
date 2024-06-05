@@ -347,59 +347,33 @@ Na implementação foi utilizado a busca aleatoria, para encontrar a melhor comb
   
   
 
-| Cidade | Instâncias | Custo Ótimo | Tempo Convergência | Custo Encontrado |
-
-|---|---|---|---|---|
-
-| Argentina | 9152 cidades | 837479 | | |
-
-| Burma |  33708 cidades | 959304 | | |
-
-| China | 71009 cidades | 4566563 | | |
-
-| Djibouti | 38 cidades | 6656 | 1.58 segundos | 7148.31 |
-
-| Egypt | 7146 cidades | 172387 |
-
-| Finland | 10639 cidades | 520527 | | |
-
-| Greece | 9882 cidades | 300899 | | |
-
-| Honduras | 14473 cidades | 177105 | | |
-
-| Ireland | 8246 cidades | 206,171 | | |
-
-| Japan | 9847 cidades | 491,924 | | |
-
-| Kazakhstan | 9976 cidades | 1,061,882 |
-
-| Luxemburgo| 980 cidades | 11340 | 930.36 segundos | 12083.53 |
-
-| Morocco | 14185 cidades | 427377 |
-
-| Nicaragua | 3496 cidades |  96132 | 11188.67 segundos | 103752.18
-
-| Oman | 1979 cidades | Não informado | 2252.59 segundos | 94788.65
-
-| Panama |  8079 cidades | Não informado |
-
-| Qatar | 194 cidades |  9352 | 28.87 segundos | 9480.83 |
-
-| Rwanda | 1621 cidades | 26051 | 2494.82 segundos | 27456.62 |
-
-| Sweden | 24978 cidades | 855597 |
-
-| Tanzania | 6117 cidades | 394718 |
-
-| Uruguay | 734 cidades | 79114 | 616.39 segundos | 85550.71 |
-
-| Vietnam | 22775 cidades | 569288
-
-| Western Sahara | 29 cidades | 27603 | 3.72 segundos | 25706.57 |
-
-| Yemen | 7663 cidades | 238314 |
-
-| Zimbabwe | 929 cidades | 95345 | 812.42 segundos |100790.92
+| Cidade         | Instâncias     | Custo Ótimo   | Tempo Convergência | Custo Encontrado |
+| -------------- | -------------- | ------------- | ------------------ | ---------------- |
+| Argentina      | 9152 cidades   | 837479        |                    |                  |
+| Burma          |  33708 cidades | 959304        |                    |                  |
+| China          | 71009 cidades  | 4566563       |                    |                  |
+| Djibouti       | 38 cidades     | 6656          | 1.58 segundos      | 7148.31          |
+| Egypt          | 7146 cidades   | 172387        |                    |                  |
+| Finland        | 10639 cidades  | 520527        |                    |                  |
+| Greece         | 9882 cidades   | 300899        |                    |                  |
+| Honduras       | 14473 cidades  | 177105        |                    |                  |
+| Ireland        | 8246 cidades   | 206,171       |                    |                  |
+| Japan          | 9847 cidades   | 491,924       |                    |                  |
+| Kazakhstan     | 9976 cidades   | 1,061,882     |                    |                  |
+| Luxemburgo     | 980 cidades    | 11340         | 930.36 segundos    | 12083.53         |
+| Morocco        | 14185 cidades  | 427377        |                    |                  |
+| Nicaragua      | 3496 cidades   |  96132        | 11188.67 segundos  | 103752.18        |
+| Oman           | 1979 cidades   | Não informado | 2252.59 segundos   | 94788.65         |
+| Panama         |  8079 cidades  | Não informado |                    |                  |
+| Qatar          | 194 cidades    |  9352         | 28.87 segundos     | 9480.83          |
+| Rwanda         | 1621 cidades   | 26051         | 2494.82 segundos   | 27456.62         |
+| Sweden         | 24978 cidades  | 855597        |                    |                  |
+| Tanzania       | 6117 cidades   | 394718        |                    |                  |
+| Uruguay        | 734 cidades    | 79114         | 616.39 segundos    | 85550.71         |
+| Vietnam        | 22775 cidades  | 569288        |                    |                  |
+| Western Sahara | 29 cidades     | 27603         | 3.72 segundos      | 25706.57         |
+| Yemen          | 7663 cidades   | 238314        |                    |                  |
+| Zimbabwe       | 929 cidades    | 95345         | 812.42 segundos    | 100790.92        |
 
   
   
