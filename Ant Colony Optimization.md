@@ -1,6 +1,5 @@
-# Ant Colony Optimization - Otimização Colonia de Formigas
 
-  
+# Ant Colony Optimization - Otimização Colônia de Formigas
 ## Introdução
 
   
