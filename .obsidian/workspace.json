@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4ee2effe36e316e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sem título.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d855c8aa1a10aaa5",
             "type": "leaf",
             "state": {
@@ -30,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3a039dfadfdaceb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sem título.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,15 +159,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "4ee2effe36e316e2",
+  "active": "3a039dfadfdaceb7",
   "lastOpenFiles": [
-    "Ciência de Dados/Analise e Visualização dos dados em Python.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
+    "Sem título.md",
+    "Ciência de Dados/Analise e Visualização dos dados em Python.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Computação/Álgebra.md",
-    "Sem título.md",
     "Regras - Compiladores.md",
     "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Ciência de Dados/Sumario.md",

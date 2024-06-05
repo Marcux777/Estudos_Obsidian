@@ -1,8 +1,6 @@
 # Ant Colony Optimization - Otimização Colonia de Formigas
 
   
-  
-
 ## Introdução
 
   
@@ -125,11 +123,19 @@ O espaço de busca $S$ é definido da seguinte forma. Um conjunto de variáveis 
 
 Uma solução $s^{∗}∈ S_{Ω}$ é chamada de ótimo global se e somente se
 
-<font size="3">
+  
+
+<span style="font-size: 150%;">
+
+  
 
 $$f(s^{∗})≤f(s) ∀s∈S_{Ω}$$
 
-</font>
+  
+
+</span>
+
+  
 
 O conjunto de todas as soluções globalmente ótimas é denotado por $S^{*}_Ω⊆S_Ω$. Resolver um COP requer encontrar pelo menos um $s^{∗}∈S^∗_Ω$.
 
@@ -162,7 +168,8 @@ O AS tem duas fases principais:
   
 
 A regra de probabilidade para a escolha da próxima cidade é:
-<font size="4">
+
+<font size="5">
 
 $$ p(c_i^j | s_p) = \frac{{\tau_{ij}^\alpha * [\eta(c_i^j)]^\beta}}{{\sum {\tau_{il}^\alpha * [\eta(c_i^l)]^\beta}}}, \forall c_i^j \in N(s_p) $$
 
@@ -186,7 +193,7 @@ A atualização do feromônio é feita da seguinte forma:
 
 <font size="5">
 
-$$τ_ij = (1 - ρ) * τ_ij + ΣΔτ_ij^k$$
+$$τ_{ij} = (1 - ρ) * τ_{ij} + ΣΔτ_{ij}^k$$
 
 </font>
 
@@ -222,9 +229,11 @@ Além dessas modificações, o ACS geralmente utiliza uma estratégia elitista, 
 
 A regra de atualização global do feromônio no ACS é a seguinte:
 
-<span style="font-size: 150%;">
-$$ \tau_{ij} = (1 - \rho) * \tau_{ij} + \rho/f(s_{gb}) $$
-</span>
+<font size="5">
+
+$$\tau_{ij} = (1 - \rho) * \tau_{ij} + \frac{\rho}{f(s_{gb})}$$
+
+</font>
 
   
 
@@ -265,10 +274,12 @@ O MAX-MIN Ant System (MMAS) é uma variante do algoritmo Ant System (AS) que int
 2.  **Atualização do Feromônio Elitista:** Apenas a melhor formiga (a melhor da iteração ou a melhor global) é permitida a depositar feromônio após cada iteração. Isso intensifica a busca em torno das soluções mais promissoras.
 
 3.  **Atualização do Feromônio:** A atualização do feromônio no MMAS é semelhante ao AS, mas com a adição dos limites de feromônio. A equação de atualização é:
-<span style="font-size: 150%;">
-$$τ_ij = (1 - ρ) * τ_ij + Δτ_ij^best$$
 
-</span>
+<font size="5">
+
+$$τ_{ij} = (1 - ρ) * τ_{ij} + Δτ_{ij}^{best}$$
+
+</font>
 
 Onde:
 
@@ -298,6 +309,28 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
   
 
+## Hiperparâmetros
+
+  
+
+*   **α (alfa):** Controla a influência dos feromônios na escolha das arestas. Valores mais altos de α aumentam a importância dos feromônios, favorecendo a exploração de soluções já encontradas. Valores mais baixos de α incentivam a exploração de novas áreas do espaço de busca.
+
+*   **β (beta):** Controla a influência da informação heurística na escolha das arestas. Valores mais altos de β aumentam a importância da heurística, tornando a busca mais gulosa. Valores mais baixos de β dão mais peso aos feromônios, permitindo uma exploração mais diversificada.
+
+*   **ρ (rho):** Taxa de evaporação do feromônio. Controla a persistência do feromônio nas arestas. Valores mais altos de ρ levam a uma evaporação mais rápida, o que pode ser útil em problemas dinâmicos, mas pode levar à perda de informações importantes em problemas estáticos. Valores mais baixos de ρ preservam o feromônio por mais tempo, o que pode ser útil em problemas estáticos, mas pode levar à convergência prematura em problemas dinâmicos.
+
+*   **Número de formigas (m):** Determina o número de soluções construídas em cada iteração. Um número maior de formigas pode levar a uma exploração mais ampla do espaço de busca, mas também aumenta o custo computacional.
+
+  
+
+A escolha dos hiperparâmetros da ACO geralmente envolve experimentação e ajuste fino, mas algumas diretrizes podem ser seguidas:
+
+  
+
+Na implementação foi utilizado a busca aleatoria, para encontrar a melhor combinação de hiperparâmetros. A busca aleatória amostra aleatoriamente valores para os hiperparâmetros dentro de um intervalo predefinido. Essa amostragem aleatória pode ser repetida várias vezes, e a melhor combinação de hiperparâmetros encontrada é selecionada.
+
+  
+
 ## Implementação
 
   
@@ -308,7 +341,12 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
 ## BanchMark
 
-**Obs: Notação Americana**
+- **nota: Notação Americana**
+
+- **nota2: Os que estão em branco, serão testados no futuro :D**
+
+  
+  
 
 | Cidade | Instâncias | Custo Ótimo | Tempo Convergência | Custo Encontrado |
 
@@ -320,7 +358,7 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
 | China | 71009 cidades | 4566563 | | |
 
-| Djibouti | 38 cidades | 6656 | 3.54 segundos | 7148.31 |
+| Djibouti | 38 cidades | 6656 | 1.58 segundos | 7148.31 |
 
 | Egypt | 7146 cidades | 172387 |
 
@@ -330,31 +368,31 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
 | Honduras | 14473 cidades | 177105 | | |
 
-| Ireland |
+| Ireland | 8246 cidades | 206,171 | | |
 
-| Japan |
+| Japan | 9847 cidades | 491,924 | | |
 
-| Kazakhstan |
+| Kazakhstan | 9976 cidades | 1,061,882 |
 
-| Luxenburgo| 980 cidades | 11340 | 2298.47 segundos | 12083.53 |
+| Luxemburgo| 980 cidades | 11340 | 930.36 segundos | 12083.53 |
 
-| Morocco |
+| Morocco | 14185 cidades | 427377 |
 
-| Nicaragua |
+| Nicaragua | 3496 cidades |  96132 | 11188.67 segundos | 103752.18
 
-| Oman |
+| Oman | 1979 cidades | Não informado | 2252.59 segundos | 94788.65
 
-| Panama |
+| Panama |  8079 cidades | Não informado |
 
-| Qatar | 194 cidades |  9352 | 91.29 segundos | 9480.83 |
+| Qatar | 194 cidades |  9352 | 28.87 segundos | 9480.83 |
 
-| Rwanda | 1621 cidades | 26051 | 7110.96 segundos | 27456.62 |
+| Rwanda | 1621 cidades | 26051 | 2494.82 segundos | 27456.62 |
 
 | Sweden | 24978 cidades | 855597 |
 
 | Tanzania | 6117 cidades | 394718 |
 
-| Uruguay | 734 cidades | 79114 | 1278.15 segundos | 85550.71 |
+| Uruguay | 734 cidades | 79114 | 616.39 segundos | 85550.71 |
 
 | Vietnam | 22775 cidades | 569288
 
@@ -362,7 +400,7 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
 | Yemen | 7663 cidades | 238314 |
 
-| Zimbabwe | 929 cidades | 95345 | 2057.08 segundos |100790.92
+| Zimbabwe | 929 cidades | 95345 | 812.42 segundos |100790.92
 
   
   
@@ -395,4 +433,10 @@ O MMAS tem sido aplicado com sucesso em várias áreas, incluindo problemas de r
 
   
 
-- (https://www.sciencedirect.com/science/article/pii/S095219761200067X?via%3Dihub)
+- R.F. Tavares Neto, M. Godinho Filho,
+
+Literature review regarding Ant Colony Optimization applied to scheduling problems: Guidelines for implementation and directions for future research,
+
+Engineering Applications of Artificial Intelligence,
+
+Volume 26, Issue 1,2013,Pages 150-161,ISSN 0952-1976,https://doi.org/10.1016/j.engappai.2012.03.011.
