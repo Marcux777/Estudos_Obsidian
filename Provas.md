@@ -56,15 +56,14 @@ $[ \text{SubsetSum}(S, T) = \text{SubsetSum}(S - \{s_i\}, T) \lor \text{SubsetSu
 ### Prova de Subestrutura Ótima
 Para provar que o problema possui subestrutura ótima, precisamos mostrar que se $\text{SubsetSum}(S, T)$ é verdadeiro, então pelo menos um dos subproblemas $( \text{SubsetSum}(S - \{s_i\}, T)$ ou $\text{SubsetSum}(S - \{s_i\}, T - s_i)$ também deve ser verdadeiro.
 
-- Se \( \text{SubsetSum}(S, T) \) é verdadeiro, então existe um subconjunto \( A \subseteq S \) tal que a soma dos elementos de \( A \) é \( T \).
-- Se \( s_i \notin A \), então \( A \) é um subconjunto de \( S - \{s_i\} \) e a soma dos elementos de $A$ é $T$. Portanto, $\text{SubsetSum}(S - \{s_i\}, T)$ é verdadeiro.
+- Se $\text{SubsetSum}(S, T)$ é verdadeiro, então existe um subconjunto $A \subseteq S$ tal que a soma dos elementos de $A$ é $T$.
+- Se $s_i \notin A$, então $A$ é um subconjunto de $S - \{s_i\}$ e a soma dos elementos de $A$ é $T$. Portanto, $\text{SubsetSum}(S - \{s_i\}, T)$ é verdadeiro.
 - Se $s_i \in A$, então $A - \{s_i\}$ é um subconjunto de $S - \{s_i\}$ e a soma dos elementos de $A - \{s_i\}$ é $T - s_i$. Portanto, $\text{SubsetSum}(S - \{s_i\}, T - s_i)$ é verdadeiro.
 
-Como pelo menos um dos subproblemas deve ser verdadeiro para que \( \text{SubsetSum}(S, T) \) seja verdadeiro, isso demonstra que o problema possui subestrutura ótima.
+Como pelo menos um dos subproblemas deve ser verdadeiro para que $\text{SubsetSum}(S, T)$ seja verdadeiro, isso demonstra que o problema possui subestrutura ótima.
 
-### Conclusão
-A subestrutura ótima do problema do Subset Sum é demonstrada pela capacidade de construir uma solução ótima para o problema original a partir de soluções ótimas para seus subproblemas. Isso é evidenciado pela recorrência que define o problema em termos de seus subproblemas.
 
+## Multiplicação de Cadeia de Matrizes
 ## Árvore de Huffman de Peso Mínimo
 Para provar que a Árvore de Huffman de Peso Mínimo tem subestrutura ótima e também possui a propriedade da escolha gulosa, vamos abordar cada uma dessas propriedades separadamente.
 ### Subestrutura Ótima
