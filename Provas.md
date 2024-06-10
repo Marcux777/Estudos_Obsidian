@@ -30,6 +30,41 @@ Vamos provar por contradição que o problema da Mochila Binária tem subestrutu
 
 5. **Contradição**: Portanto, se a solução ótima `S` para o problema original pode ser construída a partir da solução ótima `S'` do subproblema, isso implica que o problema da Mochila Binária tem subestrutura ótima. A suposição inicial de que o problema não tem subestrutura ótima leva a uma contradição.
 
+## SubSet Sum
+
+Para provar que o problema do Subset Sum possui subestrutura ótima, precisamos mostrar que uma solução ótima para o problema pode ser construída a partir de soluções ótimas para seus subproblemas. Vamos considerar o problema do Subset Sum, onde temos um conjunto de números inteiros \( S = \{s_1, s_2, \ldots, s_n\} \) e um valor alvo \( T \). Queremos determinar se existe um subconjunto de \( S \) cuja soma é igual a \( T \).
+
+### Definição do Problema
+O problema pode ser definido recursivamente da seguinte forma:
+
+- Seja $( \text{SubsetSum}(S, T) )$ a função que retorna verdadeiro se existe um subconjunto de $S$ cuja soma é $T$, e falso caso contrário.
+
+### Subestrutura Ótima
+Para mostrar que o problema possui subestrutura ótima, consideramos dois casos para cada elemento $s_i$ do conjunto $S$:
+
+1. **Caso 1: $s_i$ não está no subconjunto que soma \( T \)**:
+   - Nesse caso, precisamos verificar se existe um subconjunto dos elementos restantes que soma \( T \). Formalmente, isso é equivalente a resolver$\text{SubsetSum}(S - \{s_i\}, T)$.
+
+2. **Caso 2: $s_i$ está no subconjunto que soma \( T \)**:
+   - Nesse caso, precisamos verificar se existe um subconjunto dos elementos restantes que soma $T - s_i$. Formalmente, isso é equivalente a resolver $\text{SubsetSum}(S - \{s_i\}, T - s_i)$.
+
+### Recorrência
+Podemos então definir a função $\text{SubsetSum}(S, T)$ recursivamente como:
+
+$[ \text{SubsetSum}(S, T) = \text{SubsetSum}(S - \{s_i\}, T) \lor \text{SubsetSum}(S - \{s_i\}, T - s_i) ]$
+
+### Prova de Subestrutura Ótima
+Para provar que o problema possui subestrutura ótima, precisamos mostrar que se $\text{SubsetSum}(S, T)$ é verdadeiro, então pelo menos um dos subproblemas $( \text{SubsetSum}(S - \{s_i\}, T)$ ou $\text{SubsetSum}(S - \{s_i\}, T - s_i)$ também deve ser verdadeiro.
+
+- Se \( \text{SubsetSum}(S, T) \) é verdadeiro, então existe um subconjunto \( A \subseteq S \) tal que a soma dos elementos de \( A \) é \( T \).
+- Se \( s_i \notin A \), então \( A \) é um subconjunto de \( S - \{s_i\} \) e a soma dos elementos de $A$ é $T$. Portanto, $\text{SubsetSum}(S - \{s_i\}, T)$ é verdadeiro.
+- Se $s_i \in A$, então $A - \{s_i\}$ é um subconjunto de $S - \{s_i\}$ e a soma dos elementos de $A - \{s_i\}$ é $T - s_i$. Portanto, $\text{SubsetSum}(S - \{s_i\}, T - s_i)$ é verdadeiro.
+
+Como pelo menos um dos subproblemas deve ser verdadeiro para que \( \text{SubsetSum}(S, T) \) seja verdadeiro, isso demonstra que o problema possui subestrutura ótima.
+
+### Conclusão
+A subestrutura ótima do problema do Subset Sum é demonstrada pela capacidade de construir uma solução ótima para o problema original a partir de soluções ótimas para seus subproblemas. Isso é evidenciado pela recorrência que define o problema em termos de seus subproblemas.
+
 ## Árvore de Huffman de Peso Mínimo
 Para provar que a Árvore de Huffman de Peso Mínimo tem subestrutura ótima e também possui a propriedade da escolha gulosa, vamos abordar cada uma dessas propriedades separadamente.
 ### Subestrutura Ótima
@@ -98,4 +133,60 @@ Vamos formalizar a prova de que o algoritmo de Dijkstra encontra o caminho de pe
 3. **Correção**: A cada iteração, garantimos que a distância `d[u]` é a menor distância possível de `s` a `u`. Isso é garantido pela escolha gulosa de selecionar o vértice com a menor distância estimada e pela subestrutura ótima, que garante que a solução ótima para o subproblema de `s` a `u` pode ser estendida para encontrar a solução ótima para o problema original.
 
 4. **Conclusão**: Quando todos os vértices foram processados, as distâncias `d[v]` representam os pesos mínimos dos caminhos de `s` para todos os outros vértices `v` no grafo.
+
+## MST - Kruskal
+
+Para provar que o algoritmo de Kruskal encontra a Árvore Geradora de Peso Mínimo (MST - Minimum Spanning Tree) em um grafo, vamos demonstrar que ele possui subestrutura ótima e a propriedade da escolha gulosa.
+
+### Subestrutura Ótima
+
+A subestrutura ótima significa que a solução ótima para um problema pode ser construída a partir das soluções ótimas de seus subproblemas.
+
+#### Prova da Subestrutura Ótima
+
+1. **Definição de Subproblemas**: Considere uma MST `T` de um grafo `G`. Suponha que `T` seja dividida em duas subárvores `T1` e `T2` ao remover uma aresta `e`.
+
+2. **Subárvores Ótimas**: As subárvores `T1` e `T2` devem ser MSTs dos subgrafos correspondentes de `G`. Caso contrário, poderíamos encontrar uma árvore geradora de menor peso para um dos subgrafos, o que resultaria em uma árvore geradora de menor peso para `G`, contradizendo a suposição de que `T` é uma MST.
+
+3. **Conclusão**: Portanto, a solução ótima para o problema original pode ser construída a partir das soluções ótimas de seus subproblemas, confirmando que o problema possui subestrutura ótima.
+
+### Propriedade da Escolha Gulosa
+
+A propriedade da escolha gulosa significa que uma escolha localmente ótima em cada passo leva a uma solução globalmente ótima.
+
+#### Prova da Propriedade da Escolha Gulosa
+
+1. **Escolha Gulosa**: O algoritmo de Kruskal adiciona arestas ao MST em ordem crescente de peso, garantindo que nenhuma aresta forme um ciclo.
+
+2. **Prova por Contradição**: Suponha que a escolha gulosa de adicionar a aresta de menor peso que não forma um ciclo não leva a uma MST. Isso implicaria que existe uma MST que não inclui a aresta de menor peso, mas inclui uma aresta de maior peso. No entanto, poderíamos substituir a aresta de maior peso pela aresta de menor peso, resultando em uma árvore de menor peso, o que contradiz a suposição de que a árvore original era uma MST.
+
+3. **Conclusão**: Portanto, a escolha gulosa de adicionar a aresta de menor peso que não forma um ciclo leva a uma MST, confirmando que o algoritmo de Kruskal possui a propriedade da escolha gulosa.
+
+### Prova Completa do Algoritmo de Kruskal
+
+Vamos formalizar a prova de que o algoritmo de Kruskal encontra a MST.
+
+#### Passos do Algoritmo de Kruskal
+
+1. **Inicialização**: Inicializamos uma floresta onde cada vértice é uma árvore separada. Ordenamos todas as arestas em ordem crescente de peso.
+
+2. **Iteração**: Em cada iteração, adicionamos a aresta de menor peso que não forma um ciclo na floresta. Usamos uma estrutura de dados de união e busca (union-find) para verificar se a adição de uma aresta forma um ciclo.
+
+3. **Correção**: A cada iteração, garantimos que a aresta adicionada é a de menor peso que não forma um ciclo, mantendo a propriedade de que a floresta é uma MST parcial.
+
+4. **Conclusão**: Quando todas as arestas foram processadas, a floresta se torna uma única árvore, que é a MST do grafo.
+
+#### Prova da Correção
+
+1. **Inicialização**: No início, cada vértice é uma árvore separada, e a floresta é uma coleção de árvores disjuntas.
+
+2. **Escolha Gulosa**: Em cada iteração, escolhemos a aresta de menor peso que não forma um ciclo. Esta escolha é localmente ótima.
+
+3. **Manutenção da Propriedade de MST Parcial**: A cada iteração, ao adicionar a aresta de menor peso que não forma um ciclo, garantimos que a floresta resultante é uma MST parcial. Se adicionássemos uma aresta que forma um ciclo, isso violaria a propriedade de árvore geradora.
+
+4. **Conclusão**: Quando todas as arestas foram processadas, a floresta se torna uma única árvore. Esta árvore é a MST do grafo, pois foi construída adicionando arestas de menor peso que não formam ciclos, garantindo que a solução é globalmente ótima.
+
+### Conclusão
+
+O algoritmo de Kruskal encontra a Árvore Geradora de Peso Mínimo em um grafo porque possui subestrutura ótima e a propriedade da escolha gulosa. A solução ótima para o problema original pode ser construída a partir das soluções ótimas de seus subproblemas, e a escolha localmente ótima em cada passo leva a uma solução globalmente ótima.
 
