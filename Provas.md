@@ -64,6 +64,49 @@ Como pelo menos um dos subproblemas deve ser verdadeiro para que $\text{SubsetSu
 
 
 ## Multiplicação de Cadeia de Matrizes
+Para provar que o problema da Multiplicação de Cadeia de Matrizes possui subestrutura ótima, precisamos mostrar que uma solução ótima para o problema pode ser construída a partir de soluções ótimas para seus subproblemas. Vamos considerar o problema da Multiplicação de Cadeia de Matrizes, onde temos uma sequência de \( n \) matrizes \( A_1, A_2, \ldots, A_n \), e queremos determinar a ordem de multiplicação que minimiza o número total de multiplicações escalares.
+
+### Definição do Problema
+
+Dada uma sequência de \( n \) matrizes \( A_1, A_2, \ldots, A_n \), onde a matriz \( A_i \) tem dimensões \( p_{i-1} \times p_i \), queremos encontrar a ordem de multiplicação que minimiza o número de operações escalares necessárias.
+
+### Subestrutura Ótima
+
+Para mostrar que o problema possui subestrutura ótima, consideramos a seguinte abordagem:
+
+1. **Divisão do Problema**:
+   - Suponha que a ordem ótima para multiplicar a cadeia de matrizes \( A_i \) até \( A_j \) envolve dividir a cadeia em duas subcadeias \( (A_i \cdot \ldots \cdot A_k) \) e \( (A_{k+1} \cdot \ldots \cdot A_j) \) para algum \( i \leq k < j \).
+
+2. **Soluções Ótimas para Subproblemas**:
+   - Se a ordem ótima para multiplicar \( A_i \) até \( A_j \) envolve dividir a cadeia em \( k \), então a ordem ótima para multiplicar \( A_i \) até \( A_k \) e \( A_{k+1} \) até \( A_j \) deve ser usada. Caso contrário, poderíamos encontrar uma ordem melhor para multiplicar \( A_i \) até \( A_j \), o que contradiz a suposição de que a ordem original era ótima.
+
+3. **Construção da Solução Ótima**:
+   - Portanto, a solução ótima para o problema original pode ser construída a partir das soluções ótimas dos subproblemas \( m[i, k] \) e \( m[k+1, j] \).
+
+### Recorrência
+
+Vamos definir \( m[i, j] \) como o número mínimo de multiplicações necessárias para calcular o produto da cadeia de matrizes \( A_i \) até \( A_j \). A chave para a solução é observar que, para calcular \( m[i, j] \), podemos dividir o problema em subproblemas menores:
+
+\[ m[i, j] = \min_{i \leq k < j} \{ m[i, k] + m[k+1, j] + p_{i-1} \cdot p_k \cdot p_j \} \]
+
+Aqui, \( k \) é o índice onde a cadeia é dividida em duas subcadeias \( (A_i \cdot \ldots \cdot A_k) \) e \( (A_{k+1} \cdot \ldots \cdot A_j) \). O custo total é a soma dos custos das duas subcadeias mais o custo de multiplicar as duas matrizes resultantes.
+
+### Prova de Subestrutura Ótima
+
+Para provar que o problema possui subestrutura ótima, consideramos o seguinte:
+
+1. **Divisão do Problema**:
+   - Suponha que a ordem ótima para multiplicar a cadeia de matrizes \( A_i \) até \( A_j \) envolve dividir a cadeia em duas subcadeias \( (A_i \cdot \ldots \cdot A_k) \) e \( (A_{k+1} \cdot \ldots \cdot A_j) \) para algum \( i \leq k < j \).
+
+2. **Soluções Ótimas para Subproblemas**:
+   - Se a ordem ótima para multiplicar \( A_i \) até \( A_j \) envolve dividir a cadeia em \( k \), então a ordem ótima para multiplicar \( A_i \) até \( A_k \) e \( A_{k+1} \) até \( A_j \) deve ser usada. Caso contrário, poderíamos encontrar uma ordem melhor para multiplicar \( A_i \) até \( A_j \), o que contradiz a suposição de que a ordem original era ótima.
+
+3. **Construção da Solução Ótima**:
+   - Portanto, a solução ótima para o problema original pode ser construída a partir das soluções ótimas dos subproblemas \( m[i, k] \) e \( m[k+1, j] \).
+
+### Conclusão
+
+A subestrutura ótima do problema de Multiplicação de Cadeia de Matrizes é demonstrada pela capacidade de construir uma solução ótima para o problema original a partir de soluções ótimas para seus subproblemas. Isso é evidenciado pela recorrência que define o problema em termos de seus subproblemas e pela implementação da solução usando programação dinâmica.
 ## Árvore de Huffman de Peso Mínimo
 Para provar que a Árvore de Huffman de Peso Mínimo tem subestrutura ótima e também possui a propriedade da escolha gulosa, vamos abordar cada uma dessas propriedades separadamente.
 ### Subestrutura Ótima
