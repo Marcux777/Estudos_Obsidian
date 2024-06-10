@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ant Colony Optimization.md",
+                "file": "Provas.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ant Colony Optimization.md",
+                "file": "Provas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ant Colony Optimization.md",
+                "file": "Provas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ant Colony Optimization.md"
+                "file": "Provas.md"
               }
             }
           }
@@ -153,7 +153,7 @@
     "Regras - Compiladores.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
     "2024-06-05.md",
-    "Ant Colony Optimization.md",
+    "Provas.md",
     "Ciência de Dados/Analise e Visualização dos dados em Python.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
