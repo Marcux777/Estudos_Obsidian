@@ -65,7 +65,7 @@ Como pelo menos um dos subproblemas deve ser verdadeiro para que $\text{SubsetSu
 
 ## Multiplicação de Cadeia de Matrizes
 
-Para provar que o problema da Multiplicação de Cadeia de Matrizes possui subestrutura ótima, precisamos mostrar que uma solução ótima para o problema pode ser construída a partir de soluções ótimas para seus subproblemas. Vamos considerar o problema da Multiplicação de Cadeia de Matrizes, onde temos uma sequência de \( n \) matrizes \( A_1, A_2, \ldots, A_n \), e queremos determinar a ordem de multiplicação que minimiza o número total de multiplicações escalares.
+Para provar que o problema da Multiplicação de Cadeia de Matrizes possui subestrutura ótima, precisamos mostrar que uma solução ótima para o problema pode ser construída a partir de soluções ótimas para seus subproblemas. Vamos considerar o problema da Multiplicação de Cadeia de Matrizes, onde temos uma sequência de \( n \) matrizes \($A_1, A_2, \ldots, A_n$ , e queremos determinar a ordem de multiplicação que minimiza o número total de multiplicações escalares.
 
 ### Definição do Problema
 
