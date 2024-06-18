@@ -69,20 +69,20 @@ Para provar que o problema da Multiplicação de Cadeia de Matrizes possui subes
 
 ### Definição do Problema
 
-Dada uma sequência de \( n \) matrizes \($ A_1, A_2, \ldots, A_n$ \), onde a matriz \( A_i \) tem dimensões \( p_{i-1} \times p_i \), queremos encontrar a ordem de multiplicação que minimiza o número de operações escalares necessárias.
+Dada uma sequência de $n$ matrizes $A_1, A_2, \ldots, A_n$ \), onde a matriz $A_i$ tem dimensões $p_{i-1}\times p_i$, queremos encontrar a ordem de multiplicação que minimiza o número de operações escalares necessárias.
 
 ### Subestrutura Ótima
 
 Para mostrar que o problema possui subestrutura ótima, consideramos a seguinte abordagem:
 
 1. **Divisão do Problema**:
-   - Suponha que a ordem ótima para multiplicar a cadeia de matrizes \( A_i \) até \( A_j \) envolve dividir a cadeia em duas subcadeias \( (A_i \cdot \ldots \cdot A_k) \) e \( (A_{k+1} \cdot \ldots \cdot A_j) \) para algum \( i \leq k < j \).
+   - Suponha que a ordem ótima para multiplicar a cadeia de matrizes $A_i$ até $A_j$ envolve dividir a cadeia em duas subcadeias $(A_i \cdot \ldots \cdot A_k)$ e $(A_{k+1} \cdot \ldots \cdot A_j)$ para algum $i \leq k < j$.
 
 2. **Soluções Ótimas para Subproblemas**:
-   - Se a ordem ótima para multiplicar \( A_i \) até \( A_j \) envolve dividir a cadeia em \( k \), então a ordem ótima para multiplicar \( A_i \) até \( A_k \) e \( A_{k+1} \) até \( A_j \) deve ser usada. Caso contrário, poderíamos encontrar uma ordem melhor para multiplicar \( A_i \) até \( A_j \), o que contradiz a suposição de que a ordem original era ótima.
+   - Se a ordem ótima para multiplicar $A_i$ até $A_j$ envolve dividir a cadeia em $k$, então a ordem ótima para multiplicar $A_i$ até $A_k$ e $A_{k+1}$ até $A_j$ deve ser usada. Caso contrário, poderíamos encontrar uma ordem melhor para multiplicar $A_i$ até $A_j$, o que contradiz a suposição de que a ordem original era ótima.
 
 3. **Construção da Solução Ótima**:
-   - Portanto, a solução ótima para o problema original pode ser construída a partir das soluções ótimas dos subproblemas \( m[i, k] \) e \( m[k+1, j] \).
+   - Portanto, a solução ótima para o problema original pode ser construída a partir das soluções ótimas dos subproblemas $m[i, k]$ e $m[k+1, j]$.
 
 ### Recorrência
 
