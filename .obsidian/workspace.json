@@ -8,15 +8,11 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7be604945cf8fc98",
+            "id": "ad691d909083905b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Activity Selection Problem.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Activity Selection Problem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Activity Selection Problem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Activity Selection Problem.md"
+                "file": "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md"
               }
             }
           }
@@ -148,9 +142,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7be604945cf8fc98",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "Activity Selection Problem.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Activity Selection Problem.md",
+    "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Assign Mice to Holes.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Fitting Shelves Problem.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Policemen catch thieves.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Egyptian Fraction.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Minimum Swaps for Bracket Balancing.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Water Connection Problem.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Huffman Decoding.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Huffman Coding.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Job Sequencing Problem.md",
+    "Provas de Corretude de Algoritmos/Gulosos",
+    "Regras - Compiladores.md",
+    "Provas de Corretude de Algoritmos",
+    "Provas.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/One for All/Artigos/Algebra/Sistemas numéricos - Álgebra.md",
@@ -164,18 +172,6 @@
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Probabilidade e Estatistica/Modelos Probabilísticos.md",
     "Probabilidade e Estatistica/Introdução a Probabilidade.md",
-    "Provas.md",
-    "Regras - Compiladores.md",
-    "2024-06-05.md",
-    "Ciência de Dados/Analise e Visualização dos dados em Python.md",
-    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
-    "Ciência de Dados/Sumario.md",
-    "Limpeza de Dados em Ciência de Dados.md",
-    "Visualização de dados.md",
-    "Analisando Dados Numéricos com NumPy.md",
-    "Ciência de Dados/Analise de Dados com Python.md",
-    "Pandas.md",
-    "Probabilidade e Estatistica/Probabilidade e Estatística.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
@@ -193,8 +189,6 @@
     "Algebra Linear",
     "Matematica Pura",
     "Computação/One for All/Artigos/Sieve of Eratosthenes",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Garner's Algorithm"
+    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse"
   ]
 }
