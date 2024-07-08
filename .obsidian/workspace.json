@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "af87348d9121b292",
+        "id": "72033bfe9fbf908e",
         "type": "tabs",
         "children": [
           {
-            "id": "ad691d909083905b",
+            "id": "be92f42569a829bf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
             }
           }
         ]
@@ -118,17 +120,39 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "84770d11087643f7",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "f50f55445b739218",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "3d9270037ab27482",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 559.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -139,13 +163,17 @@
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
       "markdown-importer:Abrir importador Markdown": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "smart-connections:Open: View Smart Connections": false,
+      "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "be92f42569a829bf",
   "lastOpenFiles": [
-    "Provas de Corretude de Algoritmos/Gulosos/Activity Selection Problem.md",
+    "smart-chats/UNTITLED CHAT 2024-07-06 23 36 25.md",
+    "smart-chats",
     "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md",
+    "Provas de Corretude de Algoritmos/Gulosos/Activity Selection Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos/Assign Mice to Holes.md",
     "Provas de Corretude de Algoritmos/Gulosos/Fitting Shelves Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos/Policemen catch thieves.md",
@@ -171,7 +199,6 @@
     "Computação/One for All/Artigos/Coordenadas Homogêneas.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Probabilidade e Estatistica/Modelos Probabilísticos.md",
-    "Probabilidade e Estatistica/Introdução a Probabilidade.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
@@ -188,7 +215,6 @@
     "Probabilidade e Estatistica",
     "Algebra Linear",
     "Matematica Pura",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse"
+    "Computação/One for All/Artigos/Sieve of Eratosthenes"
   ]
 }
