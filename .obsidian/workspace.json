@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "72033bfe9fbf908e",
+        "id": "1156ea4baf159f7b",
         "type": "tabs",
         "children": [
           {
-            "id": "be92f42569a829bf",
+            "id": "03fe08a39d6a439b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.5"
+                "file": "Computação/README.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computação/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Computação/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Computação/README.md"
+              }
             }
           },
           {
@@ -152,7 +158,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 559.5
+    "width": 559.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,8 +175,11 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "be92f42569a829bf",
+  "active": "03fe08a39d6a439b",
   "lastOpenFiles": [
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
+    "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+    "Computação/Álgebra.md",
     "smart-chats/UNTITLED CHAT 2024-07-06 23 36 25.md",
     "smart-chats",
     "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md",
@@ -194,10 +204,7 @@
     "Ciência de Dados/Básico de Python.md",
     "Computação/One for All/Artigos/Bit manipulation.md",
     "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
-    "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/One for All/Artigos/Coordenadas Homogêneas.md",
-    "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Probabilidade e Estatistica/Modelos Probabilísticos.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
