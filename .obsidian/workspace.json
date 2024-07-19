@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computação/README.md",
+                "file": "Grafos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8638b51d37dd50c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dijkstra.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computação/README.md",
+                "file": "Dijkstra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computação/README.md",
+                "file": "Dijkstra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computação/README.md"
+                "file": "Dijkstra.md"
               }
             }
           },
@@ -175,11 +188,15 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "03fe08a39d6a439b",
+  "active": "8638b51d37dd50c2",
   "lastOpenFiles": [
+    "Grafos.md",
+    "Dijkstra.md",
+    "Computação/README.md",
+    "Computação/Data Structures.md",
+    "Computação/Álgebra.md",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
-    "Computação/Álgebra.md",
     "smart-chats/UNTITLED CHAT 2024-07-06 23 36 25.md",
     "smart-chats",
     "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md",
@@ -202,10 +219,6 @@
     "Computação/One for All/Artigos/Algebra/Sistemas numéricos - Álgebra.md",
     "Computação/One for All/Artigos/Ternário Equilibrado.md",
     "Ciência de Dados/Básico de Python.md",
-    "Computação/One for All/Artigos/Bit manipulation.md",
-    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
-    "Computação/One for All/Artigos/Coordenadas Homogêneas.md",
-    "Probabilidade e Estatistica/Modelos Probabilísticos.md",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
