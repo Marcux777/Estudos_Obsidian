@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Parte I - Fundamentos.md",
+                "file": "Introdução ao Aprendizado de Máquina.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Parte I - Fundamentos.md",
+                "file": "Introdução ao Aprendizado de Máquina.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Parte I - Fundamentos.md",
+                "file": "Introdução ao Aprendizado de Máquina.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Parte I - Fundamentos.md"
+                "file": "Introdução ao Aprendizado de Máquina.md"
               }
             }
           },
@@ -191,7 +191,7 @@
   "active": "6a1ff626d25da58d",
   "lastOpenFiles": [
     "Machine Learning/Sumario.md",
-    "Parte I - Fundamentos.md",
+    "Introdução ao Aprendizado de Máquina.md",
     "Machine Learning/Parte 1 - Fundamentos",
     "Machine Learning",
     "Relatório.md",

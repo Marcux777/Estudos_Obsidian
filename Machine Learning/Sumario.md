@@ -2,7 +2,7 @@
 
 Aqui estão alguns tópicos para um curso de Aprendizado de Máquina, começando com material introdutório até conceitos mais avançados:
 
-### **[[Parte I - Fundamentos]]**
+### **[[Introdução ao Aprendizado de Máquina]]**
 
 * **Introdução ao Aprendizado de Máquina**:
     * O que é Aprendizado de Máquina?
