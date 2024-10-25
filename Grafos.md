@@ -1,3 +1,0 @@
-- [[DFS]]
-- [[BFS]]
-- [[Dijkstra]]

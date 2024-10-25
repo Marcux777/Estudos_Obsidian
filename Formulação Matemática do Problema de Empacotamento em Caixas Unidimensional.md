@@ -1,1 +1,0 @@
-Formulação Matemática do Problema de Empacotamento em Caixas Unidimensional
