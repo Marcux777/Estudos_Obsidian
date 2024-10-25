@@ -11,11 +11,28 @@
             "id": "83640745541f4f9e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning/Sumario.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a1ff626d25da58d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Parte I - Fundamentos.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Parte I - Fundamentos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Parte I - Fundamentos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Parte I - Fundamentos.md"
+              }
             }
           },
           {
@@ -167,8 +188,12 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "83640745541f4f9e",
+  "active": "6a1ff626d25da58d",
   "lastOpenFiles": [
+    "Machine Learning/Sumario.md",
+    "Parte I - Fundamentos.md",
+    "Machine Learning/Parte 1 - Fundamentos",
+    "Machine Learning",
     "Relatório.md",
     "conflict-files-obsidian-git.md",
     "Pasted image 20241015144351.png",
@@ -199,7 +224,6 @@
     "Provas de Corretude de Algoritmos/Gulosos/Huffman Coding.md",
     "Provas de Corretude de Algoritmos/Gulosos/Job Sequencing Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos",
-    "Regras - Compiladores.md",
     "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
@@ -211,8 +235,6 @@
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Pasted image 20240226173805.png",
-    "Probabilidade e Estatistica",
-    "Algebra Linear",
-    "Matematica Pura"
+    "Probabilidade e Estatistica"
   ]
 }
