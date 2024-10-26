@@ -2,14 +2,14 @@
 
 Aqui estão alguns tópicos para um curso de Aprendizado de Máquina, começando com material introdutório até conceitos mais avançados:
 
-### **[[Introdução ao Aprendizado de Máquina]]**
+### **Parte I - Fundamentos**
 
-* **Introdução ao Aprendizado de Máquina**:
+* **[[Introdução ao Aprendizado de Máquina]]**:
     * O que é Aprendizado de Máquina?
     * Tipos de aprendizado de máquina: Aprendizado Supervisionado, Aprendizado Não Supervisionado, Aprendizado por Reforço.
     * Terminologia básica: features, atributos, covariáveis, variáveis de resposta.
     * Fluxo de trabalho típico de um projeto de aprendizado de máquina.
-* **Fundamentos Matemáticos**:
+* [[**Fundamentos Matemáticos]]**:
     * **Álgebra Linear**:
         * Escalares, Vetores, Matrizes e Tensores.
         * Operações com matrizes: multiplicação, inversão, etc.

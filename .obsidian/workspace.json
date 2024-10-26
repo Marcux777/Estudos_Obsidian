@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6a1ff626d25da58d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introdução ao Aprendizado de Máquina.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introdução ao Aprendizado de Máquina.md",
+                "file": "Machine Learning/Sumario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introdução ao Aprendizado de Máquina.md",
+                "file": "Machine Learning/Sumario.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introdução ao Aprendizado de Máquina.md"
+                "file": "Machine Learning/Sumario.md"
               }
             }
           },
@@ -188,10 +175,12 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "6a1ff626d25da58d",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
+    "Matematica/Algebra Linear",
+    "Matematica",
     "Machine Learning/Sumario.md",
-    "Introdução ao Aprendizado de Máquina.md",
+    "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
     "Machine Learning/Parte 1 - Fundamentos",
     "Machine Learning",
     "Relatório.md",
@@ -222,7 +211,6 @@
     "Provas de Corretude de Algoritmos/Gulosos/Water Connection Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos/Huffman Decoding.md",
     "Provas de Corretude de Algoritmos/Gulosos/Huffman Coding.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Job Sequencing Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos",
     "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
@@ -234,7 +222,6 @@
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
-    "Pasted image 20240226173805.png",
-    "Probabilidade e Estatistica"
+    "Pasted image 20240226173805.png"
   ]
 }
