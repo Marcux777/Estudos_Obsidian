@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Sumario.md",
+                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sumario"
+              "title": "Álgebra Linear"
             }
           },
           {
@@ -39,12 +39,14 @@
             "id": "5a1e7cdf735a2c05",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.4"
+                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
+              "title": "Plano de Estudo - GPT"
             }
           }
         ],
@@ -120,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Machine Learning/Sumario.md",
+                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Sumario"
+              "title": "Links inversos para Plano de Estudo - GPT"
             }
           },
           {
@@ -139,12 +141,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Machine Learning/Sumario.md",
+                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Sumario"
+              "title": "Links de saída para Plano de Estudo - GPT"
             }
           },
           {
@@ -166,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Machine Learning/Sumario.md"
+                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md"
               },
               "icon": "lucide-list",
-              "title": "Sumário de Sumario"
+              "title": "Sumário de Plano de Estudo - GPT"
             }
           },
           {
@@ -226,12 +228,14 @@
   },
   "active": "5a1e7cdf735a2c05",
   "lastOpenFiles": [
-    "Sumario.md",
     "Matematica/Algebra Linear/Álgebra Linear.md",
     "Machine Learning/Sumario.md",
+    "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
+    "Sumario.md",
+    "Introdução.md",
+    "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear",
     "Matematica",
-    "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
     "Machine Learning/Parte 1 - Fundamentos",
     "Machine Learning",
     "Relatório.md",
@@ -259,8 +263,6 @@
     "Provas de Corretude de Algoritmos/Gulosos/Policemen catch thieves.md",
     "Provas de Corretude de Algoritmos/Gulosos/Egyptian Fraction.md",
     "Provas de Corretude de Algoritmos/Gulosos/Minimum Swaps for Bracket Balancing.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Water Connection Problem.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Huffman Decoding.md",
     "Provas de Corretude de Algoritmos/Gulosos",
     "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
