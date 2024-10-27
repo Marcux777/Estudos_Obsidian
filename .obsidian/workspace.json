@@ -16,10 +16,39 @@
                 "file": "Machine Learning/Sumario.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Sumario"
+            }
+          },
+          {
+            "id": "eb258cccc640b654",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Álgebra Linear"
+            }
+          },
+          {
+            "id": "5a1e7cdf735a2c05",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -39,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -54,7 +85,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
             }
           },
           {
@@ -62,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
             }
           }
         ]
@@ -93,7 +128,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Sumario"
             }
           },
           {
@@ -105,7 +142,9 @@
                 "file": "Machine Learning/Sumario.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Sumario"
             }
           },
           {
@@ -116,7 +155,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -126,7 +167,9 @@
               "type": "outline",
               "state": {
                 "file": "Machine Learning/Sumario.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Sumario"
             }
           },
           {
@@ -134,7 +177,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -142,7 +187,9 @@
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           },
           {
@@ -150,7 +197,9 @@
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           }
         ],
@@ -175,11 +224,13 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "5a1e7cdf735a2c05",
   "lastOpenFiles": [
+    "Sumario.md",
+    "Matematica/Algebra Linear/Álgebra Linear.md",
+    "Machine Learning/Sumario.md",
     "Matematica/Algebra Linear",
     "Matematica",
-    "Machine Learning/Sumario.md",
     "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
     "Machine Learning/Parte 1 - Fundamentos",
     "Machine Learning",
@@ -210,7 +261,6 @@
     "Provas de Corretude de Algoritmos/Gulosos/Minimum Swaps for Bracket Balancing.md",
     "Provas de Corretude de Algoritmos/Gulosos/Water Connection Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos/Huffman Decoding.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Huffman Coding.md",
     "Provas de Corretude de Algoritmos/Gulosos",
     "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
@@ -220,7 +270,6 @@
     "Probabilidade e Estatistica/Pasted image 20240226173805.png",
     "Ciência de Dados",
     "Ciência de Dados/Basico de Python",
-    "Redes de Computadores",
     "Probabilidade e Estatistica/Pasted image 20240206172609.png",
     "Pasted image 20240226173805.png"
   ]
