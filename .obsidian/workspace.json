@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
+                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Plano de Estudo - GPT"
+              "title": "Links inversos para Álgebra Linear"
             }
           },
           {
@@ -141,12 +141,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
+                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Plano de Estudo - GPT"
+              "title": "Links de saída para Álgebra Linear"
             }
           },
           {
@@ -168,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md"
+                "file": "Matematica/Algebra Linear/Álgebra Linear.md"
               },
               "icon": "lucide-list",
-              "title": "Sumário de Plano de Estudo - GPT"
+              "title": "Sumário de Álgebra Linear"
             }
           },
           {
@@ -226,14 +226,16 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "5a1e7cdf735a2c05",
+  "active": "eb258cccc640b654",
   "lastOpenFiles": [
+    "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear/Álgebra Linear.md",
+    "Pasted image 20241027172419.png",
+    "Pasted image 20241027172413.png",
     "Machine Learning/Sumario.md",
     "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
     "Sumario.md",
     "Introdução.md",
-    "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear",
     "Matematica",
     "Machine Learning/Parte 1 - Fundamentos",
@@ -262,7 +264,6 @@
     "Provas de Corretude de Algoritmos/Gulosos/Fitting Shelves Problem.md",
     "Provas de Corretude de Algoritmos/Gulosos/Policemen catch thieves.md",
     "Provas de Corretude de Algoritmos/Gulosos/Egyptian Fraction.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Minimum Swaps for Bracket Balancing.md",
     "Provas de Corretude de Algoritmos/Gulosos",
     "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
@@ -271,8 +272,6 @@
     "Probabilidade e Estatistica/Pasted image 20240407124805.png",
     "Probabilidade e Estatistica/Pasted image 20240226173805.png",
     "Ciência de Dados",
-    "Ciência de Dados/Basico de Python",
-    "Probabilidade e Estatistica/Pasted image 20240206172609.png",
-    "Pasted image 20240226173805.png"
+    "Ciência de Dados/Basico de Python"
   ]
 }
