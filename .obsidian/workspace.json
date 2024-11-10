@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "3f035dc9b9364b1b",
+        "id": "90a6076eab06494f",
         "type": "tabs",
         "children": [
           {
-            "id": "83640745541f4f9e",
+            "id": "55f1861e171be2d7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Álgebra Linear"
-            }
-          },
-          {
-            "id": "eb258cccc640b654",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Álgebra Linear"
-            }
-          },
-          {
-            "id": "5a1e7cdf735a2c05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Plano de Estudo - GPT"
+              "title": "Nova aba"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -226,8 +193,9 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "eb258cccc640b654",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
+    "Series Temporais",
     "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear/Álgebra Linear.md",
     "Pasted image 20241027172419.png",
