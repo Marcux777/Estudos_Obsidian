@@ -11,10 +11,14 @@
             "id": "55f1861e171be2d7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Sem título.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Sem título"
             }
           }
         ]
@@ -193,8 +197,9 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "55f1861e171be2d7",
   "lastOpenFiles": [
+    "Sem título.md",
     "Series Temporais",
     "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear/Álgebra Linear.md",
@@ -239,7 +244,6 @@
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
     "Probabilidade e Estatistica/Pasted image 20240407124805.png",
     "Probabilidade e Estatistica/Pasted image 20240226173805.png",
-    "Ciência de Dados",
-    "Ciência de Dados/Basico de Python"
+    "Ciência de Dados"
   ]
 }
