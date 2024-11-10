@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sem título.md",
+                "file": "Series Temporais.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sem título"
+              "title": "Series Temporais"
             }
           }
         ]
@@ -199,7 +199,7 @@
   },
   "active": "55f1861e171be2d7",
   "lastOpenFiles": [
-    "Sem título.md",
+    "Series Temporais.md",
     "Series Temporais",
     "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
     "Matematica/Algebra Linear/Álgebra Linear.md",
