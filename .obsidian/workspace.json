@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Series Temporais"
             }
+          },
+          {
+            "id": "0b760047de63e465",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,7 +210,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "55f1861e171be2d7",
+  "active": "0b760047de63e465",
   "lastOpenFiles": [
     "Series Temporais.md",
     "Series Temporais",
