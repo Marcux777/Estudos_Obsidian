@@ -81,7 +81,7 @@ $$ \begin{align} x_i^{-1} &= \frac{1}{x_i} = \frac{\overbrace{x_1 \cdot x_2 \cdo
 No código, podemos apenas fazer um array de produto de prefixo (excluindo-se, começando pelo elemento identidade), calcular o inverso modular para o produto de todos os números e então multiplicá-lo pelo produto de prefixo e produto de sufixo (excluindo-se). O produto de sufixo é calculado iterando de trás para frente.
 
 ```c++
-std::vector<int> invs(const std::vector<int> &a, int m) {
+std==vector<int> invs(const std==vector<int> &a, int m) {
     int n = a.size();
     if (n == 0) return {};
     std::vector<int> b(n);

@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "90a6076eab06494f",
+        "id": "49b7f375f95de793",
         "type": "tabs",
         "children": [
           {
-            "id": "55f1861e171be2d7",
+            "id": "d5f1c69751150113",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Series Temporais.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Series Temporais"
-            }
-          },
-          {
-            "id": "0b760047de63e465",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.5"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
+              "title": "Nova aba"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -151,11 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Matematica/Algebra Linear/Álgebra Linear.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Sumário de Álgebra Linear"
+              "title": "Sumário"
             }
           },
           {
@@ -184,8 +165,38 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
+              "icon": "message-square",
+              "title": "Smart Connections Chat"
+            }
+          },
+          {
+            "id": "d06a94111b4c0d8d",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
               "icon": "lucide-file",
               "title": "Plugin desativado"
+            }
+          },
+          {
+            "id": "f6c2a1c152291281",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
+            }
+          },
+          {
+            "id": "e1da3fac88386b26",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ],
@@ -193,8 +204,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 559.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,57 +216,60 @@
       "command-palette:Abrir paleta de comandos": false,
       "markdown-importer:Abrir importador Markdown": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "smart-connections:Open: View Smart Connections": false,
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "0b760047de63e465",
+  "active": "af5fa2d9e0cae015",
   "lastOpenFiles": [
-    "Series Temporais.md",
-    "Series Temporais",
-    "Matematica/Algebra Linear/Plano de Estudo - GPT.md",
-    "Matematica/Algebra Linear/Álgebra Linear.md",
-    "Pasted image 20241027172419.png",
-    "Pasted image 20241027172413.png",
-    "Machine Learning/Sumario.md",
-    "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
+    "Computação/One for All/Artigos/Disjoint Set Union.md",
+    "smart-chats/UNTITLED CHAT 2024-11-17 04 15 35.md",
+    "Pré-Cálculo.md",
     "Sumario.md",
-    "Introdução.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
+    "textgenerator/templates/dalle/dall-e-core.md",
+    "textgenerator/templates/dalle/artGlitchcore.md",
+    "textgenerator/templates/dalle/ligCinematic.md",
+    "textgenerator/templates/dalle/artTakashiMurakami.md",
+    "textgenerator/templates/dalle/artSynthwave.md",
+    "textgenerator/templates/dalle/quaCinematic.md",
+    "textgenerator/templates/dalle/artColoringBook.md",
+    "textgenerator/templates/dalle/artPixel.md",
+    "textgenerator/templates/dalle/modFanart.md",
+    "textgenerator/templates/dalle/artCartoon.md",
+    "textgenerator/templates/dalle/artWatercolor.md",
+    "textgenerator/templates/dalle/artCyberpunk.md",
+    "textgenerator/templates/dalle/artClaymation.md",
+    "textgenerator/templates/dalle/getPhotos.md",
+    "textgenerator/templates/dalle/artChildrenDrawing.md",
+    "textgenerator/templates/dalle/sitNature.md",
+    "textgenerator/templates/dalle/ligFlare.md",
+    "textgenerator/templates/dalle/artTimBurton.md",
+    "textgenerator/templates/dalle/ligAmbient.md",
+    "textgenerator/templates/dalle/artUkiyoe.md",
+    "textgenerator/templates/dalle/artGraffiti.md",
+    "textgenerator/templates/dalle",
+    "textgenerator/templates/awesomePrompts",
+    "textgenerator/templates/default",
+    "textgenerator/templates",
+    "textgenerator",
+    "Pasted image 20241027172413.png",
+    "Sem título.canvas",
+    "smart-chats",
+    "Series Temporais",
+    "Pasted image 20241027172419.png",
     "Matematica/Algebra Linear",
     "Matematica",
     "Machine Learning/Parte 1 - Fundamentos",
-    "Machine Learning",
-    "Relatório.md",
-    "conflict-files-obsidian-git.md",
     "Pasted image 20241015144351.png",
     "Pasted image 20241015144339.png",
     "Pasted image 20241015144255.png",
-    "Grafos.md",
-    "PAA.md",
-    "smart-chats",
-    "Formulação Matemática do Problema de Empacotamento em Caixas Unidimensional 1.md",
-    "smart-chats/UNTITLED CHAT 2024-07-06 23 36 25.md",
-    "Aula 01 -.md",
-    "Curso Dockers",
-    "Dijkstra.md",
-    "Computação/README.md",
-    "Computação/Data Structures.md",
-    "Computação/Álgebra.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
-    "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
-    "Provas de Corretude de Algoritmos/Corretude de Algoritmos.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Activity Selection Problem.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Assign Mice to Holes.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Fitting Shelves Problem.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Policemen catch thieves.md",
-    "Provas de Corretude de Algoritmos/Gulosos/Egyptian Fraction.md",
-    "Provas de Corretude de Algoritmos/Gulosos",
-    "Provas de Corretude de Algoritmos",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
     "Probabilidade e Estatistica/Pasted image 20240407124805.png",
-    "Probabilidade e Estatistica/Pasted image 20240226173805.png",
-    "Ciência de Dados"
+    "Probabilidade e Estatistica/Pasted image 20240226173805.png"
   ]
 }

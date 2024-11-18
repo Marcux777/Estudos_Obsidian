@@ -1,14 +1,14 @@
 
-[[Disjoint Set Union]]
+- [[Disjoint Set Union]]
 
-[[Fenwick Tree]]
+- [[Fenwick Tree]]
 
-[[Sqrt Decomposition]]
+- [[Sqrt Decomposition]]
 
-[[Segment Tree]]
+- [[Segment Tree]]
 
-[[Treap (Cartesian tree)]]
+- [[Treap (Cartesian tree)]]
 
-[[Sqrt Tree]]
+- [[Sqrt Tree]]
 
-[[Randomized Heap]]
+- [[Randomized Heap]]
