@@ -11,10 +11,15 @@
             "id": "d5f1c69751150113",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Computação/One for All/Artigos/Fundamentals - Data Structures.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Fundamentals - Data Structures"
             }
           }
         ]
@@ -134,9 +139,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Computação/One for All/Artigos/Fundamentals - Data Structures.md"
+              },
               "icon": "lucide-list",
-              "title": "Sumário"
+              "title": "Sumário de Fundamentals - Data Structures"
             }
           },
           {
@@ -165,8 +172,8 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Smart Connections Chat"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           },
           {
@@ -204,7 +211,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,13 +230,25 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "af5fa2d9e0cae015",
+  "active": "d5f1c69751150113",
   "lastOpenFiles": [
+    "Computação/Data Structures.md",
+    "Computação/README.md",
+    "Computação/Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Diversos - Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Sistemas numéricos - Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
+    "Computação/One for All/Artigos/Montgomery Multiplication.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Funções Teoria dos Números - Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Número de divisores - soma de divisores.md",
+    "Computação/One for All/Artigos/Competitive Programming/Números Primos  - Álgebra.md",
+    "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
+    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo de Euclides para calcular o maior divisor comum.md",
+    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
     "smart-chats/UNTITLED CHAT 2024-11-17 04 15 35.md",
     "Pré-Cálculo.md",
     "Sumario.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "textgenerator/templates/dalle/dall-e-core.md",
     "textgenerator/templates/dalle/artGlitchcore.md",
     "textgenerator/templates/dalle/ligCinematic.md",
@@ -238,18 +258,6 @@
     "textgenerator/templates/dalle/artColoringBook.md",
     "textgenerator/templates/dalle/artPixel.md",
     "textgenerator/templates/dalle/modFanart.md",
-    "textgenerator/templates/dalle/artCartoon.md",
-    "textgenerator/templates/dalle/artWatercolor.md",
-    "textgenerator/templates/dalle/artCyberpunk.md",
-    "textgenerator/templates/dalle/artClaymation.md",
-    "textgenerator/templates/dalle/getPhotos.md",
-    "textgenerator/templates/dalle/artChildrenDrawing.md",
-    "textgenerator/templates/dalle/sitNature.md",
-    "textgenerator/templates/dalle/ligFlare.md",
-    "textgenerator/templates/dalle/artTimBurton.md",
-    "textgenerator/templates/dalle/ligAmbient.md",
-    "textgenerator/templates/dalle/artUkiyoe.md",
-    "textgenerator/templates/dalle/artGraffiti.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",
