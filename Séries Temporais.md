@@ -82,7 +82,7 @@ A escolha do método dependerá das características específicas da série temp
 
 ## 4. Modelos de Séries Temporais
 
-### 4.1 Modelos Autorregressivos (AR) na Análise de Séries Temporais
+### 4.1. Modelos Autorregressivos (AR) na Análise de Séries Temporais
 
 Os modelos autorregressivos (AR) são uma classe fundamental de modelos de séries temporais usados para prever valores futuros com base em observações passadas. A característica definidora de um modelo AR é expressar o valor atual de uma série temporal como uma combinação linear de seus próprios valores passados, somados a um termo de erro aleatório.
 
@@ -123,7 +123,7 @@ Os modelos AR têm ampla aplicação em várias áreas, como:
 - **Entendimento das dinâmicas subjacentes:** Identificar padrões e relações nos dados, como a persistência de choques ou a presença de ciclos.
 - **Modelagem e simulação de sistemas:** Criar modelos que capturam o comportamento de sistemas complexos ao longo do tempo.
 
-### 4.2 Explorando Modelos de Média Móvel (MA)
+### 4.2. Explorando Modelos de Média Móvel (MA)
 
 Os modelos de média móvel (MA) constituem outra família fundamental de modelos de séries temporais. Em contraste com os modelos AR, que se baseiam nas defasagens da própria variável, os modelos MA expressam o valor atual como uma função linear dos valores presentes e passados de um termo de erro aleatório. Este termo de erro, frequentemente chamado de "ruído branco", é assumido como uma sequência de variáveis independentes e identicamente distribuídas, com média zero e variância constante.
 
@@ -177,7 +177,7 @@ Os modelos MA são ferramentas valiosas na análise de séries temporais, úteis
 
 Os modelos MA, junto com os modelos AR, formam a base para o entendimento de modelos mais complexos, como ARMA, ARIMA e SARIMA. Compreender sua estrutura e propriedades é essencial para a análise eficaz de séries temporais.
 
-### 4.3 Modelos Autorregressivos de Média Móvel (ARMA)
+### 4.3. Modelos Autorregressivos de Média Móvel (ARMA)
 
 Os modelos ARMA são um conceito central na análise de séries temporais, oferecendo uma estrutura poderosa para modelar e prever dados com dependências temporais. Eles combinam os recursos dos modelos autorregressivos (AR) e de média móvel (MA), permitindo uma representação mais flexível e abrangente do processo gerador dos dados.
 
@@ -243,7 +243,7 @@ Um exemplo prático é o modelo ARMA(1, 1), que combina um único termo AR e um 
 
 Os modelos ARMA são componentes essenciais da análise de séries temporais, fornecendo um equilíbrio entre simplicidade e poder preditivo. A escolha do modelo ideal deve sempre considerar as características dos dados, os diagnósticos do modelo e o objetivo da análise.
 
-### 4.4 Modelos Autorregressivos Integrados de Médias Móveis (ARIMA)
+### 4.4. Modelos Autorregressivos Integrados de Médias Móveis (ARIMA)
 
 Os modelos ARIMA são uma classe de modelos estatísticos amplamente utilizados para a previsão de séries temporais. Eles são especialmente úteis para séries não estacionárias, ou seja, aquelas cujas propriedades estatísticas, como média e variância, mudam ao longo do tempo. O acrônimo ARIMA representa três componentes principais do modelo:
 

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Séries Temporais.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               },
@@ -213,17 +213,26 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
+            }
+          },
+          {
+            "id": "0ef15148ce948819",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
               "icon": "smart-connections",
               "title": "Smart Connections Files"
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 418.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,8 +250,10 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "adceecad73a69bb0",
+  "active": "3d9270037ab27482",
   "lastOpenFiles": [
+    "smart-chats/UNTITLED CHAT 2024-11-23 15 09 53.md",
+    "smart-chats/UNTITLED CHAT 2024-11-22 22 56 37.md",
     "textgenerator/templates/awesomePrompts/fullstacksoftwaredeveloperAwesome.md",
     "Séries Temporais.md",
     "Computação/One for All/Artigos/Fundamentals - Data Structures.md",
@@ -267,8 +278,6 @@
     "textgenerator/templates/dalle/artGlitchcore.md",
     "textgenerator/templates/dalle/ligCinematic.md",
     "textgenerator/templates/dalle/artTakashiMurakami.md",
-    "textgenerator/templates/dalle/artSynthwave.md",
-    "textgenerator/templates/dalle/quaCinematic.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",

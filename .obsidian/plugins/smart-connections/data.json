@@ -31,7 +31,39 @@
   "version": "2.1.83",
   "free_chat_uses": 5,
   "google_gemini": {
-    "api_key": "AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE"
+    "api_key": "AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE",
+    "model_name": "gemini-1.5-pro-001",
+    "description": "Stable version of Gemini 1.5 Pro, our mid-size multimodal model that supports up to 2 million tokens, released in May of 2024.",
+    "type": "API",
+    "api_key_header": "none",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/MODEL_NAME:generateContent",
+    "endpoint_streaming": "https://generativelanguage.googleapis.com/v1beta/models/MODEL_NAME:streamGenerateContent",
+    "streaming": true,
+    "actions": true,
+    "adapter": "Gemini",
+    "fetch_models": true,
+    "default_model": "gemini-1.5-pro",
+    "signup_url": "https://ai.google.dev/",
+    "key": "gemini-1.5-pro-001",
+    "max_input_tokens": 2000000,
+    "multimodal": true,
+    "raw": {
+      "name": "models/gemini-1.5-pro-001",
+      "version": "001",
+      "displayName": "Gemini 1.5 Pro 001",
+      "description": "Stable version of Gemini 1.5 Pro, our mid-size multimodal model that supports up to 2 million tokens, released in May of 2024.",
+      "inputTokenLimit": 2000000,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    }
   },
   "muted_notices": {
     "api key test pass": true,
