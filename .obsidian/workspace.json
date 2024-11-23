@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ea67df21f312de91",
+        "id": "dfb9ace8d0f0bc88",
         "type": "tabs",
         "children": [
           {
-            "id": "adceecad73a69bb0",
+            "id": "b44f78839877ce41",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,8 +183,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "smart-connections",
+              "title": "Smart Connections Files"
             }
           },
           {
@@ -193,8 +193,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "smart-connections",
+              "title": "Smart Connections Files"
             }
           },
           {
@@ -213,8 +213,8 @@
             "state": {
               "type": "smart-connections-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "smart-connections",
+              "title": "Smart Connections Files"
             }
           },
           {
@@ -228,11 +228,12 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -250,12 +251,16 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "3d9270037ab27482",
+  "active": "b44f78839877ce41",
   "lastOpenFiles": [
     "smart-chats/UNTITLED CHAT 2024-11-23 15 09 53.md",
     "smart-chats/UNTITLED CHAT 2024-11-22 22 56 37.md",
-    "textgenerator/templates/awesomePrompts/fullstacksoftwaredeveloperAwesome.md",
+    "smart-chats/UNTITLED CHAT 2024-11-17 04 15 35.md",
+    "smart-chats/UNTITLED CHAT 2024-11-17 03 39 47.md",
     "Séries Temporais.md",
+    "Sumario.md",
+    "Computação/One for All/Artigos/Sparse Table.md",
+    "textgenerator/templates/awesomePrompts/fullstacksoftwaredeveloperAwesome.md",
     "Computação/One for All/Artigos/Fundamentals - Data Structures.md",
     "Computação/Data Structures.md",
     "Computação/README.md",
@@ -271,13 +276,9 @@
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo de Euclides para calcular o maior divisor comum.md",
     "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
     "Computação/One for All/Artigos/Disjoint Set Union.md",
-    "smart-chats/UNTITLED CHAT 2024-11-17 04 15 35.md",
     "Pré-Cálculo.md",
-    "Sumario.md",
     "textgenerator/templates/dalle/dall-e-core.md",
     "textgenerator/templates/dalle/artGlitchcore.md",
-    "textgenerator/templates/dalle/ligCinematic.md",
-    "textgenerator/templates/dalle/artTakashiMurakami.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",

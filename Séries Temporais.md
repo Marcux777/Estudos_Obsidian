@@ -326,3 +326,96 @@ Embora as fontes discutam os fundamentos teóricos, ferramentas como `statsmodel
 Essas ferramentas facilitam a aplicação prática e a interpretação dos resultados, permitindo análises robustas de séries temporais.
 
 Os modelos ARIMA são fundamentais para analisar e prever séries temporais não estacionárias. Sua flexibilidade os torna amplamente aplicáveis em finanças, economia, ciência ambiental e muitas outras áreas. A escolha do modelo ideal depende das características dos dados, do objetivo da análise e dos diagnósticos realizados.
+
+## 5. Decomposição de Séries Temporais
+
+A decomposição de séries temporais é uma técnica estatística avançada que permite desagregar uma série temporal em seus componentes fundamentais, como tendência, sazonalidade e ruído. Essa abordagem é essencial para entender a dinâmica subjacente dos dados, possibilitando uma análise mais precisa e a construção de modelos preditivos mais robustos.
+
+## Métodos Fundamentais de Decomposição
+
+Dois métodos principais são amplamente utilizados na decomposição de séries temporais: a abordagem aditiva e a multiplicativa. Cada método é adequado para diferentes tipos de séries, dependendo da natureza dos componentes envolvidos.
+
+### Decomposição Aditiva
+
+A decomposição aditiva pressupõe que a série temporal é a soma dos componentes de tendência, sazonalidade e ruído:
+
+Onde:
+
+- **$Y_t$**: Valor observado da série temporal no tempo _t_.
+    
+- **$T_t$**: Componente de tendência no tempo _t_.
+    
+- **$S_t$**: Componente sazonal no tempo _t_.
+    
+- **$R_t$**: Componente residual ou ruído no tempo _t_.
+    
+
+Este método é ideal para séries temporais nas quais as flutuações sazonais têm uma magnitude relativamente constante, independentemente do nível da tendência. Por exemplo, se uma loja vende consistentemente 100 unidades adicionais de um produto em dezembro, independentemente de um crescimento ou declínio geral nas vendas, a decomposição aditiva seria mais apropriada.
+
+### Decomposição Multiplicativa
+
+A decomposição multiplicativa, por outro lado, assume que a série temporal é o produto dos componentes de tendência, sazonalidade e ruído:
+
+Essa abordagem é recomendada quando a magnitude das flutuações sazonais é proporcional ao nível da tendência. Ou seja, os efeitos sazonais aumentam ou diminuem em proporção direta ao valor da tendência. Por exemplo, se as vendas de uma loja aumentam em 20% a cada dezembro e esse aumento é proporcional ao volume total de vendas, o modelo multiplicativo capturará essa relação de forma mais precisa.
+
+## Critérios para Escolha entre Métodos Aditivo e Multiplicativo
+
+A escolha entre os modelos aditivo e multiplicativo depende principalmente da natureza dos padrões sazonais da série temporal:
+
+- **Modelo Aditivo**: Deve ser utilizado quando os padrões sazonais são constantes em termos de amplitude, independentemente do nível da tendência.
+    
+- **Modelo Multiplicativo**: É mais adequado quando os padrões sazonais variam proporcionalmente ao nível da tendência.
+    
+
+Visualizar a série temporal frequentemente oferece insights valiosos sobre qual abordagem de decomposição é mais apropriada, facilitando a escolha do método correto para a análise.
+
+## Decomposição Clássica de Séries Temporais
+
+A decomposição clássica de séries temporais é um método padrão para desagregar uma série em componentes básicos que ajudam a identificar padrões persistentes nos dados.
+
+### Componentes da Decomposição Clássica
+
+1. **Tendência ($T_t$)**: Reflete o padrão de longo prazo da série, indicando a direção geral (crescente, decrescente ou estável) ao longo do tempo.
+    
+2. **Sazonalidade ($S_t$)**: Representa padrões que se repetem em intervalos regulares, como meses ou trimestres, geralmente associados a ciclos anuais ou mensais.
+    
+3. **Ciclicidade ($C_t$)**: Flutuações de longo prazo que não possuem uma frequência fixa, muitas vezes relacionadas a ciclos econômicos ou de mercado.
+    
+4. **Irregularidade ($I_t$)**: Componente residual que captura flutuações aleatórias ou eventos imprevisíveis, muitas vezes considerados ruído.
+    
+
+### Modelos Aditivo e Multiplicativo na Decomposição Clássica
+
+- **Modelo Aditivo**: Usado quando as flutuações sazonais têm amplitude constante.
+    
+- **Modelo Multiplicativo**: Adequado quando a magnitude da sazonalidade varia proporcionalmente ao nível da tendência.
+    
+
+### Etapas da Decomposição Clássica
+
+1. **Estimativa da Tendência**: A tendência pode ser estimada por métodos como médias móveis ou regressão linear, fornecendo uma visão clara do comportamento de longo prazo.
+    
+2. **Estimativa da Sazonalidade**: A sazonalidade é determinada removendo a tendência da série original e tomando a média dos valores correspondentes de ciclos repetidos, como meses ou estações do ano.
+    
+3. **Estimativa da Ciclicidade**: A separação da ciclicidade pode ser desafiadora, e muitas vezes ela é agrupada com o componente de irregularidade.
+    
+4. **Estimativa da Irregularidade**: O componente residual é obtido subtraindo os componentes de tendência, sazonalidade e ciclicidade da série original.
+    
+
+### Limitações da Decomposição Clássica
+
+- **Assume Relações Simples**: A decomposição clássica depende de uma relação estritamente aditiva ou multiplicativa entre os componentes, o que pode não capturar a complexidade de séries mais sofisticadas.
+    
+- **Sensibilidade a Outliers**: Valores atípicos podem distorcer as estimativas dos componentes, reduzindo a precisão do modelo.
+    
+- **Incapacidade de Lidar com Padrões Não Lineares**: Séries temporais com padrões altamente não lineares podem não ser bem representadas pela decomposição clássica.
+    
+
+### Alternativas Modernas
+
+- **STL (Seasonal and Trend Decomposition using Loess)**: Uma abordagem mais flexível e robusta que permite capturar padrões não lineares de forma eficaz.
+    
+- **Método X-11**: Um método iterativo avançado que ajusta sazonalidade e tendência repetidamente até uma convergência satisfatória, oferecendo uma análise mais detalhada dos componentes.
+    
+
+A decomposição de séries temporais desempenha um papel crucial na análise exploratória, auxiliando na compreensão dos padrões subjacentes e na preparação dos dados para técnicas de modelagem mais avançadas. A escolha do método de decomposição adequado depende das características da série e do objetivo específico da análise.
