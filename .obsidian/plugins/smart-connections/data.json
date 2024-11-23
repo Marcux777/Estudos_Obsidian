@@ -35,6 +35,7 @@
   },
   "muted_notices": {
     "api key test pass": true,
-    "Notice muted": true
+    "Notice muted": true,
+    "start embedding": true
   }
 }
