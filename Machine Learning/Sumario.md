@@ -3,7 +3,6 @@
 Aqui estão alguns tópicos para um curso de Aprendizado de Máquina, começando com material introdutório até conceitos mais avançados:
 
 ### **Parte I - Fundamentos**
-- [[Séries Temporais]]
 * **[[Introdução ao Aprendizado de Máquina]]**:
     * O que é Aprendizado de Máquina?
     * Tipos de aprendizado de máquina: Aprendizado Supervisionado, Aprendizado Não Supervisionado, Aprendizado por Reforço.
