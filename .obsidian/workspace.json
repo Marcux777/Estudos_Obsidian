@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Séries Temporais.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               },
@@ -203,6 +203,10 @@
   },
   "active": "11b1b08f0d106da4",
   "lastOpenFiles": [
+    "Pasted image 20241124163558.png",
+    "Pasted image 20241124162511.png",
+    "Pasted image 20241124162454.png",
+    "Pasted image 20241124162230.png",
     "Machine Learning/Sumario.md",
     "Séries Temporais.md",
     "Pré-Cálculo.md",
@@ -229,7 +233,6 @@
     "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Número de Fibonacci.md",
     "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Equações Diofantinas Lineares.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo de Euclides Estendido.md",
-    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo de Euclides para calcular o maior divisor comum.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",
@@ -246,9 +249,6 @@
     "Pasted image 20241015144339.png",
     "Pasted image 20241015144255.png",
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
-    "Probabilidade e Estatistica/Pasted image 20240407140246.png",
-    "Probabilidade e Estatistica/Pasted image 20240407124816.png",
-    "Probabilidade e Estatistica/Pasted image 20240407124805.png",
-    "Probabilidade e Estatistica/Pasted image 20240226173805.png"
+    "Probabilidade e Estatistica/Pasted image 20240407140246.png"
   ]
 }

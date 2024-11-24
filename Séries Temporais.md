@@ -37,7 +37,8 @@ Essa distinção é fundamental para a escolha da metodologia apropriada ao se a
 
 ### Importância e Aplicações Práticas de Séries Temporais
 ---
-A análise de séries temporais é essencial para compreender a dinâmica de sistemas complexos, prever valores futuros e desenvolver estratégias de controle. Ao investigar padrões e tendências ao longo do tempo, obtém-se uma compreensão aprofundada dos mecanismos subjacentes que geram os dados, possibilitando uma análise mais precisa e fundamentada. Além disso, os modelos de séries temporais são fundamentais para previsões, fornecendo suporte à tomada de decisões estratégicas, como a estimativa da demanda futura de produtos em uma organização ou a previsão do crescimento econômico de um país.
+A análise de séries temporais é essencial para compreender a dinâmica de sistemas complexos, prever valores futuros e desenvolver estratégias de controle. Ao investigar padrões e tendências ao longo do tempo, obtém-se uma compreensão aprofundada dos mecanismos subjacentes que geram os dados, possibilitando uma análise mais precisa e fundamentada. 
+Além disso, os modelos de séries temporais são fundamentais para previsões, fornecendo suporte à tomada de decisões estratégicas, como a estimativa da demanda futura de produtos em uma organização ou a previsão do crescimento econômico de um país.
 
 Entender a dinâmica de uma série temporal não apenas permite previsões mais precisas, mas também possibilita o desenvolvimento de estratégias de controle do sistema gerador dos dados. Por exemplo, o controle de qualidade em processos de manufatura pode se beneficiar da análise de séries temporais para identificar padrões de variação e implementar intervenções corretivas. Da mesma forma, a gestão do fluxo de eletricidade em redes de energia requer o uso de séries temporais para prever a demanda e otimizar o fornecimento, garantindo estabilidade e eficiência no sistema.
 
@@ -47,10 +48,9 @@ Na engenharia, séries temporais são usadas para monitorar processos industriai
 
 Exemplos concretos de séries temporais incluem o valor de fechamento diário da Bolsa de Valores de São Paulo (BOVESPA) no contexto financeiro, a pressão atmosférica mensal em Fortaleza na área da meteorologia, e a concentração diária de poluentes atmosféricos nos Estados Unidos no campo ambiental. Esses exemplos ilustram a ampla variedade de fenômenos que podem ser investigados por meio da análise de séries temporais, com métodos específicos adaptados conforme as características dos dados e os objetivos da análise.
 
-A escolha da técnica apropriada depende não apenas das propriedades estatísticas da série temporal, mas também da natureza do problema e das perguntas de pesquisa subjacentes.
+Na Imagem, tem o classico exemplo da Série Temporal AirPassengers.
 
-
-
+![[Pasted image 20241124162511.png]]
 ## 2. Componentes de uma Série Temporal
 ---
 Os componentes de uma série temporal representam padrões distintos que contribuem para o comportamento geral de uma série, sendo fundamentais para análises e previsões precisas. Abaixo está um detalhamento de cada componente:
@@ -62,6 +62,9 @@ Os componentes de uma série temporal representam padrões distintos que contrib
 - **Ciclicidade (Cycles):** Diferentemente da sazonalidade, os ciclos são padrões que se repetem em **períodos superiores a um ano**. Esses ciclos podem ser **irregulares em sua duração e magnitude** e não estão necessariamente relacionados a eventos de calendário. Fatores que contribuem para a ciclicidade incluem ciclos econômicos, mudanças demográficas ou fenômenos como variações de manchas solares. Compreender a ciclicidade é essencial para o planejamento de longo prazo e para decisões estratégicas, especialmente em áreas como economia e finanças.
 
 - **Irregularidade ou Ruído (Irregularity or Noise):** A irregularidade ou o ruído representam as **flutuações aleatórias** em uma série temporal que **não podem ser explicadas pelos outros componentes**. O ruído pode surgir de diversas fontes, como erros de medição, eventos aleatórios ou flutuações imprevisíveis no sistema em análise. Embora o ruído possa obscurecer padrões subjacentes, é importante reconhecer que ele é uma parte inerente de muitas séries temporais do mundo real.
+
+Ilustrando isso, temos a seguinte decomposição da Série Temporal AirPassangers
+![[Pasted image 20241124163558.png]]
 ## 3. Estacionariedade
 ---
 ### Conceito de Estacionariedade
