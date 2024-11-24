@@ -11,10 +11,15 @@
             "id": "11b1b08f0d106da4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Séries Temporais.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Séries Temporais"
             }
           }
         ]
@@ -109,25 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
+                "file": "Séries Temporais.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Álgebra Linear"
-            }
-          },
-          {
-            "id": "07f46dc9a4bfa26b",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Links de saída para Séries Temporais"
             }
           },
           {
@@ -135,59 +127,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Séries Temporais.md"
+              },
               "icon": "lucide-list",
-              "title": "Sumário"
-            }
-          },
-          {
-            "id": "84770d11087643f7",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
-            }
-          },
-          {
-            "id": "f50f55445b739218",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "3d9270037ab27482",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "d06a94111b4c0d8d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "f6c2a1c152291281",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "title": "Sumário de Séries Temporais"
             }
           },
           {
@@ -201,31 +145,32 @@
             }
           },
           {
-            "id": "c73fcc418760d5ab",
+            "id": "f2484abc0fad0135",
             "type": "leaf",
             "state": {
-              "type": "smart-connections-view",
+              "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
             }
           },
           {
-            "id": "0ef15148ce948819",
+            "id": "3da64097ff09db98",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
               "state": {},
               "icon": "smart-connections",
-              "title": "Smart Connections Files"
+              "title": "Smart Connections"
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -243,8 +188,13 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "0ef15148ce948819",
+  "active": "11b1b08f0d106da4",
   "lastOpenFiles": [
+    "Machine Learning/Sumario.md",
+    "Séries Temporais.md",
+    "Pré-Cálculo.md",
+    "textgenerator/templates/smartConnections/summarize.md",
+    "textgenerator/templates/smartConnections",
     "Computação/One for All/Artigos/Algebra/Discrete Log/Discrete Log.md",
     "Computação/One for All/Artigos/Algebra/Aritmética modular - Álgebra.md",
     "Computação/One for All/Artigos/Algebra/Factorial modulo p/Factorial modulo p.md",
@@ -267,10 +217,6 @@
     "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Equações Diofantinas Lineares.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo de Euclides Estendido.md",
     "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides para calcular o maior divisor comum/Algoritmo de Euclides para calcular o maior divisor comum.md",
-    "Computação/One for All/Artigos/Algebra/Binary Exponentiation/Binary Exponentiation.md",
-    "Séries Temporais.md",
-    "smart-chats/UNTITLED CHAT 2024-11-23 15 09 53.md",
-    "smart-chats/UNTITLED CHAT 2024-11-22 22 56 37.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",
@@ -283,7 +229,6 @@
     "Pasted image 20241027172419.png",
     "Matematica/Algebra Linear",
     "Matematica",
-    "Machine Learning/Parte 1 - Fundamentos",
     "Pasted image 20241015144351.png",
     "Pasted image 20241015144339.png",
     "Pasted image 20241015144255.png",
