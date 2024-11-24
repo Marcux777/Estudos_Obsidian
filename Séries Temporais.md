@@ -199,8 +199,7 @@ Onde:
 #### Estacionariedade
 
 A estacionariedade em processos ARMA depende exclusivamente do componente AR. O processo é estacionário se as raízes da equação característica:
-
-**$1 - φ_1 z - φ_2 z^2 - … - φ_p z^p = 0$**
+**$$1 - φ_1 z - φ_2 z^2 - … - φ_p z^p = 0$$**
 
 estiverem fora do círculo unitário. Isso garante que o processo tenha média e variância constantes ao longo do tempo.
 
@@ -233,8 +232,7 @@ Os modelos ARMA são amplamente aplicados em diversas áreas, incluindo:
 - **Engenharia:** Monitoramento e controle de processos industriais.
 
 Um exemplo prático é o modelo ARMA(1, 1), que combina um único termo AR e um único termo MA:
-
-**$Y_t = c + φ_1 Y_{t-1} + ε_t + θ_1 ε_{t-1}$**
+**$$Y_t = c + φ_1 Y_{t-1} + ε_t + θ_1 ε_{t-1}$$**
 
 #### Extensões e Considerações
 
@@ -247,87 +245,18 @@ Os modelos ARMA são componentes essenciais da análise de séries temporais, fo
 ---
 ### 4.4. Modelos Autorregressivos Integrados de Médias Móveis (ARIMA)
 ---
-Os modelos ARIMA são uma classe de modelos estatísticos amplamente utilizados para a previsão de séries temporais. Eles são especialmente úteis para séries não estacionárias, ou seja, aquelas cujas propriedades estatísticas, como média e variância, mudam ao longo do tempo. O acrônimo ARIMA representa três componentes principais do modelo:
 
-#### Componentes do Modelo ARIMA
+Os modelos ARIMA são uma classe de modelos estatísticos amplamente utilizados para a previsão de séries temporais, especialmente úteis para séries não estacionárias, cujas propriedades estatísticas, como média e variância, mudam ao longo do tempo. O acrônimo ARIMA representa três componentes principais: Autoregressivo (AR), Integrado (I) e Média Móvel (MA).
 
-1. **Autoregressivo (AR):**
-   - Este componente utiliza valores passados da série temporal para prever valores futuros.
-   - O número de valores defasados usados é denotado por *p*.
-   - Exemplo:
-     - Um modelo AR(1) usa apenas o valor anterior da série para prever o valor atual.
-     - Um modelo AR(2) utiliza os dois valores anteriores, e assim por diante.
+O componente **Autoregressivo (AR)** utiliza valores passados da série temporal para prever valores futuros, onde o número de valores defasados usados é denotado por *p*. Por exemplo, um modelo AR(1) usa apenas o valor anterior da série, enquanto um modelo AR(2) utiliza os dois valores anteriores. Já o componente **Integrado (I)** lida com a não estacionariedade da série, envolvendo a diferenciação dos dados para remover tendências ou sazonalidades. A ordem de diferenciação é indicada por *d*, e uma série que se torna estacionária após ser diferenciada uma vez é classificada como I(1). O componente **Média Móvel (MA)** utiliza erros de previsão passados para prever valores futuros, com o número de termos de erro defasados indicado por *q*. Um modelo MA(1) considera apenas o erro do período anterior, enquanto MA(2) utiliza os dois erros anteriores.
 
-2. **Integrado (I):**
-   - Este componente lida com a não estacionariedade da série temporal.
-   - Envolve a diferenciação dos dados, que consiste em subtrair valores passados dos valores atuais para remover tendências ou sazonalidade.
-   - O número de vezes que os dados são diferenciados é denotado por *d*.
-   - Exemplo:
-     - Se uma série se torna estacionária após ser diferenciada uma vez, ela é classificada como I(1).
+Um modelo ARIMA é denotado como **ARIMA(p, d, q)**. Ao aplicar diferenças de ordem *d* a um processo ARIMA(p, d, q), ele se torna um processo estacionário ARMA(p, q). A seleção dos parâmetros *p*, *d* e *q* é crucial para o sucesso do modelo, e métodos como a análise das funções de autocorrelação (ACF) e autocorrelação parcial (PACF), testes de raiz unitária (como o Dickey-Fuller) e critérios de informação (AIC e BIC) são úteis para identificar os valores mais adequados.
 
-3. **Média Móvel (MA):**
-   - Este componente utiliza erros de previsão passados para prever valores futuros.
-   - O número de termos de erro defasados usados é denotado por *q*.
-   - Exemplo:
-     - Um modelo MA(1) usa apenas o erro de previsão do período anterior.
-     - Um modelo MA(2) utiliza os dois erros de previsão anteriores, e assim por diante.
+Os modelos ARIMA apresentam propriedades importantes, como **estacionariedade**, que depende dos parâmetros AR, e **invertibilidade**, que garante que um modelo MA possa ser representado como um modelo AR de ordem infinita, assegurando a unicidade na estimativa dos parâmetros. Modelos ARIMA são amplamente usados para **previsão**, utilizando dados históricos para ajustar os parâmetros e prever valores futuros. A combinação dos componentes AR e MA pode resultar em modelos mais complexos, como ARMA(p, q). A **estimação de máxima verossimilhança** é frequentemente utilizada para ajustar os parâmetros, assumindo erros normalmente distribuídos. Além disso, a **representação em espaço de estados** oferece uma forma conveniente de representar sistemas dinâmicos e permite o uso do filtro de Kalman para estimativa e previsão.
 
-Um modelo ARIMA, portanto, é denotado como **ARIMA(p, d, q)**. Ao aplicar diferenças de ordem *d* a um processo ARIMA(p, d, q), ele se torna um processo estacionário ARMA(p, q).
+Há várias **extensões e conceitos relacionados** aos modelos ARIMA. A **integração fracionária** lida com memórias longas, onde os efeitos dos choques persistem por longos períodos. Os **modelos VAR (Vetores Autorregressivos)** estendem os princípios dos modelos AR para séries multivariadas, capturando as relações entre múltiplas variáveis. Já a **cointegração** analisa equilíbrios de longo prazo entre variáveis não estacionárias, sendo um conceito fundamental para entender relações entre diferentes séries temporais.
 
-#### Escolha de Parâmetros
-
-A seleção dos parâmetros _p_, _d_ e _q_ é crucial para o sucesso do modelo. Métodos sugeridos incluem:
-
-- **Funções de Autocorrelação (ACF) e Autocorrelação Parcial (PACF)**: Analisar essas funções ajuda a identificar valores potenciais para _p_ e _q_.
-    
-- **Testes de Raiz Unitária**: Testes como o de Dickey-Fuller ajudam a determinar a ordem de integração (_d_).
-    
-- **Critérios de Informação**: Métricas como **AIC** (Critério de Informação de Akaike) e **BIC** (Critério de Informação Bayesiano) auxiliam na comparação de modelos e na seleção do mais adequado.
-
-#### Propriedades Relevantes
-
-1. **Estacionariedade:**
-   - Os processos ARMA são estacionários se suas propriedades estatísticas permanecerem constantes ao longo do tempo.
-   - A estacionariedade de um processo ARMA depende exclusivamente dos parâmetros AR.
-
-2. **Invertibilidade:**
-   - Um modelo MA ou ARMA é invertível se puder ser representado como um modelo AR de ordem infinita.
-   - Isso garante unicidade na estimativa de parâmetros e facilita a seleção do modelo.
-
-3. **Previsão:**
-   - Modelos ARIMA são usados para prever valores futuros com base em dados históricos e parâmetros ajustados.
-
-4. **Soma de Processos ARMA:**
-   - A soma de processos AR e MA pode resultar em modelos mais complexos, como ARMA(p, q).
-
-5. **Estimação de Máxima Verossimilhança:**
-   - Os parâmetros de modelos ARIMA são frequentemente estimados por máxima verossimilhança, assumindo erros normalmente distribuídos.
-
-6. **Representação em Espaço de Estados:**
-   - Oferece uma forma conveniente de representar sistemas dinâmicos, como ARIMA, e permite o uso do filtro de Kalman para estimativa e previsão.
-
-#### Extensões e Conceitos Relacionados
-
-1. **Integração Fracionária:**
-   - Permite lidar com memórias longas, onde os efeitos dos choques persistem por longos períodos.
-
-2. **Modelos VAR (Vetores Autorregressivos):**
-   - Estendem os princípios dos modelos AR para séries multivariadas, capturando relações entre múltiplas variáveis.
-
-3. **Cointegração:**
-   - Analisa equilíbrios de longo prazo entre variáveis não estacionárias, conceito relacionado à diferenciação nos modelos ARIMA.
-
-#### Implementação Prática
-
-Embora as fontes discutam os fundamentos teóricos, ferramentas como `statsmodels` em Python ou o pacote `forecast` em R são amplamente utilizadas para:
-
-- Ajustar modelos ARIMA.
-- Realizar diagnósticos.
-- Prever valores futuros.
-
-Essas ferramentas facilitam a aplicação prática e a interpretação dos resultados, permitindo análises robustas de séries temporais.
-
-Os modelos ARIMA são fundamentais para analisar e prever séries temporais não estacionárias. Sua flexibilidade os torna amplamente aplicáveis em finanças, economia, ciência ambiental e muitas outras áreas. A escolha do modelo ideal depende das características dos dados, do objetivo da análise e dos diagnósticos realizados.
+Na prática, ferramentas como `statsmodels` em Python e o pacote `forecast` em R são amplamente utilizadas para ajustar modelos ARIMA, realizar diagnósticos e prever valores futuros, facilitando a aplicação prática e a interpretação dos resultados. Essas ferramentas permitem análises robustas de séries temporais, sendo amplamente aplicáveis em áreas como finanças, economia e ciências ambientais. A escolha do modelo ideal depende das características dos dados, do objetivo da análise e dos diagnósticos realizados, garantindo a melhor performance preditiva e interpretação dos resultados.
 
 ---
 ## 5. Decomposição de Séries Temporais
@@ -500,3 +429,6 @@ Outras métricas, como a soma dos erros ao quadrado (SSE) e o erro quadrático m
     
 
 Compreender os princípios, métodos e considerações da previsão permite realizar estimativas mais informadas sobre o comportamento futuro de séries temporais. A seleção e aplicação das técnicas de previsão devem sempre ser adaptadas às características específicas dos dados e aos objetivos da análise.
+
+---
+## 6. **Detecção de Anomalias**
