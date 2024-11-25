@@ -5,11 +5,11 @@
   },
   "smart_sources": {
     "embed_model": {
-      "model_key": "andersonbcdefg/bge-small-4096",
+      "model_key": "TaylorAI/bge-micro-v2",
       "legacy_transformers": true,
       "TaylorAI/bge-micro-v2": {
-        "gpu_batch_size": 4,
-        "min_chars": 300
+        "gpu_batch_size": null,
+        "min_chars": null
       }
     },
     "smart_change": {

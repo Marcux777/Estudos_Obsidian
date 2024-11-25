@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5235e1216fe2313b",
+        "id": "012879cf5665c971",
         "type": "tabs",
         "children": [
           {
-            "id": "fa6ee56061186690",
+            "id": "acd5ffb5083632b9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Séries Temporais.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Séries Temporais"
+              "title": "Nova aba"
             }
           }
         ]
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Matematica/Algebra Linear/Álgebra Linear.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +98,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Álgebra Linear"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +107,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Séries Temporais.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Séries Temporais"
+              "title": "Links de saída"
             }
           },
           {
@@ -126,11 +119,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Séries Temporais.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Sumário de Séries Temporais"
+              "title": "Sumário"
             }
           },
           {
@@ -149,35 +140,15 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
+                "sortOrder": "alphabetical",
+                "useHierarchy": false
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "a81a6e920988bf0d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "1c32c02eb0874653",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Smart Chat Conversation View"
-            }
-          },
-          {
-            "id": "4e7efd92c87ea6b6",
+            "id": "a0b5eeddbb102ba3",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -185,9 +156,19 @@
               "icon": "smart-connections",
               "title": "Smart Connections"
             }
+          },
+          {
+            "id": "f5d1d53bfabcdf54",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -209,20 +190,21 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "4e7efd92c87ea6b6",
+  "active": "acd5ffb5083632b9",
   "lastOpenFiles": [
-    "smart-chats/UNTITLED CHAT 2024-11-25 14 01 30.md",
     "Séries Temporais.md",
     "Pré-Cálculo.md",
+    "Pasted image 20241124162230.png",
+    "Pasted image 20241124162454.png",
+    "Pasted image 20241124162511.png",
+    "Pasted image 20241124174818.png",
+    "Pasted image 20241124163558.png",
+    "Computação/One for All/Artigos/Segment Tree.md",
+    "smart-chats/UNTITLED CHAT 2024-11-25 14 01 30.md",
     "textgenerator/configs/llm/GeminiAI.json.md",
     "textgenerator/configs/llm",
     "textgenerator/configs",
     "smart-chats/UNTITLED CHAT 2024-11-25 13 58 19.md",
-    "Pasted image 20241124174818.png",
-    "Pasted image 20241124163558.png",
-    "Pasted image 20241124162511.png",
-    "Pasted image 20241124162454.png",
-    "Pasted image 20241124162230.png",
     "Machine Learning/Sumario.md",
     "textgenerator/templates/smartConnections/summarize.md",
     "textgenerator/templates/smartConnections",
@@ -243,8 +225,6 @@
     "Computação/One for All/Artigos/Algebra/Linear Sieve/Crivo Linear.md",
     "Computação/One for All/Artigos/Crivo de Eratóstenes.md",
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
-    "Computação/README.md",
-    "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Número de Fibonacci.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",
