@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e5937ff5eb7c521d",
+        "id": "5235e1216fe2313b",
         "type": "tabs",
         "children": [
           {
-            "id": "11b1b08f0d106da4",
+            "id": "fa6ee56061186690",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "Séries Temporais.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Séries Temporais"
             }
           }
         ]
@@ -73,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "924c32237d82494b",
@@ -122,9 +126,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Séries Temporais.md"
+              },
               "icon": "lucide-list",
-              "title": "Sumário"
+              "title": "Sumário de Séries Temporais"
             }
           },
           {
@@ -135,26 +141,6 @@
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
-            }
-          },
-          {
-            "id": "f2484abc0fad0135",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
-            }
-          },
-          {
-            "id": "3da64097ff09db98",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
             }
           },
           {
@@ -169,14 +155,43 @@
               "icon": "lucide-tags",
               "title": "Tags"
             }
+          },
+          {
+            "id": "a81a6e920988bf0d",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
+            }
+          },
+          {
+            "id": "1c32c02eb0874653",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
+            }
+          },
+          {
+            "id": "4e7efd92c87ea6b6",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Smart Connections"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 418.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,16 +209,21 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "11b1b08f0d106da4",
+  "active": "4e7efd92c87ea6b6",
   "lastOpenFiles": [
+    "smart-chats/UNTITLED CHAT 2024-11-25 14 01 30.md",
     "Séries Temporais.md",
+    "Pré-Cálculo.md",
+    "textgenerator/configs/llm/GeminiAI.json.md",
+    "textgenerator/configs/llm",
+    "textgenerator/configs",
+    "smart-chats/UNTITLED CHAT 2024-11-25 13 58 19.md",
     "Pasted image 20241124174818.png",
     "Pasted image 20241124163558.png",
     "Pasted image 20241124162511.png",
     "Pasted image 20241124162454.png",
     "Pasted image 20241124162230.png",
     "Machine Learning/Sumario.md",
-    "Pré-Cálculo.md",
     "textgenerator/templates/smartConnections/summarize.md",
     "textgenerator/templates/smartConnections",
     "Computação/One for All/Artigos/Algebra/Discrete Log/Discrete Log.md",
@@ -225,8 +245,6 @@
     "Computação/One for All/Artigos/Competitive Programming/Fundamental - Álgebra.md",
     "Computação/README.md",
     "Computação/One for All/Artigos/Algebra/Fibonacci Numbers/Número de Fibonacci.md",
-    "Computação/One for All/Artigos/Algebra/Equações Diofantinas Lineares/Equações Diofantinas Lineares.md",
-    "Computação/One for All/Artigos/Algebra/Algoritmo de Euclides Estendido/Algoritmo de Euclides Estendido.md",
     "textgenerator/templates/dalle",
     "textgenerator/templates/awesomePrompts",
     "textgenerator/templates/default",
@@ -237,8 +255,6 @@
     "smart-chats",
     "Series Temporais",
     "Pasted image 20241027172419.png",
-    "Matematica/Algebra Linear",
-    "Matematica",
     "Pasted image 20241015144351.png",
     "Pasted image 20241015144339.png",
     "Pasted image 20241015144255.png"

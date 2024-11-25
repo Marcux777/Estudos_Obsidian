@@ -1,10 +1,11 @@
 [
   "obsidian-git",
   "table-editor-obsidian",
-  "smart-connections",
   "obsidian-plugin-toc",
   "obsidian-icon-folder",
   "calendar",
   "obsidian-textgenerator-plugin",
-  "execute-code"
+  "execute-code",
+  "smart-connections",
+  "copilot"
 ]

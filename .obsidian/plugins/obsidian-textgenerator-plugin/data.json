@@ -4,7 +4,7 @@
   "models": [],
   "api_key": "",
   "encrypt_keys": false,
-  "selectedProvider": "Google GenerativeAI (Langchain) 1",
+  "selectedProvider": "OpenAI Chat (Langchain)",
   "max_tokens": 500,
   "temperature": 0.7,
   "frequency_penalty": 0.5,
@@ -100,7 +100,8 @@
       "api_key": ""
     },
     "OpenAI Chat (Langchain)": {
-      "basePath": "https://api.openai.com/v1"
+      "basePath": "https://api.openai.com/v1",
+      "api_key": ""
     },
     "Google GenerativeAI (Langchain)": {
       "model": "gemini-1.5-pro",
@@ -113,7 +114,9 @@
   },
   "LLMProviderOptionsKeysHashed": {
     "whisper.api_key": "__@#key_prefix#@__",
-    "Google GenerativeAI (Langchain).api_key": "__@#key_prefix#@__AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE"
+    "Google GenerativeAI (Langchain).api_key": "__@#key_prefix#@__AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE",
+    "Google GenerativeAI (Langchain) 1.api_key": "__@#key_prefix#@__AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE",
+    "OpenAI Chat (Langchain).api_key": "__@#key_prefix#@__sk-wagIDmxFqIQbBcmnQU1aVXwkjvSno_RmkZAhbho_gxT3BlbkFJ7ihzhFq9lr0sT9urK56VHKYxxBN1l6b6CbbNnPFqsA"
   },
-  "api_key_encrypted": "__@#key_prefix#@__"
+  "api_key_encrypted": "__@#key_prefix#@__sk-wagIDmxFqIQbBcmnQU1aVXwkjvSno_RmkZAhbho_gxT3BlbkFJ7ihzhFq9lr0sT9urK56VHKYxxBN1l6b6CbbNnPFqsA"
 }
