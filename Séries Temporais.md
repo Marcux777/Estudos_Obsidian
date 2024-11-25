@@ -440,3 +440,49 @@ A compreensão profunda dos princípios, métodos e desafios envolvidos na previ
 ---
 ## 7. **Detecção de Anomalias**
 
+A **detecção de anomalias** em séries temporais é o processo de identificar observações que se desviam significativamente do comportamento esperado dos dados ao longo do tempo. Essas anomalias podem resultar de erros de medição, mudanças no comportamento ou eventos inesperados.
+
+Para detectar anomalias em séries temporais, é essencial compreender as propriedades estatísticas da série e aplicar modelos adequados. Em séries estacionárias, as anomalias podem ser identificadas como pontos que se desviam significativamente do comportamento esperado. Em séries não estacionárias, pode ser necessário transformá-las em estacionárias antes de aplicar métodos de detecção de anomalias. A escolha do método de detecção dependerá das características específicas dos dados e do tipo de anomalia que se busca identificar.
+
+### Média moveis
+
+As médias móveis são ferramentas estatísticas amplamente utilizadas na análise de séries temporais para suavizar flutuações e destacar tendências subjacentes nos dados. Embora as fontes consultadas não abordem diretamente o uso de médias móveis para detecção de anomalias, sua aplicação pode ser relevante nesse contexto.
+
+#### Médias Móveis e Tendências
+
+- **Suavização**: As médias móveis ajudam a reduzir as irregularidades de curto prazo, facilitando a visualização de padrões de longo prazo na série temporal.
+    
+- **Identificação de Tendências**: Ao suavizar os dados, as médias móveis permitem identificar desvios significativos da tendência esperada, que podem indicar a presença de anomalias.
+    
+
+#### Médias Móveis e Ruído
+
+- **Redução de Ruído**: Séries temporais frequentemente contêm ruído que dificulta a detecção de anomalias. As médias móveis reduzem o impacto desse ruído, tornando os desvios reais mais evidentes.
+    
+1. **Definição de Limiares**: Médias móveis podem ser utilizadas para estabelecer limiares dinâmicos na detecção de anomalias. Pontos de dados que excedem a média móvel por uma margem definida podem ser sinalizados como potenciais anomalias.
+    
+
+#### Aplicação de Médias Móveis na Detecção de Anomalias
+
+Uma abordagem conceitual seria:
+
+1. **Calcular a Média Móvel**: Escolher um tamanho de janela adequado e calcular a média móvel da série temporal.
+    
+2. **Estabelecer um Limiar**: Determinar um limiar com base na variação típica em torno da média móvel, que pode ser um valor fixo ou múltiplo do desvio padrão dos dados.
+    
+3. **Identificar Anomalias**: Sinalizar pontos de dados que ultrapassam o limiar definido como possíveis anomalias.
+    
+
+#### Considerações
+
+- **Tamanho da Janela**: A escolha do tamanho da janela é crucial. Janelas menores são mais sensíveis a flutuações de curto prazo, enquanto janelas maiores são mais robustas ao ruído, mas podem não detectar anomalias de curta duração.
+    
+- **Definição de Limiar**: O limiar deve ser definido cuidadosamente para equilibrar sensibilidade e especificidade, evitando falsos positivos ou negativos.
+
+### Usando Exponencial Smoothing
+
+Nesse caso, pode-se usar a técnica de Exponencial Smoothing para prever toda a série temporal, assim, podemos utilizar dessa previsão para detectar as anomalias.
+
+### Usando o Seasonal-Trend decomposition (STD)
+
+### Usando o modelo Arima

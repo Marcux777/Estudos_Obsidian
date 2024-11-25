@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "012879cf5665c971",
+        "id": "df0956f60eb2b198",
         "type": "tabs",
         "children": [
           {
-            "id": "acd5ffb5083632b9",
+            "id": "f0d4466140b99f24",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -178,11 +178,12 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +201,7 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "8cda43a1e8e21ec5",
+  "active": "f0d4466140b99f24",
   "lastOpenFiles": [
     "Séries Temporais.md",
     "Pré-Cálculo.md",
