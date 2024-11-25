@@ -64,7 +64,7 @@ Os componentes de uma série temporal representam padrões distintos que contrib
 - **Irregularidade ou Ruído (Irregularity or Noise):** A irregularidade ou o ruído representam as **flutuações aleatórias** em uma série temporal que **não podem ser explicadas pelos outros componentes**. O ruído pode surgir de diversas fontes, como erros de medição, eventos aleatórios ou flutuações imprevisíveis no sistema em análise. Embora o ruído possa obscurecer padrões subjacentes, é importante reconhecer que ele é uma parte inerente de muitas séries temporais do mundo real.
 
 Ilustrando isso, temos a seguinte decomposição da Série Temporal AirPassangers
-![[Pasted image 20241124163558.png]]
+![[Pasted image 20241124174818.png]]
 ## 3. Estacionariedade
 ---
 ### Conceito de Estacionariedade
