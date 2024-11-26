@@ -200,7 +200,7 @@ A escolha da ordem apropriada é crucial e geralmente determinada por análises 
 
 #### Estacionariedade
 
-Um pressuposto-chave em muitos modelos de séries temporais, incluindo os AR, é que os dados sejam estacionários. Uma série estacionária possui propriedades estatísticas, como média, variância e autocorrelação, que permanecem constantes ao longo do tempo.
+Um pressuposto-chave em muitos modelos de séries temporais, incluindo os AR, é que os dados sejam estacionários.
 
 A estacionariedade de um processo AR depende dos parâmetros autorregressivos. Se as raízes da equação característica (formada pelos coeficientes AR) estiverem fora do círculo unitário, o processo AR é considerado estacionário. Essa condição garante que a influência de choques passados decaia com o tempo, levando a um processo estável.
 
