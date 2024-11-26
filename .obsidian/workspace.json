@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teste.md",
+                "file": "Séries Temporais.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "teste"
+              "title": "Séries Temporais"
             }
           }
         ],
@@ -205,11 +205,11 @@
   },
   "active": "e37881d2e10a8526",
   "lastOpenFiles": [
-    "Séries Temporais.md",
-    "teste.md",
     "Pré-Cálculo.md",
-    "conflict-files-obsidian-git.md",
     "Sumario.md",
+    "teste.md",
+    "Séries Temporais.md",
+    "conflict-files-obsidian-git.md",
     "Pasted image 20241125184710.png",
     "Pasted image 20241125184708.png",
     "Pasted image 20241124174818.png",
