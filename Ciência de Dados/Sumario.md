@@ -1,4 +1,4 @@
 
-[[Basico de Python]]
+[[Básico de Python]]
 
 [[Probabilidade e Estatística]]
