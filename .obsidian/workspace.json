@@ -21,8 +21,24 @@
               "icon": "lucide-file",
               "title": "Séries Temporais"
             }
+          },
+          {
+            "id": "e37881d2e10a8526",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "teste.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "teste"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Séries Temporais.md",
+                "file": "teste.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Séries Temporais"
+              "title": "Links inversos para teste"
             }
           },
           {
@@ -113,12 +129,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Séries Temporais.md",
+                "file": "teste.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Séries Temporais"
+              "title": "Links de saída para teste"
             }
           },
           {
@@ -140,10 +156,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Séries Temporais.md"
+                "file": "teste.md"
               },
               "icon": "lucide-list",
-              "title": "Sumário de Séries Temporais"
+              "title": "Sumário de teste"
             }
           },
           {
@@ -187,10 +203,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6cf00f34954c1327",
+  "active": "e37881d2e10a8526",
   "lastOpenFiles": [
-    "Pré-Cálculo.md",
     "Séries Temporais.md",
+    "teste.md",
+    "Pré-Cálculo.md",
     "conflict-files-obsidian-git.md",
     "Sumario.md",
     "Pasted image 20241125184710.png",
@@ -230,7 +247,6 @@
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",
     "Redes de Computadores",
-    "Algebra Linear/Espaços Vetoriais.md",
     "Probabilidade e Estatistica",
     "Algebra Linear",
     "Matematica Pura",
