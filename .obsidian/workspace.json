@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Séries Temporais.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               },
@@ -173,8 +173,18 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin desativado"
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
+            }
+          },
+          {
+            "id": "6217545b7829d6c4",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Smart Chat Conversation View"
             }
           }
         ],
@@ -182,8 +192,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {

@@ -118,14 +118,15 @@ Valores Críticos:
 O teste ADF é usado para verificar se uma série temporal é estacionária. 
 Se o valor $p$ for menor que um nível de significância (por exemplo, 0.05), rejeitamos a hipótese nula de que a série temporal tem uma raiz unitária (não é estacionária), indicando que a série é estacionária.
 - ADF Estatísticas: 0.815369:
-	Este é o valor da estatística do teste ADF. Ele é positivo e maior que todos os valores críticos fornecidos.
+		Este é o valor da estatística do teste ADF. Ele é positivo e maior que todos os valores críticos fornecidos.
 - Valor de P: 0.991880:
-	Este é o valor p do teste. Um valor p de 0.991880 é muito alto, indicando que não há evidência suficiente para rejeitar a hipótese nula de que a série temporal tem uma raiz unitária (não é estacionária).
+		Este é o valor p do teste. Um valor p de 0.991880 é muito alto, indicando que não há evidência suficiente para rejeitar a hipótese nula de que a série temporal tem uma raiz unitária (não é estacionária).
 - Valores Críticos:
-	1%: -3.482
-	5%: -2.884
-	10%: -2.579
-	Estes são os valores críticos para diferentes níveis de significância. Eles são usados para comparar com a estatística do teste ADF.
+		1%: -3.482
+		5%: -2.884
+		10%: -2.579
+	
+Estes são os valores críticos para diferentes níveis de significância. Eles são usados para comparar com a estatística do teste ADF.
 
 Com base nesses resultados, não podemos rejeitar a hipótese nula de que a série temporal tem uma raiz unitária. Isso significa que a série temporal não é estacionária. Em outras palavras, a série temporal possui tendências ou padrões que mudam ao longo do tempo, e não tem uma média constante, variância constante e autocorrelação constante ao longo do tempo.
 
@@ -141,8 +142,8 @@ Se uma série temporal for identificada como não estacionária, existem diverso
 
 A escolha do método dependerá das características específicas da série temporal e da natureza da não estacionariedade. Vale notar que esses métodos são descritos no contexto de dados econômicos, mas sua aplicação a outros domínios pode exigir considerações adicionais.
 
-No caso da AirPassagers, aceitamos a hipótese nula de que ela é não estacionária, pois o valor de $p$ é muito superior ao nível de significância $0.05$. Assim, devemos fazer a tranformação da série em estacionaria.
-Aplicando a transformação logaritmica:
+No caso da AirPassagers, aceitamos a hipótese nula de que ela é não estacionária, pois o valor de $p$ é muito superior ao nível de significância $0.05$. Assim, devemos fazer a transformação da série em estacionaria.
+Aplicando a transformação logarítmica:
 ``` python
 import numpy as np
 import matplotlib.pylab as plt
