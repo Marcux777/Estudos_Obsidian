@@ -7,7 +7,8 @@
   "citeFormats": [
     {
       "name": "IEEE",
-      "format": "pandoc"
+      "format": "pandoc",
+      "brackets": false
     }
   ],
   "exportFormats": [],
