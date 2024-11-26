@@ -1,9 +1,8 @@
 [
   "obsidian-git",
   "table-editor-obsidian",
-  "obsidian-plugin-toc",
-  "obsidian-icon-folder",
+  "omnisearch",
   "calendar",
-  "execute-code",
-  "smart-connections"
+  "obsidian-zotero-desktop-connector",
+  "obsidian-pandoc-reference-list"
 ]
