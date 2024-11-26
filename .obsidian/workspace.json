@@ -173,8 +173,8 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Smart Chat Conversation View"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           },
           {
@@ -183,8 +183,8 @@
             "state": {
               "type": "smart-connections-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Smart Chat Conversation View"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           }
         ],
@@ -192,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,6 +211,7 @@
   },
   "active": "f0d4466140b99f24",
   "lastOpenFiles": [
+    "Pasted image 20241126110201.png",
     "Pasted image 20241125184710.png",
     "Pasted image 20241125184708.png",
     "Séries Temporais.md",
@@ -255,7 +257,6 @@
     "smart-chats",
     "Series Temporais",
     "Pasted image 20241027172419.png",
-    "Pasted image 20241015144351.png",
-    "Pasted image 20241015144339.png"
+    "Pasted image 20241015144351.png"
   ]
 }

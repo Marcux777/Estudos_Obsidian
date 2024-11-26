@@ -12,8 +12,8 @@
   "chat_model_platform_key": "open_router",
   "open_router": {
     "api_key": "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",
-    "model_name": "openai/gpt-3.5-turbo-instruct",
-    "description": "OpenAI: GPT-3.5 Turbo Instruct",
+    "model_name": "openai/gpt-3.5-turbo-0125",
+    "description": "OpenAI: GPT-3.5 Turbo 16k",
     "type": "API",
     "endpoint": "https://openrouter.ai/api/v1/chat/completions",
     "streaming": true,
@@ -21,29 +21,29 @@
     "fetch_models": true,
     "default_model": "meta-llama/llama-3.1-8b-instruct:free",
     "signup_url": "https://accounts.openrouter.ai/sign-up?redirect_url=https%3A%2F%2Fopenrouter.ai%2Fkeys",
-    "key": "openai/gpt-3.5-turbo-instruct",
-    "max_input_tokens": 4095,
-    "actions": false,
+    "key": "openai/gpt-3.5-turbo-0125",
+    "max_input_tokens": 16385,
+    "actions": true,
     "multimodal": false,
     "raw": {
-      "id": "openai/gpt-3.5-turbo-instruct",
-      "name": "OpenAI: GPT-3.5 Turbo Instruct",
-      "created": 1695859200,
-      "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021.",
-      "context_length": 4095,
+      "id": "openai/gpt-3.5-turbo-0125",
+      "name": "OpenAI: GPT-3.5 Turbo 16k",
+      "created": 1685232000,
+      "description": "The latest GPT-3.5 Turbo model with improved instruction following, JSON mode, reproducible outputs, parallel function calling, and more. Training data: up to Sep 2021.\n\nThis version has a higher accuracy at responding in requested formats and a fix for a bug which caused a text encoding issue for non-English language function calls.",
+      "context_length": 16385,
       "architecture": {
         "modality": "text->text",
         "tokenizer": "GPT",
-        "instruct_type": "chatml"
+        "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000015",
-        "completion": "0.000002",
+        "prompt": "0.0000005",
+        "completion": "0.0000015",
         "image": "0",
         "request": "0"
       },
       "top_provider": {
-        "context_length": 4095,
+        "context_length": 16385,
         "max_completion_tokens": 4096,
         "is_moderated": true
       },
@@ -59,8 +59,8 @@
   "version": "2.2.85",
   "google_gemini": {
     "api_key": "AIzaSyDvP1b57qnL-UlKWEaE2a2EPhP8ib_7bVE",
-    "model_name": "gemini-1.5-flash-001",
-    "description": "Stable version of Gemini 1.5 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in May of 2024.",
+    "model_name": "gemini-exp-1114",
+    "description": "Experimental release (November 11th, 2024) of Gemini.",
     "type": "API",
     "api_key_header": "none",
     "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/MODEL_NAME:generateContent",
@@ -71,20 +71,19 @@
     "fetch_models": true,
     "default_model": "gemini-1.5-pro",
     "signup_url": "https://ai.google.dev/",
-    "key": "gemini-1.5-flash-001",
-    "max_input_tokens": 1000000,
-    "multimodal": true,
+    "key": "gemini-exp-1114",
+    "max_input_tokens": 32767,
+    "multimodal": false,
     "raw": {
-      "name": "models/gemini-1.5-flash-001",
-      "version": "001",
-      "displayName": "Gemini 1.5 Flash 001",
-      "description": "Stable version of Gemini 1.5 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in May of 2024.",
-      "inputTokenLimit": 1000000,
+      "name": "models/gemini-exp-1114",
+      "version": "exp-1114",
+      "displayName": "Gemini Experimental 1114",
+      "description": "Experimental release (November 11th, 2024) of Gemini.",
+      "inputTokenLimit": 32767,
       "outputTokenLimit": 8192,
       "supportedGenerationMethods": [
         "generateContent",
-        "countTokens",
-        "createCachedContent"
+        "countTokens"
       ],
       "temperature": 1,
       "topP": 0.95,
@@ -95,7 +94,7 @@
   "openai": {
     "api_key": "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",
     "model_name": "gpt-3.5-turbo",
-    "description": "context: 16385, output: 4096",
+    "description": "OpenAI",
     "type": "API",
     "endpoint": "https://api.openai.com/v1/chat/completions",
     "streaming": true,

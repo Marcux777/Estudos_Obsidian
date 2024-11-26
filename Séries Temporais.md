@@ -130,6 +130,9 @@ Estes são os valores críticos para diferentes níveis de significância. Eles 
 
 Com base nesses resultados, não podemos rejeitar a hipótese nula de que a série temporal tem uma raiz unitária. Isso significa que a série temporal não é estacionária. Em outras palavras, a série temporal possui tendências ou padrões que mudam ao longo do tempo, e não tem uma média constante, variância constante e autocorrelação constante ao longo do tempo.
 
+Nesse outro exemplo, é proveniente de dataset com datas de nascimento por pessoa, observe como os valores dão a impressão que estão bem distribuídos em torno da média laranja, temo valores acima e abaixo da média, mas sempre estão em torno da média, sem se afastar em demasia. Isto pode indicar que a série é estacionária (primeira impressão).
+![[Pasted image 20241126110201.png]]
+Mas confirmar que é estacionária, precisamos utilizar de algum método para verificar isso.
 ### Métodos para Tornar uma Série Temporal Estacionária
 ---
 Se uma série temporal for identificada como não estacionária, existem diversos métodos que podem ser utilizados para transformá-la em uma série estacionária. Alguns métodos comuns incluem:
