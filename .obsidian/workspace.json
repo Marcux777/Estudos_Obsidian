@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3fc2398a5dfdd5ad",
+        "id": "26cb6aba09a615de",
         "type": "tabs",
         "children": [
           {
-            "id": "1ca1bdd6db9564ad",
+            "id": "91ec50586c35c8de",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "Nova aba"
             }
           }
         ]
@@ -156,7 +154,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1ca1bdd6db9564ad",
+  "active": "91ec50586c35c8de",
   "lastOpenFiles": [
     "Ciência de Dados/Sumario.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
