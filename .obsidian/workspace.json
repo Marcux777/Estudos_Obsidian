@@ -152,8 +152,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin desativado"
             }
           },
           {
@@ -183,15 +183,16 @@
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "6cf00f34954c1327",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "Séries Temporais.md",
-    "Sumario.md",
     "Pré-Cálculo.md",
+    "Séries Temporais.md",
+    "conflict-files-obsidian-git.md",
+    "Sumario.md",
     "Pasted image 20241125184710.png",
     "Pasted image 20241125184708.png",
     "Pasted image 20241124174818.png",
