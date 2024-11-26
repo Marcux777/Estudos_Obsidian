@@ -80,16 +80,60 @@ Existem diversos testes estatísticos que podem ser usados para avaliar a estaci
 Há várias variações do teste de Dickey-Fuller, incluindo:
 
 - **Teste de Dickey-Fuller Aumentado (Augmented Dickey-Fuller)**: Este teste inclui valores defasados da primeira diferença da série temporal como variáveis explicativas na equação de regressão, para levar em conta a correlação serial nos dados.
-    
-- **Teste de Phillips-Perron**: Um teste não paramétrico que é robusto à heterocedasticidade e autocorrelação nos dados.
 
 A escolha do teste dependerá das características específicas dos dados da série temporal.
+
+Para os dados da tabela AirPassagers, podemos usar da seguinte forma
+
+![[Pasted image 20241124162511.png]]
+
+``` python
+# Baixamos a biblioteca contendo as funções que queremos
+%pip install statsmodels
+# importa a função para realizar o teste
+from statsmodels.tsa.stattools import adfuller
+
+X = data['#Passengers'] # dataframe contendo os dados
+
+result = adfuller(X) # teste aumentdado de Dickey-Fuller
+
+print('ADF Estatíticas: %f' % result[0])  
+
+print('Valor de P: %f' % result[1])
+
+print('Valores Críticos:')
+
+for key, value in result[4].items():
+   print('\t%s: %.3f' % (key, value))
+```
+Obteremos a seguinte saída
+```markdown
+ADF Estatíticas: 0.815369 
+Valor de P: 0.991880 
+Valores Críticos: 
+1%: -3.482 
+5%: -2.884 
+10%: -2.579
+```
+O teste ADF é usado para verificar se uma série temporal é estacionária. 
+Se o valor $p$ for menor que um nível de significância (por exemplo, 0.05), rejeitamos a hipótese nula de que a série temporal tem uma raiz unitária (não é estacionária), indicando que a série é estacionária.
+- ADF Estatísticas: 0.815369:
+	Este é o valor da estatística do teste ADF. Ele é positivo e maior que todos os valores críticos fornecidos.
+- Valor de P: 0.991880:
+	Este é o valor p do teste. Um valor p de 0.991880 é muito alto, indicando que não há evidência suficiente para rejeitar a hipótese nula de que a série temporal tem uma raiz unitária (não é estacionária).
+- Valores Críticos:
+	1%: -3.482
+	5%: -2.884
+	10%: -2.579
+	Estes são os valores críticos para diferentes níveis de significância. Eles são usados para comparar com a estatística do teste ADF.
+
+Com base nesses resultados, não podemos rejeitar a hipótese nula de que a série temporal tem uma raiz unitária. Isso significa que a série temporal não é estacionária. Em outras palavras, a série temporal possui tendências ou padrões que mudam ao longo do tempo, e não tem uma média constante, variância constante e autocorrelação constante ao longo do tempo.
 
 ### Métodos para Tornar uma Série Temporal Estacionária
 ---
 Se uma série temporal for identificada como não estacionária, existem diversos métodos que podem ser utilizados para transformá-la em uma série estacionária. Alguns métodos comuns incluem:
 
-- **Diferenciação (Differencing):** Consiste em subtrair observações consecutivas. Por exemplo, a primeira diferença de uma série temporal é calculada subtraindo o valor no tempo _t-1_ do valor no tempo _t_. A diferenciação pode remover tendências e sazonalidade de uma série temporal.
+- **Diferenciação (Differencing):** Consiste em subtrair observações consecutivas. Por exemplo, a primeira diferença de uma série temporal é calculada subtraindo o valor no tempo _$t-1$_ do valor no tempo _$t$_. A diferenciação pode remover tendências e sazonalidade de uma série temporal.
     
 - **Transformação Logarítmica:** Envolve o uso do logaritmo natural da série temporal, o que pode ajudar a estabilizar a variância da série.
     
@@ -97,6 +141,34 @@ Se uma série temporal for identificada como não estacionária, existem diverso
 
 A escolha do método dependerá das características específicas da série temporal e da natureza da não estacionariedade. Vale notar que esses métodos são descritos no contexto de dados econômicos, mas sua aplicação a outros domínios pode exigir considerações adicionais.
 
+No caso da AirPassagers, aceitamos a hipótese nula de que ela é não estacionária, pois o valor de $p$ é muito superior ao nível de significância $0.05$. Assim, devemos fazer a tranformação da série em estacionaria.
+Aplicando a transformação logaritmica:
+``` python
+import numpy as np
+import matplotlib.pylab as plt
+d_log=np.log(data) # lista contendo os dados transformados com log do numpy
+
+plt.plot(d_log)
+
+plt.show()
+```
+
+![[Pasted image 20241125184710.png]]
+
+Podemos vê uma diminuição da escala do grafico
+```python
+from statsmodels.tsa.stattools import adfuller
+
+result = adfuller(d_log) # Fazendo a verificação da Estacionariedade
+print('Valor de P: %f' % result[1])
+```
+Obteremos
+```markdown
+Valor de P: 0.422367
+```
+
+Podemos chegar a seguinte conclusão: 
+Mesmo após a transformação logarítmica, a série temporal ainda não é estacionária, pois o valor p é maior que o nível de significância comum (0.05). Isso significa que a série ainda possui tendências ou padrões que mudam ao longo do tempo.
 ## 4. Modelos de Séries Temporais
 ---
 ### 4.1. Modelos Autorregressivos (AR) na Análise de Séries Temporais
