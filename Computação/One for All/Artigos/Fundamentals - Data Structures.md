@@ -1,3 +1,4 @@
 
-[[Minimum stack - Minimum queue]]
-[[Sparse Table]]
+- [[Minimum stack - Minimum queue]]
+
+- [[Sparse Table]]

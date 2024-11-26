@@ -89,7 +89,6 @@ $0$ .
 
 Usando deslocamentos de bits e algumas operações básicas de bits, podemos facilmente definir, inverter ou limpar um bit.  
 $1 \ll x$  é um número com apenas o  $x$ -ésimo bit definido, enquanto  $\sim(1 \ll x)$  é um número com todos os bits definidos, exceto o  $x$ -ésimo bit.
-
  
 - $n ~|~ (1 \ll x)$  define o  $x$ -ésimo bit no número  $n$ 
  
@@ -132,7 +131,8 @@ bool isPowerOfTwo(unsigned int n) {
 
 ### Limpar o bit mais à direita definido
 
-A expressão  $n ~\&~ (n-1)$  pode ser usada para desativar o bit mais à direita definido de um número  $n$ . Isso funciona porque a expressão  $n-1$  inverte todos os bits após o bit mais à direita definido de  $n$ , incluindo o bit mais à direita definido. Assim, todos esses dígitos são diferentes do número original, e, fazendo um AND bit a bit, todos são definidos como 0, dando-lhe o número original  $n$  com o bit mais à direita definido invertido.
+A expressão  $n ~\&~ (n-1)$  pode ser usada para desativar o bit mais à direita definido de um número 
+$n$. Isso funciona porque a expressão  $n-1$  inverte todos os bits após o bit mais à direita definido de  $n$ , incluindo o bit mais à direita definido. Assim, todos esses dígitos são diferentes do número original, e, fazendo um AND bit a bit, todos são definidos como 0, dando-lhe o número original  $n$  com o bit mais à direita definido invertido.
 
 Por exemplo, considere o número  $52 = 0011~0100_2$ :
 

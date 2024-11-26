@@ -127,12 +127,7 @@ void union_sets(int a, int b) {
 Ambas as otimizações são equivalentes em termos de complexidade de tempo e espaço. Portanto, na prática, você pode usar qualquer uma delas.
 
 ### Complexidade de Tempo
-Como mencionado antes, se combinarmos ambas as otimizações - compressão de caminho com união por tamanho / classificação - alcançaremos consultas de tempo quase constante. Acontece que a complexidade de tempo amortizada final é  
-$O(\alpha(n))$ , onde  
-$\alpha(n)$  é a função inversa de Ackermann, que cresce muito lentamente. Na verdade, ela cresce tão lentamente, que não excede  
-$4$  para todos os  
-$n$  razoáveis (aproximadamente  
-$n < 10^{600}$ ).
+Como mencionado antes, se combinarmos ambas as otimizações - compressão de caminho com união por tamanho / classificação - alcançaremos consultas de tempo quase constante. Acontece que a complexidade de tempo amortizada final é  $O(\alpha(n))$ , onde  $\alpha(n)$  é a função inversa de Ackermann, que cresce muito lentamente. Na verdade, ela cresce tão lentamente, que não excede $4$  para todos os  $n$  razoáveis (aproximadamente $n < 10^{600}$ ).
 
 A complexidade amortizada é o tempo total por operação, avaliada ao longo de uma sequência de várias operações. A ideia é garantir o tempo total de toda a sequência, enquanto permite que operações individuais sejam muito mais lentas do que o tempo amortizado. Por exemplo, em nosso caso, uma única chamada pode levar  
 $O(\log n)$  no pior caso, mas se fizermos  
@@ -184,6 +179,7 @@ void union_sets(int a, int b) {
 Nesta seção, consideramos várias aplicações da estrutura de dados, tanto os usos triviais quanto algumas melhorias na estrutura de dados.
 
 ### Componentes Conectados em um Grafo
+
 Esta é uma das aplicações óbvias do DSU.
 
 Formalmente, o problema é definido da seguinte maneira: Inicialmente, temos um grafo vazio. Temos que adicionar vértices e arestas não direcionadas e responder a consultas do tipo  $(a, b)$  - "os vértices  $a$  e  $b$  estão no mesmo componente conectado do grafo?"
@@ -193,6 +189,7 @@ Aqui podemos aplicar diretamente a estrutura de dados e obter uma solução que 
 Esta aplicação é bastante importante, porque quase o mesmo problema aparece no algoritmo de Kruskal para encontrar uma árvore geradora mínima. Usando DSU, podemos melhorar a complexidade  $O(m \log n + n^2)$  para  $O(m \log n)$ .
 
 ### Busca por Componentes Conectados em uma Imagem
+
 Uma das aplicações do DSU é a seguinte tarefa: existe uma imagem de  $n \times m$  pixels. Originalmente todos são brancos, mas então alguns pixels pretos são desenhados. Você quer determinar o tamanho de cada componente conectado branco na imagem final.
 
 Para a solução, simplesmente iteramos sobre todos os pixels brancos na imagem, para cada célula iteramos sobre seus quatro vizinhos, e se o vizinho for branco chamamos `union_sets`. Assim, teremos um DSU com  $n m$  nós correspondentes aos pixels da imagem. As árvores resultantes no DSU são os componentes conectados desejados.
@@ -200,6 +197,7 @@ Para a solução, simplesmente iteramos sobre todos os pixels brancos na imagem,
 O problema também pode ser resolvido por DFS ou BFS, mas o método descrito aqui tem uma vantagem: ele pode processar a matriz linha por linha (ou seja, para processar uma linha, só precisamos da linha anterior e da linha atual, e só precisamos de um DSU construído para os elementos de uma linha) em  $O(\min(n, m))$  de memória.
 
 ### Armazenar Informações Adicionais para Cada Conjunto
+
 O DSU permite armazenar facilmente informações adicionais nos conjuntos.
 
 Um exemplo simples é o tamanho dos conjuntos: o armazenamento dos tamanhos já foi descrito na seção União por Tamanho (a informação foi armazenada pelo representante atual do conjunto).
@@ -207,6 +205,7 @@ Um exemplo simples é o tamanho dos conjuntos: o armazenamento dos tamanhos já 
 Da mesma forma - armazenando-o nos nós representantes - você também pode armazenar qualquer outra informação sobre os conjuntos.
 
 ### Comprimir Saltos ao Longo de um Segmento / Pintar Subarrays Offline
+
 Uma aplicação comum do DSU é a seguinte: Existe um conjunto de vértices, e cada vértice tem uma aresta de saída para outro vértice. Com o DSU, você pode encontrar o ponto final, para o qual chegamos após seguir todas as arestas a partir de um determinado ponto de partida, em tempo quase constante.
 
 Um bom exemplo desta aplicação é o problema de pintar subarrays. Temos um segmento de comprimento  $L$ , cada elemento inicialmente tem a cor 0. Temos que repintar o subarray  $[l, r]$  com a cor  $c$  para cada consulta  $(l, r, c)$ . No final, queremos encontrar a cor final de cada célula. Supomos que conhecemos todas as consultas antecipadamente, ou seja, a tarefa é offline.
@@ -237,6 +236,7 @@ for (int i = m-1; i >= 0; i--) {
 Existe uma otimização: Podemos usar união por classificação, se armazenarmos a próxima célula não pintada em um array adicional `end[]`. Então podemos mesclar dois conjuntos em um classificado de acordo com suas heurísticas, e obtemos a solução em  $O(\alpha(n))$ .
 
 ### Suporte a distâncias até o representante
+
 Às vezes, em aplicações específicas do DSU, você precisa manter a distância entre um vértice e o representante de seu conjunto (ou seja, o comprimento do caminho na árvore do nó atual até a raiz da árvore).
 
 Se não usarmos a compressão de caminho, a distância é apenas o número de chamadas recursivas. Mas isso será ineficiente.
@@ -273,6 +273,7 @@ void union_sets(int a, int b) {
 }
 ```
 ### Suporte à paridade do comprimento do caminho / Verificação de bipartição online
+
 Da mesma forma que o cálculo do comprimento do caminho até o líder, é possível manter a paridade do comprimento do caminho antes dele. Por que esta aplicação está em um parágrafo separado?
 
 A exigência incomum de armazenar a paridade do caminho surge na seguinte tarefa: inicialmente, nos é dado um grafo vazio, podem ser adicionadas arestas, e temos que responder a consultas do tipo "o componente conectado contendo este vértice é bipartido?".
@@ -334,9 +335,10 @@ bool is_bipartite(int v) {
 
 
 ### Consulta de Mínimo em Intervalo Offline (RMQ) em  $O(\alpha(n))$  em média / Truque de Arpa
-Recebemos um array a[] e temos que calcular alguns mínimos em segmentos dados do array.
 
-A ideia para resolver este problema com DSU é a seguinte: Vamos iterar sobre o array e quando estivermos no elemento i, responderemos a todas as consultas (L, R) com R == i. Para fazer isso de forma eficiente, manteremos um DSU usando os primeiros i elementos com a seguinte estrutura: o pai de um elemento é o próximo elemento menor à direita dele. Então, usando essa estrutura, a resposta para uma consulta será a[find_set(L)], o número menor à direita de L.
+Recebemos um array $a[]$ e temos que calcular alguns mínimos em segmentos dados do array.
+
+A ideia para resolver este problema com DSU é a seguinte: Vamos iterar sobre o array e quando estivermos no elemento i, responderemos a todas as consultas $(L, R)$ com $R == i$. Para fazer isso de forma eficiente, manteremos um DSU usando os primeiros $i$ elementos com a seguinte estrutura: o pai de um elemento é o próximo elemento menor à direita dele. Então, usando essa estrutura, a resposta para uma consulta será a[find_set(L)], o número menor à direita de $L$.
 
 Esta abordagem obviamente só funciona offline, ou seja, se soubermos todas as consultas antecipadamente.
 

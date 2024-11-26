@@ -16,7 +16,11 @@
   "slash-command": false,
   "editor-status": true,
   "bookmarks": true,
+<<<<<<< HEAD
   "markdown-importer": false,
+=======
+  "markdown-importer": true,
+>>>>>>> origin/main
   "zk-prefixer": false,
   "random-note": false,
   "outline": true,

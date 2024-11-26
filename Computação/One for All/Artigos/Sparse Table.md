@@ -74,7 +74,7 @@ for (int i = 2; i <= MAXN; i++)
 Alternativamente, o log pode ser calculado em tempo e espaço constantes:
 ```c++
 // C++20
-#include <bit>
+[[include]] <bit>
 int log2_floor(unsigned long i) {
     return std::bit_width(i) - 1;
 }

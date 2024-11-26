@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "26cb6aba09a615de",
+        "id": "c4f93961f6112d85",
         "type": "tabs",
         "children": [
           {
-            "id": "91ec50586c35c8de",
+            "id": "6cf00f34954c1327",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Séries Temporais.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Séries Temporais"
             }
           }
         ]
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Séries Temporais.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Links inversos para Séries Temporais"
             }
           },
           {
@@ -107,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Séries Temporais.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída"
+              "title": "Links de saída para Séries Temporais"
             }
           },
           {
@@ -132,17 +139,29 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Séries Temporais.md"
+              },
               "icon": "lucide-list",
-              "title": "Sumário"
+              "title": "Sumário de Séries Temporais"
+            }
+          },
+          {
+            "id": "05749b444df033b4",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 497.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,8 +173,23 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "91ec50586c35c8de",
+  "active": "6cf00f34954c1327",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Séries Temporais.md",
+    "Sumario.md",
+    "Pré-Cálculo.md",
+    "Pasted image 20241125184710.png",
+    "Pasted image 20241125184708.png",
+    "Pasted image 20241124174818.png",
+    "Pasted image 20241124163558.png",
+    "Pasted image 20241124162511.png",
+    "Pasted image 20241124162454.png",
+    "Pasted image 20241124162230.png",
+    "Machine Learning/Parte 1 - Fundamentos/Introdução ao Aprendizado de Máquina.md",
+    "Machine Learning/Sumario.md",
+    "Machine Learning/Parte 1 - Fundamentos",
+    "Machine Learning",
     "Ciência de Dados/Sumario.md",
     "Probabilidade e Estatistica/Probabilidade e Estatística.md",
     "Probabilidade e Estatistica/Variáveis Aleatórias.md",
@@ -166,7 +200,6 @@
     "Probabilidade e Estatistica/Pasted image 20240407141106.png",
     "Probabilidade e Estatistica/Pasted image 20240407140246.png",
     "Probabilidade e Estatistica/Pasted image 20240407124816.png",
-    "Probabilidade e Estatistica/Pasted image 20240407124805.png",
     "Computação/One for All/Artigos/Segment Tree.md",
     "Computação/One for All/Artigos/Trees - Data Structures.md",
     "Computação/Data Structures.md",
@@ -183,23 +216,10 @@
     "Ciência de Dados/Basico de Python",
     "Redes de Computadores/Capitulo 1.md",
     "Redes de Computadores",
-    "Probabilidade e Estatistica/Pasted image 20240206172609.png",
-    "Probabilidade e Estatistica/Pasted image 20240226173805.png",
     "Algebra Linear/Espaços Vetoriais.md",
-    "Computação/One for All/Artigos/Treap (Cartesian tree).md",
-    "Computação/One for All/Artigos/Pasted image 20240207183644.png",
-    "Computação/One for All/Artigos/Pasted image 20240207184558.png",
-    "Computação/One for All/Artigos/Pasted image 20240207184543.png",
-    "Computação/One for All/Artigos/Pasted image 20240207184448.png",
     "Probabilidade e Estatistica",
-    "Computação/One for All/Artigos/Algebra/Number-theoretic functions/Generalização.md",
-    "Computação/One for All/Artigos/Formal power series.md",
-    "Computação/One for All/Artigos/Algebra/Integer factorization/Algoritmo Rho de Pollard.md",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes/Análise Assintótica - Crivo de Eratóstenes.md",
     "Algebra Linear",
     "Matematica Pura",
-    "Computação/One for All/Artigos/Sieve of Eratosthenes",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Modular Inverse",
-    "Computação/One for All/Artigos/Algebra/Modular arithmetic/Linear Congruence Equation"
+    "Computação/One for All/Artigos/Sieve of Eratosthenes"
   ]
 }
